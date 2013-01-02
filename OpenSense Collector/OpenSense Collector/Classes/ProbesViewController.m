@@ -27,15 +27,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background-texture"]];
+    [backgroundImageView setFrame:self.tableView.frame];
+    
+    self.tableView.backgroundView = backgroundImageView;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    
-    NSLog(@"Test here");
-    
+    // Get available probes from OpenSense
     probes = [[OpenSense sharedInstance] availableProbes];
     [self.tableView reloadData];
 }
@@ -64,6 +67,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     cell.textLabel.text = [[probes objectAtIndex:[indexPath row]] name];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
     return cell;
 }

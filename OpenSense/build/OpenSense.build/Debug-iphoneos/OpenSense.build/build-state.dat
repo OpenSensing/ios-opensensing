@@ -3,22 +3,22 @@ v5
 r1
 cCheck dependencies
 cProcessPCH /var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense-Prefix-dfrrwxoaovovhpgpxqtfaahabqfd/OpenSense-Prefix.pch.pth OpenSense/OpenSense-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSPositioningProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSPositioningProbe.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSMotionProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSMotionProbe.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OpenSense.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/OpenSense.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSProbe.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSMotionProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSMotionProbe.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSPositioningProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSPositioningProbe.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSSocialProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSSocialProbe.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSEnvironmentProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSEnvironmentProbe.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSDeviceInfoProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInfoProbe.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSDeviceInteractionProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInteractionProbe.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSDeviceInfoProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInfoProbe.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLibtool "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/libOpenSense.a" normal armv7s
-cPBXCp OpenSense/Probes/OSMotionProbe.h build/Debug-iphoneos/../includes/OSMotionProbe.h
 cPBXCp build/Debug-iphoneos/OpenSenseResources.bundle build/Debug-iphoneos/../includes/OpenSenseResources.bundle
-cPBXCp OpenSense/Probes/OSSocialProbe.h build/Debug-iphoneos/../includes/OSSocialProbe.h
 cPBXCp OpenSense/Probes/OSPositioningProbe.h build/Debug-iphoneos/../includes/OSPositioningProbe.h
-cPBXCp OpenSense/Probes/OSDeviceInfoProbe.h build/Debug-iphoneos/../includes/OSDeviceInfoProbe.h
 cPBXCp OpenSense/Probes/OSEnvironmentProbe.h build/Debug-iphoneos/../includes/OSEnvironmentProbe.h
+cPBXCp OpenSense/Probes/OSMotionProbe.h build/Debug-iphoneos/../includes/OSMotionProbe.h
+cPBXCp OpenSense/Probes/OSSocialProbe.h build/Debug-iphoneos/../includes/OSSocialProbe.h
 cPBXCp OpenSense/Probes/OSDeviceInteractionProbe.h build/Debug-iphoneos/../includes/OSDeviceInteractionProbe.h
+cPBXCp OpenSense/Probes/OSDeviceInfoProbe.h build/Debug-iphoneos/../includes/OSDeviceInfoProbe.h
 cPBXCp OpenSense/Probes/OSProbe.h build/Debug-iphoneos/../includes/OSProbe.h
 cPBXCp OpenSense/OpenSense.h build/Debug-iphoneos/../includes/OpenSense.h
 
@@ -165,24 +165,24 @@ t1357159007
 s170
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/libOpenSense.a
-t1357159990
+t1357160540
 s83320
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSDeviceInfoProbe.o
-t1357159990
+t1357160540
 s9988
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSDeviceInteractionProbe.o
-t1357159990
-s10176
+t1357160540
+s10192
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSEnvironmentProbe.o
-t1357159990
+t1357160540
 s10020
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSMotionProbe.o
-t1357159990
-s9884
+t1357160540
+s9876
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSPositioningProbe.o
 t1357159990
@@ -193,8 +193,8 @@ t1357159990
 s9032
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSSocialProbe.o
-t1357159990
-s9884
+t1357160540
+s9876
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OpenSense.LinkFileList
 c0000000050E49A5F0000000000000537
@@ -235,7 +235,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies8f1aabdcd794b641^7556abdcd794b641^---0#1#0#--18"Check dependencies36"793FDF15-044D-4DA1-A221-EFFFAE2684FC-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies83850346e094b641^60ac0346e094b641^---0#1#0#--18"Check dependencies36"8A23BCB3-741C-4ACC-9DEB-A9C1CF73DA78-
 
 CCompileC build/OpenSense.build/Debug-iphoneos/OpenSense.build/Objects-normal/armv7s/OSDeviceInfoProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInfoProbe.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s378853340.686018

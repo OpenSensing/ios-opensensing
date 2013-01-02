@@ -36,6 +36,14 @@
 		3DDED70F167D098B006DE4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DDED70D167D098B006DE4F8 /* InfoPlist.strings */; };
 		3DDED712167D098B006DE4F8 /* OpenSense_CollectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED711167D098B006DE4F8 /* OpenSense_CollectorTests.m */; };
 		3DFE62531694CB9600145310 /* OpenSenseResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3D35C2C41694C720000ADA14 /* OpenSenseResources.bundle */; };
+		3DFE62551694DE4500145310 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE62541694DE4500145310 /* Icon.png */; };
+		3DFE62571694DE4800145310 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE62561694DE4800145310 /* Icon@2x.png */; };
+		3DFE62591694DF0500145310 /* probes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE62581694DF0500145310 /* probes@2x.png */; };
+		3DFE625D1694DF2200145310 /* status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE625C1694DF2200145310 /* status@2x.png */; };
+		3DFE62601694DFE600145310 /* statistics.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE625E1694DFE600145310 /* statistics.png */; };
+		3DFE62611694DFE600145310 /* statistics@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE625F1694DFE600145310 /* statistics@2x.png */; };
+		3DFE62631694DFF600145310 /* status.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE62621694DFF600145310 /* status.png */; };
+		3DFE62651694DFFD00145310 /* probes.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE62641694DFFD00145310 /* probes.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +93,7 @@
 		3D8C708716949EFE00619CDB /* stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stop@2x.png"; path = "Assets/stop@2x.png"; sourceTree = "<group>"; };
 		3D8C708D1694A1D500619CDB /* StatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusViewController.h; path = Classes/StatusViewController.h; sourceTree = "<group>"; };
 		3D8C708E1694A1D500619CDB /* StatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusViewController.m; path = Classes/StatusViewController.m; sourceTree = "<group>"; };
-		3DDED6D1167D098B006DE4F8 /* OpenSense Collector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenSense Collector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DDED6D1167D098B006DE4F8 /* OpenSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDED6D5167D098B006DE4F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3DDED6D7167D098B006DE4F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3DDED6D9167D098B006DE4F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -105,6 +113,14 @@
 		3DDED70E167D098B006DE4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3DDED710167D098B006DE4F8 /* OpenSense_CollectorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenSense_CollectorTests.h; sourceTree = "<group>"; };
 		3DDED711167D098B006DE4F8 /* OpenSense_CollectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenSense_CollectorTests.m; sourceTree = "<group>"; };
+		3DFE62541694DE4500145310 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		3DFE62561694DE4800145310 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		3DFE62581694DF0500145310 /* probes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "probes@2x.png"; sourceTree = "<group>"; };
+		3DFE625C1694DF2200145310 /* status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status@2x.png"; sourceTree = "<group>"; };
+		3DFE625E1694DFE600145310 /* statistics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statistics.png; sourceTree = "<group>"; };
+		3DFE625F1694DFE600145310 /* statistics@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statistics@2x.png"; sourceTree = "<group>"; };
+		3DFE62621694DFF600145310 /* status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status.png; sourceTree = "<group>"; };
+		3DFE62641694DFFD00145310 /* probes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = probes.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +161,12 @@
 		3D8C707716948DF700619CDB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3DFE62621694DFF600145310 /* status.png */,
+				3DFE625C1694DF2200145310 /* status@2x.png */,
+				3DFE62641694DFFD00145310 /* probes.png */,
+				3DFE62581694DF0500145310 /* probes@2x.png */,
+				3DFE625E1694DFE600145310 /* statistics.png */,
+				3DFE625F1694DFE600145310 /* statistics@2x.png */,
 				3D8C708416949EFE00619CDB /* stop.png */,
 				3D8C708516949EFE00619CDB /* stop_hover.png */,
 				3D8C708616949EFE00619CDB /* stop_hover@2x.png */,
@@ -173,6 +195,8 @@
 		3DDED6C6167D098B006DE4F8 = {
 			isa = PBXGroup;
 			children = (
+				3DFE62561694DE4800145310 /* Icon@2x.png */,
+				3DFE62541694DE4500145310 /* Icon.png */,
 				3D35C2B61694C720000ADA14 /* OpenSense.xcodeproj */,
 				3DDED6DB167D098B006DE4F8 /* OpenSense Collector */,
 				3DDED70A167D098B006DE4F8 /* OpenSense CollectorTests */,
@@ -184,7 +208,7 @@
 		3DDED6D2167D098B006DE4F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3DDED6D1167D098B006DE4F8 /* OpenSense Collector.app */,
+				3DDED6D1167D098B006DE4F8 /* OpenSense.app */,
 				3DDED703167D098B006DE4F8 /* OpenSense CollectorTests.octest */,
 			);
 			name = Products;
@@ -264,7 +288,7 @@
 			);
 			name = "OpenSense Collector";
 			productName = "OpenSense Collector";
-			productReference = 3DDED6D1167D098B006DE4F8 /* OpenSense Collector.app */;
+			productReference = 3DDED6D1167D098B006DE4F8 /* OpenSense.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3DDED702167D098B006DE4F8 /* OpenSense CollectorTests */ = {
@@ -364,6 +388,14 @@
 				3D8C708916949EFE00619CDB /* stop_hover.png in Resources */,
 				3D8C708A16949EFE00619CDB /* stop_hover@2x.png in Resources */,
 				3D8C708B16949EFE00619CDB /* stop@2x.png in Resources */,
+				3DFE62551694DE4500145310 /* Icon.png in Resources */,
+				3DFE62571694DE4800145310 /* Icon@2x.png in Resources */,
+				3DFE62591694DF0500145310 /* probes@2x.png in Resources */,
+				3DFE625D1694DF2200145310 /* status@2x.png in Resources */,
+				3DFE62601694DFE600145310 /* statistics.png in Resources */,
+				3DFE62611694DFE600145310 /* statistics@2x.png in Resources */,
+				3DFE62631694DFF600145310 /* status.png in Resources */,
+				3DFE62651694DFFD00145310 /* probes.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,7 +540,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenSense Collector/OpenSense Collector-Prefix.pch";
 				INFOPLIST_FILE = "OpenSense Collector/OpenSense Collector-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OpenSense;
 				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}/../OpenSense/build/includes/\"";
 				WRAPPER_EXTENSION = app;
 			};
@@ -521,7 +553,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenSense Collector/OpenSense Collector-Prefix.pch";
 				INFOPLIST_FILE = "OpenSense Collector/OpenSense Collector-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OpenSense;
 				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}/../OpenSense/build/includes/\"";
 				WRAPPER_EXTENSION = app;
 			};
