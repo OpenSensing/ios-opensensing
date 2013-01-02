@@ -35,16 +35,27 @@
 - (NSArray*)availableProbes
 {
     NSMutableArray *probes = [[NSMutableArray alloc] init];
-    NSArray *probeDescriptions = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"probes" ofType:@"plist"]];
+    NSBundle *bundle = [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"OpenSenseResources" withExtension:@"bundle"]];
+    
+    NSArray *probeDescriptions = [NSArray arrayWithContentsOfFile:[bundle pathForResource:@"probes" ofType:@"plist"]];
     
     for (NSDictionary *probeInfo in probeDescriptions)
     {
-        OSProbe *probe = [[NSClassFromString([probeInfo objectForKey:@"Class"]) alloc] init];
-        probe.name = [probeInfo objectForKey:@"Name"];
-        probe.identifier = [probeInfo objectForKey:@"Identifier"];
-        probe.description = [probeInfo objectForKey:@"Description"];
+        NSString *className = [probeInfo objectForKey:@"Class"];
+        NSLog(@"Class name: %@", className);
+        //NSLog(@"Class: %@", NSClassFromString(className));
         
-        [probes addObject:probe];
+        //[OSPositioningProbe class];
+        id probe = [[NSClassFromString(className) alloc] init];
+        
+        if (probe != nil)
+        {
+            /*probe.name = [probeInfo objectForKey:@"Name"];
+            probe.identifier = [probeInfo objectForKey:@"Identifier"];
+            probe.description = [probeInfo objectForKey:@"Description"];
+            */
+            [probes addObject:probe];
+        }
     }
     
     return probes;

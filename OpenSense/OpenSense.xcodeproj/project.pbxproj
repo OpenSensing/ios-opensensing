@@ -30,10 +30,10 @@
 		3DF797A61694BA1D00E84594 /* OSSocialProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C706E1694818300619CDB /* OSSocialProbe.h */; };
 		3DF797A71694BA1D00E84594 /* OSDeviceInfoProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70711694818E00619CDB /* OSDeviceInfoProbe.h */; };
 		3DF797A81694BA1D00E84594 /* OSDeviceInteractionProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C7074169481A200619CDB /* OSDeviceInteractionProbe.h */; };
-		3DF797AA1694BF5800E84594 /* probes.plist in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DF797A91694BB1E00E84594 /* probes.plist */; };
 		3DF797B11694BFD600E84594 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF797B01694BFD600E84594 /* CoreFoundation.framework */; };
 		3DF797B71694BFD600E84594 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DF797B51694BFD600E84594 /* InfoPlist.strings */; };
-		3DF797BC1694C00400E84594 /* probes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DF797A91694BB1E00E84594 /* probes.plist */; };
+		3DF797C41694C52200E84594 /* probes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DF797A91694BB1E00E84594 /* probes.plist */; };
+		3DFE62521694CB7100145310 /* OpenSenseResources.bundle in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DF797AF1694BFD600E84594 /* OpenSenseResources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +50,10 @@
 		3DDED699167D04CF006DE4F8 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
+			dstPath = ../includes;
 			dstSubfolderSpec = 16;
 			files = (
-				3DF797AA1694BF5800E84594 /* probes.plist in Copy Files */,
+				3DFE62521694CB7100145310 /* OpenSenseResources.bundle in Copy Files */,
 				3DF797A31694BA1D00E84594 /* OSPositioningProbe.h in Copy Files */,
 				3DF797A41694BA1D00E84594 /* OSMotionProbe.h in Copy Files */,
 				3DF797A51694BA1D00E84594 /* OSEnvironmentProbe.h in Copy Files */,
@@ -349,7 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DF797BC1694C00400E84594 /* probes.plist in Resources */,
+				3DF797C41694C52200E84594 /* probes.plist in Resources */,
 				3DF797B71694BFD600E84594 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,7 +486,10 @@
 				DSTROOT = /tmp/OpenSense.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenSense/OpenSense-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -498,7 +501,10 @@
 				DSTROOT = /tmp/OpenSense.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenSense/OpenSense-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -608,6 +614,7 @@
 				3DF797BB1694BFD600E84594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

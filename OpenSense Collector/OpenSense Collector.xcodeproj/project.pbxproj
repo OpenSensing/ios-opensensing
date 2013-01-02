@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D12255E1694B0E5005A1CBB /* libOpenSense.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D12255D1694B0E5005A1CBB /* libOpenSense.a */; };
+		3D35C2C61694C768000ADA14 /* libOpenSense.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D35C2C01694C720000ADA14 /* libOpenSense.a */; };
 		3D6788611694AC8300553E04 /* ProbesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6788601694AC8300553E04 /* ProbesViewController.m */; };
 		3D8C707A16948E0800619CDB /* background-texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8C707816948E0800619CDB /* background-texture.png */; };
 		3D8C707B16948E0800619CDB /* background-texture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8C707916948E0800619CDB /* background-texture@2x.png */; };
@@ -35,9 +35,31 @@
 		3DDED707167D098B006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D7167D098B006DE4F8 /* Foundation.framework */; };
 		3DDED70F167D098B006DE4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DDED70D167D098B006DE4F8 /* InfoPlist.strings */; };
 		3DDED712167D098B006DE4F8 /* OpenSense_CollectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED711167D098B006DE4F8 /* OpenSense_CollectorTests.m */; };
+		3DFE62531694CB9600145310 /* OpenSenseResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3D35C2C41694C720000ADA14 /* OpenSenseResources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3D35C2BF1694C720000ADA14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D35C2B61694C720000ADA14 /* OpenSense.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DDED69B167D04CF006DE4F8;
+			remoteInfo = OpenSense;
+		};
+		3D35C2C11694C720000ADA14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D35C2B61694C720000ADA14 /* OpenSense.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DDED6AC167D04CF006DE4F8;
+			remoteInfo = OpenSenseTests;
+		};
+		3D35C2C31694C720000ADA14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D35C2B61694C720000ADA14 /* OpenSense.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DF797AF1694BFD600E84594;
+			remoteInfo = OpenSenseResources;
+		};
 		3DDED708167D098B006DE4F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3DDED6C8167D098B006DE4F8 /* Project object */;
@@ -48,7 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D12255D1694B0E5005A1CBB /* libOpenSense.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOpenSense.a; path = "../OpenSense/build/Release-iphoneos/libOpenSense.a"; sourceTree = "<group>"; };
+		3D35C2B61694C720000ADA14 /* OpenSense.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OpenSense.xcodeproj; path = ../OpenSense/OpenSense.xcodeproj; sourceTree = "<group>"; };
 		3D67885F1694AC8300553E04 /* ProbesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProbesViewController.h; path = Classes/ProbesViewController.h; sourceTree = "<group>"; };
 		3D6788601694AC8300553E04 /* ProbesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProbesViewController.m; path = Classes/ProbesViewController.m; sourceTree = "<group>"; };
 		3D8C707816948E0800619CDB /* background-texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-texture.png"; path = "Assets/background-texture.png"; sourceTree = "<group>"; };
@@ -90,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D12255E1694B0E5005A1CBB /* libOpenSense.a in Frameworks */,
+				3D35C2C61694C768000ADA14 /* libOpenSense.a in Frameworks */,
 				3DDED6D6167D098B006DE4F8 /* UIKit.framework in Frameworks */,
 				3DDED6D8167D098B006DE4F8 /* Foundation.framework in Frameworks */,
 				3DDED6DA167D098B006DE4F8 /* CoreGraphics.framework in Frameworks */,
@@ -110,6 +132,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D35C2B71694C720000ADA14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D35C2C01694C720000ADA14 /* libOpenSense.a */,
+				3D35C2C21694C720000ADA14 /* OpenSenseTests.octest */,
+				3D35C2C41694C720000ADA14 /* OpenSenseResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3D8C707716948DF700619CDB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +173,7 @@
 		3DDED6C6167D098B006DE4F8 = {
 			isa = PBXGroup;
 			children = (
+				3D35C2B61694C720000ADA14 /* OpenSense.xcodeproj */,
 				3DDED6DB167D098B006DE4F8 /* OpenSense Collector */,
 				3DDED70A167D098B006DE4F8 /* OpenSense CollectorTests */,
 				3DDED6D4167D098B006DE4F8 /* Frameworks */,
@@ -160,7 +193,6 @@
 		3DDED6D4167D098B006DE4F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3D12255D1694B0E5005A1CBB /* libOpenSense.a */,
 				3DDED6D5167D098B006DE4F8 /* UIKit.framework */,
 				3DDED6D7167D098B006DE4F8 /* Foundation.framework */,
 				3DDED6D9167D098B006DE4F8 /* CoreGraphics.framework */,
@@ -273,6 +305,12 @@
 			mainGroup = 3DDED6C6167D098B006DE4F8;
 			productRefGroup = 3DDED6D2167D098B006DE4F8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3D35C2B71694C720000ADA14 /* Products */;
+					ProjectRef = 3D35C2B61694C720000ADA14 /* OpenSense.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3DDED6D0167D098B006DE4F8 /* OpenSense Collector */,
@@ -281,11 +319,36 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		3D35C2C01694C720000ADA14 /* libOpenSense.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOpenSense.a;
+			remoteRef = 3D35C2BF1694C720000ADA14 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3D35C2C21694C720000ADA14 /* OpenSenseTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OpenSenseTests.octest;
+			remoteRef = 3D35C2C11694C720000ADA14 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3D35C2C41694C720000ADA14 /* OpenSenseResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OpenSenseResources.bundle;
+			remoteRef = 3D35C2C31694C720000ADA14 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		3DDED6CF167D098B006DE4F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFE62531694CB9600145310 /* OpenSenseResources.bundle in Resources */,
 				3DDED6E0167D098B006DE4F8 /* InfoPlist.strings in Resources */,
 				3DDED6E8167D098B006DE4F8 /* Default.png in Resources */,
 				3DDED6EA167D098B006DE4F8 /* Default@2x.png in Resources */,
@@ -441,10 +504,12 @@
 		3DDED716167D098B006DE4F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenSense Collector/OpenSense Collector-Prefix.pch";
 				INFOPLIST_FILE = "OpenSense Collector/OpenSense Collector-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}/../OpenSense/build/includes/\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -452,10 +517,12 @@
 		3DDED717167D098B006DE4F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenSense Collector/OpenSense Collector-Prefix.pch";
 				INFOPLIST_FILE = "OpenSense Collector/OpenSense Collector-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}/../OpenSense/build/includes/\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

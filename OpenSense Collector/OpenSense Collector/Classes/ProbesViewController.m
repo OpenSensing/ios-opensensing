@@ -7,7 +7,7 @@
 //
 
 #import "ProbesViewController.h"
-#import "OpenSense/OpenSense.h"
+#import "OpenSense.h"
 
 @interface ProbesViewController ()
 

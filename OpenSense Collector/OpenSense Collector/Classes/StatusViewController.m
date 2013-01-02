@@ -7,8 +7,7 @@
 //
 
 #import "StatusViewController.h"
-#import "OpenSense/OpenSense.h"
-
+#import "OpenSense.h"
 @interface StatusViewController ()
 
 @end
