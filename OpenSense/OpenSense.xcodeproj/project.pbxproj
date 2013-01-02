@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D12255F1694B154005A1CBB /* OSProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70651694815800619CDB /* OSProbe.h */; };
+		3D8C70631694814C00619CDB /* OSPositioningProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70621694814C00619CDB /* OSPositioningProbe.m */; };
+		3D8C70671694815800619CDB /* OSProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70661694815800619CDB /* OSProbe.m */; };
+		3D8C706A1694816C00619CDB /* OSMotionProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70691694816C00619CDB /* OSMotionProbe.m */; };
+		3D8C706D1694817800619CDB /* OSEnvironmentProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C706C1694817800619CDB /* OSEnvironmentProbe.m */; };
+		3D8C70701694818300619CDB /* OSSocialProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C706F1694818300619CDB /* OSSocialProbe.m */; };
+		3D8C70731694818E00619CDB /* OSDeviceInfoProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */; };
+		3D8C7076169481A200619CDB /* OSDeviceInteractionProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C7075169481A200619CDB /* OSDeviceInteractionProbe.m */; };
+		3DDED69F167D04CF006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED69E167D04CF006DE4F8 /* Foundation.framework */; };
+		3DDED6A4167D04CF006DE4F8 /* OpenSense.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DDED6A3167D04CF006DE4F8 /* OpenSense.h */; };
+		3DDED6A6167D04CF006DE4F8 /* OpenSense.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED6A5167D04CF006DE4F8 /* OpenSense.m */; };
+		3DDED6AE167D04CF006DE4F8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6AD167D04CF006DE4F8 /* SenTestingKit.framework */; };
+		3DDED6B0167D04CF006DE4F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6AF167D04CF006DE4F8 /* UIKit.framework */; };
+		3DDED6B1167D04CF006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED69E167D04CF006DE4F8 /* Foundation.framework */; };
+		3DDED6B4167D04CF006DE4F8 /* libOpenSense.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED69B167D04CF006DE4F8 /* libOpenSense.a */; };
+		3DDED6BA167D04CF006DE4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DDED6B8167D04CF006DE4F8 /* InfoPlist.strings */; };
+		3DDED6BD167D04CF006DE4F8 /* OpenSenseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED6BC167D04CF006DE4F8 /* OpenSenseTests.m */; };
+		3DF797A31694BA1D00E84594 /* OSPositioningProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70611694814C00619CDB /* OSPositioningProbe.h */; };
+		3DF797A41694BA1D00E84594 /* OSMotionProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70681694816C00619CDB /* OSMotionProbe.h */; };
+		3DF797A51694BA1D00E84594 /* OSEnvironmentProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C706B1694817800619CDB /* OSEnvironmentProbe.h */; };
+		3DF797A61694BA1D00E84594 /* OSSocialProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C706E1694818300619CDB /* OSSocialProbe.h */; };
+		3DF797A71694BA1D00E84594 /* OSDeviceInfoProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70711694818E00619CDB /* OSDeviceInfoProbe.h */; };
+		3DF797A81694BA1D00E84594 /* OSDeviceInteractionProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C7074169481A200619CDB /* OSDeviceInteractionProbe.h */; };
+		3DF797AA1694BF5800E84594 /* probes.plist in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DF797A91694BB1E00E84594 /* probes.plist */; };
+		3DF797B11694BFD600E84594 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF797B01694BFD600E84594 /* CoreFoundation.framework */; };
+		3DF797B71694BFD600E84594 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DF797B51694BFD600E84594 /* InfoPlist.strings */; };
+		3DF797BC1694C00400E84594 /* probes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DF797A91694BB1E00E84594 /* probes.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DDED6B2167D04CF006DE4F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DDED692167D04CF006DE4F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DDED69A167D04CF006DE4F8;
+			remoteInfo = OpenSense;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3DDED699167D04CF006DE4F8 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				3DF797AA1694BF5800E84594 /* probes.plist in Copy Files */,
+				3DF797A31694BA1D00E84594 /* OSPositioningProbe.h in Copy Files */,
+				3DF797A41694BA1D00E84594 /* OSMotionProbe.h in Copy Files */,
+				3DF797A51694BA1D00E84594 /* OSEnvironmentProbe.h in Copy Files */,
+				3DF797A61694BA1D00E84594 /* OSSocialProbe.h in Copy Files */,
+				3DF797A71694BA1D00E84594 /* OSDeviceInfoProbe.h in Copy Files */,
+				3DF797A81694BA1D00E84594 /* OSDeviceInteractionProbe.h in Copy Files */,
+				3D12255F1694B154005A1CBB /* OSProbe.h in Copy Files */,
+				3DDED6A4167D04CF006DE4F8 /* OpenSense.h in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3D8C70611694814C00619CDB /* OSPositioningProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPositioningProbe.h; sourceTree = "<group>"; };
+		3D8C70621694814C00619CDB /* OSPositioningProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPositioningProbe.m; sourceTree = "<group>"; };
+		3D8C70651694815800619CDB /* OSProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSProbe.h; sourceTree = "<group>"; };
+		3D8C70661694815800619CDB /* OSProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSProbe.m; sourceTree = "<group>"; };
+		3D8C70681694816C00619CDB /* OSMotionProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSMotionProbe.h; sourceTree = "<group>"; };
+		3D8C70691694816C00619CDB /* OSMotionProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMotionProbe.m; sourceTree = "<group>"; };
+		3D8C706B1694817800619CDB /* OSEnvironmentProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSEnvironmentProbe.h; sourceTree = "<group>"; };
+		3D8C706C1694817800619CDB /* OSEnvironmentProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSEnvironmentProbe.m; sourceTree = "<group>"; };
+		3D8C706E1694818300619CDB /* OSSocialProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSocialProbe.h; sourceTree = "<group>"; };
+		3D8C706F1694818300619CDB /* OSSocialProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSocialProbe.m; sourceTree = "<group>"; };
+		3D8C70711694818E00619CDB /* OSDeviceInfoProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDeviceInfoProbe.h; sourceTree = "<group>"; };
+		3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDeviceInfoProbe.m; sourceTree = "<group>"; };
+		3D8C7074169481A200619CDB /* OSDeviceInteractionProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDeviceInteractionProbe.h; sourceTree = "<group>"; };
+		3D8C7075169481A200619CDB /* OSDeviceInteractionProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDeviceInteractionProbe.m; sourceTree = "<group>"; };
+		3DDED69B167D04CF006DE4F8 /* libOpenSense.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOpenSense.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DDED69E167D04CF006DE4F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3DDED6A2167D04CF006DE4F8 /* OpenSense-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenSense-Prefix.pch"; sourceTree = "<group>"; };
+		3DDED6A3167D04CF006DE4F8 /* OpenSense.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenSense.h; sourceTree = "<group>"; };
+		3DDED6A5167D04CF006DE4F8 /* OpenSense.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenSense.m; sourceTree = "<group>"; };
+		3DDED6AC167D04CF006DE4F8 /* OpenSenseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenSenseTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DDED6AD167D04CF006DE4F8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3DDED6AF167D04CF006DE4F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3DDED6B7167D04CF006DE4F8 /* OpenSenseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenSenseTests-Info.plist"; sourceTree = "<group>"; };
+		3DDED6B9167D04CF006DE4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DDED6BB167D04CF006DE4F8 /* OpenSenseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenSenseTests.h; sourceTree = "<group>"; };
+		3DDED6BC167D04CF006DE4F8 /* OpenSenseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenSenseTests.m; sourceTree = "<group>"; };
+		3DF797A91694BB1E00E84594 /* probes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = probes.plist; sourceTree = "<group>"; };
+		3DF797AF1694BFD600E84594 /* OpenSenseResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenSenseResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DF797B01694BFD600E84594 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		3DF797B41694BFD600E84594 /* OpenSenseResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenSenseResources-Info.plist"; sourceTree = "<group>"; };
+		3DF797B61694BFD600E84594 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DF797B81694BFD600E84594 /* OpenSenseResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenSenseResources-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DDED698167D04CF006DE4F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DDED69F167D04CF006DE4F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DDED6A8167D04CF006DE4F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DDED6AE167D04CF006DE4F8 /* SenTestingKit.framework in Frameworks */,
+				3DDED6B0167D04CF006DE4F8 /* UIKit.framework in Frameworks */,
+				3DDED6B1167D04CF006DE4F8 /* Foundation.framework in Frameworks */,
+				3DDED6B4167D04CF006DE4F8 /* libOpenSense.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DF797AC1694BFD600E84594 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DF797B11694BFD600E84594 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DDED690167D04CF006DE4F8 = {
+			isa = PBXGroup;
+			children = (
+				3DDED6A0167D04CF006DE4F8 /* OpenSense */,
+				3DDED6B5167D04CF006DE4F8 /* OpenSenseTests */,
+				3DF797B21694BFD600E84594 /* OpenSenseResources */,
+				3DDED69D167D04CF006DE4F8 /* Frameworks */,
+				3DDED69C167D04CF006DE4F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DDED69C167D04CF006DE4F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DDED69B167D04CF006DE4F8 /* libOpenSense.a */,
+				3DDED6AC167D04CF006DE4F8 /* OpenSenseTests.octest */,
+				3DF797AF1694BFD600E84594 /* OpenSenseResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DDED69D167D04CF006DE4F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DDED69E167D04CF006DE4F8 /* Foundation.framework */,
+				3DDED6AD167D04CF006DE4F8 /* SenTestingKit.framework */,
+				3DDED6AF167D04CF006DE4F8 /* UIKit.framework */,
+				3DF797B01694BFD600E84594 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DDED6A0167D04CF006DE4F8 /* OpenSense */ = {
+			isa = PBXGroup;
+			children = (
+				3DDED71C167D1AA7006DE4F8 /* Configuration */,
+				3DDED71B167D1A7F006DE4F8 /* Probes */,
+				3DDED6A3167D04CF006DE4F8 /* OpenSense.h */,
+				3DDED6A5167D04CF006DE4F8 /* OpenSense.m */,
+				3DDED6A1167D04CF006DE4F8 /* Supporting Files */,
+			);
+			path = OpenSense;
+			sourceTree = "<group>";
+		};
+		3DDED6A1167D04CF006DE4F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DDED6A2167D04CF006DE4F8 /* OpenSense-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DDED6B5167D04CF006DE4F8 /* OpenSenseTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DDED6BB167D04CF006DE4F8 /* OpenSenseTests.h */,
+				3DDED6BC167D04CF006DE4F8 /* OpenSenseTests.m */,
+				3DDED6B6167D04CF006DE4F8 /* Supporting Files */,
+			);
+			path = OpenSenseTests;
+			sourceTree = "<group>";
+		};
+		3DDED6B6167D04CF006DE4F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DDED6B7167D04CF006DE4F8 /* OpenSenseTests-Info.plist */,
+				3DDED6B8167D04CF006DE4F8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DDED71B167D1A7F006DE4F8 /* Probes */ = {
+			isa = PBXGroup;
+			children = (
+				3D8C70651694815800619CDB /* OSProbe.h */,
+				3D8C70661694815800619CDB /* OSProbe.m */,
+				3D8C70611694814C00619CDB /* OSPositioningProbe.h */,
+				3D8C70621694814C00619CDB /* OSPositioningProbe.m */,
+				3D8C70681694816C00619CDB /* OSMotionProbe.h */,
+				3D8C70691694816C00619CDB /* OSMotionProbe.m */,
+				3D8C706B1694817800619CDB /* OSEnvironmentProbe.h */,
+				3D8C706C1694817800619CDB /* OSEnvironmentProbe.m */,
+				3D8C706E1694818300619CDB /* OSSocialProbe.h */,
+				3D8C706F1694818300619CDB /* OSSocialProbe.m */,
+				3D8C70711694818E00619CDB /* OSDeviceInfoProbe.h */,
+				3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */,
+				3D8C7074169481A200619CDB /* OSDeviceInteractionProbe.h */,
+				3D8C7075169481A200619CDB /* OSDeviceInteractionProbe.m */,
+				3DF797A91694BB1E00E84594 /* probes.plist */,
+			);
+			path = Probes;
+			sourceTree = "<group>";
+		};
+		3DDED71C167D1AA7006DE4F8 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		3DF797B21694BFD600E84594 /* OpenSenseResources */ = {
+			isa = PBXGroup;
+			children = (
+				3DF797B31694BFD600E84594 /* Supporting Files */,
+			);
+			path = OpenSenseResources;
+			sourceTree = "<group>";
+		};
+		3DF797B31694BFD600E84594 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DF797B41694BFD600E84594 /* OpenSenseResources-Info.plist */,
+				3DF797B51694BFD600E84594 /* InfoPlist.strings */,
+				3DF797B81694BFD600E84594 /* OpenSenseResources-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DDED69A167D04CF006DE4F8 /* OpenSense */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DDED6C0167D04CF006DE4F8 /* Build configuration list for PBXNativeTarget "OpenSense" */;
+			buildPhases = (
+				3DDED697167D04CF006DE4F8 /* Sources */,
+				3DDED698167D04CF006DE4F8 /* Frameworks */,
+				3DDED699167D04CF006DE4F8 /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenSense;
+			productName = OpenSense;
+			productReference = 3DDED69B167D04CF006DE4F8 /* libOpenSense.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3DDED6AB167D04CF006DE4F8 /* OpenSenseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DDED6C3167D04CF006DE4F8 /* Build configuration list for PBXNativeTarget "OpenSenseTests" */;
+			buildPhases = (
+				3DDED6A7167D04CF006DE4F8 /* Sources */,
+				3DDED6A8167D04CF006DE4F8 /* Frameworks */,
+				3DDED6A9167D04CF006DE4F8 /* Resources */,
+				3DDED6AA167D04CF006DE4F8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DDED6B3167D04CF006DE4F8 /* PBXTargetDependency */,
+			);
+			name = OpenSenseTests;
+			productName = OpenSenseTests;
+			productReference = 3DDED6AC167D04CF006DE4F8 /* OpenSenseTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		3DF797AE1694BFD600E84594 /* OpenSenseResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DF797B91694BFD600E84594 /* Build configuration list for PBXNativeTarget "OpenSenseResources" */;
+			buildPhases = (
+				3DF797AB1694BFD600E84594 /* Sources */,
+				3DF797AC1694BFD600E84594 /* Frameworks */,
+				3DF797AD1694BFD600E84594 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenSenseResources;
+			productName = OpenSenseResources;
+			productReference = 3DF797AF1694BFD600E84594 /* OpenSenseResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DDED692167D04CF006DE4F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Mathias Hansen";
+			};
+			buildConfigurationList = 3DDED695167D04CF006DE4F8 /* Build configuration list for PBXProject "OpenSense" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3DDED690167D04CF006DE4F8;
+			productRefGroup = 3DDED69C167D04CF006DE4F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DDED69A167D04CF006DE4F8 /* OpenSense */,
+				3DDED6AB167D04CF006DE4F8 /* OpenSenseTests */,
+				3DF797AE1694BFD600E84594 /* OpenSenseResources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DDED6A9167D04CF006DE4F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DDED6BA167D04CF006DE4F8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DF797AD1694BFD600E84594 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DF797BC1694C00400E84594 /* probes.plist in Resources */,
+				3DF797B71694BFD600E84594 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DDED6AA167D04CF006DE4F8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DDED697167D04CF006DE4F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DDED6A6167D04CF006DE4F8 /* OpenSense.m in Sources */,
+				3D8C70631694814C00619CDB /* OSPositioningProbe.m in Sources */,
+				3D8C70671694815800619CDB /* OSProbe.m in Sources */,
+				3D8C706A1694816C00619CDB /* OSMotionProbe.m in Sources */,
+				3D8C706D1694817800619CDB /* OSEnvironmentProbe.m in Sources */,
+				3D8C70701694818300619CDB /* OSSocialProbe.m in Sources */,
+				3D8C70731694818E00619CDB /* OSDeviceInfoProbe.m in Sources */,
+				3D8C7076169481A200619CDB /* OSDeviceInteractionProbe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DDED6A7167D04CF006DE4F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DDED6BD167D04CF006DE4F8 /* OpenSenseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DF797AB1694BFD600E84594 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DDED6B3167D04CF006DE4F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DDED69A167D04CF006DE4F8 /* OpenSense */;
+			targetProxy = 3DDED6B2167D04CF006DE4F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3DDED6B8167D04CF006DE4F8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DDED6B9167D04CF006DE4F8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3DF797B51694BFD600E84594 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DF797B61694BFD600E84594 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DDED6BE167D04CF006DE4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3DDED6BF167D04CF006DE4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DDED6C1167D04CF006DE4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/OpenSense.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenSense/OpenSense-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3DDED6C2167D04CF006DE4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/OpenSense.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenSense/OpenSense-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3DDED6C4167D04CF006DE4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenSense/OpenSense-Prefix.pch";
+				INFOPLIST_FILE = "OpenSenseTests/OpenSenseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3DDED6C5167D04CF006DE4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenSense/OpenSense-Prefix.pch";
+				INFOPLIST_FILE = "OpenSenseTests/OpenSenseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		3DF797BA1694BFD600E84594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenSenseResources/OpenSenseResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "OpenSenseResources/OpenSenseResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3DF797BB1694BFD600E84594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenSenseResources/OpenSenseResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "OpenSenseResources/OpenSenseResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DDED695167D04CF006DE4F8 /* Build configuration list for PBXProject "OpenSense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DDED6BE167D04CF006DE4F8 /* Debug */,
+				3DDED6BF167D04CF006DE4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DDED6C0167D04CF006DE4F8 /* Build configuration list for PBXNativeTarget "OpenSense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DDED6C1167D04CF006DE4F8 /* Debug */,
+				3DDED6C2167D04CF006DE4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DDED6C3167D04CF006DE4F8 /* Build configuration list for PBXNativeTarget "OpenSenseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DDED6C4167D04CF006DE4F8 /* Debug */,
+				3DDED6C5167D04CF006DE4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DF797B91694BFD600E84594 /* Build configuration list for PBXNativeTarget "OpenSenseResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DF797BA1694BFD600E84594 /* Debug */,
+				3DF797BB1694BFD600E84594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DDED692167D04CF006DE4F8 /* Project object */;
+}

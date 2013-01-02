@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'OpenSense' target in the 'OpenSense' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
