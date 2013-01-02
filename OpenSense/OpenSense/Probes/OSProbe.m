@@ -11,6 +11,23 @@
 @implementation OSProbe
 
 @synthesize delegate;
-@synthesize name, identifier, description;
+
++ (NSString*)name
+{
+    NSAssert(NO, @"This is an abstract method and should be overridden");
+    return @"";
+}
+
++ (NSString*)identifier
+{
+    NSAssert(NO, @"This is an abstract method and should be overridden");
+    return @"";
+}
+
++ (NSString*)description
+{
+    NSAssert(NO, @"This is an abstract method and should be overridden");
+    return @"";
+}
 
 @end

@@ -10,6 +10,21 @@
 
 @implementation OSMotionProbe
 
++ (NSString*)name
+{
+    return @"Motion";
+}
+
++ (NSString*)identifier
+{
+    return @"dk.dtu.imm.sensible.motion";
+}
+
++ (NSString*)description
+{
+    return @"";
+}
+
 - (void)probeDidStart
 {
     

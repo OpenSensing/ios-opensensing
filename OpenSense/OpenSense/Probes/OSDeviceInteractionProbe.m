@@ -10,6 +10,21 @@
 
 @implementation OSDeviceInteractionProbe
 
++ (NSString*)name
+{
+    return @"Device interaction";
+}
+
++ (NSString*)identifier
+{
+    return @"dk.dtu.imm.sensible.deviceinteraction";
+}
+
++ (NSString*)description
+{
+    return @"";
+}
+
 - (void)probeDidStart
 {
     

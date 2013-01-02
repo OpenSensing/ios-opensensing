@@ -10,6 +10,21 @@
 
 @implementation OSPositioningProbe
 
++ (NSString*)name
+{
+    return @"Positioning";
+}
+
++ (NSString*)identifier
+{
+    return @"dk.dtu.imm.sensible.positioning";
+}
+
++ (NSString*)description
+{
+    return @"";
+}
+
 - (void)probeDidStart
 {
     

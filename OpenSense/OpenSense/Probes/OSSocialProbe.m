@@ -10,6 +10,21 @@
 
 @implementation OSSocialProbe
 
++ (NSString*)name
+{
+    return @"Social";
+}
+
++ (NSString*)identifier
+{
+    return @"dk.dtu.imm.sensible.social";
+}
+
++ (NSString*)description
+{
+    return @"";
+}
+
 - (void)probeDidStart
 {
     

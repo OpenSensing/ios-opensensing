@@ -10,6 +10,21 @@
 
 @implementation OSEnvironmentProbe
 
++ (NSString*)name
+{
+    return @"Environment";
+}
+
++ (NSString*)identifier
+{
+    return @"dk.dtu.imm.sensible.environment";
+}
+
++ (NSString*)description
+{
+    return @"";
+}
+
 - (void)probeDidStart
 {
     

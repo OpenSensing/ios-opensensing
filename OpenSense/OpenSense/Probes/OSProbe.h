@@ -20,8 +20,9 @@
 @interface OSProbe : NSObject
 
 @property (nonatomic, assign) id<OSProbeDelegate> delegate;
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *identifier;
-@property (nonatomic, strong) NSString *description;
+
++ (NSString*)name;
++ (NSString*)identifier;
++ (NSString*)description;
 
 @end

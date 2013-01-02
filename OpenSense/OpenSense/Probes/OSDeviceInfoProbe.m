@@ -10,6 +10,21 @@
 
 @implementation OSDeviceInfoProbe
 
++ (NSString*)name
+{
+    return @"Device info";
+}
+
++ (NSString*)identifier
+{
+    return @"dk.dtu.imm.sensible.deviceinfo";
+}
+
++ (NSString*)description
+{
+    return @"";
+}
+
 - (void)probeDidStart
 {
     

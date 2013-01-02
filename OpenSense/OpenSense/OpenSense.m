@@ -7,6 +7,12 @@
 //
 
 #import "OpenSense.h"
+#import "OSPositioningProbe.h"
+#import "OSMotionProbe.h"
+#import "OSEnvironmentProbe.h"
+#import "OSSocialProbe.h"
+#import "OSDeviceInfoProbe.h"
+#import "OSDeviceInteractionProbe.h"
 
 @implementation OpenSense
 
@@ -34,31 +40,14 @@
 
 - (NSArray*)availableProbes
 {
-    NSMutableArray *probes = [[NSMutableArray alloc] init];
-    NSBundle *bundle = [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"OpenSenseResources" withExtension:@"bundle"]];
-    
-    NSArray *probeDescriptions = [NSArray arrayWithContentsOfFile:[bundle pathForResource:@"probes" ofType:@"plist"]];
-    
-    for (NSDictionary *probeInfo in probeDescriptions)
-    {
-        NSString *className = [probeInfo objectForKey:@"Class"];
-        NSLog(@"Class name: %@", className);
-        //NSLog(@"Class: %@", NSClassFromString(className));
-        
-        //[OSPositioningProbe class];
-        id probe = [[NSClassFromString(className) alloc] init];
-        
-        if (probe != nil)
-        {
-            /*probe.name = [probeInfo objectForKey:@"Name"];
-            probe.identifier = [probeInfo objectForKey:@"Identifier"];
-            probe.description = [probeInfo objectForKey:@"Description"];
-            */
-            [probes addObject:probe];
-        }
-    }
-    
-    return probes;
+    return @[
+        [OSPositioningProbe class],
+        [OSMotionProbe class],
+        [OSEnvironmentProbe class],
+        [OSSocialProbe class],
+        [OSDeviceInfoProbe class],
+        [OSDeviceInteractionProbe class]
+    ];
 }
 
 @end

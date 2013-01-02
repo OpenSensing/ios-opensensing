@@ -63,8 +63,7 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    OSProbe *probe = [probes objectAtIndex:[indexPath row]];
-    cell.textLabel.text = probe.name;
+    cell.textLabel.text = [[probes objectAtIndex:[indexPath row]] name];
     
     return cell;
 }
