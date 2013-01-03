@@ -3,9 +3,15 @@ v5
 r1
 cCheck dependencies
 cProcessInfoPlistFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/Info.plist" OpenSenseResources/OpenSenseResources-Info.plist
-cCopyPlistFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/probes.plist" OpenSense/Probes/probes.plist
+cCpResource OpenSense/LocalStorage/opensense.db build/Debug-iphoneos/OpenSenseResources.bundle/opensense.db
 cCopyStringsFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/en.lproj/InfoPlist.strings" OpenSenseResources/en.lproj/InfoPlist.strings
+cCopyPlistFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/probes.plist" OpenSense/Probes/probes.plist
 cTouch "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle"
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/LocalStorage/opensense.db
+c0000000050E5E90E0000000000004000
+t1357244686
+s16384
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/probes.plist
 c0000000050E4846000000000000007F5
@@ -18,19 +24,23 @@ t1357154390
 s45
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle
-t1357159007
+t1357239061
 s170
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/Info.plist
-t1357159007
+t1357239061
 s1108
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/en.lproj/InfoPlist.strings
-t1357159007
+t1357239061
 s42
 
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/opensense.db
+t2
+s0
+
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/probes.plist
-t1357159007
+t1357239061
 s655
 
 NOpenSenseResources/OpenSenseResources-Info.plist
@@ -40,40 +50,49 @@ s1395
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies7de96999fe95b641^ee3f6a99fe95b641^---0#1#0#--18"Check dependencies36"F7A0290A-F0DF-4F39-9B84-F19DBE9AA6E3-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies1b47349d2196b641^2194379d2196b641^---0#1#0#--18"Check dependencies36"9EFB66D9-1187-488F-9950-012526ED8EF7-
 
 CCopyPlistFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/probes.plist" OpenSense/Probes/probes.plist
-s378851807.599651
-e378851807.603007
+s378931861.820312
+e378931861.822514
 r1
 xCopyPlistFile
 x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/probes.plist
 xOpenSense/Probes/probes.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection34"Copy OpenSense/Probes/probes.plistfc8e99dfd194b641^ab5e9adfd194b641^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/probes.plist0000000000000000^580"CopyPlistFile build/Debug-iphoneos/OpenSenseResources.bundle/probes.plist OpenSense/Probes/probes.plist    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyPlist --convert binary1 --outdir "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle" -- OpenSense/Probes/probes.plist36"2B6BDA36-65EA-45E7-BF97-0B550524D435-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection34"Copy OpenSense/Probes/probes.plist9416d2950a96b641^8a90d2950a96b641^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/probes.plist0000000000000000^580"CopyPlistFile build/Debug-iphoneos/OpenSenseResources.bundle/probes.plist OpenSense/Probes/probes.plist    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyPlist --convert binary1 --outdir "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle" -- OpenSense/Probes/probes.plist36"926F1329-F288-4C2E-A093-CCA6DC3E2198-
 
 CCopyStringsFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/en.lproj/InfoPlist.strings" OpenSenseResources/en.lproj/InfoPlist.strings
-s378851807.599645
-e378851807.601937
+s378931861.820310
+e378931861.823528
 r1
 xCopyStringsFile
 x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/en.lproj/InfoPlist.strings
 xOpenSenseResources/en.lproj/InfoPlist.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy OpenSenseResources/en.lproj/InfoPlist.strings1d8f99dfd194b641^9c189adfd194b641^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSenseResources/en.lproj/InfoPlist.strings0000000000000000^678"CopyStringsFile build/Debug-iphoneos/OpenSenseResources.bundle/en.lproj/InfoPlist.strings OpenSenseResources/en.lproj/InfoPlist.strings    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/en.lproj" -- OpenSenseResources/en.lproj/InfoPlist.strings36"620765C7-2888-4FE6-9553-79885A5A5580-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy OpenSenseResources/en.lproj/InfoPlist.stringse317d2950a96b641^ccd2d2950a96b641^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSenseResources/en.lproj/InfoPlist.strings0000000000000000^678"CopyStringsFile build/Debug-iphoneos/OpenSenseResources.bundle/en.lproj/InfoPlist.strings OpenSenseResources/en.lproj/InfoPlist.strings    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/en.lproj" -- OpenSenseResources/en.lproj/InfoPlist.strings36"6CBEAB6B-196E-4C24-87A4-F123F3989F0C-
+
+CCpResource OpenSense/LocalStorage/opensense.db build/Debug-iphoneos/OpenSenseResources.bundle/opensense.db
+s378937757.227127
+e378937757.228976
+r1
+xCpResource
+xOpenSense/LocalStorage/opensense.db
+xbuild/Debug-iphoneos/OpenSenseResources.bundle/opensense.db
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy build/Debug-iphoneos/OpenSenseResources.bundle/opensense.db6d363a9d2196b641^0edb3a9d2196b641^---0#0#0#-19%DVTDocumentLocation2@151"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/opensense.db000000000080d041^725"CpResource OpenSense/LocalStorage/opensense.db build/Debug-iphoneos/OpenSenseResources.bundle/opensense.db    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/LocalStorage/opensense.db" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle"36"332390AD-A408-405E-8883-E10678CC8482-
 
 CProcessInfoPlistFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/Info.plist" OpenSenseResources/OpenSenseResources-Info.plist
-s378851807.588884
-e378851807.591478
+s378931861.809927
+e378931861.812838
 r1
 xProcessInfoPlistFile
 x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/Info.plist
 xOpenSenseResources/OpenSenseResources-Info.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Process OpenSenseResources/OpenSenseResources-Info.plistf7cc96dfd194b641^d78997dfd194b641^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSenseResources/OpenSenseResources-Info.plist0000000000000000^669"ProcessInfoPlistFile build/Debug-iphoneos/OpenSenseResources.bundle/Info.plist OpenSenseResources/OpenSenseResources-Info.plist    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility OpenSenseResources/OpenSenseResources-Info.plist -expandbuildsettings -format binary -platform iphoneos -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/Info.plist"36"F7B2F2BF-D26E-46D8-A744-333429B9E82B-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Process OpenSenseResources/OpenSenseResources-Info.plist9c6ccf950a96b641^e92bd0950a96b641^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSenseResources/OpenSenseResources-Info.plist0000000000000000^669"ProcessInfoPlistFile build/Debug-iphoneos/OpenSenseResources.bundle/Info.plist OpenSenseResources/OpenSenseResources-Info.plist    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility OpenSenseResources/OpenSenseResources-Info.plist -expandbuildsettings -format binary -platform iphoneos -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/Info.plist"36"BFFD7260-E093-4551-9182-BEA2530526A8-
 
 CTouch "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle"
-s378851807.611130
-e378851807.615794
+s378937757.237011
+e378937757.242047
 r1
 xTouch
 x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Touch /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle397e9cdfd194b641^33a59ddfd194b641^---0#0#0#--469"Touch build/Debug-iphoneos/OpenSenseResources.bundle    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle"36"EAD74EEE-5295-4EDB-A282-4AE7CFB743D7-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Touch /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle88b93c9d2196b641^73f73d9d2196b641^---0#0#0#--469"Touch build/Debug-iphoneos/OpenSenseResources.bundle    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle"36"D0E76AA4-E76B-4DC9-AE91-E1F62E58BE86-
 

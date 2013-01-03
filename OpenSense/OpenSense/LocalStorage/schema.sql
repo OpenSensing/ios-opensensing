@@ -1,0 +1,12 @@
+CREATE TABLE batches (
+	pk INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL ,
+	created TEXT,
+	probeIdentifier TEXT
+);
+
+CREATE TABLE batch_data (
+	pk INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL ,
+	batchId INTEGER,
+	key TEXT,
+	value TEXT
+);

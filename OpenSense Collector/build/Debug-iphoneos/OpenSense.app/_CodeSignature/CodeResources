@@ -24,14 +24,6 @@
 		<data>
 		54YKLFF0vj4lDLvUgNI3p1raom8=
 		</data>
-		<key>OpenSenseResources.bundle/en.lproj/InfoPlist.strings</key>
-		<data>
-		zmV6UqBSo6r1NOz798vd5O4zTBA=
-		</data>
-		<key>OpenSenseResources.bundle/probes.plist</key>
-		<data>
-		QCCC7UHcB3i/GI+qRjUdrpnj9gY=
-		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
@@ -44,6 +36,10 @@
 		<data>
 		zsYTtjuXzy60Vb679oXa6iV6PL4=
 		</data>
+		<key>db.plist</key>
+		<data>
+		6J0+WBjkVk7XWFGjbCcdrpTKIO4=
+		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
 		QvGgptLqEYCUvSspBfvGidlg40I=
@@ -54,19 +50,27 @@
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/2eR-TY-dwr-view-Svj-ky-oON.nib</key>
 		<data>
-		tDX9to6gvKkcG33TwUkHKiFZ+eM=
+		lFR0Wo4HK+7ZlOaEN/GEt/kRTi4=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/UIViewController-4.nib</key>
 		<data>
-		WqwaQZCv7stluNaWOOdZhfi8Q1w=
+		iTHNJnqpLw4MsVAaxoWdRgfQMLg=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/oo7-Zy-rV0-view-1wV-pL-Zyz.nib</key>
 		<data>
-		mRieRufag+EnqH6iJ68TrSe3HbI=
+		vt7X2yTawEhCd2TIGS3EAcDzx4o=
 		</data>
 		<key>en.lproj/MainStoryboard.storyboardc/ztF-Qt-8Qh-view-idh-Jc-wYE.nib</key>
 		<data>
-		J+mBtRy/vNGOzfz+g+wheB6LNhM=
+		D0q43HHxZM2MSRE/u4BaQyJQPaw=
+		</data>
+		<key>opensense.db</key>
+		<data>
+		hYv80f94IqmTOrZ5R2ChOwfQwvQ=
+		</data>
+		<key>opensense.sqlite</key>
+		<data>
+		hYv80f94IqmTOrZ5R2ChOwfQwvQ=
 		</data>
 		<key>probes.png</key>
 		<data>

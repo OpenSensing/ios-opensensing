@@ -7,6 +7,7 @@
 //
 
 #import "OSProbe.h"
+#import "LocalStorage.h"
 
 @implementation OSProbe
 
@@ -54,7 +55,8 @@
     NSDictionary *data = [self sendData];
     NSLog(@"%@", data);
     
-    // TODO: Save to local storage
+    // Store data in the local storage
+    [[LocalStorage sharedInstance] saveBatch:data fromProbe:[[self class] identifier]];
 }
 
 - (NSDictionary*)sendData
