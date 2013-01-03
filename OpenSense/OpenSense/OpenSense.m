@@ -13,6 +13,7 @@
 #import "OSSocialProbe.h"
 #import "OSDeviceInfoProbe.h"
 #import "OSDeviceInteractionProbe.h"
+#import "OSBatteryProbe.h"
 
 @implementation OpenSense
 
@@ -30,11 +31,25 @@
 
 - (void)startCollector
 {
+    activeProbes = [[NSMutableArray alloc] init];
+    for (Class class in [self availableProbes])
+    {
+        OSProbe *probe = [[class alloc] init];
+        [activeProbes addObject:probe];
+        [probe startProbe];
+    }
+    
     isRunning = YES;
 }
 
 - (void)stopCollector
 {
+    for (OSProbe *probe in activeProbes)
+    {
+        [probe stopProbe];
+    }
+    activeProbes = nil;
+    
     isRunning = NO;
 }
 
@@ -46,7 +61,8 @@
         [OSEnvironmentProbe class],
         [OSSocialProbe class],
         [OSDeviceInfoProbe class],
-        [OSDeviceInteractionProbe class]
+        [OSDeviceInteractionProbe class],
+        [OSBatteryProbe class],
     ];
 }
 

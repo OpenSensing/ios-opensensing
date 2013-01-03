@@ -1,0 +1,394 @@
+TOpenSense
+v5
+r1
+cCheck dependencies
+cProcessPCH /var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense-Prefix-djjpnhyxzptgtfcjjrfwsjpvpzlg/OpenSense-Prefix.pch.pth OpenSense/OpenSense-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OpenSense.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/OpenSense.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSPositioningProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSPositioningProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSEnvironmentProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSEnvironmentProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSMotionProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSMotionProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSSocialProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSSocialProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInfoProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInfoProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInteractionProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInteractionProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/libOpenSense.a" normal i386
+cPBXCp OpenSense/Probes/OSMotionProbe.h build/Debug-iphonesimulator/../includes/OSMotionProbe.h
+cPBXCp OpenSense/Probes/OSPositioningProbe.h build/Debug-iphonesimulator/../includes/OSPositioningProbe.h
+cPBXCp build/Debug-iphonesimulator/OpenSenseResources.bundle build/Debug-iphonesimulator/../includes/OpenSenseResources.bundle
+cPBXCp OpenSense/Probes/OSEnvironmentProbe.h build/Debug-iphonesimulator/../includes/OSEnvironmentProbe.h
+cPBXCp OpenSense/Probes/OSSocialProbe.h build/Debug-iphonesimulator/../includes/OSSocialProbe.h
+cPBXCp OpenSense/Probes/OSDeviceInfoProbe.h build/Debug-iphonesimulator/../includes/OSDeviceInfoProbe.h
+cPBXCp OpenSense/Probes/OSDeviceInteractionProbe.h build/Debug-iphonesimulator/../includes/OSDeviceInteractionProbe.h
+cPBXCp OpenSense/Probes/OSProbe.h build/Debug-iphonesimulator/../includes/OSProbe.h
+cPBXCp OpenSense/OpenSense.h build/Debug-iphonesimulator/../includes/OpenSense.h
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk
+c00000000504916AD0000000000000110
+t1346967213
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c0000000050B2268A00000000003DCEF0
+t1353852554
+s4050672
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c0000000050B2268A00000000000015F7
+t1353852554
+s5623
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/OpenSense-Prefix.pch
+c0000000050CCCD4F000000000000009F
+t1355599183
+s159
+i<Foundation/Foundation.h>
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/OpenSense.h
+c0000000050E49B3000000000000001A2
+t1357159216
+s418
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/OpenSense.m
+c0000000050E49D6900000000000003D7
+t1357159785
+s983
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInfoProbe.h
+c0000000050E4774700000000000000E8
+t1357150023
+s232
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInfoProbe.m
+c0000000050E4A00400000000000001FE
+t1357160452
+s510
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInteractionProbe.h
+c0000000050E4774900000000000000F6
+t1357150025
+s246
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInteractionProbe.m
+c0000000050E4A0100000000000000221
+t1357160464
+s545
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSEnvironmentProbe.h
+c0000000050E4774300000000000000EA
+t1357150019
+s234
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSEnvironmentProbe.m
+c0000000050E49FF30000000000000202
+t1357160435
+s514
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSMotionProbe.h
+c0000000050E4774200000000000000E0
+t1357150018
+s224
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSMotionProbe.m
+c0000000050E49FE900000000000001E9
+t1357160425
+s489
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSPositioningProbe.h
+c0000000050E49B1F0000000000000102
+t1357159199
+s258
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSPositioningProbe.m
+c0000000050E49E360000000000000202
+t1357159990
+s514
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSProbe.h
+c0000000050E49E3600000000000001D6
+t1357159990
+s470
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSProbe.m
+c0000000050E49E360000000000000235
+t1357159990
+s565
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSSocialProbe.h
+c0000000050E4774500000000000000E0
+t1357150021
+s224
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSSocialProbe.m
+c0000000050E49FFA00000000000001E9
+t1357160442
+s489
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/../includes/OSDeviceInfoProbe.h
+t1357159007
+s232
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/../includes/OSDeviceInteractionProbe.h
+t1357159007
+s246
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/../includes/OSEnvironmentProbe.h
+t1357159007
+s234
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/../includes/OSMotionProbe.h
+t1357159007
+s224
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/../includes/OSPositioningProbe.h
+t1357159219
+s258
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/../includes/OSProbe.h
+t1357159990
+s470
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/../includes/OSSocialProbe.h
+t1357159007
+s224
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/../includes/OpenSense.h
+t1357159219
+s418
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/../includes/OpenSenseResources.bundle
+t1357159039
+s170
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/OpenSenseResources.bundle
+c0000000050E595FB00000000000000AA
+t1357223419
+s170
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/libOpenSense.a
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInfoProbe.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInteractionProbe.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSEnvironmentProbe.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSMotionProbe.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSPositioningProbe.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSProbe.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSSocialProbe.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OpenSense.LinkFileList
+c0000000050E595FB000000000000055F
+t1357223419
+s1375
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OpenSense.o
+t2
+s0
+
+N/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense-Prefix-djjpnhyxzptgtfcjjrfwsjpvpzlg/OpenSense-Prefix.pch.pth
+t1357158192
+s2930308
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/OpenSense.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInfoProbe.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInteractionProbe.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSEnvironmentProbe.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSMotionProbe.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSPositioningProbe.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSProbe.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSSocialProbe.m"
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies43e19b7bcd95b641^359a9c7bcd95b641^---0#1#0#--18"Check dependencies36"80607D7E-33AC-45F4-A652-A806780046A6-
+
+CCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInfoProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInfoProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s378916219.623514
+e378916219.885671
+r1
+xCompileC
+xbuild/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInfoProbe.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInfoProbe.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInfoProbe.m5fcf9f7bcd95b641^b0c5e27bcd95b641^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInfoProbe.m0000000000000000^4108"CompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInfoProbe.o OpenSense/Probes/OSDeviceInfoProbe.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-generated-files.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-own-target-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-all-target-headers.hmap" -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-project-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources/i386" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator" -include /var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense-Prefix-djjpnhyxzptgtfcjjrfwsjpvpzlg/OpenSense-Prefix.pch -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInfoProbe.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInfoProbe.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInfoProbe.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInfoProbe.o"36"EC610666-4411-41E3-811B-1E43E056A219-
+
+CCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInteractionProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInteractionProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s378916219.624093
+e378916219.885985
+r1
+xCompileC
+xbuild/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInteractionProbe.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInteractionProbe.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInteractionProbe.m60ea9f7bcd95b641^56d6e27bcd95b641^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInteractionProbe.m0000000000000000^4150"CompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInteractionProbe.o OpenSense/Probes/OSDeviceInteractionProbe.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-generated-files.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-own-target-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-all-target-headers.hmap" -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-project-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources/i386" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator" -include /var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense-Prefix-djjpnhyxzptgtfcjjrfwsjpvpzlg/OpenSense-Prefix.pch -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInteractionProbe.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInteractionProbe.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSDeviceInteractionProbe.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSDeviceInteractionProbe.o"36"B48A2804-251A-4398-9B07-7566192DC1C7-
+
+CCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSEnvironmentProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSEnvironmentProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s378916219.622924
+e378916219.886403
+r1
+xCompileC
+xbuild/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSEnvironmentProbe.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSEnvironmentProbe.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSEnvironmentProbe.m92b09f7bcd95b641^1cebe27bcd95b641^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSEnvironmentProbe.m0000000000000000^4114"CompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSEnvironmentProbe.o OpenSense/Probes/OSEnvironmentProbe.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-generated-files.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-own-target-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-all-target-headers.hmap" -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-project-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources/i386" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator" -include /var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense-Prefix-djjpnhyxzptgtfcjjrfwsjpvpzlg/OpenSense-Prefix.pch -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSEnvironmentProbe.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSEnvironmentProbe.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSEnvironmentProbe.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSEnvironmentProbe.o"36"E0436C5F-3605-417E-A6EC-4F5717494CB0-
+
+CCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSMotionProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSMotionProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s378916219.622929
+e378916219.885779
+r1
+xCompileC
+xbuild/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSMotionProbe.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSMotionProbe.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSMotionProbe.mf2b19f7bcd95b641^f3c9e27bcd95b641^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSMotionProbe.m0000000000000000^4084"CompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSMotionProbe.o OpenSense/Probes/OSMotionProbe.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-generated-files.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-own-target-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-all-target-headers.hmap" -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-project-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources/i386" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator" -include /var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense-Prefix-djjpnhyxzptgtfcjjrfwsjpvpzlg/OpenSense-Prefix.pch -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSMotionProbe.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSMotionProbe.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSMotionProbe.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSMotionProbe.o"36"4985525A-76CD-476F-95CD-0ABD2CB3D809-
+
+CCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSPositioningProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSPositioningProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s378916219.622909
+e378916219.886682
+r1
+xCompileC
+xbuild/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSPositioningProbe.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSPositioningProbe.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSPositioningProbe.m08ad9f7bcd95b641^fcfde27bcd95b641^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSPositioningProbe.m0000000000000000^4114"CompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSPositioningProbe.o OpenSense/Probes/OSPositioningProbe.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-generated-files.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-own-target-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-all-target-headers.hmap" -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-project-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources/i386" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator" -include /var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense-Prefix-djjpnhyxzptgtfcjjrfwsjpvpzlg/OpenSense-Prefix.pch -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSPositioningProbe.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSPositioningProbe.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSPositioningProbe.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSPositioningProbe.o"36"5B272A23-0827-4D45-800C-5D742F90F02D-
+
+CCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s378916219.622905
+e378916219.886509
+r1
+xCompileC
+xbuild/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSProbe.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSProbe.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSProbe.macaa9f7bcd95b641^8df0e27bcd95b641^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSProbe.m0000000000000000^4048"CompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSProbe.o OpenSense/Probes/OSProbe.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-generated-files.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-own-target-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-all-target-headers.hmap" -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-project-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources/i386" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator" -include /var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense-Prefix-djjpnhyxzptgtfcjjrfwsjpvpzlg/OpenSense-Prefix.pch -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSProbe.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSProbe.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSProbe.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSProbe.o"36"82E849FD-4978-4A8F-8128-AA5CBB8A77D8-
+
+CCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSSocialProbe.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSSocialProbe.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s378916219.623144
+e378916219.885937
+r1
+xCompileC
+xbuild/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSSocialProbe.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSSocialProbe.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSSocialProbe.m1cb49f7bcd95b641^ccd2e27bcd95b641^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSSocialProbe.m0000000000000000^4084"CompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSSocialProbe.o OpenSense/Probes/OSSocialProbe.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-generated-files.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-own-target-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-all-target-headers.hmap" -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-project-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources/i386" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator" -include /var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense-Prefix-djjpnhyxzptgtfcjjrfwsjpvpzlg/OpenSense-Prefix.pch -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSSocialProbe.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSSocialProbe.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/OSSocialProbe.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OSSocialProbe.o"36"F6ED80F7-3748-43A4-B745-62576DB5CA29-
+
+CCompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OpenSense.o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/OpenSense.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s378916219.622893
+e378916219.912600
+r1
+xCompileC
+xbuild/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OpenSense.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/OpenSense.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/OpenSense.m0cac9f7bcd95b641^27a0e97bcd95b641^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/OpenSense/OpenSense.m0000000000000000^4046"CompileC build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OpenSense.o OpenSense/OpenSense.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-generated-files.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-own-target-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-all-target-headers.hmap" -iquote "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/OpenSense-project-headers.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources/i386" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator" -include /var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense-Prefix-djjpnhyxzptgtfcjjrfwsjpvpzlg/OpenSense-Prefix.pch -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OpenSense.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OpenSense.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/OpenSense.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OpenSense.o"36"58B195F0-99BA-4E48-93D8-E35B5F0C9B95-
+
+CLibtool "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/libOpenSense.a" normal i386
+s378916219.919427
+e378916219.929062
+r1
+xLibtool
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/libOpenSense.a
+xnormal
+xi386
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified, -all_load invalid
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Libtool build/Debug-iphonesimulator/libOpenSense.a normal i3869b70eb7bcd95b641^7fd9ed7bcd95b641^-297"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified, -all_load invalid/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC -0#0#0#--1089"Libtool build/Debug-iphonesimulator/libOpenSense.a normal i386    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv IPHONEOS_DEPLOYMENT_TARGET 6.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk "-L/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator" -filelist "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/OpenSense.build/Debug-iphonesimulator/OpenSense.build/Objects-normal/i386/OpenSense.LinkFileList" -ObjC -all_load -framework Foundation -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/libOpenSense.a"36"0440943B-CB2D-48C7-B55F-CB7BA8A6CD48-
+
+CPBXCp OpenSense/OpenSense.h build/Debug-iphonesimulator/../includes/OpenSense.h
+r0
+
+CPBXCp OpenSense/Probes/OSDeviceInfoProbe.h build/Debug-iphonesimulator/../includes/OSDeviceInfoProbe.h
+r0
+
+CPBXCp OpenSense/Probes/OSDeviceInteractionProbe.h build/Debug-iphonesimulator/../includes/OSDeviceInteractionProbe.h
+r0
+
+CPBXCp OpenSense/Probes/OSEnvironmentProbe.h build/Debug-iphonesimulator/../includes/OSEnvironmentProbe.h
+r0
+
+CPBXCp OpenSense/Probes/OSMotionProbe.h build/Debug-iphonesimulator/../includes/OSMotionProbe.h
+r0
+
+CPBXCp OpenSense/Probes/OSPositioningProbe.h build/Debug-iphonesimulator/../includes/OSPositioningProbe.h
+r0
+
+CPBXCp OpenSense/Probes/OSProbe.h build/Debug-iphonesimulator/../includes/OSProbe.h
+r0
+
+CPBXCp OpenSense/Probes/OSSocialProbe.h build/Debug-iphonesimulator/../includes/OSSocialProbe.h
+r0
+
+CPBXCp build/Debug-iphonesimulator/OpenSenseResources.bundle build/Debug-iphonesimulator/../includes/OpenSenseResources.bundle
+s378916219.937262
+e378916219.939756
+r1
+xPBXCp
+xbuild/Debug-iphonesimulator/OpenSenseResources.bundle
+xbuild/Debug-iphonesimulator/../includes/OpenSenseResources.bundle
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy build/Debug-iphonesimulator/../includes/OpenSenseResources.bundle1100f07bcd95b641^9294f07bcd95b641^---0#0#0#-19%DVTDocumentLocation2@158"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/../includes/OpenSenseResources.bundle/0000000000000000^762"PBXCp build/Debug-iphonesimulator/OpenSenseResources.bundle build/Debug-iphonesimulator/../includes/OpenSenseResources.bundle    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/OpenSenseResources.bundle" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphonesimulator/../includes"36"C3916F4C-38D0-4A93-A90D-327B91C43D8F-
+
+CProcessPCH /Users/mini/Library/Developer/Xcode/DerivedData/OpenSense_Collector-ekyrwovupurarmboomzcvtrmtmii/Index/PrecompiledHeaders/OpenSense-Prefix-buhutkzwpqlctyenxobovgxfaktq_ast/OpenSense-Prefix.pch.pth OpenSense/OpenSense-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense-Prefix-djjpnhyxzptgtfcjjrfwsjpvpzlg/OpenSense-Prefix.pch.pth OpenSense/OpenSense-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+

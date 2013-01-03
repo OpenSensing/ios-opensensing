@@ -8,21 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol OSProbeDelegate <NSObject>
+@interface OSProbe : NSObject {
+    NSTimer *updateTimer;
+    NSTimeInterval updateInterval;
+}
 
-- (void)probeDidStart;
-- (void)probeDidStop;
-- (void)sendData;
-- (void)sendStatus;
-
-@end
-
-@interface OSProbe : NSObject
-
-@property (nonatomic, assign) id<OSProbeDelegate> delegate;
+@property (assign, readonly) BOOL isStarted;
 
 + (NSString*)name;
 + (NSString*)identifier;
 + (NSString*)description;
++ (NSTimeInterval)defaultUpdateInterval;
+
+- (void)startProbe;
+- (void)stopProbe;
+- (NSDictionary*)sendData;
+- (NSTimeInterval)updateInterval;
 
 @end

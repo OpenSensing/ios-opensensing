@@ -33,6 +33,7 @@
 		3DF797B11694BFD600E84594 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF797B01694BFD600E84594 /* CoreFoundation.framework */; };
 		3DF797B71694BFD600E84594 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DF797B51694BFD600E84594 /* InfoPlist.strings */; };
 		3DF797C41694C52200E84594 /* probes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DF797A91694BB1E00E84594 /* probes.plist */; };
+		3DFE53301695D5AE00E09161 /* OSBatteryProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE532F1695D5AE00E09161 /* OSBatteryProbe.m */; };
 		3DFE62521694CB7100145310 /* OpenSenseResources.bundle in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DF797AF1694BFD600E84594 /* OpenSenseResources.bundle */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,8 @@
 		3DF797B41694BFD600E84594 /* OpenSenseResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenSenseResources-Info.plist"; sourceTree = "<group>"; };
 		3DF797B61694BFD600E84594 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3DF797B81694BFD600E84594 /* OpenSenseResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenSenseResources-Prefix.pch"; sourceTree = "<group>"; };
+		3DFE532E1695D5AE00E09161 /* OSBatteryProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSBatteryProbe.h; sourceTree = "<group>"; };
+		3DFE532F1695D5AE00E09161 /* OSBatteryProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSBatteryProbe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +225,8 @@
 				3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */,
 				3D8C7074169481A200619CDB /* OSDeviceInteractionProbe.h */,
 				3D8C7075169481A200619CDB /* OSDeviceInteractionProbe.m */,
+				3DFE532E1695D5AE00E09161 /* OSBatteryProbe.h */,
+				3DFE532F1695D5AE00E09161 /* OSBatteryProbe.m */,
 				3DF797A91694BB1E00E84594 /* probes.plist */,
 			);
 			path = Probes;
@@ -385,6 +390,7 @@
 				3D8C70701694818300619CDB /* OSSocialProbe.m in Sources */,
 				3D8C70731694818E00619CDB /* OSDeviceInfoProbe.m in Sources */,
 				3D8C7076169481A200619CDB /* OSDeviceInteractionProbe.m in Sources */,
+				3DFE53301695D5AE00E09161 /* OSBatteryProbe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

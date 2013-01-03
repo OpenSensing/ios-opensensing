@@ -25,24 +25,24 @@
     return @"";
 }
 
-- (void)probeDidStart
++ (NSTimeInterval)defaultUpdateInterval
+{
+    return 10;
+}
+
+- (void)startProbe
 {
     
 }
 
-- (void)probeDidStop
+- (void)stopProbe
 {
     
 }
 
-- (void)sendData
+- (NSDictionary*)sendData
 {
-    
-}
-
-- (void)sendStatus
-{
-    
+    return [NSDictionary dictionary];
 }
 
 @end

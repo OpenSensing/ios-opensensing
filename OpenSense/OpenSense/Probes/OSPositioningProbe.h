@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "OSProbe.h"
 
-@interface OSPositioningProbe : OSProbe<OSProbeDelegate>
+@interface OSPositioningProbe : OSProbe
 
 @end

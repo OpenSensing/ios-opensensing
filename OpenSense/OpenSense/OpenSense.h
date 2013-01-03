@@ -10,7 +10,9 @@
 #import "OSProbe.h"
 #import "OSPositioningProbe.h"
 
-@interface OpenSense : NSObject
+@interface OpenSense : NSObject {
+    NSMutableArray *activeProbes;
+}
 
 @property (assign, readonly) BOOL isRunning;
 

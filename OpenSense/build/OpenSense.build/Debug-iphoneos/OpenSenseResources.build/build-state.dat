@@ -3,8 +3,8 @@ v5
 r1
 cCheck dependencies
 cProcessInfoPlistFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/Info.plist" OpenSenseResources/OpenSenseResources-Info.plist
-cCopyStringsFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/en.lproj/InfoPlist.strings" OpenSenseResources/en.lproj/InfoPlist.strings
 cCopyPlistFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/probes.plist" OpenSense/Probes/probes.plist
+cCopyStringsFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/en.lproj/InfoPlist.strings" OpenSenseResources/en.lproj/InfoPlist.strings
 cTouch "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle"
 
 N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/OpenSense/Probes/probes.plist
@@ -40,7 +40,7 @@ s1395
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciese337f945e094b641^3a5af945e094b641^---0#1#0#--18"Check dependencies36"D88902FE-A2C1-46A5-ABD7-34A00AF62755-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies7de96999fe95b641^ee3f6a99fe95b641^---0#1#0#--18"Check dependencies36"F7A0290A-F0DF-4F39-9B84-F19DBE9AA6E3-
 
 CCopyPlistFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/OpenSenseResources.bundle/probes.plist" OpenSense/Probes/probes.plist
 s378851807.599651

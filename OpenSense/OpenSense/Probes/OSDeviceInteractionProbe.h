@@ -8,6 +8,6 @@
 
 #import "OSProbe.h"
 
-@interface OSDeviceInteractionProbe : OSProbe<OSProbeDelegate>
+@interface OSDeviceInteractionProbe : OSProbe
 
 @end
