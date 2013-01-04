@@ -52,8 +52,8 @@
 
 - (void)updateTimerElapsed:(id)sender
 {
+    // Receive data from the probe
     NSDictionary *data = [self sendData];
-    NSLog(@"%@", data);
     
     // Store data in the local storage
     [[LocalStorage sharedInstance] saveBatch:data fromProbe:[[self class] identifier]];

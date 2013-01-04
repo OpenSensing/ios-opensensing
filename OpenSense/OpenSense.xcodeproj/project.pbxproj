@@ -129,7 +129,6 @@
 		3DDED6B9167D04CF006DE4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3DDED6BB167D04CF006DE4F8 /* OpenSenseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenSenseTests.h; sourceTree = "<group>"; };
 		3DDED6BC167D04CF006DE4F8 /* OpenSenseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenSenseTests.m; sourceTree = "<group>"; };
-		3DF797A91694BB1E00E84594 /* probes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = probes.plist; sourceTree = "<group>"; };
 		3DF797B01694BFD600E84594 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		3DF797B41694BFD600E84594 /* OpenSenseResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenSenseResources-Info.plist"; sourceTree = "<group>"; };
 		3DF797B61694BFD600E84594 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -340,7 +339,6 @@
 				3D8C7075169481A200619CDB /* OSDeviceInteractionProbe.m */,
 				3DFE532E1695D5AE00E09161 /* OSBatteryProbe.h */,
 				3DFE532F1695D5AE00E09161 /* OSBatteryProbe.m */,
-				3DF797A91694BB1E00E84594 /* probes.plist */,
 			);
 			path = Probes;
 			sourceTree = "<group>";

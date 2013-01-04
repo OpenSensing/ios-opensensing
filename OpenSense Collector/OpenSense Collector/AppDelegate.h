@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    dispatch_block_t expirationHandler;
+    UIBackgroundTaskIdentifier bgTask;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
