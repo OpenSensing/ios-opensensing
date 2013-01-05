@@ -7,6 +7,8 @@
 //
 
 #import "LocalStorage.h"
+#import "OpenSense.h"
+#import "ZIMOrmSdk.h"
 #import "Batch.h"
 
 @implementation LocalStorage
@@ -35,6 +37,23 @@
         batchData.value = [batchDataDict valueForKey:key];
         [batchData save];
     }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kOpenSenseBatchSavedNotification object:batch];
+}
+
+- (NSArray*)fetchBatches
+{
+    ZIMOrmSelectStatement *select = [[ZIMOrmSelectStatement alloc] initWithModel: [Batch class]];
+    [select orderBy:@"created" descending:YES]; // Newest first
+    return [select query];
+}
+
+- (NSArray*)fetchBatchesForProbe:(NSString*)probeIdentifier
+{
+    ZIMOrmSelectStatement *select = [[ZIMOrmSelectStatement alloc] initWithModel: [Batch class]];
+    [select where:@"probeIdentifier" operator:ZIMSqlOperatorEqualTo value:probeIdentifier]; // Only batches from the specific probe
+    [select orderBy:@"created" descending:YES]; // Newest first
+    return [select query];
 }
 
 @end

@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		3D12255F1694B154005A1CBB /* OSProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70651694815800619CDB /* OSProbe.h */; };
+		3D4B3B14169723FB00FFEA73 /* Batch.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DFE541E1696067D00E09161 /* Batch.h */; };
+		3D4B3B15169723FB00FFEA73 /* BatchData.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DFE54211696076500E09161 /* BatchData.h */; };
+		3D4B3B171697256600FFEA73 /* NSString+ZIMString.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DFE53B0169604C700E09161 /* NSString+ZIMString.h */; };
+		3D4B3B181697256600FFEA73 /* ZIMOrmModel.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DFE53B3169604C700E09161 /* ZIMOrmModel.h */; };
+		3D4B3B191697256600FFEA73 /* ZIMOrmModelDelegate.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DFE53B5169604C700E09161 /* ZIMOrmModelDelegate.h */; };
+		3D4B3B1A1697256600FFEA73 /* ZIMOrmSdk.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DFE53B6169604C700E09161 /* ZIMOrmSdk.h */; };
+		3D4B3B1B1697256600FFEA73 /* ZIMOrmSelectStatement.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DFE53B7169604C700E09161 /* ZIMOrmSelectStatement.h */; };
+		3D4B3B1C1697256600FFEA73 /* ZIMMessageDigest.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DFE53F9169604C700E09161 /* ZIMMessageDigest.h */; };
+		3D4B3B1D1697256600FFEA73 /* OSBatteryProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DFE532E1695D5AE00E09161 /* OSBatteryProbe.h */; };
 		3D8C70631694814C00619CDB /* OSPositioningProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70621694814C00619CDB /* OSPositioningProbe.m */; };
 		3D8C70671694815800619CDB /* OSProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70661694815800619CDB /* OSProbe.m */; };
 		3D8C706A1694816C00619CDB /* OSMotionProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70691694816C00619CDB /* OSMotionProbe.m */; };
@@ -15,6 +24,8 @@
 		3D8C70701694818300619CDB /* OSSocialProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C706F1694818300619CDB /* OSSocialProbe.m */; };
 		3D8C70731694818E00619CDB /* OSDeviceInfoProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */; };
 		3D8C7076169481A200619CDB /* OSDeviceInteractionProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C7075169481A200619CDB /* OSDeviceInteractionProbe.m */; };
+		3DB21AE116972CB700F6B294 /* Batch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE541F1696067D00E09161 /* Batch.m */; };
+		3DB21AE416972ED500F6B294 /* OSProximityProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB21AE316972ED500F6B294 /* OSProximityProbe.m */; };
 		3DDED69F167D04CF006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED69E167D04CF006DE4F8 /* Foundation.framework */; };
 		3DDED6A4167D04CF006DE4F8 /* OpenSense.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DDED6A3167D04CF006DE4F8 /* OpenSense.h */; };
 		3DDED6A6167D04CF006DE4F8 /* OpenSense.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED6A5167D04CF006DE4F8 /* OpenSense.m */; };
@@ -65,7 +76,6 @@
 		3DFE541A169604C700E09161 /* ZIMSqlUpdateStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE53F5169604C700E09161 /* ZIMSqlUpdateStatement.m */; };
 		3DFE541B169604C700E09161 /* ZIMSqlUpsertStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE53F7169604C700E09161 /* ZIMSqlUpsertStatement.m */; };
 		3DFE541C169604C700E09161 /* ZIMMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE53FA169604C700E09161 /* ZIMMessageDigest.m */; };
-		3DFE54201696067D00E09161 /* Batch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE541F1696067D00E09161 /* Batch.m */; };
 		3DFE54231696076500E09161 /* BatchData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE54221696076500E09161 /* BatchData.m */; };
 		3DFE5427169608CF00E09161 /* LocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE5426169608CF00E09161 /* LocalStorage.m */; };
 		3DFE542B16960B5800E09161 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFE542A16960B5800E09161 /* libsqlite3.0.dylib */; };
@@ -88,6 +98,15 @@
 			dstPath = ../includes;
 			dstSubfolderSpec = 16;
 			files = (
+				3D4B3B171697256600FFEA73 /* NSString+ZIMString.h in Copy Files */,
+				3D4B3B181697256600FFEA73 /* ZIMOrmModel.h in Copy Files */,
+				3D4B3B191697256600FFEA73 /* ZIMOrmModelDelegate.h in Copy Files */,
+				3D4B3B1A1697256600FFEA73 /* ZIMOrmSdk.h in Copy Files */,
+				3D4B3B1B1697256600FFEA73 /* ZIMOrmSelectStatement.h in Copy Files */,
+				3D4B3B1C1697256600FFEA73 /* ZIMMessageDigest.h in Copy Files */,
+				3D4B3B1D1697256600FFEA73 /* OSBatteryProbe.h in Copy Files */,
+				3D4B3B14169723FB00FFEA73 /* Batch.h in Copy Files */,
+				3D4B3B15169723FB00FFEA73 /* BatchData.h in Copy Files */,
 				3DF797A31694BA1D00E84594 /* OSPositioningProbe.h in Copy Files */,
 				3DF797A41694BA1D00E84594 /* OSMotionProbe.h in Copy Files */,
 				3DF797A51694BA1D00E84594 /* OSEnvironmentProbe.h in Copy Files */,
@@ -117,6 +136,8 @@
 		3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDeviceInfoProbe.m; sourceTree = "<group>"; };
 		3D8C7074169481A200619CDB /* OSDeviceInteractionProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDeviceInteractionProbe.h; sourceTree = "<group>"; };
 		3D8C7075169481A200619CDB /* OSDeviceInteractionProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDeviceInteractionProbe.m; sourceTree = "<group>"; };
+		3DB21AE216972ED500F6B294 /* OSProximityProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSProximityProbe.h; sourceTree = "<group>"; };
+		3DB21AE316972ED500F6B294 /* OSProximityProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSProximityProbe.m; sourceTree = "<group>"; };
 		3DDED69B167D04CF006DE4F8 /* libOpenSense.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOpenSense.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDED69E167D04CF006DE4F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3DDED6A2167D04CF006DE4F8 /* OpenSense-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenSense-Prefix.pch"; sourceTree = "<group>"; };
@@ -339,6 +360,8 @@
 				3D8C7075169481A200619CDB /* OSDeviceInteractionProbe.m */,
 				3DFE532E1695D5AE00E09161 /* OSBatteryProbe.h */,
 				3DFE532F1695D5AE00E09161 /* OSBatteryProbe.m */,
+				3DB21AE216972ED500F6B294 /* OSProximityProbe.h */,
+				3DB21AE316972ED500F6B294 /* OSProximityProbe.m */,
 			);
 			path = Probes;
 			sourceTree = "<group>";
@@ -663,9 +686,10 @@
 				3DFE541A169604C700E09161 /* ZIMSqlUpdateStatement.m in Sources */,
 				3DFE541B169604C700E09161 /* ZIMSqlUpsertStatement.m in Sources */,
 				3DFE541C169604C700E09161 /* ZIMMessageDigest.m in Sources */,
-				3DFE54201696067D00E09161 /* Batch.m in Sources */,
 				3DFE54231696076500E09161 /* BatchData.m in Sources */,
 				3DFE5427169608CF00E09161 /* LocalStorage.m in Sources */,
+				3DB21AE116972CB700F6B294 /* Batch.m in Sources */,
+				3DB21AE416972ED500F6B294 /* OSProximityProbe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,18 +39,31 @@
 
 - (void)startProbe
 {
-    updateTimer = [NSTimer scheduledTimerWithTimeInterval:[self updateInterval] target:self selector:@selector(updateTimerElapsed:) userInfo:nil repeats:YES];
+    NSLog(@"%@ started", [[self class] name]);
+    
+    NSTimeInterval timerUpdateInterval = [self updateInterval];
+    
+    if (timerUpdateInterval > 0)
+    {
+        updateTimer = [NSTimer scheduledTimerWithTimeInterval:timerUpdateInterval target:self selector:@selector(saveData) userInfo:nil repeats:YES];
+    }
+    else
+    {
+        updateTimer = nil; // The probe is pushing data instead
+    }
 }
 
 - (void)stopProbe
 {
+    NSLog(@"%@ stopped", [[self class] name]);
+    
     if (updateTimer)
     {
         [updateTimer invalidate];
     }
 }
 
-- (void)updateTimerElapsed:(id)sender
+- (void)saveData
 {
     // Receive data from the probe
     NSDictionary *data = [self sendData];

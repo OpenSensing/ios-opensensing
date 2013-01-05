@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "OpenSense.h"
 
 @implementation AppDelegate
 
@@ -15,7 +16,7 @@
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     
     expirationHandler = ^{
-        [[UIApplication sharedApplication] endBackgroundTask:bgTask];
+        [application endBackgroundTask:bgTask];
         
         bgTask = UIBackgroundTaskInvalid;
         bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:expirationHandler];
@@ -33,17 +34,18 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:expirationHandler];
-    
-    // Start the worker task
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSLog(@"-- Worker task started --");
-        while (true)
-        {
-            NSLog(@"%@, %f remaining", [[NSDate date] description], [[UIApplication sharedApplication] backgroundTimeRemaining]);
-            [NSThread sleepForTimeInterval:1.0f];
-        }
-    });
+    if ([[OpenSense sharedInstance] isRunning])
+    {
+        bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:expirationHandler];
+        
+        // Start the worker task
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            while (true)
+            {
+                [NSThread sleepForTimeInterval:10.0f];
+            }
+        });
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

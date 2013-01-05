@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="15">
             <objects>
-                <tabBarController id="4" sceneMemberID="viewController">
+                <tabBarController id="4" customClass="TabBarViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -28,16 +28,17 @@
         <scene sceneID="ajg-90-Rx3">
             <objects>
                 <tableViewController id="ztF-Qt-8Qh" customClass="ProbesViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="idh-Jc-wYE">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="idh-Jc-wYE">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="JFO-h9-ggq" style="IBUITableViewCellStyleDefault" id="AMi-Yc-p7X">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="JFO-h9-ggq" style="IBUITableViewCellStyleDefault" id="AMi-Yc-p7X">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFO-h9-ggq">
@@ -48,6 +49,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="TMa-T8-G5D" kind="push" identifier="ProbeDataPlotSegue" id="iMP-7q-FNW"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -57,37 +61,143 @@
             </objects>
             <point key="canvasLocation" x="1131" y="287"/>
         </scene>
-        <!--Table View Controller - Statistics-->
+        <!--Probe Data Plot View Controller-->
+        <scene sceneID="mHm-ip-UbP">
+            <objects>
+                <viewController id="TMa-T8-G5D" customClass="ProbeDataPlotViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sSF-Yy-4Mq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mv9-5R-h8g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5jN-5C-boV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1572" y="287"/>
+        </scene>
+        <!--Database View Controller - Collected data-->
         <scene sceneID="BWm-ZS-I2z">
             <objects>
-                <tableViewController id="oo7-Zy-rV0" sceneMemberID="viewController">
+                <tableViewController id="oo7-Zy-rV0" customClass="DatabaseViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1wV-pL-Zyz">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ZfN-yY-nfS">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BatchCell" id="ZfN-yY-nfS" customClass="BatchCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2013-01-01 09:26" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxg-uf-Hgx">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="LTK-OF-Ksa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Battery" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIQ-Qh-PP3">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="177" id="XHh-Ls-m17"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="sIQ-Qh-PP3" firstAttribute="bottom" secondItem="pxg-uf-Hgx" secondAttribute="bottom" type="default" id="0fI-zb-Tlx"/>
+                                    <constraint firstItem="sIQ-Qh-PP3" firstAttribute="leading" secondItem="pxg-uf-Hgx" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="VuI-GV-U9D"/>
+                                    <constraint firstItem="sIQ-Qh-PP3" firstAttribute="top" secondItem="pxg-uf-Hgx" secondAttribute="top" type="default" id="aOs-G6-R3W"/>
+                                    <constraint firstItem="pxg-uf-Hgx" firstAttribute="centerY" secondItem="ZfN-yY-nfS" secondAttribute="centerY" type="default" id="cqr-qc-r4F"/>
+                                    <constraint firstAttribute="trailing" secondItem="sIQ-Qh-PP3" secondAttribute="trailing" constant="20" type="default" id="eET-9n-isM"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="labelDateTime" destination="pxg-uf-Hgx" id="6Zb-Xo-5Hb"/>
+                                    <outlet property="labelProbe" destination="sIQ-Qh-PP3" id="c8K-Wf-1hl"/>
+                                    <segue destination="FdO-G8-PFy" kind="push" identifier="BatchDataSegue" id="mNb-D4-Knm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Statistics" id="GaU-KA-I9k"/>
+                    <navigationItem key="navigationItem" title="Collected data" id="GaU-KA-I9k"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEm-sp-Cyv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1125" y="963"/>
         </scene>
-        <!--Navigation Controller - Statistics-->
+        <!--Batch Data View Controller-->
+        <scene sceneID="a9L-pU-ig4">
+            <objects>
+                <tableViewController id="FdO-G8-PFy" customClass="BatchDataViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tkF-Yk-Z1o">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BatchDataCell" id="Y46-0C-5qB" customClass="BatchDataCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="BATTERY_LEVEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvv-HQ-mgI">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="nxY-os-7iM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-1x-gbf">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="141" id="sPu-EU-Bg5"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="kvv-HQ-mgI" firstAttribute="leading" secondItem="Y46-0C-5qB" secondAttribute="leading" constant="10" id="BxS-9K-mos"/>
+                                    <constraint firstItem="xdW-1x-gbf" firstAttribute="baseline" secondItem="kvv-HQ-mgI" secondAttribute="baseline" type="default" id="Ty3-JH-hRp"/>
+                                    <constraint firstItem="kvv-HQ-mgI" firstAttribute="top" secondItem="xdW-1x-gbf" secondAttribute="top" type="default" id="aJF-lT-YHN"/>
+                                    <constraint firstItem="kvv-HQ-mgI" firstAttribute="centerY" secondItem="Y46-0C-5qB" secondAttribute="centerY" type="default" id="zN0-JY-3Gh"/>
+                                    <constraint firstItem="xdW-1x-gbf" firstAttribute="leading" secondItem="kvv-HQ-mgI" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zlC-4t-Q9i"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="labelKey" destination="kvv-HQ-mgI" id="40D-PV-oUa"/>
+                                    <outlet property="labelValue" destination="xdW-1x-gbf" id="THj-Al-aKg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FdO-G8-PFy" id="f70-km-ehc"/>
+                            <outlet property="delegate" destination="FdO-G8-PFy" id="To3-CW-7M6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="0re-FI-vVC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yMB-sv-IVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1572" y="963"/>
+        </scene>
+        <!--Navigation Controller - Collected data-->
         <scene sceneID="YmB-Zp-q1e">
             <objects>
                 <navigationController definesPresentationContext="YES" id="V4n-qr-HeF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Statistics" image="statistics.png" id="RDS-kM-Yfw"/>
+                    <tabBarItem key="tabBarItem" title="Collected data" image="statistics.png" id="RDS-kM-Yfw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mKi-Fi-L0e">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -269,8 +379,31 @@
         <image name="stop_hover.png" width="150" height="55"/>
     </resources>
     <classes>
+        <class className="BatchCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BatchCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="labelDateTime" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelProbe" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BatchDataCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BatchDataCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="labelKey" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelValue" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BatchDataViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BatchDataViewController.h"/>
+        </class>
+        <class className="DatabaseViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DatabaseViewController.h"/>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ProbeDataPlotViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProbeDataPlotViewController.h"/>
         </class>
         <class className="ProbesViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProbesViewController.h"/>
@@ -284,6 +417,9 @@
                 <relationship kind="outlet" name="pausedView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="runningView" candidateClass="UIView"/>
             </relationships>
+        </class>
+        <class className="TabBarViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TabBarViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

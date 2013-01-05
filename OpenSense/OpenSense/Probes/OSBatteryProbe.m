@@ -28,23 +28,30 @@
 
 + (NSTimeInterval)defaultUpdateInterval
 {
-    return 3600;
+    return -1;
 }
 
 - (void)startProbe
 {
-    NSLog(@"Battery probe started");
     [[UIDevice currentDevice] setBatteryMonitoringEnabled:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batteryChanged:) name:UIDeviceBatteryLevelDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batteryChanged:) name:UIDeviceBatteryStateDidChangeNotification object:nil];
     
     [super startProbe];
 }
 
 - (void)stopProbe
 {
-    NSLog(@"Battery probe stopped");
     [[UIDevice currentDevice] setBatteryMonitoringEnabled:NO];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     [super stopProbe];
+}
+
+- (void)batteryChanged:(NSNotification*)notification
+{
+    // Take new data snapshot
+    [self saveData];
 }
 
 - (NSDictionary*)sendData

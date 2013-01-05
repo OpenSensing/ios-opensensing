@@ -1,6 +1,6 @@
 CREATE TABLE batches (
 	pk INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL ,
-	created TEXT,
+	created DATETIME,
 	probeIdentifier TEXT
 );
 

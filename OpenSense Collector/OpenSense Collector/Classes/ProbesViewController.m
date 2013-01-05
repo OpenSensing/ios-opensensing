@@ -7,6 +7,7 @@
 //
 
 #import "ProbesViewController.h"
+#import "ProbeDataPlotViewController.h"
 #import "OpenSense.h"
 
 @interface ProbesViewController ()
@@ -67,7 +68,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     cell.textLabel.text = [[probes objectAtIndex:[indexPath row]] name];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
     return cell;
 }
@@ -113,17 +113,13 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if ([[segue identifier] isEqualToString:@"ProbeDataPlotSegue"])
+    {
+        ProbeDataPlotViewController *probeDataPlotViewController = [segue destinationViewController];
+        probeDataPlotViewController.probeIdentifer = [[probes objectAtIndex:[[self.tableView indexPathForSelectedRow] row]] identifier];
+    }
 }
 
 @end

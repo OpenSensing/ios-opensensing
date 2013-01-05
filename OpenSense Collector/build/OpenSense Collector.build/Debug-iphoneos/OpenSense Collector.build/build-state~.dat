@@ -1,0 +1,910 @@
+TOpenSense Collector
+v5
+r1
+cCheck dependencies
+cCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/ResourceRules.plist build/Debug-iphoneos/OpenSense.app/ResourceRules.plist
+cProcessInfoPlistFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Info.plist" "OpenSense Collector/OpenSense Collector-Info.plist"
+cProcessPCH "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch.pth" "OpenSense Collector/OpenSense Collector-Prefix.pch" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/AppDelegate.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/AppDelegate.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/main.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/main.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/StatusViewController.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/StatusViewController.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/DatabaseViewController.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/DatabaseViewController.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/ProbesViewController.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/ProbesViewController.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchCell.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchCell.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataViewController.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataViewController.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataCell.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataCell.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/OpenSense" normal armv7s
+cGenerateDSYMFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app.dSYM" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/OpenSense"
+cCopyStringsFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/en.lproj/InfoPlist.strings" "OpenSense Collector/en.lproj/InfoPlist.strings"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default.png" "OpenSense Collector/Default.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default@2x.png" "OpenSense Collector/Default@2x.png"
+cCompileStoryboard "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/en.lproj/MainStoryboard.storyboard"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default-568h@2x.png" "OpenSense Collector/Default-568h@2x.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/background-texture.png" "OpenSense Collector/Assets/background-texture.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/background-texture@2x.png" "OpenSense Collector/Assets/background-texture@2x.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start_hover.png" "OpenSense Collector/Assets/start_hover.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start.png" "OpenSense Collector/Assets/start.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start@2x.png" "OpenSense Collector/Assets/start@2x.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start_hover@2x.png" "OpenSense Collector/Assets/start_hover@2x.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop.png" "OpenSense Collector/Assets/stop.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop_hover.png" "OpenSense Collector/Assets/stop_hover.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop_hover@2x.png" "OpenSense Collector/Assets/stop_hover@2x.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop@2x.png" "OpenSense Collector/Assets/stop@2x.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Icon.png" Icon.png
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Icon@2x.png" Icon@2x.png
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/probes@2x.png" "OpenSense Collector/probes@2x.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/status@2x.png" "OpenSense Collector/status@2x.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/statistics.png" "OpenSense Collector/statistics.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/statistics@2x.png" "OpenSense Collector/statistics@2x.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/status.png" "OpenSense Collector/status.png"
+cCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/probes.png" "OpenSense Collector/probes.png"
+cCpResource "OpenSense Collector/opensense.sqlite" build/Debug-iphoneos/OpenSense.app/opensense.sqlite
+cCopyPlistFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/db.plist" "OpenSense Collector/db.plist"
+cProcessProductPackaging "/Users/mini/Library/MobileDevice/Provisioning Profiles/10D6891A-9309-45D9-B6F5-803FD2DA342E.mobileprovision" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/embedded.mobileprovision"
+cProcessProductPackaging "/Users/mini/Library/MobileDevice/Provisioning Profiles/10D6891A-9309-45D9-B6F5-803FD2DA342E.mobileprovision" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/embedded.mobileprovision"
+cTouch "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app"
+cProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Entitlements.plist "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.xcent"
+cCodeSign "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app"
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk
+c00000000503C83D40000000000000132
+t1346143188
+s306
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Entitlements.plist
+c0000000050B2267F0000000000000094
+t1353852543
+s148
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/ResourceRules.plist
+c0000000050B2267F0000000000000096
+t1353852543
+s150
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c0000000050B226800000000000322740
+t1353852544
+s3286848
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c0000000050B226800000000000629C80
+t1353852544
+s6462592
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c0000000050B2268000000000000015F7
+t1353852544
+s5623
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c0000000050B226810000000000000E8D
+t1353852545
+s3725
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c0000000050B2268200000000011BA850
+t1353852546
+s18589776
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/include/Availability.h
+c0000000050B226830000000000001B54
+t1353852547
+s6996
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libsqlite3.0.dylib
+c0000000050B226840000000000121450
+t1353852548
+s1184848
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/Icon.png
+c0000000050E4A6B30000000000002E15
+t1357162163
+s11797
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/Icon@2x.png
+c0000000050E4A6B300000000000061DD
+t1357162163
+s25053
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/AppDelegate.m
+c0000000050E6024D00000000000009D8
+t1357251149
+s2520
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/background-texture.png
+c0000000050E456A80000000000051E27
+t1357141672
+s335399
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/background-texture@2x.png
+c0000000050E456630000000000189F4C
+t1357141603
+s1613644
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/start.png
+c0000000050E4650B0000000000001490
+t1357145355
+s5264
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/start@2x.png
+c0000000050E464EC0000000000002458
+t1357145324
+s9304
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/start_hover.png
+c0000000050E465020000000000001477
+t1357145346
+s5239
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/start_hover@2x.png
+c0000000050E464F70000000000002944
+t1357145335
+s10564
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/stop.png
+c0000000050E4676B0000000000001383
+t1357145963
+s4995
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/stop@2x.png
+c0000000050E4670700000000000024A1
+t1357145863
+s9377
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/stop_hover.png
+c0000000050E4676500000000000012B0
+t1357145957
+s4784
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/stop_hover@2x.png
+c0000000050E46753000000000000228A
+t1357145939
+s8842
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchCell.m
+c0000000050E6E6C40000000000000263
+t1357309636
+s611
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataCell.m
+c0000000050E6E7D8000000000000026F
+t1357309912
+s623
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataViewController.m
+c0000000050E6FB480000000000000AD1
+t1357314888
+s2769
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/DatabaseViewController.m
+c0000000050E6FD54000000000000102F
+t1357315412
+s4143
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/ProbesViewController.m
+c0000000050E4AAAE0000000000000E6E
+t1357163182
+s3694
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/StatusViewController.m
+c0000000050E491A30000000000000483
+t1357156771
+s1155
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Default-568h@2x.png
+c0000000050748B2300000000000048A2
+t1349815075
+s18594
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Default.png
+c0000000050748B23000000000000198C
+t1349815075
+s6540
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Default@2x.png
+c0000000050748B230000000000003EEB
+t1349815075
+s16107
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/OpenSense Collector-Prefix.pch
+c0000000050CCD20B0000000000000155
+t1355600395
+s341
+i<Availability.h>
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/db.plist
+c0000000050E5EAFD000000000000016A
+t1357245181
+s362
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/en.lproj/InfoPlist.strings
+c0000000050CCD20B000000000000002D
+t1355600395
+s45
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/en.lproj/MainStoryboard.storyboard
+c0000000050E6F5EA0000000000008F1A
+t1357313514
+s36634
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/main.m
+c0000000050E489D40000000000000161
+t1357154772
+s353
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/opensense.sqlite
+c0000000050E6F10B0000000000004000
+t1357312267
+s16384
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/probes.png
+c000000004CB898D20000000000000B90
+t1287166162
+s2960
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/probes@2x.png
+c000000004CB898D20000000000000B9E
+t1287166162
+s2974
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/statistics.png
+c000000004CBBDF3E000000000000015B
+t1287380798
+s347
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/statistics@2x.png
+c000000004CBBE1640000000000000242
+t1287381348
+s578
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/status.png
+c000000004CB898CC0000000000000C1C
+t1287166156
+s3100
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/status@2x.png
+c000000004CB898CC0000000000000D5D
+t1287166156
+s3421
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app.dSYM
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default-568h@2x.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default@2x.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Icon.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Icon@2x.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Info.plist
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/OpenSense
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/PkgInfo
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/ResourceRules.plist
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/background-texture.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/background-texture@2x.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/db.plist
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/embedded.mobileprovision
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/en.lproj/MainStoryboard.storyboardc
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/opensense.sqlite
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/probes.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/probes@2x.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start@2x.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start_hover.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start_hover@2x.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/statistics.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/statistics@2x.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/status.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/status@2x.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop@2x.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop_hover.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop_hover@2x.png
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/AppDelegate.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchCell.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataCell.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataViewController.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/DatabaseViewController.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/OpenSense.LinkFileList
+c0000000050E6FD98000000000000062A
+t1357315480
+s1578
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/ProbesViewController.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/StatusViewController.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/main.o
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.xcent
+t2
+s0
+
+N/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/libOpenSense.a
+c0000000050E6FD980000000000105150
+t1357315480
+s1069392
+
+N/Users/mini/Library/MobileDevice/Provisioning Profiles/10D6891A-9309-45D9-B6F5-803FD2DA342E.mobileprovision
+c0000000050E38F960000000000002136
+t1357090710
+s8502
+
+N/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch.pth
+t2
+s0
+
+NOpenSense Collector/OpenSense Collector-Info.plist
+c0000000050E605CF0000000000000699
+t1357252047
+s1689
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/AppDelegate.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchCell.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataCell.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataViewController.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/DatabaseViewController.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/ProbesViewController.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/StatusViewController.m"
+r0
+
+CBuild AST from "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/main.m"
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies8fe1b1183597b641^b729b2183597b641^---0#1#0#--18"Check dependencies36"0D484950-6191-446A-9EF6-8DC088185CD0-
+
+CCodeSign "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app"
+s379008282.209161
+e379008282.367986
+r1
+xCodeSign
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"CodeSign build/Debug-iphoneos/OpenSense.app959a351a3597b641^f4325e1a3597b641^---0#0#0#-19%DVTDocumentLocation2@139"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/build/Debug-iphoneos/OpenSense.app/0000000000000000^1008"CodeSign build/Debug-iphoneos/OpenSense.app    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv CODESIGN_ALLOCATE /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/codesign --force --sign 68db6d232420ead9ae958637b4e929f2fc835564 "--resource-rules=/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/ResourceRules.plist" --entitlements "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.xcent" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app"36"0287B94F-651F-458B-AB9D-7A3D9E913579-
+
+CCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/AppDelegate.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/AppDelegate.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s379008280.923771
+e379008281.020138
+r1
+xCompileC
+xbuild/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/AppDelegate.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/AppDelegate.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/AppDelegate.m:18:62: warning: capturing 'self' strongly in this block is likely to lead to a retain cycle [-Warc-retain-cycles]
+o        [[UIApplication sharedApplication] endBackgroundTask:bgTask];
+o                                                             ^~~~~~
+o/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/AppDelegate.m:17:5: note: block will be retained by an object strongly retained by the captured object
+o    expirationHandler = ^{
+o    ^~~~~~~~~~~~~~~~~
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/AppDelegate.m7ba1ec183597b641^e5ef06193597b641^-647"/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/AppDelegate.m:18:62: warning: capturing 'self' strongly in this block is likely to lead to a retain cycle [-Warc-retain-cycles]        [[UIApplication sharedApplication] endBackgroundTask:bgTask];                                                             ^~~~~~/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/AppDelegate.m:17:5: note: block will be retained by an object strongly retained by the captured object    expirationHandler = ^{    ^~~~~~~~~~~~~~~~~1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@75"Capturing 'self' strongly in this block is likely to lead to a retain cycle-379008281#18446744073709551615#0#1(2@76"Block will be retained by an object strongly retained by the captured object-379008281#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@139"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/AppDelegate.m0000000000000000^16#4#16#4#397#0#16"ARC Retain Cycle1(3@139"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/AppDelegate.m0000000000000000^16#4#16#21#397#0#-1#27"com.apple.dt.IDE.diagnostic3@139"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/AppDelegate.m0000000000000000^17#61#17#61#481#0#16"ARC Retain Cycle1(3@139"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/AppDelegate.m0000000000000000^17#61#17#67#481#0#-0#0#0#-19%DVTDocumentLocation4@139"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/AppDelegate.m0000000000000000^3774"CompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/AppDelegate.o" "OpenSense Collector/AppDelegate.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=6.0 "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/../OpenSense/build/includes" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources/armv7s" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos" -include "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch" -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/AppDelegate.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/AppDelegate.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/AppDelegate.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/AppDelegate.o"36"5F13D511-0F06-4B19-911D-5D3106B1E1A0-
+
+CCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchCell.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchCell.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s379008280.923883
+e379008280.996831
+r1
+xCompileC
+xbuild/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchCell.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchCell.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection131"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchCell.m93abec183597b641^7e7101193597b641^---0#0#0#-19%DVTDocumentLocation2@145"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Classes/BatchCell.m0000000000000000^3778"CompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchCell.o" "OpenSense Collector/Classes/BatchCell.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=6.0 "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/../OpenSense/build/includes" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources/armv7s" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos" -include "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch" -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchCell.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchCell.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchCell.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchCell.o"36"E6272014-F6D8-4414-8BA5-58DF32157F55-
+
+CCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataCell.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataCell.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s379008280.924373
+e379008281.002148
+r1
+xCompileC
+xbuild/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataCell.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataCell.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection135"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataCell.mc7baec183597b641^6f8401193597b641^---0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Classes/BatchDataCell.m0000000000000000^3802"CompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataCell.o" "OpenSense Collector/Classes/BatchDataCell.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=6.0 "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/../OpenSense/build/includes" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources/armv7s" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos" -include "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch" -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataCell.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataCell.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataCell.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataCell.o"36"3FE3E125-D261-4FC8-8DC7-75ADE78B4F01-
+
+CCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataViewController.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataViewController.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s379008280.924136
+e379008281.002687
+r1
+xCompileC
+xbuild/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataViewController.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataViewController.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection145"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataViewController.mbbb5ec183597b641^238601193597b641^---0#0#0#-19%DVTDocumentLocation2@159"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Classes/BatchDataViewController.m0000000000000000^3862"CompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataViewController.o" "OpenSense Collector/Classes/BatchDataViewController.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=6.0 "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/../OpenSense/build/includes" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources/armv7s" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos" -include "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch" -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataViewController.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataViewController.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/BatchDataViewController.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/BatchDataViewController.o"36"E2C11FA4-26C0-4473-ACDE-037716E200EF-
+
+CCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/DatabaseViewController.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/DatabaseViewController.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s379008280.923796
+e379008281.010456
+r1
+xCompileC
+xbuild/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/DatabaseViewController.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/DatabaseViewController.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection144"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/DatabaseViewController.m5ea0ec183597b641^f3e806193597b641^---0#0#0#-19%DVTDocumentLocation2@158"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Classes/DatabaseViewController.m0000000000000000^3856"CompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/DatabaseViewController.o" "OpenSense Collector/Classes/DatabaseViewController.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=6.0 "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/../OpenSense/build/includes" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources/armv7s" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos" -include "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch" -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/DatabaseViewController.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/DatabaseViewController.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/DatabaseViewController.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/DatabaseViewController.o"36"464B56CD-9045-48BE-B13E-7DA64C1AB6FE-
+
+CCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/ProbesViewController.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/ProbesViewController.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s379008280.923803
+e379008280.997985
+r1
+xCompileC
+xbuild/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/ProbesViewController.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/ProbesViewController.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection142"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/ProbesViewController.m6fa0ec183597b641^0f7b01193597b641^---0#0#0#-19%DVTDocumentLocation2@156"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Classes/ProbesViewController.m0000000000000000^3844"CompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/ProbesViewController.o" "OpenSense Collector/Classes/ProbesViewController.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=6.0 "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/../OpenSense/build/includes" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources/armv7s" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos" -include "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch" -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/ProbesViewController.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/ProbesViewController.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/ProbesViewController.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/ProbesViewController.o"36"3995106B-7D31-4BB6-AAB1-DC7569FB4724-
+
+CCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/StatusViewController.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/StatusViewController.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s379008280.923787
+e379008281.001937
+r1
+xCompileC
+xbuild/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/StatusViewController.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/StatusViewController.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection142"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/StatusViewController.m62a3ec183597b641^458201193597b641^---0#0#0#-19%DVTDocumentLocation2@156"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Classes/StatusViewController.m0000000000000000^3844"CompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/StatusViewController.o" "OpenSense Collector/Classes/StatusViewController.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=6.0 "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/../OpenSense/build/includes" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources/armv7s" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos" -include "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch" -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/StatusViewController.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/StatusViewController.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Classes/StatusViewController.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/StatusViewController.o"36"6DAB876D-28ED-4E68-8E6D-F49284F83935-
+
+CCompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/main.o" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/main.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s379008280.923779
+e379008280.950908
+r1
+xCompileC
+xbuild/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/main.o
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/main.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Compile /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/main.m3ca0ec183597b641^022ef4183597b641^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/main.m0000000000000000^3732"CompileC "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/main.o" "OpenSense Collector/main.m" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=6.0 "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/../OpenSense/build/includes" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources/armv7s" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos" -include "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch" -MMD -MT dependencies -MF "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/main.d" --serialize-diagnostics "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/main.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/main.m" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/main.o"36"2EE85B6E-E418-445A-A03C-CCDF60512038-
+
+CCompileStoryboard "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/en.lproj/MainStoryboard.storyboard"
+s379008281.141134
+e379008282.146085
+r1
+xCompileStoryboard
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/en.lproj/MainStoryboard.storyboard
+o2013-01-04 11:04:41.755 Interface Builder Cocoa Touch Tool[21654:f07] CFPreferences: user home directory at file://localhost/Users/mini/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"CompileStoryboard "OpenSense Collector/en.lproj/MainStoryboard.storyboard"a03824193597b641^6b66251a3597b641^-237"2013-01-04 11:04:41.755 Interface Builder Cocoa Touch Tool[21654:f07] CFPreferences: user home directory at file://localhost/Users/mini/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#0#-19%DVTDocumentLocation2@160"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/en.lproj/MainStoryboard.storyboard0000000000000000^1040"CompileStoryboard "OpenSense Collector/en.lproj/MainStoryboard.storyboard"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 6.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/en.lproj/MainStoryboard.storyboardc" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/en.lproj/MainStoryboard.storyboard" --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk36"D595F14D-4D46-479C-98FA-BBDD55C41D18-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default-568h@2x.png" "OpenSense Collector/Default-568h@2x.png"
+s379008281.141138
+e379008281.286892
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default-568h@2x.png
+xOpenSense Collector/Default-568h@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"CopyPNGFile build/Debug-iphoneos/OpenSense.app/Default-568h@2x.png "OpenSense Collector/Default-568h@2x.png"5e4724193597b641^53cb4a193597b641^---0#0#0#-19%DVTDocumentLocation2@145"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Default-568h@2x.png0000000000000000^773"CopyPNGFile "build/Debug-iphoneos/OpenSense.app/Default-568h@2x.png" "OpenSense Collector/Default-568h@2x.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Default-568h@2x.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default-568h@2x.png"36"EFCDD274-B1CA-4FE0-9EBA-B8B728EB5B28-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default.png" "OpenSense Collector/Default.png"
+s379008281.141103
+e379008281.203513
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default.png
+xOpenSense Collector/Default.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"CopyPNGFile build/Debug-iphoneos/OpenSense.app/Default.png "OpenSense Collector/Default.png"763624193597b641^cf6b34193597b641^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Default.png0000000000000000^739"CopyPNGFile build/Debug-iphoneos/OpenSense.app/Default.png "OpenSense Collector/Default.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Default.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default.png"36"11C3E3FB-2EBE-4421-AD61-1A12B5DE84B9-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default@2x.png" "OpenSense Collector/Default@2x.png"
+s379008281.141124
+e379008281.235625
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default@2x.png
+xOpenSense Collector/Default@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"CopyPNGFile build/Debug-iphoneos/OpenSense.app/Default@2x.png "OpenSense Collector/Default@2x.png"1a3424193597b641^ea593c193597b641^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Default@2x.png0000000000000000^753"CopyPNGFile "build/Debug-iphoneos/OpenSense.app/Default@2x.png" "OpenSense Collector/Default@2x.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Default@2x.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Default@2x.png"36"FA8ADCF7-29B2-4237-8771-5EBF87CC4A8B-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Icon.png" Icon.png
+s379008281.276038
+e379008281.330019
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Icon.png
+xIcon.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"CopyPNGFile build/Debug-iphoneos/OpenSense.app/Icon.png Icon.png19e446193597b641^e48154193597b641^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/Icon.png0000000000000000^685"CopyPNGFile build/Debug-iphoneos/OpenSense.app/Icon.png Icon.png    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/Icon.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Icon.png"36"73E5C438-4DD2-46EA-B732-B69AF53839AD-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Icon@2x.png" Icon@2x.png
+s379008281.290097
+e379008281.341712
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Icon@2x.png
+xIcon@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"CopyPNGFile build/Debug-iphoneos/OpenSense.app/Icon@2x.png Icon@2x.pngde5a4a193597b641^5a8357193597b641^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/Icon@2x.png0000000000000000^701"CopyPNGFile "build/Debug-iphoneos/OpenSense.app/Icon@2x.png" "Icon@2x.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/Icon@2x.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Icon@2x.png"36"4ACC0DF8-0447-4E9B-A006-3628FEAF32EC-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/background-texture.png" "OpenSense Collector/Assets/background-texture.png"
+s379008281.141156
+e379008281.391872
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/background-texture.png
+xOpenSense Collector/Assets/background-texture.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"CopyPNGFile build/Debug-iphoneos/OpenSense.app/background-texture.png "OpenSense Collector/Assets/background-texture.png"653624193597b641^645d64193597b641^---0#0#0#-19%DVTDocumentLocation2@155"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Assets/background-texture.png0000000000000000^797"CopyPNGFile build/Debug-iphoneos/OpenSense.app/background-texture.png "OpenSense Collector/Assets/background-texture.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/background-texture.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/background-texture.png"36"4EF3FD6A-7F5C-4429-B690-7E4AB6DD397A-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/background-texture@2x.png" "OpenSense Collector/Assets/background-texture@2x.png"
+s379008281.141166
+e379008281.802028
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/background-texture@2x.png
+xOpenSense Collector/Assets/background-texture@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"CopyPNGFile build/Debug-iphoneos/OpenSense.app/background-texture@2x.png "OpenSense Collector/Assets/background-texture@2x.png"f73b24193597b641^fc50cd193597b641^---0#0#0#-19%DVTDocumentLocation2@158"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Assets/background-texture@2x.png0000000000000000^811"CopyPNGFile "build/Debug-iphoneos/OpenSense.app/background-texture@2x.png" "OpenSense Collector/Assets/background-texture@2x.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/background-texture@2x.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/background-texture@2x.png"36"45F34EE1-B9E6-4648-8D7E-5EABCE4E5C2F-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/probes.png" "OpenSense Collector/probes.png"
+s379008281.342987
+e379008281.372057
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/probes.png
+xOpenSense Collector/probes.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"CopyPNGFile build/Debug-iphoneos/OpenSense.app/probes.png "OpenSense Collector/probes.png"3be357193597b641^4fb063193597b641^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/probes.png0000000000000000^735"CopyPNGFile build/Debug-iphoneos/OpenSense.app/probes.png "OpenSense Collector/probes.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/probes.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/probes.png"36"779BD6E7-DFA3-4586-8D25-84A1415CF749-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/probes@2x.png" "OpenSense Collector/probes@2x.png"
+s379008281.291168
+e379008281.333015
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/probes@2x.png
+xOpenSense Collector/probes@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"CopyPNGFile build/Debug-iphoneos/OpenSense.app/probes@2x.png "OpenSense Collector/probes@2x.png"bf9b4a193597b641^464055193597b641^---0#0#0#-19%DVTDocumentLocation2@139"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/probes@2x.png0000000000000000^749"CopyPNGFile "build/Debug-iphoneos/OpenSense.app/probes@2x.png" "OpenSense Collector/probes@2x.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/probes@2x.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/probes@2x.png"36"385C781A-9BCF-42B4-9822-23BA929258D3-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start.png" "OpenSense Collector/Assets/start.png"
+s379008281.153503
+e379008281.220627
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start.png
+xOpenSense Collector/Assets/start.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"CopyPNGFile build/Debug-iphoneos/OpenSense.app/start.png "OpenSense Collector/Assets/start.png"676127193597b641^9d8238193597b641^---0#0#0#-19%DVTDocumentLocation2@142"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Assets/start.png0000000000000000^745"CopyPNGFile build/Debug-iphoneos/OpenSense.app/start.png "OpenSense Collector/Assets/start.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/start.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start.png"36"7A47008A-2DFC-4650-9284-4AFF321B262E-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start@2x.png" "OpenSense Collector/Assets/start@2x.png"
+s379008281.204974
+e379008281.250453
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start@2x.png
+xOpenSense Collector/Assets/start@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"CopyPNGFile build/Debug-iphoneos/OpenSense.app/start@2x.png "OpenSense Collector/Assets/start@2x.png"199134193597b641^fe2640193597b641^---0#0#0#-19%DVTDocumentLocation2@145"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Assets/start@2x.png0000000000000000^759"CopyPNGFile "build/Debug-iphoneos/OpenSense.app/start@2x.png" "OpenSense Collector/Assets/start@2x.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/start@2x.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start@2x.png"36"B29935D3-74BE-48D5-B9A4-0D5218282843-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start_hover.png" "OpenSense Collector/Assets/start_hover.png"
+s379008281.141172
+e379008281.211532
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start_hover.png
+xOpenSense Collector/Assets/start_hover.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"CopyPNGFile build/Debug-iphoneos/OpenSense.app/start_hover.png "OpenSense Collector/Assets/start_hover.png"8a3d24193597b641^f52e36193597b641^---0#0#0#-19%DVTDocumentLocation2@148"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Assets/start_hover.png0000000000000000^769"CopyPNGFile build/Debug-iphoneos/OpenSense.app/start_hover.png "OpenSense Collector/Assets/start_hover.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/start_hover.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start_hover.png"36"075724C0-50D9-45C2-8EBA-BC72FB69B5DB-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start_hover@2x.png" "OpenSense Collector/Assets/start_hover@2x.png"
+s379008281.212806
+e379008281.257806
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start_hover@2x.png
+xOpenSense Collector/Assets/start_hover@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"CopyPNGFile build/Debug-iphoneos/OpenSense.app/start_hover@2x.png "OpenSense Collector/Assets/start_hover@2x.png"699036193597b641^3fff41193597b641^---0#0#0#-19%DVTDocumentLocation2@151"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Assets/start_hover@2x.png0000000000000000^783"CopyPNGFile "build/Debug-iphoneos/OpenSense.app/start_hover@2x.png" "OpenSense Collector/Assets/start_hover@2x.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/start_hover@2x.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/start_hover@2x.png"36"C64BFD2A-DE01-494A-A41A-EC304303B36B-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/statistics.png" "OpenSense Collector/statistics.png"
+s379008281.311474
+e379008281.349858
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/statistics.png
+xOpenSense Collector/statistics.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"CopyPNGFile build/Debug-iphoneos/OpenSense.app/statistics.png "OpenSense Collector/statistics.png"8dd04f193597b641^a79259193597b641^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/statistics.png0000000000000000^751"CopyPNGFile build/Debug-iphoneos/OpenSense.app/statistics.png "OpenSense Collector/statistics.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/statistics.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/statistics.png"36"463A705F-07DE-4CBF-AFBC-130FA859E9A8-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/statistics@2x.png" "OpenSense Collector/statistics@2x.png"
+s379008281.331488
+e379008281.371676
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/statistics@2x.png
+xOpenSense Collector/statistics@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"CopyPNGFile build/Debug-iphoneos/OpenSense.app/statistics@2x.png "OpenSense Collector/statistics@2x.png"6bf254193597b641^69aa63193597b641^---0#0#0#-19%DVTDocumentLocation2@143"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/statistics@2x.png0000000000000000^765"CopyPNGFile "build/Debug-iphoneos/OpenSense.app/statistics@2x.png" "OpenSense Collector/statistics@2x.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/statistics@2x.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/statistics@2x.png"36"2CF750B4-7573-4FB6-BD89-40912F5EF92F-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/status.png" "OpenSense Collector/status.png"
+s379008281.334302
+e379008281.370828
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/status.png
+xOpenSense Collector/status.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"CopyPNGFile build/Debug-iphoneos/OpenSense.app/status.png "OpenSense Collector/status.png"05a855193597b641^99f55e193597b641^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/status.png0000000000000000^735"CopyPNGFile build/Debug-iphoneos/OpenSense.app/status.png "OpenSense Collector/status.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/status.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/status.png"36"4B840A04-0369-4148-BE3F-3C0443A7534C-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/status@2x.png" "OpenSense Collector/status@2x.png"
+s379008281.306836
+e379008281.358826
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/status@2x.png
+xOpenSense Collector/status@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"CopyPNGFile build/Debug-iphoneos/OpenSense.app/status@2x.png "OpenSense Collector/status@2x.png"88a04e193597b641^a3e65b193597b641^---0#0#0#-19%DVTDocumentLocation2@139"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/status@2x.png0000000000000000^749"CopyPNGFile "build/Debug-iphoneos/OpenSense.app/status@2x.png" "OpenSense Collector/status@2x.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/status@2x.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/status@2x.png"36"31A03B91-E85D-40BF-98ED-4F320B807071-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop.png" "OpenSense Collector/Assets/stop.png"
+s379008281.221939
+e379008281.274605
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop.png
+xOpenSense Collector/Assets/stop.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"CopyPNGFile build/Debug-iphoneos/OpenSense.app/stop.png "OpenSense Collector/Assets/stop.png"4eed38193597b641^49ba4a193597b641^---0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Assets/stop.png0000000000000000^741"CopyPNGFile build/Debug-iphoneos/OpenSense.app/stop.png "OpenSense Collector/Assets/stop.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/stop.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop.png"36"121E1905-B75D-4D53-8C61-626E2BD2FBFD-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop@2x.png" "OpenSense Collector/Assets/stop@2x.png"
+s379008281.259172
+e379008281.310177
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop@2x.png
+xOpenSense Collector/Assets/stop@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"CopyPNGFile build/Debug-iphoneos/OpenSense.app/stop@2x.png "OpenSense Collector/Assets/stop@2x.png"726f42193597b641^45654f193597b641^---0#0#0#-19%DVTDocumentLocation2@144"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Assets/stop@2x.png0000000000000000^755"CopyPNGFile "build/Debug-iphoneos/OpenSense.app/stop@2x.png" "OpenSense Collector/Assets/stop@2x.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/stop@2x.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop@2x.png"36"413EFA23-32B0-4BCA-BAA9-DF06E45063E6-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop_hover.png" "OpenSense Collector/Assets/stop_hover.png"
+s379008281.236989
+e379008281.289958
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop_hover.png
+xOpenSense Collector/Assets/stop_hover.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"CopyPNGFile build/Debug-iphoneos/OpenSense.app/stop_hover.png "OpenSense Collector/Assets/stop_hover.png"87c13c193597b641^5bcd4a193597b641^---0#0#0#-19%DVTDocumentLocation2@147"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Assets/stop_hover.png0000000000000000^765"CopyPNGFile build/Debug-iphoneos/OpenSense.app/stop_hover.png "OpenSense Collector/Assets/stop_hover.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/stop_hover.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop_hover.png"36"A622CFFE-9707-49CC-A965-419D12D0336A-
+
+CCopyPNGFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop_hover@2x.png" "OpenSense Collector/Assets/stop_hover@2x.png"
+s379008281.251766
+e379008281.305542
+r1
+xCopyPNGFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop_hover@2x.png
+xOpenSense Collector/Assets/stop_hover@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"CopyPNGFile build/Debug-iphoneos/OpenSense.app/stop_hover@2x.png "OpenSense Collector/Assets/stop_hover@2x.png"448740193597b641^05524e193597b641^---0#0#0#-19%DVTDocumentLocation2@150"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/Assets/stop_hover@2x.png0000000000000000^779"CopyPNGFile "build/Debug-iphoneos/OpenSense.app/stop_hover@2x.png" "OpenSense Collector/Assets/stop_hover@2x.png"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/Assets/stop_hover@2x.png" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/stop_hover@2x.png"36"B55CFBAE-0109-4C1B-A4F7-192D10AAA18A-
+
+CCopyPlistFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/db.plist" "OpenSense Collector/db.plist"
+s379008281.355156
+e379008281.357206
+r1
+xCopyPlistFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/db.plist
+xOpenSense Collector/db.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection33"Copy OpenSense Collector/db.plistc5fe5a193597b641^9a975b193597b641^---0#0#0#-19%DVTDocumentLocation2@134"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/db.plist0000000000000000^574"CopyPlistFile build/Debug-iphoneos/OpenSense.app/db.plist "OpenSense Collector/db.plist"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyPlist --convert binary1 --outdir "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app" -- "OpenSense Collector/db.plist"36"5BD07472-5655-4B33-A434-E02E63996D73-
+
+CCopyStringsFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/en.lproj/InfoPlist.strings" "OpenSense Collector/en.lproj/InfoPlist.strings"
+s379008281.141101
+e379008281.151986
+r1
+xCopyStringsFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/en.lproj/InfoPlist.strings
+xOpenSense Collector/en.lproj/InfoPlist.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy OpenSense Collector/en.lproj/InfoPlist.strings473d24193597b641^6f6634193597b641^---0#0#0#-19%DVTDocumentLocation2@152"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/en.lproj/InfoPlist.strings0000000000000000^680"CopyStringsFile build/Debug-iphoneos/OpenSense.app/en.lproj/InfoPlist.strings "OpenSense Collector/en.lproj/InfoPlist.strings"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/en.lproj" -- "OpenSense Collector/en.lproj/InfoPlist.strings"36"36A60CD9-9713-4DD5-ABDC-DD786633653E-
+
+CCpResource "OpenSense Collector/opensense.sqlite" build/Debug-iphoneos/OpenSense.app/opensense.sqlite
+s379008281.351060
+e379008281.353946
+r1
+xCpResource
+xOpenSense Collector/opensense.sqlite
+xbuild/Debug-iphoneos/OpenSense.app/opensense.sqlite
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy build/Debug-iphoneos/OpenSense.app/opensense.sqlitecbf659193597b641^08aa5a193597b641^---0#0#0#-19%DVTDocumentLocation2@155"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/build/Debug-iphoneos/OpenSense.app/opensense.sqlite000000000080d041^739"CpResource "OpenSense Collector/opensense.sqlite" build/Debug-iphoneos/OpenSense.app/opensense.sqlite    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/opensense.sqlite" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app"36"2113BF28-443B-4F84-8A42-EC96DB5DA8EF-
+
+CCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/ResourceRules.plist build/Debug-iphoneos/OpenSense.app/ResourceRules.plist
+s379008280.701868
+e379008280.704013
+r1
+xCpResource
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/ResourceRules.plist
+xbuild/Debug-iphoneos/OpenSense.app/ResourceRules.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Copy build/Debug-iphoneos/OpenSense.app/ResourceRules.plistaeb9b3183597b641^0c3bb4183597b641^---0#0#0#-19%DVTDocumentLocation2@158"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/build/Debug-iphoneos/OpenSense.app/ResourceRules.plist000000000080d041^824"CpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/ResourceRules.plist build/Debug-iphoneos/OpenSense.app/ResourceRules.plist    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/ResourceRules.plist "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app"36"7E48E9E9-954B-4906-8220-4E3E696F38E0-
+
+CGenerateDSYMFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app.dSYM" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/OpenSense"
+s379008281.091285
+e379008281.133035
+r1
+xGenerateDSYMFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app.dSYM
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/OpenSense
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection134"Generating /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app.dSYMe5b817193597b641^780d22193597b641^---0#0#0#-19%DVTDocumentLocation2@143"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/build/Debug-iphoneos/OpenSense.app.dSYM000000000080d041^743"GenerateDSYMFile build/Debug-iphoneos/OpenSense.app.dSYM build/Debug-iphoneos/OpenSense.app/OpenSense    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/OpenSense" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app.dSYM"36"9952BB77-3AF9-4EB7-AF57-425C03AD7213-
+
+CLd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/OpenSense" normal armv7s
+s379008281.026915
+e379008281.084470
+r1
+xLd
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/OpenSense
+xnormal
+xarmv7s
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection133"Link /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/OpenSense27f806193597b641^a19f15193597b641^---0#0#0#--1446"Ld build/Debug-iphoneos/OpenSense.app/OpenSense normal armv7s    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv IPHONEOS_DEPLOYMENT_TARGET 6.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7s -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk "-L/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos" -filelist "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/Objects-normal/armv7s/OpenSense.LinkFileList" -dead_strip -ObjC -all_load -fobjc-arc -fobjc-link-runtime -miphoneos-version-min=6.0 -lsqlite3.0 "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense/build/Debug-iphoneos/libOpenSense.a" -framework UIKit -framework Foundation -framework CoreGraphics -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/OpenSense"36"05F97E4B-3682-43A9-ABB2-597306B14659-
+
+CProcessInfoPlistFile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Info.plist" "OpenSense Collector/OpenSense Collector-Info.plist"
+s379008280.701903
+e379008280.705906
+r1
+xProcessInfoPlistFile
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Info.plist
+xOpenSense Collector/OpenSense Collector-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Process OpenSense Collector/OpenSense Collector-Info.plist5ebcb3183597b641^52b6b4183597b641^---0#0#0#-19%DVTDocumentLocation2@158"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/OpenSense%20Collector-Info.plist0000000000000000^974"ProcessInfoPlistFile build/Debug-iphoneos/OpenSense.app/Info.plist "OpenSense Collector/OpenSense Collector-Info.plist"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility "OpenSense Collector/OpenSense Collector-Info.plist" -genpkginfo "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/PkgInfo" -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/ResourceRules.plist" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/Info.plist"36"92DE18DB-3081-4889-A148-31575552B535-
+
+CProcessPCH "/Users/mini/Library/Developer/Xcode/DerivedData/OpenSense_Collector-ekyrwovupurarmboomzcvtrmtmii/Index/PrecompiledHeaders/OpenSense Collector-Prefix-cjtyqasxuhdowjahqsecscfrcrsg_ast/OpenSense Collector-Prefix.pch.pth" "OpenSense Collector/OpenSense Collector-Prefix.pch" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch.pth" "OpenSense Collector/OpenSense Collector-Prefix.pch" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s379008280.717103
+e379008280.908284
+r1
+xProcessPCH
+x/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch.pth
+xOpenSense Collector/OpenSense Collector-Prefix.pch
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Precompile OpenSense Collector/OpenSense Collector-Prefix.pchd2a9b7183597b641^2387e8183597b641^---0#0#0#-19%DVTDocumentLocation2@158"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/OpenSense%20Collector/OpenSense%20Collector-Prefix.pch0000000000000000^3673"ProcessPCH "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch.pth" "OpenSense Collector/OpenSense Collector-Prefix.pch" normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch armv7s -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=6.0 "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.hmap" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/../OpenSense/build/includes" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources/armv7s" "-I/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/DerivedSources" "-F/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos" --serialize-diagnostics "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch.dia" -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/OpenSense Collector/OpenSense Collector-Prefix.pch" -o "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch.pth" -MMD -MT dependencies -MF "/var/folders/6_/htvcfzcd4cb_w9z6bgpmnx5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenSense Collector-Prefix-azyvtnclnuxptyduxqvrdvhvqphp/OpenSense Collector-Prefix.pch.d"36"FD11AE5E-23F2-427F-B94F-1AEDD2AF6C48-
+
+CProcessProductPackaging "/Users/mini/Library/MobileDevice/Provisioning Profiles/10D6891A-9309-45D9-B6F5-803FD2DA342E.mobileprovision" "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/embedded.mobileprovision"
+s379008282.163903
+e379008282.166127
+r1
+xProcessProductPackaging
+x/Users/mini/Library/MobileDevice/Provisioning Profiles/10D6891A-9309-45D9-B6F5-803FD2DA342E.mobileprovision
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/embedded.mobileprovision
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection193"ProcessProductPackaging "/Users/mini/Library/MobileDevice/Provisioning Profiles/10D6891A-9309-45D9-B6F5-803FD2DA342E.mobileprovision" build/Debug-iphoneos/OpenSense.app/embedded.mobileprovisionb0042a1a3597b641^7f872a1a3597b641^---0#0#0#-19%DVTDocumentLocation2@163"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/build/Debug-iphoneos/OpenSense.app/embedded.mobileprovision0000000000000000^770"ProcessProductPackaging "/Users/mini/Library/MobileDevice/Provisioning Profiles/10D6891A-9309-45D9-B6F5-803FD2DA342E.mobileprovision" build/Debug-iphoneos/OpenSense.app/embedded.mobileprovision    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility "/Users/mini/Library/MobileDevice/Provisioning Profiles/10D6891A-9309-45D9-B6F5-803FD2DA342E.mobileprovision" -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app/embedded.mobileprovision"36"0B726D38-8397-4D18-BB5F-3ABAAB871065-
+
+CProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Entitlements.plist "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.xcent"
+s379008282.190967
+e379008282.200797
+r1
+xProcessProductPackaging
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Entitlements.plist
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.xcent
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection235"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Entitlements.plist "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.xcent"8f37311a3597b641^0a67331a3597b641^---0#0#0#-19%DVTDocumentLocation2@196"file://localhost/Users/mini/Documents/Diplom-IT/7.%20Semester/Eksamensprojekt/src/OpenSense%20Collector/build/OpenSense%20Collector.build/Debug-iphoneos/OpenSense%20Collector.build/OpenSense.xcent000000000080d041^878"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Entitlements.plist "build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.xcent"    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/Entitlements.plist -entitlements -format xml -o "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/OpenSense Collector.build/Debug-iphoneos/OpenSense Collector.build/OpenSense.xcent"36"B985153E-A4DA-4D1C-92DB-2E01C1E37137-
+
+CTouch "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app"
+s379008282.174110
+e379008282.179170
+r1
+xTouch
+x/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Touch /Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app5da42c1a3597b641^7ade2d1a3597b641^---0#0#0#--465"Touch build/Debug-iphoneos/OpenSense.app    cd "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/mini/Documents/Diplom-IT/7. Semester/Eksamensprojekt/src/OpenSense Collector/build/Debug-iphoneos/OpenSense.app"36"7FA06247-D263-4657-8ED6-1B968772FE4C-
+

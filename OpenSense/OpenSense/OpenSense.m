@@ -7,6 +7,7 @@
 //
 
 #import "OpenSense.h"
+#import "LocalStorage.h"
 #import "OSPositioningProbe.h"
 #import "OSMotionProbe.h"
 #import "OSEnvironmentProbe.h"
@@ -14,6 +15,7 @@
 #import "OSDeviceInfoProbe.h"
 #import "OSDeviceInteractionProbe.h"
 #import "OSBatteryProbe.h"
+#import "OSProximityProbe.h"
 
 @implementation OpenSense
 
@@ -63,7 +65,31 @@
         [OSDeviceInfoProbe class],
         [OSDeviceInteractionProbe class],
         [OSBatteryProbe class],
+        [OSProximityProbe class],
     ];
+}
+
+- (NSString*)probeNameFromIdentifier:(NSString*)probeIdentifier
+{
+    for (Class probe in [self availableProbes])
+    {
+        if ([[probe identifier] isEqualToString:probeIdentifier])
+        {
+            return [probe name];
+        }
+    }
+    
+    return nil;
+}
+
+- (NSArray*)localDataBatches
+{
+    return [[LocalStorage sharedInstance] fetchBatches];
+}
+
+- (NSArray*)localDataBatchesForProbe:(NSString*)probeIdentifier
+{
+    return [[LocalStorage sharedInstance] fetchBatchesForProbe:probeIdentifier];
 }
 
 @end

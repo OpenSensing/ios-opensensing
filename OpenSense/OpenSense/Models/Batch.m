@@ -38,7 +38,7 @@
 }
 
 - (NSArray*)batchData {
-    return [self hasMany:[BatchData class] foreignKey:[NSArray arrayWithObject:@"batch_id"]];
+    return [self hasMany:[BatchData class] foreignKey:[NSArray arrayWithObject:@"batchId"]];
 }
 
 @end
