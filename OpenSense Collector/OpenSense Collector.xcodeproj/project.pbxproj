@@ -392,10 +392,10 @@
 		3DDED6C6167D098B006DE4F8 = {
 			isa = PBXGroup;
 			children = (
-				3DFE62561694DE4800145310 /* Icon@2x.png */,
-				3DFE62541694DE4500145310 /* Icon.png */,
 				3D35C2B61694C720000ADA14 /* OpenSense.xcodeproj */,
 				3DDED6DB167D098B006DE4F8 /* OpenSense Collector */,
+				3DFE62561694DE4800145310 /* Icon@2x.png */,
+				3DFE62541694DE4500145310 /* Icon.png */,
 				3DDED70A167D098B006DE4F8 /* OpenSense CollectorTests */,
 				3DDED6D4167D098B006DE4F8 /* Frameworks */,
 				3DDED6D2167D098B006DE4F8 /* Products */,
