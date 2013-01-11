@@ -41,4 +41,18 @@
     return [self hasMany:[BatchData class] foreignKey:[NSArray arrayWithObject:@"batchId"]];
 }
 
+- (NSDictionary*)batchDataDict {
+    NSArray *batchDataList = [self batchData];
+    
+    // Turn array into dictionary
+    NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
+    
+    for (BatchData *batchData in batchDataList)
+    {
+        [result setObject:batchData.value forKey:batchData.key];
+    }
+    
+    return [[NSDictionary alloc] initWithDictionary:result];
+}
+
 @end

@@ -44,7 +44,7 @@
 - (NSArray*)fetchBatches
 {
     ZIMOrmSelectStatement *select = [[ZIMOrmSelectStatement alloc] initWithModel: [Batch class]];
-    [select orderBy:@"created" descending:YES]; // Newest first
+    [select orderBy:@"created" descending:NO]; // Newest first
     return [select query];
 }
 
@@ -52,7 +52,7 @@
 {
     ZIMOrmSelectStatement *select = [[ZIMOrmSelectStatement alloc] initWithModel: [Batch class]];
     [select where:@"probeIdentifier" operator:ZIMSqlOperatorEqualTo value:probeIdentifier]; // Only batches from the specific probe
-    [select orderBy:@"created" descending:YES]; // Newest first
+    [select orderBy:@"created" descending:NO]; // Newest first
     return [select query];
 }
 

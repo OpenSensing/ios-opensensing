@@ -21,5 +21,6 @@
 @property (nonatomic, strong) NSString *probeIdentifier;
 
 - (NSArray*)batchData;
+- (NSDictionary*)batchDataDict;
 
 @end
