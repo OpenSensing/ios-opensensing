@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define kUpdateIntervalDisabled  -1
+
 @interface OSProbe : NSObject {
     NSTimer *updateTimer;
     NSTimeInterval updateInterval;

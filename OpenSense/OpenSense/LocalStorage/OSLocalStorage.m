@@ -1,19 +1,19 @@
 //
-//  LocalStorage.m
+//  OSLocalStorage.m
 //  OpenSense
 //
 //  Created by Mathias Hansen on 1/3/13.
 //  Copyright (c) 2013 Mathias Hansen. All rights reserved.
 //
 
-#import "LocalStorage.h"
+#import "OSLocalStorage.h"
 #import "OpenSense.h"
 #import "ZIMOrmSdk.h"
 #import "Batch.h"
 
-@implementation LocalStorage
+@implementation OSLocalStorage
 
-+ (LocalStorage*)sharedInstance
++ (OSLocalStorage*)sharedInstance
 {
     static dispatch_once_t pred = 0;
     __strong static id _sharedObject = nil;

@@ -7,7 +7,8 @@
 //
 
 #import "OSProbe.h"
-#import "LocalStorage.h"
+#import "OSLocalStorage.h"
+#import "OSConfiguration.h"
 
 @implementation OSProbe
 
@@ -39,11 +40,11 @@
 
 - (void)startProbe
 {
-    NSLog(@"%@ started", [[self class] name]);
-    
     NSTimeInterval timerUpdateInterval = [self updateInterval];
     
-    if (timerUpdateInterval > 0)
+    NSLog(@"%@ started with %f update interval", [[self class] name], timerUpdateInterval);
+    
+    if (timerUpdateInterval != kUpdateIntervalDisabled)
     {
         updateTimer = [NSTimer scheduledTimerWithTimeInterval:timerUpdateInterval target:self selector:@selector(saveData) userInfo:nil repeats:YES];
     }
@@ -69,7 +70,7 @@
     NSDictionary *data = [self sendData];
     
     // Store data in the local storage
-    [[LocalStorage sharedInstance] saveBatch:data fromProbe:[[self class] identifier]];
+    [[OSLocalStorage sharedInstance] saveBatch:data fromProbe:[[self class] identifier]];
 }
 
 - (NSDictionary*)sendData
@@ -79,10 +80,17 @@
 }
 
 - (NSTimeInterval)updateInterval
-{
-    // TODO: Load from config as primary source
-    NSTimeInterval interval = [[self class] defaultUpdateInterval];
-    return interval;
+{    
+    // Get update interval from config
+    NSTimeInterval configInterval = [[OSConfiguration currentConfig] updateIntervalForProbe:[[self class] identifier]];
+    
+    // If config did not provide an update interval, use the default probe interval instead
+    if (configInterval < 0)
+    {
+        [[self class] defaultUpdateInterval];
+    }
+    
+    return configInterval;
 }
 
 @end

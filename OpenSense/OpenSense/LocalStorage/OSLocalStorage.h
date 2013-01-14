@@ -1,5 +1,5 @@
 //
-//  LocalStorage.h
+//  OSLocalStorage.h
 //  OpenSense
 //
 //  Created by Mathias Hansen on 1/3/13.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LocalStorage : NSObject
+@interface OSLocalStorage : NSObject
 
-+ (LocalStorage*)sharedInstance;
++ (OSLocalStorage*)sharedInstance;
 - (void)saveBatch:(NSDictionary*)batch fromProbe:(NSString*)probeIdentifier;
 - (NSArray*)fetchBatches;
 - (NSArray*)fetchBatchesForProbe:(NSString*)probeIdentifier;

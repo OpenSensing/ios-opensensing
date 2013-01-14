@@ -7,7 +7,7 @@
 //
 
 #import "OpenSense.h"
-#import "LocalStorage.h"
+#import "OSLocalStorage.h"
 #import "OSPositioningProbe.h"
 #import "OSMotionProbe.h"
 #import "OSEnvironmentProbe.h"
@@ -84,12 +84,12 @@
 
 - (NSArray*)localDataBatches
 {
-    return [[LocalStorage sharedInstance] fetchBatches];
+    return [[OSLocalStorage sharedInstance] fetchBatches];
 }
 
 - (NSArray*)localDataBatchesForProbe:(NSString*)probeIdentifier
 {
-    return [[LocalStorage sharedInstance] fetchBatchesForProbe:probeIdentifier];
+    return [[OSLocalStorage sharedInstance] fetchBatchesForProbe:probeIdentifier];
 }
 
 @end

@@ -18,7 +18,7 @@
 
 + (NSString*)identifier
 {
-    return @"dk.dtu.imm.sensible.battery";
+    return @"edu.mit.media.funf.probe.builtin.BatteryProbe";
 }
 
 + (NSString*)description
@@ -28,22 +28,30 @@
 
 + (NSTimeInterval)defaultUpdateInterval
 {
-    return -1;
+    return kUpdateIntervalDisabled;
 }
 
 - (void)startProbe
 {
-    [[UIDevice currentDevice] setBatteryMonitoringEnabled:YES];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batteryChanged:) name:UIDeviceBatteryLevelDidChangeNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batteryChanged:) name:UIDeviceBatteryStateDidChangeNotification object:nil];
+    // Only listen to updates if we are not saving data with an interval
+    if ([self updateInterval] == kUpdateIntervalDisabled)
+    {
+        [[UIDevice currentDevice] setBatteryMonitoringEnabled:YES];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batteryChanged:) name:UIDeviceBatteryLevelDidChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batteryChanged:) name:UIDeviceBatteryStateDidChangeNotification object:nil];
+    }
     
     [super startProbe];
 }
 
 - (void)stopProbe
 {
-    [[UIDevice currentDevice] setBatteryMonitoringEnabled:NO];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    // Only listen to updates if we are not saving data with an interval
+    if ([self updateInterval] == kUpdateIntervalDisabled)
+    {
+        [[UIDevice currentDevice] setBatteryMonitoringEnabled:NO];
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    }
     
     [super stopProbe];
 }
@@ -56,31 +64,31 @@
 
 - (NSDictionary*)sendData
 {
-    NSNumber *batteryLevel = [NSNumber numberWithFloat:[[UIDevice currentDevice] batteryLevel]];
+    NSNumber *batteryLevel = [NSNumber numberWithFloat:[[UIDevice currentDevice] batteryLevel] * 100.0f];
     
     NSString *batteryState;
     switch ([[UIDevice currentDevice] batteryState]) {
         case UIDeviceBatteryStateFull:
-            batteryState = @"FULL";
+            batteryState = @"full";
             break;
         
         case UIDeviceBatteryStateCharging:
-            batteryState = @"CHARGING";
+            batteryState = @"charging";
             break;
             
         case UIDeviceBatteryStateUnplugged:
-            batteryState = @"UNPLUGGED";
+            batteryState = @"unplugged";
             break;
             
         default:
         case UIDeviceBatteryStateUnknown:
-            batteryState = @"UNKNOWN";
+            batteryState = @"unknown";
             break;
     }
     
     NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
-                                 batteryLevel, @"BATTERY_LEVEL",
-                                 batteryState, @"BATTERY_STATE",
+                                 batteryLevel, @"level",
+                                 batteryState, @"state",
                                  nil];
     
     return data;

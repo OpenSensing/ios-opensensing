@@ -17,6 +17,7 @@
 		3D4B3B1B1697256600FFEA73 /* ZIMOrmSelectStatement.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DFE53B7169604C700E09161 /* ZIMOrmSelectStatement.h */; };
 		3D4B3B1C1697256600FFEA73 /* ZIMMessageDigest.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DFE53F9169604C700E09161 /* ZIMMessageDigest.h */; };
 		3D4B3B1D1697256600FFEA73 /* OSBatteryProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DFE532E1695D5AE00E09161 /* OSBatteryProbe.h */; };
+		3D5AEA0316A45AF000741652 /* OSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5AEA0216A45AF000741652 /* OSConfiguration.m */; };
 		3D8C70631694814C00619CDB /* OSPositioningProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70621694814C00619CDB /* OSPositioningProbe.m */; };
 		3D8C70671694815800619CDB /* OSProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70661694815800619CDB /* OSProbe.m */; };
 		3D8C706A1694816C00619CDB /* OSMotionProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70691694816C00619CDB /* OSMotionProbe.m */; };
@@ -77,7 +78,7 @@
 		3DFE541B169604C700E09161 /* ZIMSqlUpsertStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE53F7169604C700E09161 /* ZIMSqlUpsertStatement.m */; };
 		3DFE541C169604C700E09161 /* ZIMMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE53FA169604C700E09161 /* ZIMMessageDigest.m */; };
 		3DFE54231696076500E09161 /* BatchData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE54221696076500E09161 /* BatchData.m */; };
-		3DFE5427169608CF00E09161 /* LocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE5426169608CF00E09161 /* LocalStorage.m */; };
+		3DFE5427169608CF00E09161 /* OSLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE5426169608CF00E09161 /* OSLocalStorage.m */; };
 		3DFE542B16960B5800E09161 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFE542A16960B5800E09161 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3D5AEA0116A45AF000741652 /* OSConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSConfiguration.h; sourceTree = "<group>"; };
+		3D5AEA0216A45AF000741652 /* OSConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSConfiguration.m; sourceTree = "<group>"; };
 		3D8C70611694814C00619CDB /* OSPositioningProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSPositioningProbe.h; sourceTree = "<group>"; };
 		3D8C70621694814C00619CDB /* OSPositioningProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPositioningProbe.m; sourceTree = "<group>"; };
 		3D8C70651694815800619CDB /* OSProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSProbe.h; sourceTree = "<group>"; };
@@ -237,8 +240,8 @@
 		3DFE541F1696067D00E09161 /* Batch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Batch.m; path = Models/Batch.m; sourceTree = "<group>"; };
 		3DFE54211696076500E09161 /* BatchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BatchData.h; path = Models/BatchData.h; sourceTree = "<group>"; };
 		3DFE54221696076500E09161 /* BatchData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BatchData.m; path = Models/BatchData.m; sourceTree = "<group>"; };
-		3DFE5425169608CF00E09161 /* LocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalStorage.h; path = LocalStorage/LocalStorage.h; sourceTree = "<group>"; };
-		3DFE5426169608CF00E09161 /* LocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalStorage.m; path = LocalStorage/LocalStorage.m; sourceTree = "<group>"; };
+		3DFE5425169608CF00E09161 /* OSLocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSLocalStorage.h; path = LocalStorage/OSLocalStorage.h; sourceTree = "<group>"; };
+		3DFE5426169608CF00E09161 /* OSLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSLocalStorage.m; path = LocalStorage/OSLocalStorage.m; sourceTree = "<group>"; };
 		3DFE542A16960B5800E09161 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		3DFE542F1696115300E09161 /* schema.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = schema.sql; path = LocalStorage/schema.sql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -369,6 +372,8 @@
 		3DDED71C167D1AA7006DE4F8 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				3D5AEA0116A45AF000741652 /* OSConfiguration.h */,
+				3D5AEA0216A45AF000741652 /* OSConfiguration.m */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -538,8 +543,8 @@
 		3DFE5424169608B900E09161 /* LocalStorage */ = {
 			isa = PBXGroup;
 			children = (
-				3DFE5425169608CF00E09161 /* LocalStorage.h */,
-				3DFE5426169608CF00E09161 /* LocalStorage.m */,
+				3DFE5425169608CF00E09161 /* OSLocalStorage.h */,
+				3DFE5426169608CF00E09161 /* OSLocalStorage.m */,
 				3DFE542F1696115300E09161 /* schema.sql */,
 			);
 			name = LocalStorage;
@@ -687,9 +692,10 @@
 				3DFE541B169604C700E09161 /* ZIMSqlUpsertStatement.m in Sources */,
 				3DFE541C169604C700E09161 /* ZIMMessageDigest.m in Sources */,
 				3DFE54231696076500E09161 /* BatchData.m in Sources */,
-				3DFE5427169608CF00E09161 /* LocalStorage.m in Sources */,
+				3DFE5427169608CF00E09161 /* OSLocalStorage.m in Sources */,
 				3DB21AE116972CB700F6B294 /* Batch.m in Sources */,
 				3DB21AE416972ED500F6B294 /* OSProximityProbe.m in Sources */,
+				3D5AEA0316A45AF000741652 /* OSConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

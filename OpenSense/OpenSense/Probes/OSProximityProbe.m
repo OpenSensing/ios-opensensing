@@ -28,21 +28,29 @@
 
 + (NSTimeInterval)defaultUpdateInterval
 {
-    return -1; // This probe does not collected data with an interval
+    return kUpdateIntervalDisabled;
 }
 
 - (void)startProbe
 {
-    [[UIDevice currentDevice] setProximityMonitoringEnabled:YES];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(proximityStateChanged:) name:UIDeviceProximityStateDidChangeNotification object:nil];
+    // Only listen to updates if we are not saving data with an interval
+    if ([self updateInterval] == kUpdateIntervalDisabled)
+    {
+        [[UIDevice currentDevice] setProximityMonitoringEnabled:YES];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(proximityStateChanged:) name:UIDeviceProximityStateDidChangeNotification object:nil];
+    }
     
     [super startProbe];
 }
 
 - (void)stopProbe
 {
-    [[UIDevice currentDevice] setProximityMonitoringEnabled:NO];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    // Only listen to updates if we are not saving data with an interval
+    if ([self updateInterval] == kUpdateIntervalDisabled)
+    {
+        [[UIDevice currentDevice] setProximityMonitoringEnabled:NO];
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    }
     
     [super stopProbe];
 }
