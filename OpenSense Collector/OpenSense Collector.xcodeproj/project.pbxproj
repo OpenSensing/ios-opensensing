@@ -12,6 +12,7 @@
 		3D084274169DE60B0053F4C9 /* BatchDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D084271169DE60B0053F4C9 /* BatchDataCell.m */; };
 		3D35C2C61694C768000ADA14 /* libOpenSense.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D35C2C01694C720000ADA14 /* libOpenSense.a */; };
 		3D4B3B20169729C300FFEA73 /* BatchDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B3B1F169729C300FFEA73 /* BatchDataViewController.m */; };
+		3D5AEA0516A4977A00741652 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D5AEA0416A4977A00741652 /* config.json */; };
 		3D6788611694AC8300553E04 /* ProbesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6788601694AC8300553E04 /* ProbesViewController.m */; };
 		3D8C708F1694A1D500619CDB /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C708E1694A1D500619CDB /* StatusViewController.m */; };
 		3DB21AF516973F0F00F6B294 /* background-texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB21AE516973F0F00F6B294 /* background-texture.png */; };
@@ -90,6 +91,7 @@
 		3D35C2B61694C720000ADA14 /* OpenSense.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OpenSense.xcodeproj; path = ../OpenSense/OpenSense.xcodeproj; sourceTree = "<group>"; };
 		3D4B3B1E169729C300FFEA73 /* BatchDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BatchDataViewController.h; path = Classes/BatchDataViewController.h; sourceTree = "<group>"; };
 		3D4B3B1F169729C300FFEA73 /* BatchDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BatchDataViewController.m; path = Classes/BatchDataViewController.m; sourceTree = "<group>"; };
+		3D5AEA0416A4977A00741652 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		3D67885F1694AC8300553E04 /* ProbesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProbesViewController.h; path = Classes/ProbesViewController.h; sourceTree = "<group>"; };
 		3D6788601694AC8300553E04 /* ProbesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProbesViewController.m; path = Classes/ProbesViewController.m; sourceTree = "<group>"; };
 		3D8C708D1694A1D500619CDB /* StatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusViewController.h; path = Classes/StatusViewController.h; sourceTree = "<group>"; };
@@ -455,6 +457,7 @@
 				3DDED6ED167D098B006DE4F8 /* MainStoryboard.storyboard */,
 				3DB21B08169740BC00F6B294 /* Vendor */,
 				3DDED6DC167D098B006DE4F8 /* Supporting Files */,
+				3D5AEA0416A4977A00741652 /* config.json */,
 			);
 			path = "OpenSense Collector";
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				3DB21B0216973F0F00F6B294 /* stop_hover@2x.png in Resources */,
 				3DB21B0316973F0F00F6B294 /* stop.png in Resources */,
 				3DB21B0416973F0F00F6B294 /* stop@2x.png in Resources */,
+				3D5AEA0516A4977A00741652 /* config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

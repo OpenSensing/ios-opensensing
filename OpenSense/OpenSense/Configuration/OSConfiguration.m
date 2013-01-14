@@ -39,9 +39,17 @@
 
 - (void)loadConfig
 {
-    // Try to load local json config file
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
-    NSData* data = [NSData dataWithContentsOfFile:filePath];
+    // First, try to load config file from the documents directory
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *filePath = [documentsPath stringByAppendingPathComponent:@"config.json"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:filePath])
+    {
+        // Try to load local json config file instead
+        filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
+    }
+    
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
     
     if (data)
     {
@@ -58,8 +66,9 @@
     
     if (data)
     {
-        // Save local copy
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
+        // Save local copy to documents directory
+        NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        NSString *filePath = [documentsPath stringByAppendingPathComponent:@"config.json"];
         [data writeToFile:filePath atomically:YES];
         
         // Parse json as dictionary
@@ -129,13 +138,18 @@
         return -1;
     
     // Get probe data from config
-    NSDictionary *probeData = [[config objectForKey:@"dataRequests"] objectForKey:probeId];
+    NSArray *probeData = [[config objectForKey:@"dataRequests"] objectForKey:probeId];
     
     // Check if probe and DURATION key exists first
-    if (!probeData || ![probeData objectForKey:@"DURATION"])
+    if (!probeData || [probeData count] <= 0)
         return -1;
     
-    return [[probeData objectForKey:@"DURATION"] doubleValue];
+    NSDictionary *firstProbeData = [probeData objectAtIndex:0];
+    
+    if (![firstProbeData objectForKey:@"DURATION"])
+        return -1;
+    
+    return [[firstProbeData objectForKey:@"DURATION"] doubleValue];
 }
 
 @end
