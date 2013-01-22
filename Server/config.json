@@ -1,0 +1,15 @@
+{	"name": "funf",
+	"version":1,
+	"dataArchivePeriod":3600,
+	"dataRequests":{
+		"edu.mit.media.funf.probe.builtin.LocationProbe": [
+            { "PERIOD": 1800 }
+        ],
+        "edu.mit.media.funf.probe.builtin.HardwareInfoProbe": [
+            { "PERIOD": 604800 }
+        ],
+        "edu.mit.media.funf.probe.builtin.BatteryProbe": [
+            { "PERIOD": 300 }
+        ]
+	}
+}
