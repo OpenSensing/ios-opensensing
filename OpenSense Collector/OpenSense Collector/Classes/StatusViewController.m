@@ -27,7 +27,13 @@
 {
     [super viewDidLoad];
     
+    // Subscribe to batch saved notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batchesUpdated:) name:kOpenSenseBatchSavedNotification object:nil];
+    
+    // Start collecting
+    if (![OpenSense sharedInstance].isRunning) {
+        [self toggleCollecting:nil];
+    }
 }
 
 - (void)batchesUpdated:(NSNotification*)notification

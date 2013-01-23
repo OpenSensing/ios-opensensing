@@ -22,7 +22,7 @@
 
 + (NSString*)description
 {
-    return @"";
+    return @"Monitors significant location changes";
 }
 
 + (NSTimeInterval)defaultUpdateInterval
