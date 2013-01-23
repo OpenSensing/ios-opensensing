@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StatusViewController : UIViewController
+@interface StatusViewController : UIViewController {
+    NSTimer *elapsedTimer;
+    long entriesCount;
+}
 
 @property (weak, nonatomic) IBOutlet UIView *pausedView;
 @property (weak, nonatomic) IBOutlet UIView *runningView;

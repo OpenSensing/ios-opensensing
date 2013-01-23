@@ -66,7 +66,7 @@
     NSNumber *proximityState = [NSNumber numberWithBool:[[UIDevice currentDevice] proximityState]];
     
     NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
-                                 proximityState, @"PROXIMITY_STATE",
+                                 proximityState, @"state",
                                  nil];
     
     return data;

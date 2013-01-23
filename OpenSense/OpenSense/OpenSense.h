@@ -18,6 +18,8 @@
 }
 
 @property (assign, readonly) BOOL isRunning;
+@property (strong
+           , readonly) NSDate *startTime;
 
 + (OpenSense*)sharedInstance;
 - (BOOL)startCollector;

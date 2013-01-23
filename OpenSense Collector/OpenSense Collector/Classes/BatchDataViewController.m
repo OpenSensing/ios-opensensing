@@ -35,7 +35,12 @@
     
     self.tableView.backgroundView = backgroundImageView;
     
-    batchDataItems = [batch batchData];
+    // Get dictionary keys and remove probe and datetime keys (we don't need to display these)
+    NSMutableArray *mutableBatchKeys = [[NSMutableArray alloc] initWithArray:[batch allKeys]];
+    [mutableBatchKeys removeObject:@"probe"];
+    [mutableBatchKeys removeObject:@"datetime"];
+    
+    batchKeys = [[NSArray alloc] initWithArray:mutableBatchKeys];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,7 +58,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return batchDataItems ? [batchDataItems count] : 0;
+    return batchKeys ? [batchKeys count] : 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,9 +66,11 @@
     static NSString *CellIdentifier = @"BatchDataCell";
     BatchDataCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    BatchData *batchData = [batchDataItems objectAtIndex:[indexPath row]];
-    cell.labelKey.text = batchData.key;
-    cell.labelValue.text = batchData.value;
+    NSString *key = [batchKeys objectAtIndex:[indexPath row]];
+    id value = [batch objectForKey:key];
+    
+    cell.labelKey.text = key;
+    cell.labelValue.text = [value description];
     
     return cell;
 }

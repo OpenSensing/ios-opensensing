@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OSLocalStorage : NSObject
+@interface OSLocalStorage : NSObject {
+    dispatch_queue_t probeFileQueue;
+}
 
 + (OSLocalStorage*)sharedInstance;
 - (void)saveBatch:(NSDictionary*)batch fromProbe:(NSString*)probeIdentifier;

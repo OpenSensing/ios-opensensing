@@ -24,6 +24,7 @@
 @implementation OpenSense
 
 @synthesize isRunning;
+@synthesize startTime;
 
 + (OpenSense*)sharedInstance
 {
@@ -109,6 +110,7 @@
     }
     
     isRunning = YES;
+    startTime = [NSDate date];
     
     return YES;
 }

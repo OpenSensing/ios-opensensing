@@ -10,6 +10,8 @@
 
 @interface DatabaseViewController : UITableViewController {
     NSMutableArray *batches;
+    NSDateFormatter *dateFormatter;
+    UIView *loadingView;
 }
 
 @end

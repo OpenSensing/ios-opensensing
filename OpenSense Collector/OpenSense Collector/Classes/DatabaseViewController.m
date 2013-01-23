@@ -10,7 +10,6 @@
 #import "BatchDataViewController.h"
 #import "BatchCell.h"
 #import "OpenSense.h"
-#import "Batch.h"
 
 @interface DatabaseViewController ()
 
@@ -18,41 +17,51 @@
 
 @implementation DatabaseViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        batches = nil;
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background-texture"]];
     [backgroundImageView setFrame:self.tableView.frame];
     
     self.tableView.backgroundView = backgroundImageView;
     
+    // Show loading view
+    loadingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [loadingView setBackgroundColor:[UIColor colorWithWhite:0.0f alpha:0.8f]];
+    
+    UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [activityIndicatorView setCenter:CGPointMake(loadingView.frame.size.width / 2, loadingView.frame.size.height / 2)];
+    [activityIndicatorView startAnimating];
+    [loadingView addSubview:activityIndicatorView];
+    
+    UILabel *loadingLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, activityIndicatorView.center.y + 20.0, loadingView.frame.size.width, 40.0)];
+    [loadingLabel setBackgroundColor:[UIColor clearColor]];
+    [loadingLabel setTextColor:[UIColor whiteColor]];
+    [loadingLabel setTextAlignment:NSTextAlignmentCenter];
+    [loadingLabel setText:@"Decrypting collected data"];
+    [loadingView addSubview:loadingLabel];
+    
+    [self.view addSubview:loadingView];
+    
+    batches = nil;
     [[OpenSense sharedInstance] localDataBatches:^(NSArray *fetchedBatches) {
         batches = [[NSMutableArray alloc] initWithArray:fetchedBatches];
         [self.tableView reloadData];
+        [loadingView removeFromSuperview];
+        loadingView = nil;
     }];
+    
+    // Initialize dateformatter
+    dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batchesUpdated:) name:kOpenSenseBatchSavedNotification object:nil];
 }
 
 - (void)batchesUpdated:(NSNotification*)notification
 {
-    Batch *batch = [notification object];
+    NSDictionary *batch = [notification object];
     [batches insertObject:batch atIndex:0];
     [self.tableView reloadData];
 }
@@ -80,10 +89,14 @@
     static NSString *CellIdentifier = @"BatchCell";
     BatchCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    Batch *batch = [batches objectAtIndex:[indexPath row]];
-    cell.labelDateTime.text = [NSDateFormatter localizedStringFromDate:batch.created dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
+    // Get batch
+    NSDictionary *batch = [batches objectAtIndex:[indexPath row]];
     
-    NSString *probeName = [[OpenSense sharedInstance] probeNameFromIdentifier:batch.probeIdentifier];
+    // Format date
+    NSDate *datetime = [dateFormatter dateFromString:[batch objectForKey:@"datetime"]];
+    cell.labelDateTime.text = [NSDateFormatter localizedStringFromDate:datetime dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
+    
+    NSString *probeName = [[OpenSense sharedInstance] probeNameFromIdentifier:[batch objectForKey:@"probe"]];
     cell.labelProbe.text = probeName ? probeName : @"Unknown";
     
     return cell;
@@ -134,9 +147,20 @@
 {
     if ([[segue identifier] isEqualToString:@"BatchDataSegue"])
     {
+        // Get batch data and probe name
+        NSDictionary *batch = [batches objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        NSString *probeName = [[OpenSense sharedInstance] probeNameFromIdentifier:[batch objectForKey:@"probe"]];
+        
+        // Get viewcontroller and set batch and title
         BatchDataViewController *batchDataViewController = [segue destinationViewController];
-        [batchDataViewController setBatch:[batches objectAtIndex:[self.tableView indexPathForSelectedRow].row]];
+        [batchDataViewController setBatch:batch];
+        [batchDataViewController setTitle:probeName];
     }
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

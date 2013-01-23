@@ -33,10 +33,11 @@
 
 - (void)startProbe
 {
+    [[UIDevice currentDevice] setBatteryMonitoringEnabled:YES];
+    
     // Only listen to updates if we are not saving data with an interval
     if ([self updateInterval] == kUpdateIntervalDisabled)
     {
-        [[UIDevice currentDevice] setBatteryMonitoringEnabled:YES];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batteryChanged:) name:UIDeviceBatteryLevelDidChangeNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batteryChanged:) name:UIDeviceBatteryStateDidChangeNotification object:nil];
     }
@@ -46,10 +47,11 @@
 
 - (void)stopProbe
 {
+    [[UIDevice currentDevice] setBatteryMonitoringEnabled:NO];
+    
     // Only listen to updates if we are not saving data with an interval
     if ([self updateInterval] == kUpdateIntervalDisabled)
     {
-        [[UIDevice currentDevice] setBatteryMonitoringEnabled:NO];
         [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
     

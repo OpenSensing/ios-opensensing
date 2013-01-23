@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Batch.h"
 
 @interface BatchDataViewController : UITableViewController {
-    NSArray *batchDataItems;
+    NSArray *batchKeys;
 }
 
-@property (nonatomic, strong) Batch *batch;
+@property (nonatomic, strong) NSDictionary *batch;
 
 @end

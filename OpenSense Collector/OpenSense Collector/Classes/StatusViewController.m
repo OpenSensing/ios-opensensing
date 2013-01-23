@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        entriesCount = 0;
     }
     return self;
 }
@@ -26,7 +26,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batchesUpdated:) name:kOpenSenseBatchSavedNotification object:nil];
+}
+
+- (void)batchesUpdated:(NSNotification*)notification
+{
+    entriesCount++;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.labelStorage.text = [NSString stringWithFormat:@"%ld entries", entriesCount];
+    });
+}
+
+- (void)updateTime:(id)sender
+{
+    // Calculate interval
+    NSDate *start = [[OpenSense sharedInstance] startTime];
+    NSTimeInterval interval = [[NSDate date] timeIntervalSinceDate:start];
+    
+    // Format to hours/minutes/seconds
+    long seconds = (long)interval % 60;
+    interval /= 60;
+    long minutes = (long)interval % 60;
+    long hours = interval / 60;
+    
+    self.labelTime.text = [NSString stringWithFormat:@"%02ld:%02ld:%02ld", hours, minutes, seconds];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,14 +66,26 @@
         [[OpenSense sharedInstance] stopCollector];
         [self.runningView setHidden:YES];
         [self.pausedView setHidden:NO];
+        
+        // Stop timer
+        [elapsedTimer invalidate];
+        elapsedTimer = nil;
     }
     else
     {
         if ([[OpenSense sharedInstance] startCollector]) {
             [self.runningView setHidden:NO];
             [self.pausedView setHidden:YES];
+            
+            // Start timer to update label
+            elapsedTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
         }
     }
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

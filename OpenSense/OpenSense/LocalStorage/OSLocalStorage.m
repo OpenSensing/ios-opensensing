@@ -23,6 +23,17 @@
     return _sharedObject;
 }
 
+- (id)init
+{
+    self = [super init];
+    
+    if (self) {
+        probeFileQueue = dispatch_queue_create("dk.dtu.imm.sensible.filequeue", DISPATCH_QUEUE_SERIAL);
+    }
+    
+    return self;
+}
+
 - (void)saveBatch:(NSDictionary*)batchDataDict fromProbe:(NSString*)probeIdentifier
 {
     // Append timestamp and probe name to dictionary
@@ -31,7 +42,7 @@
     
     NSMutableDictionary *jsonDict = [[NSMutableDictionary alloc] initWithDictionary:batchDataDict];
     [jsonDict setObject:probeIdentifier forKey:@"probe"];
-    [jsonDict setObject:[dateFormatter stringFromDate:[NSDate date]] forKey:@"time"];
+    [jsonDict setObject:[dateFormatter stringFromDate:[NSDate date]] forKey:@"datetime"];
     
     // Convert to JSON data
     NSError *error = nil;
@@ -45,15 +56,11 @@
     NSData *encryptedJsonData = [jsonData AES256EncryptWithKey:[OpenSense sharedInstance].encryptionKey];
     NSString *encryptedJsonDataStr = [encryptedJsonData base64Encoding];
     
-    // Rotate data file ifneedbe
+    // Rotate probe data file ifneedbe
     [self logrotate];
     
     // Append data to file    
-    if (![self appendToProbeDataFile:encryptedJsonDataStr]) {
-        NSLog(@"Could not save data from %@", probeIdentifier);
-    } else {
-        NSLog(@"Saved data from %@", probeIdentifier);
-    }
+    [self appendToProbeDataFile:encryptedJsonDataStr];
     
     // Post "batch saved" notification
     [[NSNotificationCenter defaultCenter] postNotificationName:kOpenSenseBatchSavedNotification object:jsonDict];
@@ -100,35 +107,82 @@
     }
 }
 
-- (BOOL)appendToProbeDataFile:(NSString*)line
+- (void)appendToProbeDataFile:(NSString*)content
 {
-    // Determine file path
-    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *dataPath = [documentsPath stringByAppendingPathComponent:@"data"];
-    NSString *currentFile = [dataPath stringByAppendingPathComponent:@"probedata"];
-    
-    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:currentFile];
-    if (!fileHandle) {
-        return NO;
-    }
-    
-    // Add line break
-    line = [line stringByAppendingString:@"\n"];
-    
-    // Convert to NSData object
-    NSData *data = [line dataUsingEncoding:NSUTF8StringEncoding];
-    
-    // Write to the end of the file
-    [fileHandle seekToEndOfFile];
-    [fileHandle writeData:data];
-    [fileHandle closeFile];
-    
-    return YES;
+    dispatch_async(probeFileQueue, ^{
+        NSString *line = [content copy];
+        
+        // Determine file path
+        NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        NSString *dataPath = [documentsPath stringByAppendingPathComponent:@"data"];
+        NSString *currentFile = [dataPath stringByAppendingPathComponent:@"probedata"];
+        
+        NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:currentFile];
+        if (!fileHandle) {
+            return;
+        }
+        
+        // Add line break
+        line = [line stringByAppendingString:@"\n"];
+        
+        // Convert to NSData object
+        NSData *data = [line dataUsingEncoding:NSUTF8StringEncoding];
+        
+        // Write to the end of the file
+        [fileHandle seekToEndOfFile];
+        [fileHandle writeData:data];
+        [fileHandle closeFile];
+    });
 }
 
 - (void)fetchBatches:(void (^)(NSArray *batches))success
 {
-    
+    dispatch_async(probeFileQueue, ^{
+        NSMutableArray *allBatches = [[NSMutableArray alloc] init];
+        
+        // Determine file path
+        NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        NSString *dataPath = [documentsPath stringByAppendingPathComponent:@"data"];
+        
+        // Find files in data directory
+        NSArray *probeDataFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dataPath error:NULL];
+        for (NSString *file in probeDataFiles) {
+            if ([file hasPrefix:@"probedata"]) { // If file is probedata file
+                
+                NSString *filePath = [dataPath stringByAppendingPathComponent:file];
+                
+                // Read file and split into lines
+                NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+                NSArray *lines = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+                
+                for (NSString *line in lines) {
+                    if ([line length] <= 0) { // Skip blank lines
+                        continue;
+                    }
+                    
+                    // Create data object and decrypt it
+                    NSData *encryptedData = [[NSData alloc] initWithBase64EncodedString:line];
+                    NSData *decryptedData = [encryptedData AES256DecryptWithKey:[OpenSense sharedInstance].encryptionKey];
+                    
+                    // Parse JSON
+                    NSError *error = nil;
+                    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:decryptedData options:kNilOptions error:&error];
+                    
+                    if (!json) {
+                        NSLog(@"Could not parse %@ error: %@", file, [error localizedDescription]);
+                    } else {
+                        [allBatches addObject:json];
+                    }
+                }
+            }
+        }
+        
+        // Execute on main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSArray *batches = [[NSArray alloc] initWithArray:allBatches];
+            success(batches);
+        });
+    });
 }
 
 - (void)fetchBatchesForProbe:(NSString*)probeIdentifier success:(void (^)(NSArray *batches))success
