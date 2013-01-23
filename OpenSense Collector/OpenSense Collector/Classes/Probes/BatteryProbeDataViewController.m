@@ -35,7 +35,7 @@
     [super viewDidLoad];
     
     // Load data from local storage
-    plotData = [[OpenSense sharedInstance] localDataBatchesForProbe:@"dk.dtu.imm.sensible.battery"];
+    //plotData = [[OpenSense sharedInstance] localDataBatchesForProbe:@"dk.dtu.imm.sensible.battery"];
     
     [self initPlot];
 }

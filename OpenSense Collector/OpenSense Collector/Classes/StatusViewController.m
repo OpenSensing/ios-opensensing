@@ -45,9 +45,10 @@
     }
     else
     {
-        [[OpenSense sharedInstance] startCollector];
-        [self.runningView setHidden:NO];
-        [self.pausedView setHidden:YES];
+        if ([[OpenSense sharedInstance] startCollector]) {
+            [self.runningView setHidden:NO];
+            [self.pausedView setHidden:YES];
+        }
     }
 }
 

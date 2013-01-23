@@ -42,8 +42,10 @@
     
     self.tableView.backgroundView = backgroundImageView;
     
-    batches = [[NSMutableArray alloc] initWithArray:[[OpenSense sharedInstance] localDataBatches]];
-    [self.tableView reloadData];
+    [[OpenSense sharedInstance] localDataBatches:^(NSArray *fetchedBatches) {
+        batches = [[NSMutableArray alloc] initWithArray:fetchedBatches];
+        [self.tableView reloadData];
+    }];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batchesUpdated:) name:kOpenSenseBatchSavedNotification object:nil];
 }

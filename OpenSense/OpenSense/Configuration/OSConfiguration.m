@@ -7,12 +7,14 @@
 //
 
 #import "OSConfiguration.h"
+#import "AFNetworking.h"
 
 #define kDefaultVersion                 0
 #define kDefaultDataArchivePeriod       3 * 60 * 60 // 3 hours
 #define kDefaultDataUploadPeriod        6 * 60 * 60 // 6 hours
 #define kDefaultConfigUpdatePeriod      1 * 60 * 60 // 1 hour
 #define kDefaultDataUploadOnWifiOnly    NO
+#define kDefaultMaxDataFileSizeKb       2048 // 2mb
 
 @implementation OSConfiguration
 
@@ -54,34 +56,34 @@
     if (data)
     {
         // Parse json as dictionary
-        config = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        NSError *error = nil;
+        config = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        
+        if (!config) {
+            NSLog(@"Could not parse config: %@", [error localizedDescription]);
+        }
     }
 }
 
 - (void)refreshConfig
 {
     // Try to download json config file
-    NSURL *url = [NSURL URLWithString:[self configUpdateUrl]];
-    NSData *data = [NSData dataWithContentsOfURL:url];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[OSConfiguration currentConfig].baseUrl];
     
-    if (data)
-    {
-        // Save local copy to documents directory
-        NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-        NSString *filePath = [documentsPath stringByAppendingPathComponent:@"config.json"];
-        [data writeToFile:filePath atomically:YES];
-        
-        // Parse json as dictionary
-        config = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    }
-}
-
-- (NSString*)name
-{
-    if (!config)
-        return nil;
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *filePath = [documentsPath stringByAppendingPathComponent:@"config.json"];
     
-    return [config objectForKey:@"name"];
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:@"/config" parameters:nil];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.outputStream = [NSOutputStream outputStreamToFileAtPath:filePath append:NO];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self loadConfig]; // Load the config file
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        // Ignore failure, will be retried later anyways
+    }];
+    
+    [operation start];
 }
 
 - (NSNumber*)version
@@ -92,12 +94,12 @@
     return [config objectForKey:@"version"] ? [config objectForKey:@"version"] : [NSNumber numberWithInt:kDefaultVersion];
 }
 
-- (NSString*)configUpdateUrl
+- (NSURL*)baseUrl
 {
     if (!config)
         return nil;
     
-    return [config objectForKey:@"configUpdateUrl"];
+    return [[NSURL alloc] initWithString:[config objectForKey:@"baseUrl"]];
 }
 
 - (NSNumber*)configUpdatePeriod
@@ -116,20 +118,20 @@
     return [config objectForKey:@"dataArchivePeriod"] ? [config objectForKey:@"dataArchivePeriod"] : [NSNumber numberWithLong:kDefaultConfigUpdatePeriod];
 }
 
-- (NSString*)dataUploadUrl
-{
-    if (!config)
-        return nil;
-    
-    return [config objectForKey:@"dataUploadUrl"];
-}
-
 - (NSNumber*)dataUploadPeriod
 {
     if (!config)
         return nil;
     
     return [config objectForKey:@"dataUploadPeriod"] ? [config objectForKey:@"dataUploadPeriod"] : [NSNumber numberWithLong:kDefaultConfigUpdatePeriod];
+}
+
+- (NSNumber*)maxDataFileSizeKb
+{
+    if (!config)
+        return nil;
+    
+    return [config objectForKey:@"maxDataFileSizeKb"] ? [config objectForKey:@"maxDataFileSizeKb"] : [NSNumber numberWithLong:kDefaultMaxDataFileSizeKb];
 }
 
 - (NSTimeInterval)updateIntervalForProbe:(NSString*)probeId

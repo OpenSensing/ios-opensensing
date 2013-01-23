@@ -15,13 +15,12 @@
 + (OSConfiguration*)currentConfig;
 - (void)loadConfig;
 - (void)refreshConfig;
-- (NSString*)name;
 - (NSNumber*)version;
-- (NSString*)configUpdateUrl;
+- (NSURL*)baseUrl;
 - (NSNumber*)configUpdatePeriod;
 - (NSNumber*)dataArchivePeriod;
-- (NSString*)dataUploadUrl;
 - (NSNumber*)dataUploadPeriod;
+- (NSNumber*)maxDataFileSizeKb;
 - (NSTimeInterval)updateIntervalForProbe:(NSString*)probeId;
 
 @end

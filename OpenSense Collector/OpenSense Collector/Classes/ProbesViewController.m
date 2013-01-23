@@ -85,7 +85,7 @@
     NSString *identifier = [[probes objectAtIndex:[indexPath row]] identifier];
     if ([identifier isEqualToString:@"dk.dtu.imm.sensible.battery"])
     {
-        dataViewController = [[BatteryProbeDataViewController alloc] init];
+        //dataViewController = [[BatteryProbeDataViewController alloc] init];
     }
     
     if (dataViewController)

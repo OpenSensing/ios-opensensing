@@ -14,16 +14,18 @@
 
 @interface OpenSense : NSObject {
     NSMutableArray *activeProbes;
+    BOOL registrationInProgress;
 }
 
 @property (assign, readonly) BOOL isRunning;
 
 + (OpenSense*)sharedInstance;
-- (void)startCollector;
+- (BOOL)startCollector;
 - (void)stopCollector;
 - (NSArray*)availableProbes;
 - (NSString*)probeNameFromIdentifier:(NSString*)probeIdentifier;
-- (NSArray*)localDataBatches;
-- (NSArray*)localDataBatchesForProbe:(NSString*)probeIdentifier;
+- (void)localDataBatches:(void (^)(NSArray *batches))success;
+- (void)localDataBatchesForProbe:(NSString*)probeIdentifier success:(void (^)(NSArray *batches))success;
+- (NSString*)encryptionKey;
 
 @end

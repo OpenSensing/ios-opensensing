@@ -7,7 +7,11 @@
 //
 
 #import "OpenSense.h"
+#import "AFNetworking.h"
+#import "UIDevice+IdentifierAddition.h"
+#import "STKeychain.h"
 #import "OSLocalStorage.h"
+#import "OSConfiguration.h"
 #import "OSPositioningProbe.h"
 #import "OSMotionProbe.h"
 #import "OSEnvironmentProbe.h"
@@ -31,8 +35,71 @@
     return _sharedObject;
 }
 
-- (void)startCollector
+- (id)init
 {
+    self = [super init];
+    
+    if (self)
+    {
+        registrationInProgress = NO;
+        
+        NSError *error = nil;
+        if (![STKeychain getPasswordForUsername:@"OpenSense" andServiceName:@"OpenSense" error:&error]) {
+            [self registerDevice];
+        }
+    }
+    
+    return self;
+}
+
+- (void)registerDevice
+{
+    // Make sure that registration can not be called multiple times at once
+    if (registrationInProgress) {
+        return;
+    }
+    registrationInProgress = YES;
+    
+    // Make HTTP request to register the device
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[OSConfiguration currentConfig].baseUrl];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            [[UIDevice currentDevice] uniqueGlobalDeviceIdentifier], @"uuid",
+                            nil];
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"/register" parameters:params];
+
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        // If a key was provided, store it in the keychain
+        if ([JSON objectForKey:@"key"]) {
+            
+            NSError *error = nil;
+            if (![STKeychain storeUsername:@"OpenSense" andPassword:[JSON objectForKey:@"key"] forServiceName:@"OpenSense" updateExisting:NO error:&error]) {
+                NSLog(@"Could not store encryption key: %@", [error localizedDescription]);
+            } else {            
+                NSLog(@"Device registered with key: %@", [JSON objectForKey:@"key"]);
+            }
+        }
+        
+        registrationInProgress = NO;
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Could not register device" message:@"The device could not be registered, please try again later." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alertView show];
+        
+        registrationInProgress = NO;
+    }];
+    [operation start];
+}
+
+- (BOOL)startCollector
+{
+    NSError *error = nil;
+    if (![STKeychain getPasswordForUsername:@"OpenSense" andServiceName:@"OpenSense" error:&error]) {
+        [self registerDevice];
+        return NO;
+    }
+    
     activeProbes = [[NSMutableArray alloc] init];
     for (Class class in [self availableProbes])
     {
@@ -42,6 +109,8 @@
     }
     
     isRunning = YES;
+    
+    return YES;
 }
 
 - (void)stopCollector
@@ -82,14 +151,19 @@
     return nil;
 }
 
-- (NSArray*)localDataBatches
+- (void)localDataBatches:(void (^)(NSArray *batches))success
 {
-    return [[OSLocalStorage sharedInstance] fetchBatches];
+    [[OSLocalStorage sharedInstance] fetchBatches:success];
 }
 
-- (NSArray*)localDataBatchesForProbe:(NSString*)probeIdentifier
+- (void)localDataBatchesForProbe:(NSString*)probeIdentifier success:(void (^)(NSArray *batches))success
 {
-    return [[OSLocalStorage sharedInstance] fetchBatchesForProbe:probeIdentifier];
+    [[OSLocalStorage sharedInstance] fetchBatchesForProbe:probeIdentifier success:success];
+}
+
+- (NSString*)encryptionKey
+{
+    return [STKeychain getPasswordForUsername:@"OpenSense" andServiceName:@"OpenSense" error:nil];
 }
 
 @end

@@ -12,7 +12,7 @@
 
 + (OSLocalStorage*)sharedInstance;
 - (void)saveBatch:(NSDictionary*)batch fromProbe:(NSString*)probeIdentifier;
-- (NSArray*)fetchBatches;
-- (NSArray*)fetchBatchesForProbe:(NSString*)probeIdentifier;
+- (void)fetchBatches:(void (^)(NSArray *batches))success;
+- (void)fetchBatchesForProbe:(NSString*)probeIdentifier success:(void (^)(NSArray *batches))success;
 
 @end

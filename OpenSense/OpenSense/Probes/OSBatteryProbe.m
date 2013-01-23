@@ -18,7 +18,7 @@
 
 + (NSString*)identifier
 {
-    return @"edu.mit.media.funf.probe.builtin.BatteryProbe";
+    return @"dk.dtu.imm.sensible.battery";
 }
 
 + (NSString*)description

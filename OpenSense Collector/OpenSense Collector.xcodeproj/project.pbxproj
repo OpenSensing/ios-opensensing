@@ -14,7 +14,10 @@
 		3D4B3B20169729C300FFEA73 /* BatchDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B3B1F169729C300FFEA73 /* BatchDataViewController.m */; };
 		3D5AEA0516A4977A00741652 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D5AEA0416A4977A00741652 /* config.json */; };
 		3D6788611694AC8300553E04 /* ProbesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6788601694AC8300553E04 /* ProbesViewController.m */; };
+		3D7A747816B03D43000B4A0D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7A747716B03D43000B4A0D /* MobileCoreServices.framework */; };
+		3D7A747A16B03D50000B4A0D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7A747916B03D50000B4A0D /* SystemConfiguration.framework */; };
 		3D8C708F1694A1D500619CDB /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C708E1694A1D500619CDB /* StatusViewController.m */; };
+		3D98CA8516AF4C230009F3C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D98CA8416AF4C230009F3C4 /* Security.framework */; };
 		3DB21AF516973F0F00F6B294 /* background-texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB21AE516973F0F00F6B294 /* background-texture.png */; };
 		3DB21AF616973F0F00F6B294 /* background-texture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB21AE616973F0F00F6B294 /* background-texture@2x.png */; };
 		3DB21AF716973F0F00F6B294 /* probes.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB21AE716973F0F00F6B294 /* probes.png */; };
@@ -50,9 +53,6 @@
 		3DDED70F167D098B006DE4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DDED70D167D098B006DE4F8 /* InfoPlist.strings */; };
 		3DDED712167D098B006DE4F8 /* OpenSense_CollectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED711167D098B006DE4F8 /* OpenSense_CollectorTests.m */; };
 		3DE740DA16971DB300BCB9A0 /* DatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE740D916971DB300BCB9A0 /* DatabaseViewController.m */; };
-		3DFE542D1696105600E09161 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFE542C1696105600E09161 /* libsqlite3.0.dylib */; };
-		3DFE5434169621F200E09161 /* opensense.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE5432169621F200E09161 /* opensense.sqlite */; };
-		3DFE5435169621F200E09161 /* db.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE5433169621F200E09161 /* db.plist */; };
 		3DFE62551694DE4500145310 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE62541694DE4500145310 /* Icon.png */; };
 		3DFE62571694DE4800145310 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE62561694DE4800145310 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
@@ -94,8 +94,11 @@
 		3D5AEA0416A4977A00741652 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		3D67885F1694AC8300553E04 /* ProbesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProbesViewController.h; path = Classes/ProbesViewController.h; sourceTree = "<group>"; };
 		3D6788601694AC8300553E04 /* ProbesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProbesViewController.m; path = Classes/ProbesViewController.m; sourceTree = "<group>"; };
+		3D7A747716B03D43000B4A0D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3D7A747916B03D50000B4A0D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3D8C708D1694A1D500619CDB /* StatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusViewController.h; path = Classes/StatusViewController.h; sourceTree = "<group>"; };
 		3D8C708E1694A1D500619CDB /* StatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusViewController.m; path = Classes/StatusViewController.m; sourceTree = "<group>"; };
+		3D98CA8416AF4C230009F3C4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3DB21AE516973F0F00F6B294 /* background-texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-texture.png"; path = "Assets/background-texture.png"; sourceTree = "<group>"; };
 		3DB21AE616973F0F00F6B294 /* background-texture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-texture@2x.png"; path = "Assets/background-texture@2x.png"; sourceTree = "<group>"; };
 		3DB21AE716973F0F00F6B294 /* probes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = probes.png; path = Assets/probes.png; sourceTree = "<group>"; };
@@ -212,9 +215,6 @@
 		3DDED711167D098B006DE4F8 /* OpenSense_CollectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenSense_CollectorTests.m; sourceTree = "<group>"; };
 		3DE740D816971DB300BCB9A0 /* DatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseViewController.h; path = Classes/DatabaseViewController.h; sourceTree = "<group>"; };
 		3DE740D916971DB300BCB9A0 /* DatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseViewController.m; path = Classes/DatabaseViewController.m; sourceTree = "<group>"; };
-		3DFE542C1696105600E09161 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		3DFE5432169621F200E09161 /* opensense.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = opensense.sqlite; sourceTree = "<group>"; };
-		3DFE5433169621F200E09161 /* db.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = db.plist; sourceTree = "<group>"; };
 		3DFE62541694DE4500145310 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3DFE62561694DE4800145310 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,8 +224,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7A747A16B03D50000B4A0D /* SystemConfiguration.framework in Frameworks */,
+				3D7A747816B03D43000B4A0D /* MobileCoreServices.framework in Frameworks */,
+				3D98CA8516AF4C230009F3C4 /* Security.framework in Frameworks */,
 				3DB21B5716975B1E00F6B294 /* QuartzCore.framework in Frameworks */,
-				3DFE542D1696105600E09161 /* libsqlite3.0.dylib in Frameworks */,
 				3DB21B55169740D600F6B294 /* libCorePlot-CocoaTouch.a in Frameworks */,
 				3D35C2C61694C768000ADA14 /* libOpenSense.a in Frameworks */,
 				3DDED6D6167D098B006DE4F8 /* UIKit.framework in Frameworks */,
@@ -434,8 +436,10 @@
 		3DDED6D4167D098B006DE4F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3DFE542C1696105600E09161 /* libsqlite3.0.dylib */,
+				3D7A747916B03D50000B4A0D /* SystemConfiguration.framework */,
+				3D7A747716B03D43000B4A0D /* MobileCoreServices.framework */,
 				3DB21B54169740D600F6B294 /* libCorePlot-CocoaTouch.a */,
+				3D98CA8416AF4C230009F3C4 /* Security.framework */,
 				3DB21B5616975B1E00F6B294 /* QuartzCore.framework */,
 				3DDED6D5167D098B006DE4F8 /* UIKit.framework */,
 				3DDED6D7167D098B006DE4F8 /* Foundation.framework */,
@@ -448,8 +452,6 @@
 		3DDED6DB167D098B006DE4F8 /* OpenSense Collector */ = {
 			isa = PBXGroup;
 			children = (
-				3DFE5432169621F200E09161 /* opensense.sqlite */,
-				3DFE5433169621F200E09161 /* db.plist */,
 				3D8C708C1694A1B800619CDB /* Classes */,
 				3D8C707716948DF700619CDB /* Assets */,
 				3DDED6E4167D098B006DE4F8 /* AppDelegate.h */,
@@ -596,8 +598,6 @@
 				3DDED6EF167D098B006DE4F8 /* MainStoryboard.storyboard in Resources */,
 				3DFE62551694DE4500145310 /* Icon.png in Resources */,
 				3DFE62571694DE4800145310 /* Icon@2x.png in Resources */,
-				3DFE5434169621F200E09161 /* opensense.sqlite in Resources */,
-				3DFE5435169621F200E09161 /* db.plist in Resources */,
 				3DB21AF516973F0F00F6B294 /* background-texture.png in Resources */,
 				3DB21AF616973F0F00F6B294 /* background-texture@2x.png in Resources */,
 				3DB21AF716973F0F00F6B294 /* probes.png in Resources */,

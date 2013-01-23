@@ -1,70 +1,22 @@
 {
-    "name": "awesome2",
-    "version": 2,
-    "dataUploadOnWifiOnly": true,
-    "configUpdateUrl": "http://curie.imm.dtu.dk/sensible_inbound/funf-config/",
-    "configUpdatePeriod": 21600,
-    "dataArchivePeriod": 300,
-    "dataUploadUrl": "http://curie.imm.dtu.dk/sensible_inbound/funf-upload/",
-    "dataUploadPeriod": 7200,
-    "dataRequests": {
-        "edu.mit.media.funf.probe.builtin.BatteryProbe": [
-                                                          {
-                                                          "PERIOD": 3600,
-                                                          "DURATION": 30
-                                                          }
-                                                          ],
-        "edu.mit.media.funf.probe.builtin.TimeOffsetProbe": [
-                                                             {
-                                                             "PERIOD": 21600
-                                                             }
-                                                             ],
-        "edu.mit.media.funf.probe.builtin.HardwareInfoProbe": [
-                                                               {
-                                                               "PERIOD": 86400
-                                                               }
-                                                               ],
-        "edu.mit.media.funf.probe.builtin.LocationProbe": [
-                                                           {
-                                                           "PERIOD": 900,
-                                                           "DURATION": 30
-                                                           }
-                                                           ],
-        "edu.mit.media.funf.probe.builtin.ScreenProbe": [
-        {}
-        ],
-        "edu.mit.media.funf.probe.builtin.BluetoothProbe": [
-                                                            {
-                                                            "PERIOD": 300,
-                                                            "DURATION": 30
-                                                            }
-                                                            ],
-        "edu.mit.media.funf.probe.builtin.CellProbe": [
-                                                       {
-                                                       "PERIOD": 600,
-                                                       "DURATION": 30
-                                                       }
-                                                       ],
-        "edu.mit.media.funf.probe.builtin.WifiProbe": [
-                                                       {
-                                                       "PERIOD": 600,
-                                                       "DURATION": 30
-                                                       }
-                                                       ],
-        "edu.mit.media.funf.probe.builtin.CallLogProbe": [
-                                                          {
-                                                          "PERIOD": 43200
-                                                          }
-                                                          ],
-        "edu.mit.media.funf.probe.builtin.ContactProbe": [
-                                                          {
-                                                          "PERIOD": 43200
-                                                          }
-                                                          ],
-        "edu.mit.media.funf.probe.builtin.SMSProbe": [
-                                                      {
-                                                      "PERIOD": 43200
-                                                      }
-                                                      ]
-    }
+  "name": "awesome2",
+  "version": 2,
+  "dataUploadOnWifiOnly": true,
+  "baseUrl": "http://codemonkey.io:4000",
+  "configUpdatePeriod": 21600,
+  "dataArchivePeriod": 300,
+  "dataUploadPeriod": 7200,
+  "maxDataFileSizeKb": 5,
+  "dataRequests": {
+    "dk.dtu.imm.sensible.battery": [
+      {
+        "DURATION": 2
+      }
+    ],
+    "dk.dtu.imm.sensible.proximity": [
+      {
+        "DURATION": 2
+      }
+    ],
+  }
 }
