@@ -36,6 +36,7 @@
 		3D98CA8816AF4CB00009F3C4 /* NSData+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D98CA8716AF4CB00009F3C4 /* NSData+AESCrypt.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3D98CA8C16AF4CCE0009F3C4 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D98CA8A16AF4CC90009F3C4 /* UIDevice+IdentifierAddition.m */; };
 		3D98CA8F16AF4CFA0009F3C4 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D98CA8E16AF4CFA0009F3C4 /* NSString+MD5Addition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3DA2596616B087A800190683 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA2596516B087A800190683 /* CoreLocation.framework */; };
 		3DB21AE416972ED500F6B294 /* OSProximityProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB21AE316972ED500F6B294 /* OSProximityProbe.m */; };
 		3DDED69F167D04CF006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED69E167D04CF006DE4F8 /* Foundation.framework */; };
 		3DDED6A4167D04CF006DE4F8 /* OpenSense.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DDED6A3167D04CF006DE4F8 /* OpenSense.h */; };
@@ -138,6 +139,7 @@
 		3D98CA8A16AF4CC90009F3C4 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+IdentifierAddition.m"; path = "Vendor/UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
 		3D98CA8D16AF4CFA0009F3C4 /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MD5Addition.h"; path = "Vendor/NSString+MD5Addition.h"; sourceTree = "<group>"; };
 		3D98CA8E16AF4CFA0009F3C4 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MD5Addition.m"; path = "Vendor/NSString+MD5Addition.m"; sourceTree = "<group>"; };
+		3DA2596516B087A800190683 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3DB21AE216972ED500F6B294 /* OSProximityProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSProximityProbe.h; sourceTree = "<group>"; };
 		3DB21AE316972ED500F6B294 /* OSProximityProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSProximityProbe.m; sourceTree = "<group>"; };
 		3DDED69B167D04CF006DE4F8 /* libOpenSense.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOpenSense.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA2596616B087A800190683 /* CoreLocation.framework in Frameworks */,
 				3D7A747616B03D34000B4A0D /* MobileCoreServices.framework in Frameworks */,
 				3D7A747416B03D2F000B4A0D /* SystemConfiguration.framework in Frameworks */,
 				3D98CA8316AF4BE10009F3C4 /* Security.framework in Frameworks */,
@@ -250,6 +253,7 @@
 		3DDED69D167D04CF006DE4F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DA2596516B087A800190683 /* CoreLocation.framework */,
 				3D7A747516B03D34000B4A0D /* MobileCoreServices.framework */,
 				3D7A747316B03D2F000B4A0D /* SystemConfiguration.framework */,
 				3D98CA8216AF4BE10009F3C4 /* Security.framework */,

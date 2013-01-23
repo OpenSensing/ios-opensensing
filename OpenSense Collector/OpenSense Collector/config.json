@@ -6,16 +6,21 @@
   "configUpdatePeriod": 21600,
   "dataArchivePeriod": 300,
   "dataUploadPeriod": 7200,
-  "maxDataFileSizeKb": 5,
+  "maxDataFileSizeKb": 1024,
   "dataRequests": {
     "dk.dtu.imm.sensible.battery": [
       {
-        "DURATION": 2
+        "interval": -1
       }
     ],
     "dk.dtu.imm.sensible.proximity": [
       {
-        "DURATION": 2
+        "interval": -1
+      }
+    ],
+    "dk.dtu.imm.sensible.positiong": [
+      {
+        "interval": -1
       }
     ],
   }

@@ -18,6 +18,8 @@
 		3D7A747A16B03D50000B4A0D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7A747916B03D50000B4A0D /* SystemConfiguration.framework */; };
 		3D8C708F1694A1D500619CDB /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C708E1694A1D500619CDB /* StatusViewController.m */; };
 		3D98CA8516AF4C230009F3C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D98CA8416AF4C230009F3C4 /* Security.framework */; };
+		3DA2596216B0837C00190683 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA2596116B0837C00190683 /* MapKit.framework */; };
+		3DA2596416B0879F00190683 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA2596316B0879F00190683 /* CoreLocation.framework */; };
 		3DB21AF516973F0F00F6B294 /* background-texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB21AE516973F0F00F6B294 /* background-texture.png */; };
 		3DB21AF616973F0F00F6B294 /* background-texture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB21AE616973F0F00F6B294 /* background-texture@2x.png */; };
 		3DB21AF716973F0F00F6B294 /* probes.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB21AE716973F0F00F6B294 /* probes.png */; };
@@ -99,6 +101,8 @@
 		3D8C708D1694A1D500619CDB /* StatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusViewController.h; path = Classes/StatusViewController.h; sourceTree = "<group>"; };
 		3D8C708E1694A1D500619CDB /* StatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusViewController.m; path = Classes/StatusViewController.m; sourceTree = "<group>"; };
 		3D98CA8416AF4C230009F3C4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3DA2596116B0837C00190683 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3DA2596316B0879F00190683 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3DB21AE516973F0F00F6B294 /* background-texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-texture.png"; path = "Assets/background-texture.png"; sourceTree = "<group>"; };
 		3DB21AE616973F0F00F6B294 /* background-texture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-texture@2x.png"; path = "Assets/background-texture@2x.png"; sourceTree = "<group>"; };
 		3DB21AE716973F0F00F6B294 /* probes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = probes.png; path = Assets/probes.png; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA2596416B0879F00190683 /* CoreLocation.framework in Frameworks */,
+				3DA2596216B0837C00190683 /* MapKit.framework in Frameworks */,
 				3D7A747A16B03D50000B4A0D /* SystemConfiguration.framework in Frameworks */,
 				3D7A747816B03D43000B4A0D /* MobileCoreServices.framework in Frameworks */,
 				3D98CA8516AF4C230009F3C4 /* Security.framework in Frameworks */,
@@ -436,6 +442,8 @@
 		3DDED6D4167D098B006DE4F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DA2596316B0879F00190683 /* CoreLocation.framework */,
+				3DA2596116B0837C00190683 /* MapKit.framework */,
 				3D7A747916B03D50000B4A0D /* SystemConfiguration.framework */,
 				3D7A747716B03D43000B4A0D /* MobileCoreServices.framework */,
 				3DB21B54169740D600F6B294 /* libCorePlot-CocoaTouch.a */,

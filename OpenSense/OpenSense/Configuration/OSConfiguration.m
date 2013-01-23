@@ -148,10 +148,10 @@
     
     NSDictionary *firstProbeData = [probeData objectAtIndex:0];
     
-    if (![firstProbeData objectForKey:@"DURATION"])
+    if (![firstProbeData objectForKey:@"interval"])
         return -1;
     
-    return [[firstProbeData objectForKey:@"DURATION"] doubleValue];
+    return [[firstProbeData objectForKey:@"interval"] doubleValue];
 }
 
 @end

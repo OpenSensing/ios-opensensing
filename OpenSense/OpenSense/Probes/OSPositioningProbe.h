@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "OSProbe.h"
 
-@interface OSPositioningProbe : OSProbe
+@interface OSPositioningProbe : OSProbe<CLLocationManagerDelegate> {
+    CLLocationManager *locationManager;
+    CLLocation *lastLocation;
+}
 
 @end

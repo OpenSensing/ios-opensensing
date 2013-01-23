@@ -69,8 +69,11 @@
     // Receive data from the probe
     NSDictionary *data = [self sendData];
     
-    // Store data in the local storage
-    [[OSLocalStorage sharedInstance] saveBatch:data fromProbe:[[self class] identifier]];
+    if (data)
+    {
+        // Store data in the local storage
+        [[OSLocalStorage sharedInstance] saveBatch:data fromProbe:[[self class] identifier]];
+    }
 }
 
 - (NSDictionary*)sendData
