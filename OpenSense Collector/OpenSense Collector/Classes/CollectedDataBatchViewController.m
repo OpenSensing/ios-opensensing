@@ -1,19 +1,19 @@
 //
-//  BatchDataViewController.m
+//  CollectedDataBatchViewController.m
 //  OpenSense Collector
 //
 //  Created by Mathias Hansen on 1/4/13.
 //  Copyright (c) 2013 Mathias Hansen. All rights reserved.
 //
 
-#import "BatchDataViewController.h"
+#import "CollectedDataBatchViewController.h"
 #import "BatchDataCell.h"
 
-@interface BatchDataViewController ()
+@interface CollectedDataBatchViewController ()
 
 @end
 
-@implementation BatchDataViewController
+@implementation CollectedDataBatchViewController
 
 @synthesize batch;
 

@@ -36,16 +36,14 @@
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    UINavigationController *selectedNavigationController = (UINavigationController*)[self selectedViewController];
+    /*UINavigationController *selectedNavigationController = (UINavigationController*)[self selectedViewController];
     
     if ([[selectedNavigationController topViewController] respondsToSelector:@selector(supportedInterfaceOrientations)])
     {
         return [[selectedNavigationController topViewController] supportedInterfaceOrientations];
-    }
-    else
-    {
-        return UIInterfaceOrientationMaskPortrait; // Return to default supported orientation
-    }
+    }*/
+    
+    return UIInterfaceOrientationMaskPortrait; // Return to default supported orientation
 }
 
 - (void)didReceiveMemoryWarning

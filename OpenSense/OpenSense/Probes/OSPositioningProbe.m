@@ -36,12 +36,16 @@
     [locationManager setDelegate:self];
     
     [locationManager startMonitoringSignificantLocationChanges];
+    
+    [super startProbe];
 }
 
 - (void)stopProbe
 {
     [locationManager stopMonitoringSignificantLocationChanges];
     locationManager = nil;
+    
+    [super stopProbe];
 }
 
 - (NSDictionary*)sendData

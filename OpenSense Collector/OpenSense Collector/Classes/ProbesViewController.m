@@ -76,16 +76,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Click: %d", indexPath.row);
-    
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     UIViewController *dataViewController = nil;
     
-    NSString *identifier = [[probes objectAtIndex:[indexPath row]] identifier];
-    if ([identifier isEqualToString:@"dk.dtu.imm.sensible.battery"])
+    NSString *probeName = [[probes objectAtIndex:[indexPath row]] name];
+    NSString *className = [NSString stringWithFormat:@"%@ProbeDataViewController", probeName];
+    Class dataViewControllerClass = NSClassFromString(className);
+    
+    if (dataViewControllerClass)
     {
-        //dataViewController = [[BatteryProbeDataViewController alloc] init];
+        dataViewController = [[dataViewControllerClass alloc] init];
     }
     
     if (dataViewController)

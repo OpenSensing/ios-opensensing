@@ -137,6 +137,11 @@
 
 - (void)fetchBatches:(void (^)(NSArray *batches))success
 {
+    [self fetchBatchesForProbe:nil success:success];
+}
+
+- (void)fetchBatchesForProbe:(NSString*)probeIdentifier success:(void (^)(NSArray *batches))success
+{
     dispatch_async(probeFileQueue, ^{
         NSMutableArray *allBatches = [[NSMutableArray alloc] init];
         
@@ -171,7 +176,10 @@
                     if (!json) {
                         NSLog(@"Could not parse %@ error: %@", file, [error localizedDescription]);
                     } else {
-                        [allBatches addObject:json];
+                        // If probeidentifier is nil, just add it - else, only add it if probeIdentifier matches
+                        if (!probeIdentifier || [[json objectForKey:@"probe"] isEqualToString:probeIdentifier]) {
+                            [allBatches addObject:json];
+                        }
                     }
                 }
             }
@@ -183,11 +191,6 @@
             success(batches);
         });
     });
-}
-
-- (void)fetchBatchesForProbe:(NSString*)probeIdentifier success:(void (^)(NSArray *batches))success
-{
-    
 }
 
 @end

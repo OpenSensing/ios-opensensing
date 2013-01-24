@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="1131" y="287"/>
         </scene>
-        <!--Database View Controller - Collected data-->
+        <!--Collected Data View Controller - Collected data-->
         <scene sceneID="BWm-ZS-I2z">
             <objects>
-                <tableViewController id="oo7-Zy-rV0" customClass="DatabaseViewController" sceneMemberID="viewController">
+                <tableViewController id="oo7-Zy-rV0" customClass="CollectedDataViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1wV-pL-Zyz">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="1125" y="963"/>
         </scene>
-        <!--Batch Data View Controller-->
+        <!--Collected Data Batch View Controller-->
         <scene sceneID="a9L-pU-ig4">
             <objects>
-                <tableViewController id="FdO-G8-PFy" customClass="BatchDataViewController" sceneMemberID="viewController">
+                <tableViewController id="FdO-G8-PFy" customClass="CollectedDataBatchViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tkF-Yk-Z1o">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -375,11 +375,11 @@
                 <relationship kind="outlet" name="labelValue" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="BatchDataViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BatchDataViewController.h"/>
+        <class className="CollectedDataBatchViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CollectedDataBatchViewController.h"/>
         </class>
-        <class className="DatabaseViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DatabaseViewController.h"/>
+        <class className="CollectedDataViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CollectedDataViewController.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

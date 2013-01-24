@@ -40,7 +40,7 @@
 {
     entriesCount++;
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.labelStorage.text = [NSString stringWithFormat:@"%ld entries", entriesCount];
+        self.labelStorage.text = [NSString stringWithFormat:@"%ld %@", entriesCount, (entriesCount == 1) ? @"entry" : @"entries"];
     });
 }
 

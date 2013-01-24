@@ -11,7 +11,7 @@
 		3D084273169DE60B0053F4C9 /* BatchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D08426F169DE60B0053F4C9 /* BatchCell.m */; };
 		3D084274169DE60B0053F4C9 /* BatchDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D084271169DE60B0053F4C9 /* BatchDataCell.m */; };
 		3D35C2C61694C768000ADA14 /* libOpenSense.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D35C2C01694C720000ADA14 /* libOpenSense.a */; };
-		3D4B3B20169729C300FFEA73 /* BatchDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B3B1F169729C300FFEA73 /* BatchDataViewController.m */; };
+		3D4B3B20169729C300FFEA73 /* CollectedDataBatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B3B1F169729C300FFEA73 /* CollectedDataBatchViewController.m */; };
 		3D5AEA0516A4977A00741652 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D5AEA0416A4977A00741652 /* config.json */; };
 		3D6788611694AC8300553E04 /* ProbesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6788601694AC8300553E04 /* ProbesViewController.m */; };
 		3D7A747816B03D43000B4A0D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7A747716B03D43000B4A0D /* MobileCoreServices.framework */; };
@@ -39,6 +39,9 @@
 		3DB21B55169740D600F6B294 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB21B54169740D600F6B294 /* libCorePlot-CocoaTouch.a */; };
 		3DB21B5716975B1E00F6B294 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB21B5616975B1E00F6B294 /* QuartzCore.framework */; };
 		3DB21B6016978F1E00F6B294 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB21B5F16978F1E00F6B294 /* TabBarViewController.m */; };
+		3DB69EF216B1C0B1009570F3 /* CollectedDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69EF116B1C0B1009570F3 /* CollectedDataViewController.m */; };
+		3DB69EF816B1C3A8009570F3 /* PositioningProbeDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69EF716B1C3A8009570F3 /* PositioningProbeDataViewController.m */; };
+		3DB69EFB16B1C543009570F3 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69EFA16B1C543009570F3 /* LoadingView.m */; };
 		3DDED6D6167D098B006DE4F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D5167D098B006DE4F8 /* UIKit.framework */; };
 		3DDED6D8167D098B006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D7167D098B006DE4F8 /* Foundation.framework */; };
 		3DDED6DA167D098B006DE4F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D9167D098B006DE4F8 /* CoreGraphics.framework */; };
@@ -54,7 +57,6 @@
 		3DDED707167D098B006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D7167D098B006DE4F8 /* Foundation.framework */; };
 		3DDED70F167D098B006DE4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DDED70D167D098B006DE4F8 /* InfoPlist.strings */; };
 		3DDED712167D098B006DE4F8 /* OpenSense_CollectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED711167D098B006DE4F8 /* OpenSense_CollectorTests.m */; };
-		3DE740DA16971DB300BCB9A0 /* DatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE740D916971DB300BCB9A0 /* DatabaseViewController.m */; };
 		3DFE62551694DE4500145310 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE62541694DE4500145310 /* Icon.png */; };
 		3DFE62571694DE4800145310 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE62561694DE4800145310 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
@@ -91,8 +93,8 @@
 		3D084270169DE60B0053F4C9 /* BatchDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatchDataCell.h; sourceTree = "<group>"; };
 		3D084271169DE60B0053F4C9 /* BatchDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatchDataCell.m; sourceTree = "<group>"; };
 		3D35C2B61694C720000ADA14 /* OpenSense.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OpenSense.xcodeproj; path = ../OpenSense/OpenSense.xcodeproj; sourceTree = "<group>"; };
-		3D4B3B1E169729C300FFEA73 /* BatchDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BatchDataViewController.h; path = Classes/BatchDataViewController.h; sourceTree = "<group>"; };
-		3D4B3B1F169729C300FFEA73 /* BatchDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BatchDataViewController.m; path = Classes/BatchDataViewController.m; sourceTree = "<group>"; };
+		3D4B3B1E169729C300FFEA73 /* CollectedDataBatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectedDataBatchViewController.h; path = Classes/CollectedDataBatchViewController.h; sourceTree = "<group>"; };
+		3D4B3B1F169729C300FFEA73 /* CollectedDataBatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectedDataBatchViewController.m; path = Classes/CollectedDataBatchViewController.m; sourceTree = "<group>"; };
 		3D5AEA0416A4977A00741652 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		3D67885F1694AC8300553E04 /* ProbesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProbesViewController.h; path = Classes/ProbesViewController.h; sourceTree = "<group>"; };
 		3D6788601694AC8300553E04 /* ProbesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProbesViewController.m; path = Classes/ProbesViewController.m; sourceTree = "<group>"; };
@@ -197,6 +199,12 @@
 		3DB21B5616975B1E00F6B294 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3DB21B5E16978F1D00F6B294 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = Classes/TabBarViewController.h; sourceTree = "<group>"; };
 		3DB21B5F16978F1E00F6B294 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = Classes/TabBarViewController.m; sourceTree = "<group>"; };
+		3DB69EF016B1C0B1009570F3 /* CollectedDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectedDataViewController.h; path = Classes/CollectedDataViewController.h; sourceTree = "<group>"; };
+		3DB69EF116B1C0B1009570F3 /* CollectedDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectedDataViewController.m; path = Classes/CollectedDataViewController.m; sourceTree = "<group>"; };
+		3DB69EF616B1C3A8009570F3 /* PositioningProbeDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositioningProbeDataViewController.h; sourceTree = "<group>"; };
+		3DB69EF716B1C3A8009570F3 /* PositioningProbeDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositioningProbeDataViewController.m; sourceTree = "<group>"; };
+		3DB69EF916B1C543009570F3 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		3DB69EFA16B1C543009570F3 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		3DDED6D1167D098B006DE4F8 /* OpenSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDED6D5167D098B006DE4F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3DDED6D7167D098B006DE4F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -217,8 +225,6 @@
 		3DDED70E167D098B006DE4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3DDED710167D098B006DE4F8 /* OpenSense_CollectorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenSense_CollectorTests.h; sourceTree = "<group>"; };
 		3DDED711167D098B006DE4F8 /* OpenSense_CollectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenSense_CollectorTests.m; sourceTree = "<group>"; };
-		3DE740D816971DB300BCB9A0 /* DatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseViewController.h; path = Classes/DatabaseViewController.h; sourceTree = "<group>"; };
-		3DE740D916971DB300BCB9A0 /* DatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseViewController.m; path = Classes/DatabaseViewController.m; sourceTree = "<group>"; };
 		3DFE62541694DE4500145310 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3DFE62561694DE4800145310 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +266,8 @@
 			children = (
 				3D08426B169DE60B0053F4C9 /* BatteryProbeDataViewController.h */,
 				3D08426C169DE60B0053F4C9 /* BatteryProbeDataViewController.m */,
+				3DB69EF616B1C3A8009570F3 /* PositioningProbeDataViewController.h */,
+				3DB69EF716B1C3A8009570F3 /* PositioningProbeDataViewController.m */,
 			);
 			name = Probes;
 			path = Classes/Probes;
@@ -272,6 +280,8 @@
 				3D08426F169DE60B0053F4C9 /* BatchCell.m */,
 				3D084270169DE60B0053F4C9 /* BatchDataCell.h */,
 				3D084271169DE60B0053F4C9 /* BatchDataCell.m */,
+				3DB69EF916B1C543009570F3 /* LoadingView.h */,
+				3DB69EFA16B1C543009570F3 /* LoadingView.m */,
 			);
 			name = Views;
 			path = Classes/Views;
@@ -320,10 +330,10 @@
 				3D8C708E1694A1D500619CDB /* StatusViewController.m */,
 				3D67885F1694AC8300553E04 /* ProbesViewController.h */,
 				3D6788601694AC8300553E04 /* ProbesViewController.m */,
-				3DE740D816971DB300BCB9A0 /* DatabaseViewController.h */,
-				3DE740D916971DB300BCB9A0 /* DatabaseViewController.m */,
-				3D4B3B1E169729C300FFEA73 /* BatchDataViewController.h */,
-				3D4B3B1F169729C300FFEA73 /* BatchDataViewController.m */,
+				3DB69EF016B1C0B1009570F3 /* CollectedDataViewController.h */,
+				3DB69EF116B1C0B1009570F3 /* CollectedDataViewController.m */,
+				3D4B3B1E169729C300FFEA73 /* CollectedDataBatchViewController.h */,
+				3D4B3B1F169729C300FFEA73 /* CollectedDataBatchViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -661,12 +671,14 @@
 				3DDED6E6167D098B006DE4F8 /* AppDelegate.m in Sources */,
 				3D8C708F1694A1D500619CDB /* StatusViewController.m in Sources */,
 				3D6788611694AC8300553E04 /* ProbesViewController.m in Sources */,
-				3DE740DA16971DB300BCB9A0 /* DatabaseViewController.m in Sources */,
-				3D4B3B20169729C300FFEA73 /* BatchDataViewController.m in Sources */,
+				3D4B3B20169729C300FFEA73 /* CollectedDataBatchViewController.m in Sources */,
 				3DB21B6016978F1E00F6B294 /* TabBarViewController.m in Sources */,
 				3D084272169DE60B0053F4C9 /* BatteryProbeDataViewController.m in Sources */,
 				3D084273169DE60B0053F4C9 /* BatchCell.m in Sources */,
 				3D084274169DE60B0053F4C9 /* BatchDataCell.m in Sources */,
+				3DB69EF216B1C0B1009570F3 /* CollectedDataViewController.m in Sources */,
+				3DB69EF816B1C3A8009570F3 /* PositioningProbeDataViewController.m in Sources */,
+				3DB69EFB16B1C543009570F3 /* LoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

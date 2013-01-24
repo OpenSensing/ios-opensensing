@@ -1,5 +1,5 @@
 //
-//  BatchDataViewController.h
+//  CollectedDataBatchViewController.h
 //  OpenSense Collector
 //
 //  Created by Mathias Hansen on 1/4/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BatchDataViewController : UITableViewController {
+@interface CollectedDataBatchViewController : UITableViewController {
     NSArray *batchKeys;
 }
 

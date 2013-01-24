@@ -1,5 +1,5 @@
 //
-//  DatabaseViewController.h
+//  CollectedDataViewController.h
 //  OpenSense Collector
 //
 //  Created by Mathias Hansen on 1/4/13.
@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoadingView.h"
 
-@interface DatabaseViewController : UITableViewController {
+@interface CollectedDataViewController : UITableViewController {
     NSMutableArray *batches;
     NSDateFormatter *dateFormatter;
-    UIView *loadingView;
+    LoadingView *loadingView;
 }
 
 @end

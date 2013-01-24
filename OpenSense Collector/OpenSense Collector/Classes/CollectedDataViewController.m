@@ -1,21 +1,21 @@
 //
-//  DatabaseViewController.m
+//  CollectedDataViewController.m
 //  OpenSense Collector
 //
 //  Created by Mathias Hansen on 1/4/13.
 //  Copyright (c) 2013 Mathias Hansen. All rights reserved.
 //
 
-#import "DatabaseViewController.h"
-#import "BatchDataViewController.h"
+#import "CollectedDataViewController.h"
+#import "CollectedDataBatchViewController.h"
 #import "BatchCell.h"
 #import "OpenSense.h"
 
-@interface DatabaseViewController ()
+@interface CollectedDataViewController ()
 
 @end
 
-@implementation DatabaseViewController
+@implementation CollectedDataViewController
 
 - (void)viewDidLoad
 {
@@ -27,27 +27,16 @@
     self.tableView.backgroundView = backgroundImageView;
     
     // Show loading view
-    loadingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [loadingView setBackgroundColor:[UIColor colorWithWhite:0.0f alpha:0.8f]];
-    
-    UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    [activityIndicatorView setCenter:CGPointMake(loadingView.frame.size.width / 2, loadingView.frame.size.height / 2)];
-    [activityIndicatorView startAnimating];
-    [loadingView addSubview:activityIndicatorView];
-    
-    UILabel *loadingLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, activityIndicatorView.center.y + 20.0, loadingView.frame.size.width, 40.0)];
-    [loadingLabel setBackgroundColor:[UIColor clearColor]];
-    [loadingLabel setTextColor:[UIColor whiteColor]];
-    [loadingLabel setTextAlignment:NSTextAlignmentCenter];
-    [loadingLabel setText:@"Decrypting collected data"];
-    [loadingView addSubview:loadingLabel];
-    
+    loadingView = [[LoadingView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:loadingView];
     
+    // Load data
     batches = nil;
     [[OpenSense sharedInstance] localDataBatches:^(NSArray *fetchedBatches) {
         batches = [[NSMutableArray alloc] initWithArray:fetchedBatches];
         [self.tableView reloadData];
+        
+        // Remove loading view
         [loadingView removeFromSuperview];
         loadingView = nil;
     }];
@@ -152,9 +141,9 @@
         NSString *probeName = [[OpenSense sharedInstance] probeNameFromIdentifier:[batch objectForKey:@"probe"]];
         
         // Get viewcontroller and set batch and title
-        BatchDataViewController *batchDataViewController = [segue destinationViewController];
-        [batchDataViewController setBatch:batch];
-        [batchDataViewController setTitle:probeName];
+        CollectedDataBatchViewController *CollectedDataBatchViewController = [segue destinationViewController];
+        [CollectedDataBatchViewController setBatch:batch];
+        [CollectedDataBatchViewController setTitle:probeName];
     }
 }
 
