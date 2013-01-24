@@ -22,5 +22,6 @@
 - (NSNumber*)dataUploadPeriod;
 - (NSNumber*)maxDataFileSizeKb;
 - (NSTimeInterval)updateIntervalForProbe:(NSString*)probeId;
+- (NSArray*)enabledProbes;
 
 @end

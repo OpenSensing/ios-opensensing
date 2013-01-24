@@ -13,7 +13,7 @@
 #import "OSLocalStorage.h"
 #import "OSConfiguration.h"
 #import "OSPositioningProbe.h"
-#import "OSMotionProbe.h"
+#import "OSAccelerometerProbe.h"
 #import "OSEnvironmentProbe.h"
 #import "OSSocialProbe.h"
 #import "OSDeviceInfoProbe.h"
@@ -102,7 +102,7 @@
     }
     
     activeProbes = [[NSMutableArray alloc] init];
-    for (Class class in [self availableProbes])
+    for (Class class in [self enabledProbes])
     {
         OSProbe *probe = [[class alloc] init];
         [activeProbes addObject:probe];
@@ -130,7 +130,7 @@
 {
     return @[
         [OSPositioningProbe class],
-        [OSMotionProbe class],
+        [OSAccelerometerProbe class],
         [OSEnvironmentProbe class],
         [OSSocialProbe class],
         [OSDeviceInfoProbe class],
@@ -138,6 +138,23 @@
         [OSBatteryProbe class],
         [OSProximityProbe class],
     ];
+}
+
+- (NSArray*)enabledProbes
+{
+    NSArray *configEnabledProbes = [[OSConfiguration currentConfig] enabledProbes];
+    NSMutableArray *enabledProbesMutableList = [[NSMutableArray alloc] init];
+    
+    for (Class probe in [self availableProbes])
+    {
+        if ([configEnabledProbes containsObject:[probe identifier]])
+        {
+            [enabledProbesMutableList addObject:probe];
+        }
+    }
+    
+    NSArray *enabledProbesList = [[NSArray alloc] initWithArray:enabledProbesMutableList];
+    return enabledProbesList;
 }
 
 - (NSString*)probeNameFromIdentifier:(NSString*)probeIdentifier

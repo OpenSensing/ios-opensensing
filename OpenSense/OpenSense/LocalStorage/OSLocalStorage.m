@@ -123,7 +123,7 @@
         }
         
         // Add line break
-        line = [line stringByAppendingString:@"\n"];
+        line = [line stringByAppendingString:@"\n\n"];
         
         // Convert to NSData object
         NSData *data = [line dataUsingEncoding:NSUTF8StringEncoding];

@@ -25,6 +25,7 @@
 - (BOOL)startCollector;
 - (void)stopCollector;
 - (NSArray*)availableProbes;
+- (NSArray*)enabledProbes;
 - (NSString*)probeNameFromIdentifier:(NSString*)probeIdentifier;
 - (void)localDataBatches:(void (^)(NSArray *batches))success;
 - (void)localDataBatchesForProbe:(NSString*)probeIdentifier success:(void (^)(NSArray *batches))success;

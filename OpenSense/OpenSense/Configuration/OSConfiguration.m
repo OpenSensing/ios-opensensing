@@ -154,4 +154,19 @@
     return [[firstProbeData objectForKey:@"interval"] doubleValue];
 }
 
+- (NSArray*)enabledProbes
+{
+    if (!config)
+        return [NSArray array];
+    
+    // Get probe data from config
+    NSDictionary *probeData = [config objectForKey:@"dataRequests"];
+    
+    // Check if probe and DURATION key exists first
+    if (!probeData)
+        return [NSArray array];
+    
+    return [probeData allKeys];
+}
+
 @end

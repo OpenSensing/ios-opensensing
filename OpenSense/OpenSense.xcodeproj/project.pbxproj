@@ -15,7 +15,7 @@
 		3D7A747D16B0467F000B4A0D /* STKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A747B16B0467F000B4A0D /* STKeychain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3D8C70631694814C00619CDB /* OSPositioningProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70621694814C00619CDB /* OSPositioningProbe.m */; };
 		3D8C70671694815800619CDB /* OSProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70661694815800619CDB /* OSProbe.m */; };
-		3D8C706A1694816C00619CDB /* OSMotionProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70691694816C00619CDB /* OSMotionProbe.m */; };
+		3D8C706A1694816C00619CDB /* OSAccelerometerProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70691694816C00619CDB /* OSAccelerometerProbe.m */; };
 		3D8C706D1694817800619CDB /* OSEnvironmentProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C706C1694817800619CDB /* OSEnvironmentProbe.m */; };
 		3D8C70701694818300619CDB /* OSSocialProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C706F1694818300619CDB /* OSSocialProbe.m */; };
 		3D8C70731694818E00619CDB /* OSDeviceInfoProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */; };
@@ -38,6 +38,8 @@
 		3D98CA8F16AF4CFA0009F3C4 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D98CA8E16AF4CFA0009F3C4 /* NSString+MD5Addition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3DA2596616B087A800190683 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA2596516B087A800190683 /* CoreLocation.framework */; };
 		3DB21AE416972ED500F6B294 /* OSProximityProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB21AE316972ED500F6B294 /* OSProximityProbe.m */; };
+		3DB69EFF16B1D59A009570F3 /* OSMotionProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69EFE16B1D59A009570F3 /* OSMotionProbe.m */; };
+		3DB69F0116B1D74A009570F3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB69F0016B1D74A009570F3 /* CoreMotion.framework */; };
 		3DDED69F167D04CF006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED69E167D04CF006DE4F8 /* Foundation.framework */; };
 		3DDED6A4167D04CF006DE4F8 /* OpenSense.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DDED6A3167D04CF006DE4F8 /* OpenSense.h */; };
 		3DDED6A6167D04CF006DE4F8 /* OpenSense.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED6A5167D04CF006DE4F8 /* OpenSense.m */; };
@@ -48,7 +50,7 @@
 		3DDED6BA167D04CF006DE4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DDED6B8167D04CF006DE4F8 /* InfoPlist.strings */; };
 		3DDED6BD167D04CF006DE4F8 /* OpenSenseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED6BC167D04CF006DE4F8 /* OpenSenseTests.m */; };
 		3DF797A31694BA1D00E84594 /* OSPositioningProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70611694814C00619CDB /* OSPositioningProbe.h */; };
-		3DF797A41694BA1D00E84594 /* OSMotionProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70681694816C00619CDB /* OSMotionProbe.h */; };
+		3DF797A41694BA1D00E84594 /* OSAccelerometerProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70681694816C00619CDB /* OSAccelerometerProbe.h */; };
 		3DF797A51694BA1D00E84594 /* OSEnvironmentProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C706B1694817800619CDB /* OSEnvironmentProbe.h */; };
 		3DF797A61694BA1D00E84594 /* OSSocialProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C706E1694818300619CDB /* OSSocialProbe.h */; };
 		3DF797A71694BA1D00E84594 /* OSDeviceInfoProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70711694818E00619CDB /* OSDeviceInfoProbe.h */; };
@@ -79,7 +81,7 @@
 				3D98CA8016AF4BA20009F3C4 /* OSProximityProbe.h in Copy Files */,
 				3D4B3B1D1697256600FFEA73 /* OSBatteryProbe.h in Copy Files */,
 				3DF797A31694BA1D00E84594 /* OSPositioningProbe.h in Copy Files */,
-				3DF797A41694BA1D00E84594 /* OSMotionProbe.h in Copy Files */,
+				3DF797A41694BA1D00E84594 /* OSAccelerometerProbe.h in Copy Files */,
 				3DF797A51694BA1D00E84594 /* OSEnvironmentProbe.h in Copy Files */,
 				3DF797A61694BA1D00E84594 /* OSSocialProbe.h in Copy Files */,
 				3DF797A71694BA1D00E84594 /* OSDeviceInfoProbe.h in Copy Files */,
@@ -103,8 +105,8 @@
 		3D8C70621694814C00619CDB /* OSPositioningProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPositioningProbe.m; sourceTree = "<group>"; };
 		3D8C70651694815800619CDB /* OSProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSProbe.h; sourceTree = "<group>"; };
 		3D8C70661694815800619CDB /* OSProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSProbe.m; sourceTree = "<group>"; };
-		3D8C70681694816C00619CDB /* OSMotionProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSMotionProbe.h; sourceTree = "<group>"; };
-		3D8C70691694816C00619CDB /* OSMotionProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMotionProbe.m; sourceTree = "<group>"; };
+		3D8C70681694816C00619CDB /* OSAccelerometerProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSAccelerometerProbe.h; sourceTree = "<group>"; };
+		3D8C70691694816C00619CDB /* OSAccelerometerProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSAccelerometerProbe.m; sourceTree = "<group>"; };
 		3D8C706B1694817800619CDB /* OSEnvironmentProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSEnvironmentProbe.h; sourceTree = "<group>"; };
 		3D8C706C1694817800619CDB /* OSEnvironmentProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSEnvironmentProbe.m; sourceTree = "<group>"; };
 		3D8C706E1694818300619CDB /* OSSocialProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSocialProbe.h; sourceTree = "<group>"; };
@@ -142,6 +144,9 @@
 		3DA2596516B087A800190683 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3DB21AE216972ED500F6B294 /* OSProximityProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSProximityProbe.h; sourceTree = "<group>"; };
 		3DB21AE316972ED500F6B294 /* OSProximityProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSProximityProbe.m; sourceTree = "<group>"; };
+		3DB69EFD16B1D59A009570F3 /* OSMotionProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSMotionProbe.h; sourceTree = "<group>"; };
+		3DB69EFE16B1D59A009570F3 /* OSMotionProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMotionProbe.m; sourceTree = "<group>"; };
+		3DB69F0016B1D74A009570F3 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		3DDED69B167D04CF006DE4F8 /* libOpenSense.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOpenSense.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDED69E167D04CF006DE4F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3DDED6A2167D04CF006DE4F8 /* OpenSense-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenSense-Prefix.pch"; sourceTree = "<group>"; };
@@ -166,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DB69F0116B1D74A009570F3 /* CoreMotion.framework in Frameworks */,
 				3DA2596616B087A800190683 /* CoreLocation.framework in Frameworks */,
 				3D7A747616B03D34000B4A0D /* MobileCoreServices.framework in Frameworks */,
 				3D7A747416B03D2F000B4A0D /* SystemConfiguration.framework in Frameworks */,
@@ -253,6 +259,7 @@
 		3DDED69D167D04CF006DE4F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DB69F0016B1D74A009570F3 /* CoreMotion.framework */,
 				3DA2596516B087A800190683 /* CoreLocation.framework */,
 				3D7A747516B03D34000B4A0D /* MobileCoreServices.framework */,
 				3D7A747316B03D2F000B4A0D /* SystemConfiguration.framework */,
@@ -311,10 +318,12 @@
 			children = (
 				3D8C70651694815800619CDB /* OSProbe.h */,
 				3D8C70661694815800619CDB /* OSProbe.m */,
+				3DB69EFD16B1D59A009570F3 /* OSMotionProbe.h */,
+				3DB69EFE16B1D59A009570F3 /* OSMotionProbe.m */,
+				3D8C70681694816C00619CDB /* OSAccelerometerProbe.h */,
+				3D8C70691694816C00619CDB /* OSAccelerometerProbe.m */,
 				3D8C70611694814C00619CDB /* OSPositioningProbe.h */,
 				3D8C70621694814C00619CDB /* OSPositioningProbe.m */,
-				3D8C70681694816C00619CDB /* OSMotionProbe.h */,
-				3D8C70691694816C00619CDB /* OSMotionProbe.m */,
 				3D8C706B1694817800619CDB /* OSEnvironmentProbe.h */,
 				3D8C706C1694817800619CDB /* OSEnvironmentProbe.m */,
 				3D8C706E1694818300619CDB /* OSSocialProbe.h */,
@@ -450,7 +459,7 @@
 				3DDED6A6167D04CF006DE4F8 /* OpenSense.m in Sources */,
 				3D8C70631694814C00619CDB /* OSPositioningProbe.m in Sources */,
 				3D8C70671694815800619CDB /* OSProbe.m in Sources */,
-				3D8C706A1694816C00619CDB /* OSMotionProbe.m in Sources */,
+				3D8C706A1694816C00619CDB /* OSAccelerometerProbe.m in Sources */,
 				3D8C706D1694817800619CDB /* OSEnvironmentProbe.m in Sources */,
 				3D8C70701694818300619CDB /* OSSocialProbe.m in Sources */,
 				3D8C70731694818E00619CDB /* OSDeviceInfoProbe.m in Sources */,
@@ -472,6 +481,7 @@
 				3D98CA8C16AF4CCE0009F3C4 /* UIDevice+IdentifierAddition.m in Sources */,
 				3D98CA8F16AF4CFA0009F3C4 /* NSString+MD5Addition.m in Sources */,
 				3D7A747D16B0467F000B4A0D /* STKeychain.m in Sources */,
+				3DB69EFF16B1D59A009570F3 /* OSMotionProbe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

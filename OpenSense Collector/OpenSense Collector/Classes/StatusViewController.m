@@ -76,6 +76,9 @@
         // Stop timer
         [elapsedTimer invalidate];
         elapsedTimer = nil;
+        
+        // Reset entries count
+        entriesCount = 0;
     }
     else
     {
