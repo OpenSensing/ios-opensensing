@@ -14,6 +14,8 @@
 #import "OSConfiguration.h"
 #import "OSPositioningProbe.h"
 #import "OSAccelerometerProbe.h"
+#import "OSMagnetometerProbe.h"
+#import "OSGyroProbe.h"
 #import "OSEnvironmentProbe.h"
 #import "OSSocialProbe.h"
 #import "OSDeviceInfoProbe.h"
@@ -131,6 +133,8 @@
     return @[
         [OSPositioningProbe class],
         [OSAccelerometerProbe class],
+        [OSMagnetometerProbe class],
+        [OSGyroProbe class],
         [OSEnvironmentProbe class],
         [OSSocialProbe class],
         [OSDeviceInfoProbe class],

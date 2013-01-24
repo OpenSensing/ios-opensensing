@@ -32,7 +32,6 @@
 
 + (NSTimeInterval)defaultUpdateInterval
 {
-    NSAssert(NO, @"This is an abstract method and should be overridden");
     return -1;
 }
 

@@ -18,7 +18,22 @@
         "interval": -1
       }
     ],
-    "dk.dtu.imm.sensible.positiong": [
+    "dk.dtu.imm.sensible.positioning": [
+      {
+        "interval": -1
+      }
+    ],
+    "dk.dtu.imm.sensible.accelerometer": [
+      {
+        "interval": -1
+      }
+    ],
+    "dk.dtu.imm.sensible.magnetometer": [
+      {
+        "interval": -1
+      }
+    ],
+    "dk.dtu.imm.sensible.gyro": [
       {
         "interval": -1
       }

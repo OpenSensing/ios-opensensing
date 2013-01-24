@@ -40,6 +40,8 @@
 		3DB21AE416972ED500F6B294 /* OSProximityProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB21AE316972ED500F6B294 /* OSProximityProbe.m */; };
 		3DB69EFF16B1D59A009570F3 /* OSMotionProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69EFE16B1D59A009570F3 /* OSMotionProbe.m */; };
 		3DB69F0116B1D74A009570F3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB69F0016B1D74A009570F3 /* CoreMotion.framework */; };
+		3DB69F0616B1DD9B009570F3 /* OSMagnetometerProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69F0516B1DD9B009570F3 /* OSMagnetometerProbe.m */; };
+		3DB69F0916B1DE71009570F3 /* OSGyroProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69F0816B1DE71009570F3 /* OSGyroProbe.m */; };
 		3DDED69F167D04CF006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED69E167D04CF006DE4F8 /* Foundation.framework */; };
 		3DDED6A4167D04CF006DE4F8 /* OpenSense.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DDED6A3167D04CF006DE4F8 /* OpenSense.h */; };
 		3DDED6A6167D04CF006DE4F8 /* OpenSense.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED6A5167D04CF006DE4F8 /* OpenSense.m */; };
@@ -147,6 +149,10 @@
 		3DB69EFD16B1D59A009570F3 /* OSMotionProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSMotionProbe.h; sourceTree = "<group>"; };
 		3DB69EFE16B1D59A009570F3 /* OSMotionProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMotionProbe.m; sourceTree = "<group>"; };
 		3DB69F0016B1D74A009570F3 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		3DB69F0416B1DD9B009570F3 /* OSMagnetometerProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSMagnetometerProbe.h; sourceTree = "<group>"; };
+		3DB69F0516B1DD9B009570F3 /* OSMagnetometerProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMagnetometerProbe.m; sourceTree = "<group>"; };
+		3DB69F0716B1DE71009570F3 /* OSGyroProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSGyroProbe.h; sourceTree = "<group>"; };
+		3DB69F0816B1DE71009570F3 /* OSGyroProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSGyroProbe.m; sourceTree = "<group>"; };
 		3DDED69B167D04CF006DE4F8 /* libOpenSense.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOpenSense.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDED69E167D04CF006DE4F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3DDED6A2167D04CF006DE4F8 /* OpenSense-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenSense-Prefix.pch"; sourceTree = "<group>"; };
@@ -322,6 +328,10 @@
 				3DB69EFE16B1D59A009570F3 /* OSMotionProbe.m */,
 				3D8C70681694816C00619CDB /* OSAccelerometerProbe.h */,
 				3D8C70691694816C00619CDB /* OSAccelerometerProbe.m */,
+				3DB69F0416B1DD9B009570F3 /* OSMagnetometerProbe.h */,
+				3DB69F0516B1DD9B009570F3 /* OSMagnetometerProbe.m */,
+				3DB69F0716B1DE71009570F3 /* OSGyroProbe.h */,
+				3DB69F0816B1DE71009570F3 /* OSGyroProbe.m */,
 				3D8C70611694814C00619CDB /* OSPositioningProbe.h */,
 				3D8C70621694814C00619CDB /* OSPositioningProbe.m */,
 				3D8C706B1694817800619CDB /* OSEnvironmentProbe.h */,
@@ -482,6 +492,8 @@
 				3D98CA8F16AF4CFA0009F3C4 /* NSString+MD5Addition.m in Sources */,
 				3D7A747D16B0467F000B4A0D /* STKeychain.m in Sources */,
 				3DB69EFF16B1D59A009570F3 /* OSMotionProbe.m in Sources */,
+				3DB69F0616B1DD9B009570F3 /* OSMagnetometerProbe.m in Sources */,
+				3DB69F0916B1DE71009570F3 /* OSGyroProbe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

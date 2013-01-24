@@ -27,7 +27,7 @@
 
 + (NSTimeInterval)defaultUpdateInterval
 {
-    return -1;
+    return [super defaultUpdateInterval];
 }
 
 - (void)startProbe
