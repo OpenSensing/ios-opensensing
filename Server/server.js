@@ -4,8 +4,7 @@ var qs      = require('querystring');
 var fs      = require('fs');
 var crypto  = require('crypto');
 
-var serverAddresss = "127.0.0.1";
-var serverPort = 8080;
+var serverPort = 4000;
 
 // Create HTTP Server
 var server = http.createServer(function (req, res) {
@@ -36,8 +35,8 @@ var server = http.createServer(function (req, res) {
 });
 
 // Start listening to port
-server.listen(serverPort, serverAddresss, function() {
-    console.log("Server now running at http://" + serverAddresss + ":" + serverPort + "/");
+server.listen(serverPort, function() {
+    console.log("Server now running at http://" + server.address().address + ":" + serverPort + "/");
 });
 
 // Handle HTTP request regardless of method
@@ -45,16 +44,16 @@ function handleRequest(path, data, res) {
     switch (path) {
         // Register a new device
         case '/register': {
-            if (!data.uuid) { // Make sure that a device uuid is specified
+            if (!data.device_id) { // Make sure that a device id is specified
                 res.writeHead(400, {"Content-Type": "text/json"});
                 res.end(JSON.stringify({
-                    error: "Missing uuid parameter"
+                    error: "Missing device_id parameter"
                 }));
             } else {
                 // Generate a random key that the device can use to encrypt data
                 var key = generateKey();
 
-                // Store key and device uuid here in full implementation
+                // Store key and device id here in full implementation
                 res.writeHead(200, {"Content-Type": "application/json"});
                 res.end(JSON.stringify({
                     key: key
@@ -75,6 +74,46 @@ function handleRequest(path, data, res) {
                 res.end(data);
               }
             });
+            break;
+        }
+
+        // Upload probe data
+        case '/upload': {
+            if (!data.device_id) { // Make sure that a device id is specified
+                res.writeHead(400, {"Content-Type": "text/json"});
+                res.end(JSON.stringify({
+                    error: "Missing device_id parameter"
+                }));
+            } else if (!data.file_hash) { // Make sure that the file hash is specified
+                res.writeHead(400, {"Content-Type": "text/json"});
+                res.end(JSON.stringify({
+                    error: "Missing file_hash parameter"
+                }));
+            } else if (!data.data) { // Make sure that the file hash is specified
+                res.writeHead(400, {"Content-Type": "text/json"});
+                res.end(JSON.stringify({
+                    error: "Missing data parameter"
+                }));
+            } else {
+                // Check integrity of uploaded data
+                var hash = crypto.createHash('md5').update(data.data).digest("hex");
+                if (hash != data.file_hash) {
+                    res.writeHead(400, {"Content-Type": "text/json"});
+                    res.end(JSON.stringify({
+                        error: "Integrity check failed"
+                    }));
+                } else {
+                    // Write status response
+                    res.writeHead(200, {"Content-Type": "application/json"});
+                    res.end(JSON.stringify({
+                        status: 'ok'
+                    }));
+
+                    console.log('Data received for device: ' + data.device_id);
+
+                    // Store data here in full implementation
+                }
+            }
             break;
         }
 

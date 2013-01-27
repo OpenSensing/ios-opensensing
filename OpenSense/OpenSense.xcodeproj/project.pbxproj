@@ -42,6 +42,7 @@
 		3DB69F0116B1D74A009570F3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB69F0016B1D74A009570F3 /* CoreMotion.framework */; };
 		3DB69F0616B1DD9B009570F3 /* OSMagnetometerProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69F0516B1DD9B009570F3 /* OSMagnetometerProbe.m */; };
 		3DB69F0916B1DE71009570F3 /* OSGyroProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69F0816B1DE71009570F3 /* OSGyroProbe.m */; };
+		3DD1314D16B5EFBF0055CB7C /* Common.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DDCAA9B16B5EF470063DC29 /* Common.h */; };
 		3DDED69F167D04CF006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED69E167D04CF006DE4F8 /* Foundation.framework */; };
 		3DDED6A4167D04CF006DE4F8 /* OpenSense.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DDED6A3167D04CF006DE4F8 /* OpenSense.h */; };
 		3DDED6A6167D04CF006DE4F8 /* OpenSense.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED6A5167D04CF006DE4F8 /* OpenSense.m */; };
@@ -78,6 +79,7 @@
 			dstPath = ../includes;
 			dstSubfolderSpec = 16;
 			files = (
+				3DD1314D16B5EFBF0055CB7C /* Common.h in Copy Files */,
 				3D98CA7E16AF4BA20009F3C4 /* OSLocalStorage.h in Copy Files */,
 				3D98CA7F16AF4BA20009F3C4 /* OSConfiguration.h in Copy Files */,
 				3D98CA8016AF4BA20009F3C4 /* OSProximityProbe.h in Copy Files */,
@@ -153,6 +155,7 @@
 		3DB69F0516B1DD9B009570F3 /* OSMagnetometerProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMagnetometerProbe.m; sourceTree = "<group>"; };
 		3DB69F0716B1DE71009570F3 /* OSGyroProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSGyroProbe.h; sourceTree = "<group>"; };
 		3DB69F0816B1DE71009570F3 /* OSGyroProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSGyroProbe.m; sourceTree = "<group>"; };
+		3DDCAA9B16B5EF470063DC29 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		3DDED69B167D04CF006DE4F8 /* libOpenSense.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOpenSense.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDED69E167D04CF006DE4F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3DDED6A2167D04CF006DE4F8 /* OpenSense-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenSense-Prefix.pch"; sourceTree = "<group>"; };
@@ -296,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				3DDED6A2167D04CF006DE4F8 /* OpenSense-Prefix.pch */,
+				3DDCAA9B16B5EF470063DC29 /* Common.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

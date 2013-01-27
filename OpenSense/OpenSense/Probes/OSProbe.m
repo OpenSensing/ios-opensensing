@@ -42,7 +42,7 @@
 {
     NSTimeInterval timerUpdateInterval = [self updateInterval];
     
-    NSLog(@"%@ started with %f update interval", [[self class] name], timerUpdateInterval);
+    OSLog(@"%@ started with %f update interval", [[self class] name], timerUpdateInterval);
     
     if (timerUpdateInterval != kUpdateIntervalDisabled)
     {
@@ -56,7 +56,7 @@
 
 - (void)stopProbe
 {
-    NSLog(@"%@ stopped", [[self class] name]);
+    OSLog(@"%@ stopped", [[self class] name]);
     
     if (updateTimer)
     {

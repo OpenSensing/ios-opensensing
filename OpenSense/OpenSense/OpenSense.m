@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "UIDevice+IdentifierAddition.h"
 #import "STKeychain.h"
+#import "NSString+MD5Addition.h"
 #import "OSLocalStorage.h"
 #import "OSConfiguration.h"
 #import "OSPositioningProbe.h"
@@ -67,7 +68,7 @@
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[OSConfiguration currentConfig].baseUrl];
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            [[UIDevice currentDevice] uniqueGlobalDeviceIdentifier], @"uuid",
+                            [[UIDevice currentDevice] uniqueGlobalDeviceIdentifier], @"device_id",
                             nil];
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"/register" parameters:params];
 
@@ -79,9 +80,9 @@
             
             NSError *error = nil;
             if (![STKeychain storeUsername:@"OpenSense" andPassword:[JSON objectForKey:@"key"] forServiceName:@"OpenSense" updateExisting:NO error:&error]) {
-                NSLog(@"Could not store encryption key: %@", [error localizedDescription]);
+                OSLog(@"Could not store encryption key: %@", [error localizedDescription]);
             } else {            
-                NSLog(@"Device registered with key: %@", [JSON objectForKey:@"key"]);
+                OSLog(@"Device registered with key: %@", [JSON objectForKey:@"key"]);
             }
         }
         
@@ -114,6 +115,12 @@
     isRunning = YES;
     startTime = [NSDate date];
     
+    // Start upload timer for uploading data
+    uploadTimer = [NSTimer scheduledTimerWithTimeInterval:[[[OSConfiguration currentConfig] dataUploadPeriod] doubleValue] target:self selector:@selector(uploadData:) userInfo:nil repeats:YES];
+    
+    // For debugging
+    [self uploadData:nil];
+    
     return YES;
 }
 
@@ -126,6 +133,10 @@
     activeProbes = nil;
     
     isRunning = NO;
+    
+    // Stop upload timer
+    [uploadTimer invalidate];
+    uploadTimer = nil;
 }
 
 - (NSArray*)availableProbes
@@ -181,12 +192,73 @@
 
 - (void)localDataBatchesForProbe:(NSString*)probeIdentifier success:(void (^)(NSArray *batches))success
 {
-    [[OSLocalStorage sharedInstance] fetchBatchesForProbe:probeIdentifier success:success];
+    [[OSLocalStorage sharedInstance] fetchBatchesForProbe:probeIdentifier skipCurrent:NO parseJSON:YES success:success];
 }
 
 - (NSString*)encryptionKey
 {
     return [STKeychain getPasswordForUsername:@"OpenSense" andServiceName:@"OpenSense" error:nil];
+}
+
+- (void)uploadData:(id)sender
+{
+    [[OSLocalStorage sharedInstance] fetchBatchesForProbe:nil skipCurrent:NO parseJSON:NO success:^(NSArray *batches) {
+        
+        OSLog(@"Constructing JSON document with %d batches", [batches count]);
+        
+        // Construct JSON document by comma-separating indvidual data batches
+        NSString *jsonFile = [[NSString alloc] init];
+        for (NSData *lineData in batches) {
+            NSString *lineStr = [[NSString alloc] initWithData:lineData encoding:NSUTF8StringEncoding];
+            
+            if (lineStr) {
+                jsonFile = [jsonFile stringByAppendingFormat:@"%@,", lineStr];
+            }
+        }
+        
+        // We don't need to upload anything if no valid data was found
+        if ([jsonFile length] <= 0) {
+            return;
+        }
+        
+        // Remove the last comma
+        jsonFile = [jsonFile substringToIndex:[jsonFile length] - 1];
+        
+        // ...and add array brackets
+        jsonFile = [NSString stringWithFormat:@"[%@]", jsonFile];
+        
+        OSLog(@"%@", jsonFile);
+        
+        // Create hash of document for integrity checking
+        NSString *jsonFileHash = [jsonFile stringFromMD5];
+        
+        AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[OSConfiguration currentConfig].baseUrl];
+        
+        NSDictionary *params = @{
+            @"file_hash": jsonFileHash,
+            @"device_id": [[UIDevice currentDevice] uniqueGlobalDeviceIdentifier],
+            @"data": jsonFile
+        };
+        
+        OSLog(@"Parameters: %@", params);
+        
+        NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"/upload" parameters:params];
+        
+        AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+            
+            if ([JSON objectForKey:@"status"]) {
+                OSLog(@"Status: %@", [JSON objectForKey:@"status"]);
+            }
+        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+            OSLog(@"Could not upload collected data");
+        }];
+        
+        [operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+            OSLog(@"Uploading.. %lld / %lld bytes", totalBytesWritten, totalBytesExpectedToWrite);
+        }];
+        
+        [operation start];
+    }];
 }
 
 @end

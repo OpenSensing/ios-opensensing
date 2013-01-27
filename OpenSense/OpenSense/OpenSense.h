@@ -15,6 +15,7 @@
 @interface OpenSense : NSObject {
     NSMutableArray *activeProbes;
     BOOL registrationInProgress;
+    NSTimer *uploadTimer;
 }
 
 @property (assign, readonly) BOOL isRunning;

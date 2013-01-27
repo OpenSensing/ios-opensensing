@@ -48,7 +48,7 @@
     NSError *error = nil;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:kNilOptions error:&error];
     if (!jsonData) {
-        NSLog(@"Could not serialize JSON data: %@", [error localizedDescription]);
+        OSLog(@"Could not serialize JSON data: %@", [error localizedDescription]);
         return ;
     }
     
@@ -78,7 +78,7 @@
         
         // Create data directory and probedata file
         if (![[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:&error]) {
-            NSLog(@"Could not create data directory: %@", [error localizedDescription]);
+            OSLog(@"Could not create data directory: %@", [error localizedDescription]);
         } else {
             [[NSFileManager defaultManager] createFileAtPath:currentFile contents:nil attributes:nil]; // Create blank probedata file
         }
@@ -89,7 +89,7 @@
     long maxFileSize = ([[OSConfiguration currentConfig].maxDataFileSizeKb longValue] * 1024L);
     
     if (fileSize > maxFileSize) { // If file is to big
-        NSLog(@"Rotating log file");
+        OSLog(@"Rotating log file");
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd'T'hh-mm-ss"];
@@ -100,7 +100,7 @@
         // Rename current probedata file to probedate.CURRENT_DATETIME
         NSError *error = nil;
         if (![[NSFileManager defaultManager] moveItemAtPath:currentFile toPath:newFile error:&error]) {
-            NSLog(@"Could not rename file %@ to %@ - %@", currentFile, newFileName, [error localizedDescription]);
+            OSLog(@"Could not rename file %@ to %@ - %@", currentFile, newFileName, [error localizedDescription]);
         } else {
             [[NSFileManager defaultManager] createFileAtPath:currentFile contents:nil attributes:nil]; // Create a new probedata file
         }
@@ -137,11 +137,16 @@
 
 - (void)fetchBatches:(void (^)(NSArray *batches))success
 {
-    [self fetchBatchesForProbe:nil success:success];
+    [self fetchBatchesForProbe:nil skipCurrent:NO parseJSON:YES success:success];
 }
 
-- (void)fetchBatchesForProbe:(NSString*)probeIdentifier success:(void (^)(NSArray *batches))success
+- (void)fetchBatchesForProbe:(NSString*)probeIdentifier skipCurrent:(BOOL)skipCurrent parseJSON:(BOOL)parseJSON success:(void (^)(NSArray *batches))success
 {
+    // If a probe identifier is specified, we have to parse JSON
+    if (probeIdentifier != nil) {
+        parseJSON = YES;
+    }
+    
     dispatch_async(probeFileQueue, ^{
         NSMutableArray *allBatches = [[NSMutableArray alloc] init];
         
@@ -154,6 +159,12 @@
         for (NSString *file in probeDataFiles) {
             if ([file hasPrefix:@"probedata"]) { // If file is probedata file
                 
+                // If told to skip current and this is the current probedata file, skip processing it
+                if (skipCurrent && [file isEqualToString:@"probedata"]) {
+                    continue;
+                }
+                
+                // Determine full path of the file
                 NSString *filePath = [dataPath stringByAppendingPathComponent:file];
                 
                 // Read file and split into lines
@@ -169,17 +180,22 @@
                     NSData *encryptedData = [[NSData alloc] initWithBase64EncodedString:line];
                     NSData *decryptedData = [encryptedData AES256DecryptWithKey:[OpenSense sharedInstance].encryptionKey];
                     
-                    // Parse JSON
-                    NSError *error = nil;
-                    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:decryptedData options:kNilOptions error:&error];
-                    
-                    if (!json) {
-                        NSLog(@"Could not parse %@ error: %@", file, [error localizedDescription]);
-                    } else {
-                        // If probeidentifier is nil, just add it - else, only add it if probeIdentifier matches
-                        if (!probeIdentifier || [[json objectForKey:@"probe"] isEqualToString:probeIdentifier]) {
-                            [allBatches addObject:json];
+                    // Parse JSON if needed
+                    if (parseJSON) {
+                        NSError *error = nil;
+                        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:decryptedData options:kNilOptions error:&error];
+                        
+                        if (!json) {
+                            OSLog(@"Could not parse %@ error: %@", file, [error localizedDescription]);
+                        } else {
+                            // If probeidentifier is nil, just add it - else, only add it if probeIdentifier matches
+                            if (!probeIdentifier || [[json objectForKey:@"probe"] isEqualToString:probeIdentifier]) {
+                                [allBatches addObject:json];
+                            }
                         }
+                    } else {
+                        // Just add the NSData object to our final array
+                        [allBatches addObject:decryptedData];
                     }
                 }
             }

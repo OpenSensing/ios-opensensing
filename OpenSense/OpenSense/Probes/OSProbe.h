@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Mathias Hansen. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #define kUpdateIntervalDisabled  -1
 
 @interface OSProbe : NSObject {

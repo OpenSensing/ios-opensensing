@@ -15,7 +15,7 @@
 {
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     
-    NSLog(@"Encryption key: %@", [[OpenSense sharedInstance] encryptionKey]);
+    OSLog(@"Encryption key: %@", [[OpenSense sharedInstance] encryptionKey]);
     
     expirationHandler = ^{
         [application endBackgroundTask:bgTask];

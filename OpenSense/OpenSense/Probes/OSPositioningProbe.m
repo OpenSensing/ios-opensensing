@@ -79,7 +79,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    NSLog(@"Could not monitor location: %@", [error localizedDescription]);
+    OSLog(@"Could not monitor location: %@", [error localizedDescription]);
 }
 
 

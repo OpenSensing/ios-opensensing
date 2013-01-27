@@ -60,7 +60,7 @@
         config = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         
         if (!config) {
-            NSLog(@"Could not parse config: %@", [error localizedDescription]);
+            OSLog(@"Could not parse config: %@", [error localizedDescription]);
         }
     }
 }
