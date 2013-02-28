@@ -16,8 +16,6 @@
 		3D8C70631694814C00619CDB /* OSPositioningProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70621694814C00619CDB /* OSPositioningProbe.m */; };
 		3D8C70671694815800619CDB /* OSProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70661694815800619CDB /* OSProbe.m */; };
 		3D8C706A1694816C00619CDB /* OSAccelerometerProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70691694816C00619CDB /* OSAccelerometerProbe.m */; };
-		3D8C706D1694817800619CDB /* OSEnvironmentProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C706C1694817800619CDB /* OSEnvironmentProbe.m */; };
-		3D8C70701694818300619CDB /* OSSocialProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C706F1694818300619CDB /* OSSocialProbe.m */; };
 		3D8C70731694818E00619CDB /* OSDeviceInfoProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */; };
 		3D8C7076169481A200619CDB /* OSDeviceInteractionProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C7075169481A200619CDB /* OSDeviceInteractionProbe.m */; };
 		3D98CA7116AF3FAE0009F3C4 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D98CA5F16AF3FAE0009F3C4 /* AFHTTPClient.m */; };
@@ -54,8 +52,6 @@
 		3DDED6BD167D04CF006DE4F8 /* OpenSenseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED6BC167D04CF006DE4F8 /* OpenSenseTests.m */; };
 		3DF797A31694BA1D00E84594 /* OSPositioningProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70611694814C00619CDB /* OSPositioningProbe.h */; };
 		3DF797A41694BA1D00E84594 /* OSAccelerometerProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70681694816C00619CDB /* OSAccelerometerProbe.h */; };
-		3DF797A51694BA1D00E84594 /* OSEnvironmentProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C706B1694817800619CDB /* OSEnvironmentProbe.h */; };
-		3DF797A61694BA1D00E84594 /* OSSocialProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C706E1694818300619CDB /* OSSocialProbe.h */; };
 		3DF797A71694BA1D00E84594 /* OSDeviceInfoProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70711694818E00619CDB /* OSDeviceInfoProbe.h */; };
 		3DF797A81694BA1D00E84594 /* OSDeviceInteractionProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C7074169481A200619CDB /* OSDeviceInteractionProbe.h */; };
 		3DFE53301695D5AE00E09161 /* OSBatteryProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE532F1695D5AE00E09161 /* OSBatteryProbe.m */; };
@@ -86,8 +82,6 @@
 				3D4B3B1D1697256600FFEA73 /* OSBatteryProbe.h in Copy Files */,
 				3DF797A31694BA1D00E84594 /* OSPositioningProbe.h in Copy Files */,
 				3DF797A41694BA1D00E84594 /* OSAccelerometerProbe.h in Copy Files */,
-				3DF797A51694BA1D00E84594 /* OSEnvironmentProbe.h in Copy Files */,
-				3DF797A61694BA1D00E84594 /* OSSocialProbe.h in Copy Files */,
 				3DF797A71694BA1D00E84594 /* OSDeviceInfoProbe.h in Copy Files */,
 				3DF797A81694BA1D00E84594 /* OSDeviceInteractionProbe.h in Copy Files */,
 				3D12255F1694B154005A1CBB /* OSProbe.h in Copy Files */,
@@ -111,10 +105,6 @@
 		3D8C70661694815800619CDB /* OSProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSProbe.m; sourceTree = "<group>"; };
 		3D8C70681694816C00619CDB /* OSAccelerometerProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSAccelerometerProbe.h; sourceTree = "<group>"; };
 		3D8C70691694816C00619CDB /* OSAccelerometerProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSAccelerometerProbe.m; sourceTree = "<group>"; };
-		3D8C706B1694817800619CDB /* OSEnvironmentProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSEnvironmentProbe.h; sourceTree = "<group>"; };
-		3D8C706C1694817800619CDB /* OSEnvironmentProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSEnvironmentProbe.m; sourceTree = "<group>"; };
-		3D8C706E1694818300619CDB /* OSSocialProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSocialProbe.h; sourceTree = "<group>"; };
-		3D8C706F1694818300619CDB /* OSSocialProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSocialProbe.m; sourceTree = "<group>"; };
 		3D8C70711694818E00619CDB /* OSDeviceInfoProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDeviceInfoProbe.h; sourceTree = "<group>"; };
 		3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDeviceInfoProbe.m; sourceTree = "<group>"; };
 		3D8C7074169481A200619CDB /* OSDeviceInteractionProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDeviceInteractionProbe.h; sourceTree = "<group>"; };
@@ -338,10 +328,6 @@
 				3DB69F0816B1DE71009570F3 /* OSGyroProbe.m */,
 				3D8C70611694814C00619CDB /* OSPositioningProbe.h */,
 				3D8C70621694814C00619CDB /* OSPositioningProbe.m */,
-				3D8C706B1694817800619CDB /* OSEnvironmentProbe.h */,
-				3D8C706C1694817800619CDB /* OSEnvironmentProbe.m */,
-				3D8C706E1694818300619CDB /* OSSocialProbe.h */,
-				3D8C706F1694818300619CDB /* OSSocialProbe.m */,
 				3D8C70711694818E00619CDB /* OSDeviceInfoProbe.h */,
 				3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */,
 				3D8C7074169481A200619CDB /* OSDeviceInteractionProbe.h */,
@@ -474,8 +460,6 @@
 				3D8C70631694814C00619CDB /* OSPositioningProbe.m in Sources */,
 				3D8C70671694815800619CDB /* OSProbe.m in Sources */,
 				3D8C706A1694816C00619CDB /* OSAccelerometerProbe.m in Sources */,
-				3D8C706D1694817800619CDB /* OSEnvironmentProbe.m in Sources */,
-				3D8C70701694818300619CDB /* OSSocialProbe.m in Sources */,
 				3D8C70731694818E00619CDB /* OSDeviceInfoProbe.m in Sources */,
 				3D8C7076169481A200619CDB /* OSDeviceInteractionProbe.m in Sources */,
 				3DFE53301695D5AE00E09161 /* OSBatteryProbe.m in Sources */,

@@ -23,7 +23,7 @@
     self = [super init];
     if (self)
     {
-        [self loadConfig];
+        [self load];
     }
     
     return self;
@@ -39,7 +39,7 @@
     return _sharedObject;
 }
 
-- (void)loadConfig
+- (void)load
 {
     // First, try to load config file from the documents directory
     NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -65,7 +65,7 @@
     }
 }
 
-- (void)refreshConfig
+- (void)refresh
 {
     // Try to download json config file
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[OSConfiguration currentConfig].baseUrl];
@@ -78,7 +78,7 @@
     operation.outputStream = [NSOutputStream outputStreamToFileAtPath:filePath append:NO];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        [self loadConfig]; // Load the config file
+        [[OSConfiguration currentConfig] load]; // Reload the config file
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // Ignore failure, will be retried later anyways
     }];

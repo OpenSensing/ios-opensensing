@@ -13,8 +13,8 @@
 }
 
 + (OSConfiguration*)currentConfig;
-- (void)loadConfig;
-- (void)refreshConfig;
+- (void)load;
+- (void)refresh;
 - (NSNumber*)version;
 - (NSURL*)baseUrl;
 - (NSNumber*)configUpdatePeriod;

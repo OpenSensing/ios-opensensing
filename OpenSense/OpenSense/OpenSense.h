@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "OSProbe.h"
-#import "OSPositioningProbe.h"
 
 #define kOpenSenseBatchSavedNotification @"kOpenSenseBatchSavedNotification"
 
@@ -16,6 +15,7 @@
     NSMutableArray *activeProbes;
     BOOL registrationInProgress;
     NSTimer *uploadTimer;
+    NSTimer *configTimer;
 }
 
 @property (assign, readonly) BOOL isRunning;

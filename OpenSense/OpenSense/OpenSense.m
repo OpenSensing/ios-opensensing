@@ -17,8 +17,6 @@
 #import "OSAccelerometerProbe.h"
 #import "OSMagnetometerProbe.h"
 #import "OSGyroProbe.h"
-#import "OSEnvironmentProbe.h"
-#import "OSSocialProbe.h"
 #import "OSDeviceInfoProbe.h"
 #import "OSDeviceInteractionProbe.h"
 #import "OSBatteryProbe.h"
@@ -98,12 +96,14 @@
 
 - (BOOL)startCollector
 {
+    // Make sure that the encryption key is available
     NSError *error = nil;
     if (![STKeychain getPasswordForUsername:@"OpenSense" andServiceName:@"OpenSense" error:&error]) {
         [self registerDevice];
         return NO;
     }
     
+    // Start all probes
     activeProbes = [[NSMutableArray alloc] init];
     for (Class class in [self enabledProbes])
     {
@@ -112,11 +112,14 @@
         [probe startProbe];
     }
     
+    // Update state information
     isRunning = YES;
     startTime = [NSDate date];
     
     // Start upload timer for uploading data
     uploadTimer = [NSTimer scheduledTimerWithTimeInterval:[[[OSConfiguration currentConfig] dataUploadPeriod] doubleValue] target:self selector:@selector(uploadData:) userInfo:nil repeats:YES];
+    
+    configTimer = [NSTimer scheduledTimerWithTimeInterval:[[[OSConfiguration currentConfig] configUpdatePeriod] doubleValue] target:self selector:@selector(refreshConfig:) userInfo:nil repeats:YES];
     
     // For debugging
     [self uploadData:nil];
@@ -146,8 +149,6 @@
         [OSAccelerometerProbe class],
         [OSMagnetometerProbe class],
         [OSGyroProbe class],
-        [OSEnvironmentProbe class],
-        [OSSocialProbe class],
         [OSDeviceInfoProbe class],
         [OSDeviceInteractionProbe class],
         [OSBatteryProbe class],
@@ -259,6 +260,11 @@
         
         [operation start];
     }];
+}
+
+- (void)refreshConfig:(id)sender
+{
+    [[OSConfiguration currentConfig] refresh];
 }
 
 @end
