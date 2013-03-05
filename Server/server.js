@@ -3,6 +3,7 @@ var url     = require('url');
 var qs      = require('querystring');
 var fs      = require('fs');
 var crypto  = require('crypto');
+var mkdirp  = require('mkdirp');
 
 var serverPort = 4000;
 
@@ -111,7 +112,28 @@ function handleRequest(path, data, res) {
 
                     console.log('Data received for device: ' + data.device_id);
 
-                    // Store data here in full implementation
+                    // Create data directory if necessary
+                    mkdirp("data/" + data.device_id, function (err) {
+                        if (err) {
+                            console.log(err);
+                        }
+                        else
+                        {
+                            // Little hackish/quick way to get current datetime formatted for a filename
+                            var filename = new Date().toISOString()
+                                .replace(/T/, '-')
+                                .replace(/\..+/, '')
+                                .replace(':', '') +
+                                ".json";
+
+                            // Save data file
+                            fs.writeFile("data/" + data.device_id + "/" + filename, data.data, function(err) {
+                                if (err) {
+                                    console.log(err);
+                                }
+                            }); 
+                        }
+                    });
                 }
             }
             break;
