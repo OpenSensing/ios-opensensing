@@ -123,13 +123,16 @@ function handleRequest(path, data, res) {
                             var filename = new Date().toISOString()
                                 .replace(/T/, '-')
                                 .replace(/\..+/, '')
-                                .replace(':', '') +
+                                .replace(/:\s*/g, '') +
                                 ".json";
 
                             // Save data file
                             fs.writeFile("data/" + data.device_id + "/" + filename, data.data, function(err) {
                                 if (err) {
                                     console.log(err);
+                                } else {
+                                    // Make file only readable and writeable by current user
+                                    fs.chmodSync("data/" + data.device_id + "/" + filename, '700');
                                 }
                             }); 
                         }
