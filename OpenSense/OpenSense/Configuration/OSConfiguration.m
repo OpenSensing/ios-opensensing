@@ -49,6 +49,9 @@
     {
         // Try to load local json config file instead
         filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
+        
+        // Refresh configuration file
+        [self refresh];
     }
     
     NSData *data = [NSData dataWithContentsOfFile:filePath];
@@ -80,7 +83,7 @@
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         [[OSConfiguration currentConfig] load]; // Reload the config file
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // Ignore failure, will be retried later anyways
+        // Ignore failure. Will be retried later anyways.
     }];
     
     [operation start];

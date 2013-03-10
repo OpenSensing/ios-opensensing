@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "OpenSense.h"
+#import "TestFlight.h"
 
 @implementation AppDelegate
 
@@ -15,7 +16,10 @@
 {
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     
-    OSLog(@"Encryption key: %@", [[OpenSense sharedInstance] encryptionKey]);
+    // TestFlight
+    [TestFlight takeOff:@"a341b15d210378ecc994aec59b6c6662_MTkyMjQ4MjAxMy0wMy0wNCAyMjo0MzoxOS4xMjU4NzU"];
+    
+    //OSLog(@"Encryption key: %@", [[OpenSense sharedInstance] encryptionKey]);
     
     expirationHandler = ^{
         [application endBackgroundTask:bgTask];

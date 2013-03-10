@@ -96,12 +96,21 @@
 
 - (BOOL)startCollector
 {
+    // Make sure that the collector process is not already running
+    if (isRunning) {
+        return NO;
+    }
+    
     // Make sure that the encryption key is available
     NSError *error = nil;
     if (![STKeychain getPasswordForUsername:@"OpenSense" andServiceName:@"OpenSense" error:&error]) {
         [self registerDevice];
         return NO;
     }
+    
+    // Update state information
+    isRunning = YES;
+    startTime = [NSDate date];
     
     // Start all probes
     activeProbes = [[NSMutableArray alloc] init];
@@ -112,23 +121,24 @@
         [probe startProbe];
     }
     
-    // Update state information
-    isRunning = YES;
-    startTime = [NSDate date];
-    
-    // Start upload timer for uploading data
+    // Start timers
     uploadTimer = [NSTimer scheduledTimerWithTimeInterval:[[[OSConfiguration currentConfig] dataUploadPeriod] doubleValue] target:self selector:@selector(uploadData:) userInfo:nil repeats:YES];
     
     configTimer = [NSTimer scheduledTimerWithTimeInterval:[[[OSConfiguration currentConfig] configUpdatePeriod] doubleValue] target:self selector:@selector(refreshConfig:) userInfo:nil repeats:YES];
     
     // For debugging
-    [self uploadData:nil];
+    //[self uploadData:nil];
     
     return YES;
 }
 
 - (void)stopCollector
 {
+    // Only stop collector process if it is already running
+    if (!isRunning) {
+        return;
+    }
+    
     for (OSProbe *probe in activeProbes)
     {
         [probe stopProbe];
@@ -137,9 +147,12 @@
     
     isRunning = NO;
     
-    // Stop upload timer
+    // Stop timers
     [uploadTimer invalidate];
     uploadTimer = nil;
+    
+    [configTimer invalidate];
+    configTimer = nil;
 }
 
 - (NSArray*)availableProbes
@@ -203,7 +216,8 @@
 
 - (void)uploadData:(id)sender
 {
-    [[OSLocalStorage sharedInstance] fetchBatchesForProbe:nil skipCurrent:NO parseJSON:NO success:^(NSArray *batches) {
+    // Fetch probe data, but skip currently used probe file to avoid conflicts
+    [[OSLocalStorage sharedInstance] fetchBatchesForProbe:nil skipCurrent:YES parseJSON:NO success:^(NSArray *batches) {
         
         OSLog(@"Constructing JSON document with %d batches", [batches count]);
         
@@ -247,8 +261,10 @@
         
         AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
             
-            if ([JSON objectForKey:@"status"]) {
-                OSLog(@"Status: %@", [JSON objectForKey:@"status"]);
+            if ([JSON objectForKey:@"status"] && [[JSON objectForKey:@"status"] isEqualToString:@"ok"]) {
+                OSLog(@"Data succesfully uploaded!");
+            } else {
+                OSLog(@"Could not upload collected data");
             }
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
             OSLog(@"Could not upload collected data");

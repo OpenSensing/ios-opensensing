@@ -16,6 +16,8 @@
 		3D6788611694AC8300553E04 /* ProbesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6788601694AC8300553E04 /* ProbesViewController.m */; };
 		3D7A747816B03D43000B4A0D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7A747716B03D43000B4A0D /* MobileCoreServices.framework */; };
 		3D7A747A16B03D50000B4A0D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7A747916B03D50000B4A0D /* SystemConfiguration.framework */; };
+		3D7FA2D316E5A090001ED0FA /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7FA2D216E5A090001ED0FA /* libTestFlight.a */; };
+		3D7FA2D616E5A0B1001ED0FA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7FA2D516E5A0B1001ED0FA /* libz.dylib */; };
 		3D8C708F1694A1D500619CDB /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C708E1694A1D500619CDB /* StatusViewController.m */; };
 		3D98CA8516AF4C230009F3C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D98CA8416AF4C230009F3C4 /* Security.framework */; };
 		3DA2596216B0837C00190683 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA2596116B0837C00190683 /* MapKit.framework */; };
@@ -101,6 +103,9 @@
 		3D6788601694AC8300553E04 /* ProbesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProbesViewController.m; path = Classes/ProbesViewController.m; sourceTree = "<group>"; };
 		3D7A747716B03D43000B4A0D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3D7A747916B03D50000B4A0D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3D7FA2D216E5A090001ED0FA /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		3D7FA2D516E5A0B1001ED0FA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3D7FA2D716E5A1F3001ED0FA /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		3D8C708D1694A1D500619CDB /* StatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusViewController.h; path = Classes/StatusViewController.h; sourceTree = "<group>"; };
 		3D8C708E1694A1D500619CDB /* StatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusViewController.m; path = Classes/StatusViewController.m; sourceTree = "<group>"; };
 		3D98CA8416AF4C230009F3C4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -237,6 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7FA2D616E5A0B1001ED0FA /* libz.dylib in Frameworks */,
 				3DB69F0316B1D750009570F3 /* CoreMotion.framework in Frameworks */,
 				3DA2596416B0879F00190683 /* CoreLocation.framework in Frameworks */,
 				3DA2596216B0837C00190683 /* MapKit.framework in Frameworks */,
@@ -249,6 +255,7 @@
 				3DDED6D6167D098B006DE4F8 /* UIKit.framework in Frameworks */,
 				3DDED6D8167D098B006DE4F8 /* Foundation.framework in Frameworks */,
 				3DDED6DA167D098B006DE4F8 /* CoreGraphics.framework in Frameworks */,
+				3D7FA2D316E5A090001ED0FA /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +352,7 @@
 		3DB21B08169740BC00F6B294 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				3D7FA2D716E5A1F3001ED0FA /* TestFlight.h */,
 				3DB21B09169740BC00F6B294 /* CorePlot */,
 			);
 			path = Vendor;
@@ -456,6 +464,8 @@
 		3DDED6D4167D098B006DE4F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D7FA2D516E5A0B1001ED0FA /* libz.dylib */,
+				3D7FA2D216E5A090001ED0FA /* libTestFlight.a */,
 				3DB69F0216B1D750009570F3 /* CoreMotion.framework */,
 				3DA2596316B0879F00190683 /* CoreLocation.framework */,
 				3DA2596116B0837C00190683 /* MapKit.framework */,
@@ -743,7 +753,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -758,6 +769,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -771,7 +784,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -779,6 +793,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -794,6 +810,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../../../Downloads/CorePlot_1.1/Binaries/iOS\"",
+					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -815,6 +832,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../../../Downloads/CorePlot_1.1/Binaries/iOS\"",
+					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
