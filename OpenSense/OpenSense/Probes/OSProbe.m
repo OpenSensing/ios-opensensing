@@ -61,6 +61,7 @@
     if (updateTimer)
     {
         [updateTimer invalidate];
+        updateTimer = nil;
     }
 }
 

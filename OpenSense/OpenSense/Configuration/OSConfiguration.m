@@ -49,9 +49,6 @@
     {
         // Try to load local json config file instead
         filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
-        
-        // Refresh configuration file
-        [self refresh];
     }
     
     NSData *data = [NSData dataWithContentsOfFile:filePath];
