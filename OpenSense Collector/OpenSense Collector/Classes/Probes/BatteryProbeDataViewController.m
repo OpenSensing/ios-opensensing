@@ -51,16 +51,16 @@
 
 - (void)initPlot
 {
-    [self configureHost];
+    /*[self configureHost];
     [self configureGraph];
     [self configurePlot:kFullPlot color:[CPTColor blueColor]];
     [self configurePlot:kChargingPlot color:[CPTColor yellowColor]];
     [self configurePlot:kUnpluggedPlot color:[CPTColor redColor]];
     [self configurePlot:kUnknownPlot color:[CPTColor grayColor]];
-    [self configureAxes];
+    [self configureAxes];*/
 }
 
-- (void)configureHost
+/*- (void)configureHost
 {
     hostView = [(CPTGraphHostingView *) [CPTGraphHostingView alloc] initWithFrame:self.view.bounds];
     //hostView.allowPinchScaling = YES;
@@ -170,7 +170,7 @@
             [xLocations addObject:[NSNumber numberWithFloat:location]];
         }
         i++;
-    }*/
+    }*
     x.axisLabels = xLabels;
     x.majorTickLocations = xLocations;
     
@@ -211,12 +211,12 @@
     y.axisLabels = yLabels;    
     y.majorTickLocations = yMajorLocations;
     y.minorTickLocations = yMinorLocations;
-}
+}*/
 
 #pragma mark -
 #pragma mark Plot Data Source Methods
 
-- (NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot
+/*- (NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot
 {
     return plotData.count;
 }
@@ -265,14 +265,14 @@
             }
             
             return [NSNumber numberWithDouble:[[batchDataDict objectForKey:@"BATTERY_LEVEL"] doubleValue] * 100.0f];
-            */
+            *
             
             break;
         }
     }
     
     return [NSDecimalNumber zero];
-}
+}*/
 
 - (void)didReceiveMemoryWarning
 {

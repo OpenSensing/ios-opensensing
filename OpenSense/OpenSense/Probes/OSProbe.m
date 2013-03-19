@@ -14,6 +14,16 @@
 
 @synthesize isStarted;
 
+- (id)init
+{
+    if (self = [super init]) {
+        NSString *instanceClassName = NSStringFromClass([self class]);
+        NSAssert((![instanceClassName isEqualToString:@"OSProbe"]), @"This is an abstract class and should never be instantiated directly");
+    }
+    
+    return self;
+}
+
 + (NSString*)name
 {
     NSAssert(NO, @"This is an abstract method and should be overridden");

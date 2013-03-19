@@ -61,6 +61,9 @@
         
         if (!config) {
             OSLog(@"Could not parse config: %@", [error localizedDescription]);
+            
+            // Delete config.json in the documents directory if possible
+            [[NSFileManager defaultManager] removeItemAtPath:[documentsPath stringByAppendingPathComponent:@"config.json"] error:nil];
         }
     }
 }

@@ -38,7 +38,6 @@
 		3DB21B0216973F0F00F6B294 /* stop_hover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB21AF216973F0F00F6B294 /* stop_hover@2x.png */; };
 		3DB21B0316973F0F00F6B294 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB21AF316973F0F00F6B294 /* stop.png */; };
 		3DB21B0416973F0F00F6B294 /* stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB21AF416973F0F00F6B294 /* stop@2x.png */; };
-		3DB21B55169740D600F6B294 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB21B54169740D600F6B294 /* libCorePlot-CocoaTouch.a */; };
 		3DB21B5716975B1E00F6B294 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB21B5616975B1E00F6B294 /* QuartzCore.framework */; };
 		3DB21B6016978F1E00F6B294 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB21B5F16978F1E00F6B294 /* TabBarViewController.m */; };
 		3DB69EF216B1C0B1009570F3 /* CollectedDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69EF116B1C0B1009570F3 /* CollectedDataViewController.m */; };
@@ -250,7 +249,6 @@
 				3D7A747816B03D43000B4A0D /* MobileCoreServices.framework in Frameworks */,
 				3D98CA8516AF4C230009F3C4 /* Security.framework in Frameworks */,
 				3DB21B5716975B1E00F6B294 /* QuartzCore.framework in Frameworks */,
-				3DB21B55169740D600F6B294 /* libCorePlot-CocoaTouch.a in Frameworks */,
 				3D35C2C61694C768000ADA14 /* libOpenSense.a in Frameworks */,
 				3DDED6D6167D098B006DE4F8 /* UIKit.framework in Frameworks */,
 				3DDED6D8167D098B006DE4F8 /* Foundation.framework in Frameworks */,
