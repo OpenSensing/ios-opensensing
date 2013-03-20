@@ -45,7 +45,7 @@
 + (NSTimeInterval)defaultUpdateInterval
 {
     NSAssert(NO, @"This is an abstract method and should be overridden");
-    return -1;
+    return kUpdateIntervalUnknown;
 }
 
 - (void)startProbe
@@ -54,7 +54,7 @@
     
     OSLog(@"%@ started with %f update interval", [[self class] name], timerUpdateInterval);
     
-    if (timerUpdateInterval != kUpdateIntervalDisabled)
+    if (timerUpdateInterval != kUpdateIntervalPush && timerUpdateInterval != kUpdateIntervalUnknown)
     {
         updateTimer = [NSTimer scheduledTimerWithTimeInterval:timerUpdateInterval target:self selector:@selector(saveData) userInfo:nil repeats:YES];
     }
@@ -99,7 +99,7 @@
     NSTimeInterval configInterval = [[OSConfiguration currentConfig] updateIntervalForProbe:[[self class] identifier]];
     
     // If config did not provide an update interval, use the default probe interval instead
-    if (configInterval < 0)
+    if (configInterval == kUpdateIntervalUnknown)
     {
         [[self class] defaultUpdateInterval];
     }

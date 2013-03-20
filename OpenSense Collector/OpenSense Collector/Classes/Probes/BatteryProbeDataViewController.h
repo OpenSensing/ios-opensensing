@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CorePlot-CocoaTouch.h"
 
-@interface BatteryProbeDataViewController : UIViewController<CPTPlotDataSource> {
-    CPTGraphHostingView *hostView;
+@interface BatteryProbeDataViewController : UIViewController {
+    //CPTGraphHostingView *hostView;
     NSArray *plotData;
 }
 

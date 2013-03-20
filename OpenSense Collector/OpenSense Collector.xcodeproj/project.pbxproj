@@ -44,6 +44,7 @@
 		3DB69EF816B1C3A8009570F3 /* PositioningProbeDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69EF716B1C3A8009570F3 /* PositioningProbeDataViewController.m */; };
 		3DB69EFB16B1C543009570F3 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69EFA16B1C543009570F3 /* LoadingView.m */; };
 		3DB69F0316B1D750009570F3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB69F0216B1D750009570F3 /* CoreMotion.framework */; };
+		3DDC364D16F943960007DB39 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDC364B16F943960007DB39 /* libTestFlight.a */; };
 		3DDED6D6167D098B006DE4F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D5167D098B006DE4F8 /* UIKit.framework */; };
 		3DDED6D8167D098B006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D7167D098B006DE4F8 /* Foundation.framework */; };
 		3DDED6DA167D098B006DE4F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D9167D098B006DE4F8 /* CoreGraphics.framework */; };
@@ -104,7 +105,6 @@
 		3D7A747916B03D50000B4A0D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3D7FA2D216E5A090001ED0FA /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		3D7FA2D516E5A0B1001ED0FA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		3D7FA2D716E5A1F3001ED0FA /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		3D8C708D1694A1D500619CDB /* StatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusViewController.h; path = Classes/StatusViewController.h; sourceTree = "<group>"; };
 		3D8C708E1694A1D500619CDB /* StatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusViewController.m; path = Classes/StatusViewController.m; sourceTree = "<group>"; };
 		3D98CA8416AF4C230009F3C4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -211,6 +211,8 @@
 		3DB69EF916B1C543009570F3 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		3DB69EFA16B1C543009570F3 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		3DB69F0216B1D750009570F3 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		3DDC364B16F943960007DB39 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		3DDC364C16F943960007DB39 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		3DDCAA9D16B5EF630063DC29 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		3DDED6D1167D098B006DE4F8 /* OpenSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDED6D5167D098B006DE4F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -254,6 +256,7 @@
 				3DDED6D8167D098B006DE4F8 /* Foundation.framework in Frameworks */,
 				3DDED6DA167D098B006DE4F8 /* CoreGraphics.framework in Frameworks */,
 				3D7FA2D316E5A090001ED0FA /* libTestFlight.a in Frameworks */,
+				3DDC364D16F943960007DB39 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +353,7 @@
 		3DB21B08169740BC00F6B294 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				3D7FA2D716E5A1F3001ED0FA /* TestFlight.h */,
+				3DDC364A16F943960007DB39 /* TestFlight */,
 				3DB21B09169740BC00F6B294 /* CorePlot */,
 			);
 			path = Vendor;
@@ -435,6 +438,15 @@
 				3DB21B53169740BC00F6B294 /* NSNumberExtensions.h */,
 			);
 			path = CorePlot;
+			sourceTree = "<group>";
+		};
+		3DDC364A16F943960007DB39 /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				3DDC364B16F943960007DB39 /* libTestFlight.a */,
+				3DDC364C16F943960007DB39 /* TestFlight.h */,
+			);
+			path = TestFlight;
 			sourceTree = "<group>";
 		};
 		3DDED6C6167D098B006DE4F8 = {
@@ -807,8 +819,7 @@
 				INFOPLIST_FILE = "OpenSense Collector/OpenSense Collector-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../../Downloads/CorePlot_1.1/Binaries/iOS\"",
-					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/OpenSense Collector/Vendor/TestFlight\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -829,8 +840,7 @@
 				INFOPLIST_FILE = "OpenSense Collector/OpenSense Collector-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../../Downloads/CorePlot_1.1/Binaries/iOS\"",
-					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/OpenSense Collector/Vendor/TestFlight\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",

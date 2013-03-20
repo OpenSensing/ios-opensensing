@@ -170,10 +170,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DB69F0116B1D74A009570F3 /* CoreMotion.framework in Frameworks */,
-				3DA2596616B087A800190683 /* CoreLocation.framework in Frameworks */,
 				3D7A747616B03D34000B4A0D /* MobileCoreServices.framework in Frameworks */,
 				3D7A747416B03D2F000B4A0D /* SystemConfiguration.framework in Frameworks */,
+				3DB69F0116B1D74A009570F3 /* CoreMotion.framework in Frameworks */,
+				3DA2596616B087A800190683 /* CoreLocation.framework in Frameworks */,
 				3D98CA8316AF4BE10009F3C4 /* Security.framework in Frameworks */,
 				3DDED69F167D04CF006DE4F8 /* Foundation.framework in Frameworks */,
 			);

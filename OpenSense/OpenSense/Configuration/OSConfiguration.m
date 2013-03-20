@@ -7,6 +7,7 @@
 //
 
 #import "OSConfiguration.h"
+#import "OSProbe.h"
 #import "AFNetworking.h"
 
 #define kDefaultVersion                 0
@@ -140,19 +141,19 @@
 - (NSTimeInterval)updateIntervalForProbe:(NSString*)probeId
 {
     if (!config)
-        return -1;
+        return kUpdateIntervalUnknown;
     
     // Get probe data from config
     NSArray *probeData = [[config objectForKey:@"dataRequests"] objectForKey:probeId];
     
     // Check if probe and DURATION key exists first
     if (!probeData || [probeData count] <= 0)
-        return -1;
+        return kUpdateIntervalUnknown;
     
     NSDictionary *firstProbeData = [probeData objectAtIndex:0];
     
     if (![firstProbeData objectForKey:@"interval"])
-        return -1;
+        return kUpdateIntervalUnknown;
     
     return [[firstProbeData objectForKey:@"interval"] doubleValue];
 }

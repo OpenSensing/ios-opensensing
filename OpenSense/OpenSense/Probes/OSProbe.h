@@ -6,7 +6,9 @@
 //  Copyright (c) 2013 Mathias Hansen. All rights reserved.
 //
 
-#define kUpdateIntervalDisabled  -1
+// Helper constants for update intervals
+#define kUpdateIntervalPush     -1
+#define kUpdateIntervalUnknown  -2
 
 @interface OSProbe : NSObject {
     NSTimer *updateTimer;

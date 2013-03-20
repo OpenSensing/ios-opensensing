@@ -158,7 +158,7 @@
     NSMutableSet *xLabels = [NSMutableSet setWithCapacity:dateCount];
     NSMutableSet *xLocations = [NSMutableSet setWithCapacity:dateCount];
     NSInteger i = 0;
-    /*for (Batch *batch in plotData)
+    *for (Batch *batch in plotData)
     {
         CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:[NSDateFormatter localizedStringFromDate:batch.created dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle] textStyle:x.labelTextStyle];
         CGFloat location = i;
@@ -236,7 +236,7 @@
             if (![(NSString*)plot.identifier isEqualToString:kUnpluggedPlot])
                 return nil;
             
-            /*Batch *batch = [plotData objectAtIndex:index];
+            *Batch *batch = [plotData objectAtIndex:index];
             NSDictionary *batchDataDict = [batch batchDataDict];
             
             Batch *previousBatch = nil;

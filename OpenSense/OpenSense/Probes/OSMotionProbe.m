@@ -32,7 +32,7 @@
 
 + (NSTimeInterval)defaultUpdateInterval
 {
-    return -1;
+    return kUpdateIntervalPush;
 }
 
 - (void)startProbe

@@ -28,13 +28,13 @@
 
 + (NSTimeInterval)defaultUpdateInterval
 {
-    return kUpdateIntervalDisabled;
+    return kUpdateIntervalPush;
 }
 
 - (void)startProbe
 {
     // Only listen to updates if we are not saving data with an interval
-    if ([self updateInterval] == kUpdateIntervalDisabled)
+    if ([self updateInterval] == kUpdateIntervalPush)
     {
         [[UIDevice currentDevice] setProximityMonitoringEnabled:YES];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(proximityStateChanged:) name:UIDeviceProximityStateDidChangeNotification object:nil];
@@ -46,7 +46,7 @@
 - (void)stopProbe
 {
     // Only listen to updates if we are not saving data with an interval
-    if ([self updateInterval] == kUpdateIntervalDisabled)
+    if ([self updateInterval] == kUpdateIntervalPush)
     {
         [[UIDevice currentDevice] setProximityMonitoringEnabled:NO];
         [[NSNotificationCenter defaultCenter] removeObserver:self];
