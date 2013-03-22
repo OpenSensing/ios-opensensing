@@ -263,6 +263,18 @@
             
             if ([JSON objectForKey:@"status"] && [[JSON objectForKey:@"status"] isEqualToString:@"ok"]) {
                 OSLog(@"Data succesfully uploaded!");
+                
+                // Determine file path
+                NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+                NSString *dataPath = [documentsPath stringByAppendingPathComponent:@"data"];
+                
+                // Find files in data directory
+                NSArray *probeDataFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dataPath error:NULL];
+                for (NSString *file in probeDataFiles) {
+                    if ([file hasPrefix:@"probedata"] && ![file isEqualToString:@"probedata"]) {
+                        [[NSFileManager defaultManager] removeItemAtPath:file error:nil]; // Delete file
+                    }
+                }
             } else {
                 OSLog(@"Could not upload collected data");
             }

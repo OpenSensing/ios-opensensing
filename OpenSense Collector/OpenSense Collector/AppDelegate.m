@@ -17,7 +17,7 @@
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     
     // TestFlight
-    [TestFlight takeOff:@"a341b15d210378ecc994aec59b6c6662_MTkyMjQ4MjAxMy0wMy0wNCAyMjo0MzoxOS4xMjU4NzU"];
+    [TestFlight takeOff:@"ae42a109-c1fe-4dbb-a38a-ed8847530765"];
     
     //OSLog(@"Encryption key: %@", [[OpenSense sharedInstance] encryptionKey]);
     
