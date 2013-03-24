@@ -158,6 +158,14 @@ function handleRequest(path, data, res) {
 }
 
 function generateKey() {
-    var buf = crypto.randomBytes(20);
-    return buf.toString('hex');
+    var validCharacters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%';
+
+    var key = '';
+
+    for (var i = 0; i < 40; i++) {
+        var index = Math.floor(Math.random() * validCharacters.length);
+        key += validCharacters[index];
+    }
+
+    return key;
 }
