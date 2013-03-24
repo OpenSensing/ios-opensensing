@@ -19,7 +19,9 @@
     // TestFlight
     [TestFlight takeOff:@"ae42a109-c1fe-4dbb-a38a-ed8847530765"];
     
-    //OSLog(@"Encryption key: %@", [[OpenSense sharedInstance] encryptionKey]);
+#ifdef SHOW_ENCRYPTION_KEY
+    OSLog(@"Encryption key: %@", [[OpenSense sharedInstance] encryptionKey]);
+#endif
     
     expirationHandler = ^{
         [application endBackgroundTask:bgTask];
@@ -48,7 +50,7 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             while (true)
             {
-                [NSThread sleepForTimeInterval:10.0f];
+                [NSThread sleepForTimeInterval:10.0f]; // Free up the CPU
             }
         });
     }
