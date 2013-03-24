@@ -90,14 +90,22 @@ function handleRequest(path, data, res) {
                 res.end(JSON.stringify({
                     error: "Missing file_hash parameter"
                 }));
-            } else if (!data.data) { // Make sure that the file hash is specified
+            } else if (data.file_hash.length != 32) { // Make sure that the file hash has correct length
+                res.writeHead(400, {"Content-Type": "text/json"});
+                res.end(JSON.stringify({
+                    error: "file_hash must be exactly 32 characters"
+                }));
+            } else if (!data.data) { // Make sure that the data is specified
                 res.writeHead(400, {"Content-Type": "text/json"});
                 res.end(JSON.stringify({
                     error: "Missing data parameter"
                 }));
             } else {
                 // Check integrity of uploaded data
-                var hash = crypto.createHash('md5').update(data.data).digest("hex");
+                var hash = crypto.createHash('md5')
+                    .update(data.data)
+                    .digest("hex");
+
                 if (hash != data.file_hash) {
                     res.writeHead(400, {"Content-Type": "text/json"});
                     res.end(JSON.stringify({
@@ -121,9 +129,9 @@ function handleRequest(path, data, res) {
                         {
                             // Little hackish/quick way to get current datetime formatted for a filename
                             var filename = new Date().toISOString()
-                                .replace(/T/, '-')
-                                .replace(/\..+/, '')
-                                .replace(/:\s*/g, '') +
+                                .replace(/T/, '-') // Replace 'T' with a dash
+                                .replace(/\..+/, '') // Remove anything after the dot (We don't need timezone and second precision) 
+                                .replace(/:\s*/g, '') + // Strip colons
                                 ".json";
 
                             // Save data file
@@ -150,6 +158,6 @@ function handleRequest(path, data, res) {
 }
 
 function generateKey() {
-    var buf = crypto.randomBytes(48);
+    var buf = crypto.randomBytes(20);
     return buf.toString('hex');
 }
