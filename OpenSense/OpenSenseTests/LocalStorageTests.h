@@ -1,5 +1,5 @@
 //
-//  OpenSenseTests.h
+//  LocalStorageTests.h
 //  OpenSenseTests
 //
 //  Created by Mathias Hansen on 1/2/13.
@@ -8,6 +8,8 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface OpenSenseTests : SenTestCase
+@interface LocalStorageTests : SenTestCase {
+    NSString *documentsPath;
+}
 
 @end

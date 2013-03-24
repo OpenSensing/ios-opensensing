@@ -52,6 +52,12 @@
         filePath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
     }
     
+    if (![[NSFileManager defaultManager] fileExistsAtPath:filePath])
+    {
+        // Try to load local library json config file instead
+        filePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"config" ofType:@"json"];
+    }
+    
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     
     if (data)

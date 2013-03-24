@@ -49,7 +49,7 @@
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:kNilOptions error:&error];
     if (!jsonData) {
         OSLog(@"Could not serialize JSON data: %@", [error localizedDescription]);
-        return ;
+        return;
     }
     
     // Encrypt data
