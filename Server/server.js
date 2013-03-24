@@ -163,7 +163,11 @@ function generateKey() {
     var key = '';
 
     for (var i = 0; i < 40; i++) {
-        var index = Math.floor(Math.random() * validCharacters.length);
+        var index;
+        do {
+            index = Math.floor(Math.random() * validCharacters.length);
+        } while (i != 0 && validCharacters[index] == key[key.length - 1]); // Prevent repeating characters
+
         key += validCharacters[index];
     }
 
