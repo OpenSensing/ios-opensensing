@@ -55,11 +55,6 @@
 		3DDED6EA167D098B006DE4F8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DDED6E9167D098B006DE4F8 /* Default@2x.png */; };
 		3DDED6EC167D098B006DE4F8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DDED6EB167D098B006DE4F8 /* Default-568h@2x.png */; };
 		3DDED6EF167D098B006DE4F8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDED6ED167D098B006DE4F8 /* MainStoryboard.storyboard */; };
-		3DDED705167D098B006DE4F8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED704167D098B006DE4F8 /* SenTestingKit.framework */; };
-		3DDED706167D098B006DE4F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D5167D098B006DE4F8 /* UIKit.framework */; };
-		3DDED707167D098B006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D7167D098B006DE4F8 /* Foundation.framework */; };
-		3DDED70F167D098B006DE4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DDED70D167D098B006DE4F8 /* InfoPlist.strings */; };
-		3DDED712167D098B006DE4F8 /* OpenSense_CollectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDED711167D098B006DE4F8 /* OpenSense_CollectorTests.m */; };
 		3DFE62551694DE4500145310 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE62541694DE4500145310 /* Icon.png */; };
 		3DFE62571694DE4800145310 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE62561694DE4800145310 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
@@ -78,13 +73,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3DDED6AC167D04CF006DE4F8;
 			remoteInfo = OpenSenseTests;
-		};
-		3DDED708167D098B006DE4F8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3DDED6C8167D098B006DE4F8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3DDED6D0167D098B006DE4F8;
-			remoteInfo = "OpenSense Collector";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -228,7 +216,6 @@
 		3DDED6E9167D098B006DE4F8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3DDED6EB167D098B006DE4F8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3DDED6EE167D098B006DE4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		3DDED703167D098B006DE4F8 /* OpenSense CollectorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OpenSense CollectorTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDED704167D098B006DE4F8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3DDED70C167D098B006DE4F8 /* OpenSense CollectorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenSense CollectorTests-Info.plist"; sourceTree = "<group>"; };
 		3DDED70E167D098B006DE4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -257,16 +244,6 @@
 				3DDED6DA167D098B006DE4F8 /* CoreGraphics.framework in Frameworks */,
 				3D7FA2D316E5A090001ED0FA /* libTestFlight.a in Frameworks */,
 				3DDC364D16F943960007DB39 /* libTestFlight.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3DDED6FF167D098B006DE4F8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DDED705167D098B006DE4F8 /* SenTestingKit.framework in Frameworks */,
-				3DDED706167D098B006DE4F8 /* UIKit.framework in Frameworks */,
-				3DDED707167D098B006DE4F8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +443,6 @@
 			isa = PBXGroup;
 			children = (
 				3DDED6D1167D098B006DE4F8 /* OpenSense.app */,
-				3DDED703167D098B006DE4F8 /* OpenSense CollectorTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -561,25 +537,6 @@
 			productReference = 3DDED6D1167D098B006DE4F8 /* OpenSense.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3DDED702167D098B006DE4F8 /* OpenSense CollectorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3DDED718167D098B006DE4F8 /* Build configuration list for PBXNativeTarget "OpenSense CollectorTests" */;
-			buildPhases = (
-				3DDED6FE167D098B006DE4F8 /* Sources */,
-				3DDED6FF167D098B006DE4F8 /* Frameworks */,
-				3DDED700167D098B006DE4F8 /* Resources */,
-				3DDED701167D098B006DE4F8 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3DDED709167D098B006DE4F8 /* PBXTargetDependency */,
-			);
-			name = "OpenSense CollectorTests";
-			productName = "OpenSense CollectorTests";
-			productReference = 3DDED703167D098B006DE4F8 /* OpenSense CollectorTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -608,7 +565,6 @@
 			projectRoot = "";
 			targets = (
 				3DDED6D0167D098B006DE4F8 /* OpenSense Collector */,
-				3DDED702167D098B006DE4F8 /* OpenSense CollectorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -662,31 +618,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3DDED700167D098B006DE4F8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DDED70F167D098B006DE4F8 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3DDED701167D098B006DE4F8 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DDED6CD167D098B006DE4F8 /* Sources */ = {
@@ -708,23 +640,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3DDED6FE167D098B006DE4F8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DDED712167D098B006DE4F8 /* OpenSense_CollectorTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3DDED709167D098B006DE4F8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3DDED6D0167D098B006DE4F8 /* OpenSense Collector */;
-			targetProxy = 3DDED708167D098B006DE4F8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3DDED6DE167D098B006DE4F8 /* InfoPlist.strings */ = {
@@ -852,40 +768,6 @@
 			};
 			name = Release;
 		};
-		3DDED719167D098B006DE4F8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpenSense Collector.app/OpenSense Collector";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OpenSense Collector/OpenSense Collector-Prefix.pch";
-				INFOPLIST_FILE = "OpenSense CollectorTests/OpenSense CollectorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		3DDED71A167D098B006DE4F8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpenSense Collector.app/OpenSense Collector";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OpenSense Collector/OpenSense Collector-Prefix.pch";
-				INFOPLIST_FILE = "OpenSense CollectorTests/OpenSense CollectorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -903,15 +785,6 @@
 			buildConfigurations = (
 				3DDED716167D098B006DE4F8 /* Debug */,
 				3DDED717167D098B006DE4F8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3DDED718167D098B006DE4F8 /* Build configuration list for PBXNativeTarget "OpenSense CollectorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3DDED719167D098B006DE4F8 /* Debug */,
-				3DDED71A167D098B006DE4F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

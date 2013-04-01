@@ -71,7 +71,6 @@
         
         // Unlock semaphore
         dispatch_semaphore_signal(semaphore);
-        
     }];
     
     // Wait for a response before finishing up
