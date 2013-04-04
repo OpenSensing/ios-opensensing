@@ -7,7 +7,6 @@
 //
 
 #import "ProbesViewController.h"
-#import "BatteryProbeDataViewController.h"
 #import "OpenSense.h"
 
 @interface ProbesViewController ()

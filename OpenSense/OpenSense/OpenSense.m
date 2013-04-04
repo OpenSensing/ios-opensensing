@@ -18,7 +18,6 @@
 #import "OSMagnetometerProbe.h"
 #import "OSGyroProbe.h"
 #import "OSDeviceInfoProbe.h"
-#import "OSDeviceInteractionProbe.h"
 #import "OSBatteryProbe.h"
 #import "OSProximityProbe.h"
 
@@ -163,7 +162,6 @@
         [OSMagnetometerProbe class],
         [OSGyroProbe class],
         [OSDeviceInfoProbe class],
-        [OSDeviceInteractionProbe class],
         [OSBatteryProbe class],
         [OSProximityProbe class],
     ];
