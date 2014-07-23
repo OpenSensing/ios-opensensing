@@ -2,7 +2,7 @@
   "name": "awesome2",
   "version": 2,
   "dataUploadOnWifiOnly": true,
-  "baseUrl": "http://codemonkey.io:4000",
+  "baseUrl": "http://localhost:4000",
   "configUpdatePeriod": 21600,
   "dataArchivePeriod": 300,
   "dataUploadPeriod": 7200,
