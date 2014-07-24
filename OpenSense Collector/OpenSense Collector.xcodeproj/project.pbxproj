@@ -548,7 +548,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = OpenSense;
-				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}/../OpenSense/build/includes/\"";
+				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}/../OpenSense/\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -569,7 +569,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = OpenSense;
-				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}/../OpenSense/build/includes/\"";
+				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}/../OpenSense/\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
