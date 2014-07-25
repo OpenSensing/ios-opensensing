@@ -15,7 +15,6 @@
 		3D6788611694AC8300553E04 /* ProbesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6788601694AC8300553E04 /* ProbesViewController.m */; };
 		3D7A747816B03D43000B4A0D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7A747716B03D43000B4A0D /* MobileCoreServices.framework */; };
 		3D7A747A16B03D50000B4A0D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7A747916B03D50000B4A0D /* SystemConfiguration.framework */; };
-		3D7FA2D316E5A090001ED0FA /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7FA2D216E5A090001ED0FA /* libTestFlight.a */; };
 		3D7FA2D616E5A0B1001ED0FA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7FA2D516E5A0B1001ED0FA /* libz.dylib */; };
 		3D8C708F1694A1D500619CDB /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C708E1694A1D500619CDB /* StatusViewController.m */; };
 		3D98CA8516AF4C230009F3C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D98CA8416AF4C230009F3C4 /* Security.framework */; };
@@ -43,7 +42,6 @@
 		3DB69EF816B1C3A8009570F3 /* PositioningProbeDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69EF716B1C3A8009570F3 /* PositioningProbeDataViewController.m */; };
 		3DB69EFB16B1C543009570F3 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69EFA16B1C543009570F3 /* LoadingView.m */; };
 		3DB69F0316B1D750009570F3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB69F0216B1D750009570F3 /* CoreMotion.framework */; };
-		3DDC364D16F943960007DB39 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDC364B16F943960007DB39 /* libTestFlight.a */; };
 		3DDED6D6167D098B006DE4F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D5167D098B006DE4F8 /* UIKit.framework */; };
 		3DDED6D8167D098B006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D7167D098B006DE4F8 /* Foundation.framework */; };
 		3DDED6DA167D098B006DE4F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6D9167D098B006DE4F8 /* CoreGraphics.framework */; };
@@ -161,8 +159,6 @@
 				3DDED6D6167D098B006DE4F8 /* UIKit.framework in Frameworks */,
 				3DDED6D8167D098B006DE4F8 /* Foundation.framework in Frameworks */,
 				3DDED6DA167D098B006DE4F8 /* CoreGraphics.framework in Frameworks */,
-				3D7FA2D316E5A090001ED0FA /* libTestFlight.a in Frameworks */,
-				3DDC364D16F943960007DB39 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,10 +543,7 @@
 				GCC_PREFIX_HEADER = "OpenSense Collector/OpenSense Collector-Prefix.pch";
 				INFOPLIST_FILE = "OpenSense Collector/OpenSense Collector-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/OpenSense Collector/Vendor/TestFlight\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -572,10 +565,7 @@
 				GCC_PREFIX_HEADER = "OpenSense Collector/OpenSense Collector-Prefix.pch";
 				INFOPLIST_FILE = "OpenSense Collector/OpenSense Collector-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/OpenSense Collector/Vendor/TestFlight\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
