@@ -8,7 +8,9 @@
 
 #import "OSMotionProbe.h"
 
-#define kMotionUpdateInterval (double)1/50 // 50Hz
+#define kMotionUpdateInterval (double)1/50  // 50Hz
+#define kMotionSampleFrequency (double) 900.0 // seconds
+#define kMotionSampleDuration (double) 30.0   //seconds
 
 @implementation OSMotionProbe
 
@@ -39,9 +41,7 @@
 {
     // Initialize motion manager and queue
     motionManager = [[CMMotionManager alloc] init];
-    motionManager.accelerometerUpdateInterval = kMotionUpdateInterval;
-    motionManager.gyroUpdateInterval = kMotionUpdateInterval;
-    motionManager.magnetometerUpdateInterval = kMotionUpdateInterval;
+    motionManager.deviceMotionUpdateInterval = kMotionUpdateInterval;
     operationQueue = [[NSOperationQueue alloc] init];
     
     [super startProbe];
