@@ -360,6 +360,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Mathias Hansen";
+				TargetAttributes = {
+					3DDED6D0167D098B006DE4F8 = {
+						DevelopmentTeam = 4K8T4ETL5D;
+					};
+				};
 			};
 			buildConfigurationList = 3DDED6CB167D098B006DE4F8 /* Build configuration list for PBXProject "OpenSense Collector" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -536,9 +541,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenSense Collector/OpenSense Collector-Prefix.pch";
 				INFOPLIST_FILE = "OpenSense Collector/OpenSense Collector-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/OpenSense Collector/Vendor/TestFlight\"",
@@ -548,6 +556,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = OpenSense;
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}/../OpenSense/\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -557,9 +566,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenSense Collector/OpenSense Collector-Prefix.pch";
 				INFOPLIST_FILE = "OpenSense Collector/OpenSense Collector-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/OpenSense Collector/Vendor/TestFlight\"",
@@ -569,6 +581,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = OpenSense;
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}/../OpenSense/\"/**";
 				WRAPPER_EXTENSION = app;
 			};
