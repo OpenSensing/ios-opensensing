@@ -33,12 +33,6 @@
 - (void)startProbe
 {
     [super startProbe];
-    
-    // Start receiving updates
-    [motionManager startGyroUpdatesToQueue:operationQueue withHandler:^(CMGyroData *gyroData, NSError *error) {
-        lastData = gyroData;
-        [self saveData];
-    }];
 }
 
 - (void)stopProbe
@@ -60,6 +54,23 @@
                                  nil];
     
     return data;
+}
+
+- (void) startSample
+{
+    
+    [motionManager startGyroUpdatesToQueue:operationQueue withHandler:^(CMGyroData *gyroData, NSError *error) {
+        lastData = gyroData;
+        [self saveData];
+    }];
+    
+    // stop the motion manager after time has elapsed.
+    [super startSample];
+}
+
+- (void) stopSample
+{
+    [motionManager stopGyroUpdates];
 }
 
 @end

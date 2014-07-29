@@ -10,7 +10,7 @@
 
 // kMotionUpdateInterval originally 0.1
 
-#define kMotionUpdateInterval (double) 0.1  // 50Hz
+#define kMotionUpdateInterval (double) 0.5  // 50Hz
 #define kMotionSampleFrequency (double) 5.0 // seconds
 #define kMotionSampleDuration (double) 1.0   //seconds
 
@@ -46,11 +46,29 @@
     motionManager.deviceMotionUpdateInterval = kMotionUpdateInterval;
     operationQueue = [[NSOperationQueue alloc] init];
     
+    // Start generating and sampling data
+
+    [self startSample];  // Span new thread to avoid sampleFrequency delay
+    NSTimeInterval sampleFrequency = [self sampleFrequency];
+    sampleFrequencyTimer = [NSTimer scheduledTimerWithTimeInterval:sampleFrequency target:self selector:@selector(startSample) userInfo:nil repeats:YES];
+
+    
     [super startProbe];
 }
 
 - (void)stopProbe
 {
+    // Invalidate and clear timers
+    if (sampleFrequencyTimer){
+        [sampleFrequencyTimer invalidate];
+        sampleFrequencyTimer = nil;
+    }
+    if (sampleDurationTimer){
+        [sampleDurationTimer invalidate];
+        sampleDurationTimer = nil;
+    }
+
+    
     // Stop receving updates and release objects
     [motionManager stopDeviceMotionUpdates];
     motionManager = nil;
@@ -63,12 +81,17 @@
 
 - (void) startSample
 {
-    NSAssert(NO, @"This is an abstract method and should be overridden");
+    
+    // after a period of time stop the motion Manager
+    NSTimeInterval sampleDuration = [self sampleDuration];
+    sampleDurationTimer = [NSTimer scheduledTimerWithTimeInterval:sampleDuration target:self selector:@selector(stopSample) userInfo:nil repeats:NO];
+    
 }
 
 - (void) stopSample
 {
-    NSAssert(NO, @"This is an abstract method and should be overridden");
+//    NSAssert(NO, @"This is an abstract method and should be overridden");
+    [motionManager stopDeviceMotionUpdates];
 }
 
 - (NSTimeInterval) sampleFrequency

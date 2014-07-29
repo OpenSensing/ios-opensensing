@@ -33,25 +33,12 @@
 - (void)startProbe
 {
     [super startProbe];
-    NSLog(@"Accelerometer startProbe called");
-    
-    //initially do this immediately, to avoid the first delay
-    [self startSample];
-    
-    
-    // call startSample every sampleFrequency seconds
-    NSTimeInterval sampleFrequency = [self sampleFrequency];
-    sampleFrequencyTimer = [NSTimer scheduledTimerWithTimeInterval:sampleFrequency target:self selector:@selector(startSample) userInfo:nil repeats:YES];
     
 }
 
 - (void)stopProbe
 { 
     [super stopProbe];
-    if (sampleFrequencyTimer){
-        [sampleFrequencyTimer invalidate];
-        sampleFrequencyTimer = nil;
-    }
 }
 
 
@@ -74,23 +61,18 @@
 
 - (void) startSample
 {
-    NSLog(@"Accelerometer startSample Called");
     [motionManager startAccelerometerUpdatesToQueue:operationQueue withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
         lastData = accelerometerData;
         [self saveData];
     }];
     
-//    after a period of time stop the motion Manager
-    NSTimeInterval sampleDuration = [self sampleDuration];
-    [NSTimer scheduledTimerWithTimeInterval:sampleDuration target:self selector:@selector(stopSample) userInfo:nil repeats:NO];
-    
-    
+    // stop the motion manager after time has elapsed.
+    [super startSample];
     
 }
 
 - (void) stopSample
 {
-    NSLog(@"Accelerometer stopSample Called");
     [motionManager stopAccelerometerUpdates];
 }
 

@@ -62,4 +62,20 @@
     return data;
 }
 
+- (void) startSample
+{
+    [motionManager startMagnetometerUpdatesToQueue:operationQueue withHandler:^(CMMagnetometerData *magnetometerData, NSError *error) {
+        lastData = magnetometerData;
+        [self saveData];
+    }];
+    
+    // stop the motion manager after time has elapsed.
+    [super startSample];
+}
+
+- (void) stopSample
+{
+    [motionManager stopMagnetometerUpdates];
+}
+
 @end
