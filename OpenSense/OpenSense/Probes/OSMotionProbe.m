@@ -10,9 +10,9 @@
 
 // kMotionUpdateInterval originally 0.1
 
-#define kMotionUpdateInterval (double) 0.5  // originally 1/50 50Hz
-#define kMotionSampleFrequency (double) 10.0 // seconds
-#define kMotionSampleDuration (double) 1.0   //seconds
+#define kMotionUpdateInterval (double) 1/50  // originally 1/50 50Hz
+#define kMotionSampleFrequency (double) 2700.0 // seconds between samples
+#define kMotionSampleDuration (double) 5.0   // probes record data for this many seconds
 
 @implementation OSMotionProbe
 
@@ -41,6 +41,11 @@
 
 - (void)startProbe
 {
+    if(kMotionSampleFrequency - kMotionSampleDuration < 0){
+        [NSException raise:@"Your OSMotionProbe frequency/duration are incorrect" format:@"Check to make sure your greater tha is less than your kMotionSampleDuration"];
+    }
+
+    
     // Initialize motion manager and queue
     motionManager = [[CMMotionManager alloc] init];
     motionManager.deviceMotionUpdateInterval = kMotionUpdateInterval;
