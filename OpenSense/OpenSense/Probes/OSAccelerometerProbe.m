@@ -35,6 +35,10 @@
     [super startProbe];
     NSLog(@"Accelerometer startProbe called");
     
+    //initially do this immediately, to avoid the first delay
+    [self startSample];
+    
+    
     // call startSample every sampleFrequency seconds
     NSTimeInterval sampleFrequency = [self sampleFrequency];
     sampleFrequencyTimer = [NSTimer scheduledTimerWithTimeInterval:sampleFrequency target:self selector:@selector(startSample) userInfo:nil repeats:YES];
