@@ -4,15 +4,16 @@ sensible-opensense-collector
 ###To Build the Collector App
 
 Prerequisites (OSX only):
-	* xCode 4 or newer
 
-	* iOS 6x
+	* xCode 4 or higher
+
+	* iOS 7x
 
 	* NodeJS
 
 To build, you will need to create a new config.json file in OpenSense Collector/OpenSense Collector. Use these defaults:
 
-```
+```javascript
 {
   "name": "awesome2",
   "version": 2,
@@ -44,7 +45,9 @@ To build, you will need to create a new config.json file in OpenSense Collector/
 
 
 Commands:
+
 	node Server/server.js
+
 	open OpenSense\ Collector/OpenSense\ Collector.xcodeproj
 
 
