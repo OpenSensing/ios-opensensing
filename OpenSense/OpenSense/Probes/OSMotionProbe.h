@@ -13,6 +13,18 @@
     CMMotionManager *motionManager;
     NSOperationQueue *operationQueue;
     CMLogItem *lastData;
+    NSTimer *sampleFrequencyTimer;
+    NSTimer *sampleDurationTimer;
 }
+
+// turn on processor and start sampling data.
+// startProbe will turn these on and off on a timer.
+-(void) startSample;
+-(void) stopSample;
+
+- (NSTimeInterval) sampleFrequency;
+- (NSTimeInterval) sampleDuration;
+
+
 
 @end
