@@ -8,16 +8,12 @@
 
 #import "AppDelegate.h"
 #import "OpenSense.h"
-#import "TestFlight.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 //    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
-    
-    // TestFlight
-    [TestFlight takeOff:@"ae42a109-c1fe-4dbb-a38a-ed8847530765"];
     
 #ifdef SHOW_ENCRYPTION_KEY
     OSLog(@"Encryption key: %@", [[OpenSense sharedInstance] encryptionKey]);

@@ -34,17 +34,14 @@
 {
     [super startProbe];
     
-    // Start receiving updates
-    [motionManager startAccelerometerUpdatesToQueue:operationQueue withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
-        lastData = accelerometerData;
-        [self saveData];
-    }];
 }
 
 - (void)stopProbe
 { 
     [super stopProbe];
 }
+
+
 
 - (NSDictionary*)sendData
 {
@@ -60,6 +57,23 @@
                                  nil];
     
     return data;
+}
+
+- (void) startSample
+{
+    [motionManager startAccelerometerUpdatesToQueue:operationQueue withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
+        lastData = accelerometerData;
+        [self saveData];
+    }];
+    
+    // stop the motion manager after time has elapsed.
+    [super startSample];
+    
+}
+
+- (void) stopSample
+{
+    [motionManager stopAccelerometerUpdates];
 }
 
 @end

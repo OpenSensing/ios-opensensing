@@ -8,7 +8,11 @@
 
 #import "OSMotionProbe.h"
 
-#define kMotionUpdateInterval (double)1/50 // 50Hz
+// kMotionUpdateInterval originally 0.1
+
+#define kMotionUpdateInterval (double) 1/50  // originally 1/50 50Hz
+#define kMotionSampleFrequency (double) 2700.0 // seconds between samples
+#define kMotionSampleDuration (double) 5.0   // probes record data for this many seconds
 
 @implementation OSMotionProbe
 
@@ -37,24 +41,73 @@
 
 - (void)startProbe
 {
+    if(kMotionSampleFrequency - kMotionSampleDuration < 0){
+        [NSException raise:@"Your OSMotionProbe frequency/duration are incorrect" format:@"Check to make sure your greater tha is less than your kMotionSampleDuration"];
+    }
+
+    
     // Initialize motion manager and queue
     motionManager = [[CMMotionManager alloc] init];
-    motionManager.accelerometerUpdateInterval = kMotionUpdateInterval;
-    motionManager.gyroUpdateInterval = kMotionUpdateInterval;
-    motionManager.magnetometerUpdateInterval = kMotionUpdateInterval;
+    motionManager.deviceMotionUpdateInterval = kMotionUpdateInterval;
     operationQueue = [[NSOperationQueue alloc] init];
+    
+    // Start generating and sampling data
+
+    [self startSample];  // Span new thread to avoid sampleFrequency delay
+    NSTimeInterval sampleFrequency = [self sampleFrequency];
+    sampleFrequencyTimer = [NSTimer scheduledTimerWithTimeInterval:sampleFrequency target:self selector:@selector(startSample) userInfo:nil repeats:YES];
+
     
     [super startProbe];
 }
 
 - (void)stopProbe
 {
+    // Invalidate and clear timers
+    if (sampleFrequencyTimer){
+        [sampleFrequencyTimer invalidate];
+        sampleFrequencyTimer = nil;
+    }
+    if (sampleDurationTimer){
+        [sampleDurationTimer invalidate];
+        sampleDurationTimer = nil;
+    }
+
+    
     // Stop receving updates and release objects
-    [motionManager stopAccelerometerUpdates];
+    [motionManager stopDeviceMotionUpdates];
     motionManager = nil;
     operationQueue = nil;
     
     [super stopProbe];
 }
+
+# pragma mark - sample start/stop
+
+- (void) startSample
+{
+    
+    // after a period of time stop the motion Manager
+    NSTimeInterval sampleDuration = [self sampleDuration];
+    sampleDurationTimer = [NSTimer scheduledTimerWithTimeInterval:sampleDuration target:self selector:@selector(stopSample) userInfo:nil repeats:NO];
+    
+}
+
+- (void) stopSample
+{
+//    NSAssert(NO, @"This is an abstract method and should be overridden");
+    [motionManager stopDeviceMotionUpdates];
+}
+
+- (NSTimeInterval) sampleFrequency
+{
+    return kMotionSampleFrequency;
+}
+
+- (NSTimeInterval) sampleDuration
+{
+    return kMotionSampleDuration;
+}
+
 
 @end
