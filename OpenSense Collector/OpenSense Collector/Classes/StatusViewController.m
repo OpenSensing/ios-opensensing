@@ -93,7 +93,7 @@
 }
 
 - (IBAction)toggleUpload:(id)sender {
-    [[OpenSense sharedInstance] myUploadData];
+    [[OpenSense sharedInstance] uploadData:sender];
 }
 
 - (void)dealloc

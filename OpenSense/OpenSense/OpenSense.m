@@ -212,16 +212,12 @@
     return [STKeychain getPasswordForUsername:@"OpenSense" andServiceName:@"OpenSense" error:nil];
 }
 
-- (void) myUploadData
-{
-//    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(uploadData:) userInfo:nil repeats:NO];
-    [self uploadData:nil];
-}
 
 - (void)uploadData:(id)sender
 {
-    // Fetch probe data, but skip currently used probe file to avoid conflicts
-    [[OSLocalStorage sharedInstance] fetchBatchesForProbe:nil skipCurrent:YES parseJSON:NO success:^(NSArray *batches) {
+    // Fetch probe data, but if openSense is running, skip the currently used probe file to avoid conflicts. See Thesis p. 37
+    BOOL * skipCurrent = [OpenSense sharedInstance].isRunning;
+    [[OSLocalStorage sharedInstance] fetchBatchesForProbe:nil skipCurrent:skipCurrent parseJSON:NO success:^(NSArray *batches) {
         
         OSLog(@"Constructing JSON document with %d batches", [batches count]);
         

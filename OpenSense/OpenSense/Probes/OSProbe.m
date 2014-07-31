@@ -73,10 +73,12 @@
         [updateTimer invalidate];
         updateTimer = nil;
     }
+    [self saveData];
 }
 
 - (void)saveData
 {
+    OSLog(@"%@ called save data", [[self class] name]);
     // Receive data from the probe
     NSDictionary *data = [self sendData];
     
