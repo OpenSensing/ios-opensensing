@@ -33,12 +33,6 @@
 - (void)startProbe
 {
     [super startProbe];
-    
-    // Start receiving updates
-    [motionManager startMagnetometerUpdatesToQueue:operationQueue withHandler:^(CMMagnetometerData *magnetometerData, NSError *error) {
-        lastData = magnetometerData;
-        [self saveData];
-    }];
 }
 
 - (void)stopProbe

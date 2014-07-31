@@ -212,6 +212,12 @@
     return [STKeychain getPasswordForUsername:@"OpenSense" andServiceName:@"OpenSense" error:nil];
 }
 
+- (void) myUploadData
+{
+//    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(uploadData:) userInfo:nil repeats:NO];
+    [self uploadData:nil];
+}
+
 - (void)uploadData:(id)sender
 {
     // Fetch probe data, but skip currently used probe file to avoid conflicts
@@ -240,7 +246,7 @@
         // ...and add array brackets
         jsonFile = [NSString stringWithFormat:@"[%@]", jsonFile];
         
-        OSLog(@"%@", jsonFile);
+        OSLog(@"Json File to be sent:\n%@", jsonFile);
         
         // Create hash of document for integrity checking
         NSString *jsonFileHash = [jsonFile stringFromMD5];

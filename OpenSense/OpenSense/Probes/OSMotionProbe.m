@@ -10,7 +10,7 @@
 
 // kMotionUpdateInterval originally 0.1
 
-#define kMotionUpdateInterval (double) 1/50  // originally 1/50 50Hz
+#define kMotionUpdateInterval (double) 0.1  // originally 1/50 50Hz
 #define kMotionSampleFrequency (double) 2700.0 // seconds between samples
 #define kMotionSampleDuration (double) 5.0   // probes record data for this many seconds
 
@@ -49,6 +49,9 @@
     // Initialize motion manager and queue
     motionManager = [[CMMotionManager alloc] init];
     motionManager.deviceMotionUpdateInterval = kMotionUpdateInterval;
+    motionManager.accelerometerUpdateInterval = kMotionUpdateInterval;
+    motionManager.magnetometerUpdateInterval = kMotionUpdateInterval;
+    motionManager.gyroUpdateInterval = kMotionUpdateInterval;
     operationQueue = [[NSOperationQueue alloc] init];
     
     // Start generating and sampling data

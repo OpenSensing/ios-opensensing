@@ -92,6 +92,10 @@
     }
 }
 
+- (IBAction)toggleUpload:(id)sender {
+    [[OpenSense sharedInstance] myUploadData];
+}
+
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
