@@ -84,6 +84,7 @@
 		3DF797A71694BA1D00E84594 /* OSDeviceInfoProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70711694818E00619CDB /* OSDeviceInfoProbe.h */; };
 		3DFE53301695D5AE00E09161 /* OSBatteryProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE532F1695D5AE00E09161 /* OSBatteryProbe.m */; };
 		3DFE5427169608CF00E09161 /* OSLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE5426169608CF00E09161 /* OSLocalStorage.m */; };
+		9413FB15198C1A7B001F62AD /* OSActivityManagerProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 9413FB14198C1A7B001F62AD /* OSActivityManagerProbe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +191,8 @@
 		3DFE532F1695D5AE00E09161 /* OSBatteryProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSBatteryProbe.m; sourceTree = "<group>"; };
 		3DFE5425169608CF00E09161 /* OSLocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSLocalStorage.h; path = LocalStorage/OSLocalStorage.h; sourceTree = "<group>"; };
 		3DFE5426169608CF00E09161 /* OSLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSLocalStorage.m; path = LocalStorage/OSLocalStorage.m; sourceTree = "<group>"; };
+		9413FB13198C1A7B001F62AD /* OSActivityManagerProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSActivityManagerProbe.h; sourceTree = "<group>"; };
+		9413FB14198C1A7B001F62AD /* OSActivityManagerProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSActivityManagerProbe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +370,8 @@
 				3DFE532F1695D5AE00E09161 /* OSBatteryProbe.m */,
 				3DB21AE216972ED500F6B294 /* OSProximityProbe.h */,
 				3DB21AE316972ED500F6B294 /* OSProximityProbe.m */,
+				9413FB13198C1A7B001F62AD /* OSActivityManagerProbe.h */,
+				9413FB14198C1A7B001F62AD /* OSActivityManagerProbe.m */,
 			);
 			path = Probes;
 			sourceTree = "<group>";
@@ -491,6 +496,7 @@
 				3DDED6A6167D04CF006DE4F8 /* OpenSense.m in Sources */,
 				3D8C70631694814C00619CDB /* OSPositioningProbe.m in Sources */,
 				3D8C70671694815800619CDB /* OSProbe.m in Sources */,
+				9413FB15198C1A7B001F62AD /* OSActivityManagerProbe.m in Sources */,
 				3D8C706A1694816C00619CDB /* OSAccelerometerProbe.m in Sources */,
 				3D8C70731694818E00619CDB /* OSDeviceInfoProbe.m in Sources */,
 				3DFE53301695D5AE00E09161 /* OSBatteryProbe.m in Sources */,

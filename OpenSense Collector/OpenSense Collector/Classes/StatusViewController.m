@@ -94,7 +94,7 @@
 
 - (IBAction)toggleUpload:(id)sender {
     // should only be called when OpenSense is stopped
-    [[OpenSense sharedInstance] stopCollectorAndUploadData:sender];
+    [[OpenSense sharedInstance] stopCollectorAndUploadData];
 }
 
 - (void)dealloc

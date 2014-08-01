@@ -39,21 +39,20 @@
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     OSLog(@"application performFetchWithCompletionHandler entered");
     
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//    NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
-//    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"/log.txt"];
-//    NSFileHandle *f = [NSFileHandle fileHandleForUpdatingAtPath:filePath];
-//    [f seekToEndOfFile];
-//    NSString *message = [NSString stringWithFormat:@"performFetch ran at time %f\n",[[NSDate date] timeIntervalSince1970]];
-//    [f writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
-//    [f closeFile];
-//    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"/backgroundlog.txt"];
+    NSFileHandle *f = [NSFileHandle fileHandleForUpdatingAtPath:filePath];
+    [f seekToEndOfFile];
+    NSString *message = [NSString stringWithFormat:@"performFetch ran at time %f\n",[[NSDate date] timeIntervalSince1970]];
+    [f writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
+    [f closeFile];
 
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
     NSDate *now = [NSDate date];
     localNotification.fireDate = now;
-    localNotification.alertBody = @"OpenSensing activated and took a data sample";
+    localNotification.alertBody = filePath;
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     
@@ -61,7 +60,7 @@
     // only start the collector if it was running when the user exited
     if (openSenseRunningWhenEnteredBackground) {
         [[OpenSense sharedInstance] startCollector];
-        [NSTimer scheduledTimerWithTimeInterval:20 target:[OpenSense sharedInstance] selector:@selector(stopCollectorAndUploadData) userInfo:nil repeats:NO];
+        [NSTimer scheduledTimerWithTimeInterval:15 target:[OpenSense sharedInstance] selector:@selector(stopCollectorAndUploadData) userInfo:nil repeats:NO];
     }
     completionHandler(UIBackgroundFetchResultNoData);
 }
