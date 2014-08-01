@@ -37,7 +37,8 @@
 }
 
 - (void)stopProbe
-{ 
+{
+    [motionManager stopAccelerometerUpdates];
     [super stopProbe];
 }
 

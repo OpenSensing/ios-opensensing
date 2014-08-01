@@ -93,6 +93,11 @@
 }
 
 - (IBAction)toggleUpload:(id)sender {
+    // should only be called when OpenSense is stopped
+    if ([[OpenSense sharedInstance] isRunning]){
+        [[OpenSense sharedInstance] stopCollector];
+    }
+        
     [[OpenSense sharedInstance] uploadData:sender];
 }
 

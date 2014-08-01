@@ -79,6 +79,7 @@
     
     // Stop receving updates and release objects
     [motionManager stopDeviceMotionUpdates];
+        
     motionManager = nil;
     operationQueue = nil;
     

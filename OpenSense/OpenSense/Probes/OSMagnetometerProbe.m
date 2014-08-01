@@ -37,6 +37,7 @@
 
 - (void)stopProbe
 {
+    [motionManager stopMagnetometerUpdates];
     [super stopProbe];
 }
 

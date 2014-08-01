@@ -219,7 +219,7 @@
     BOOL * skipCurrent = [OpenSense sharedInstance].isRunning;
     [[OSLocalStorage sharedInstance] fetchBatchesForProbe:nil skipCurrent:skipCurrent parseJSON:NO success:^(NSArray *batches) {
         
-        OSLog(@"Constructing JSON document with %d batches", [batches count]);
+        OSLog(@"Constructing JSON document with %lu batches", (unsigned long)[batches count]);
         
         // Construct JSON document by comma-separating indvidual data batches
         NSString *jsonFile = [[NSString alloc] init];
@@ -242,7 +242,7 @@
         // ...and add array brackets
         jsonFile = [NSString stringWithFormat:@"[%@]", jsonFile];
         
-        OSLog(@"Json File to be sent:\n%@", jsonFile);
+//        OSLog(@"Json File to be sent:\n%@", jsonFile);
         
         // Create hash of document for integrity checking
         NSString *jsonFileHash = [jsonFile stringFromMD5];

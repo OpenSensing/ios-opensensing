@@ -30,6 +30,7 @@
 - (void)localDataBatches:(void (^)(NSArray *batches))success;
 - (void)localDataBatchesForProbe:(NSString*)probeIdentifier success:(void (^)(NSArray *batches))success;
 - (NSString*)encryptionKey;
+
 - (void) uploadData:(id)sender;
 
 @end

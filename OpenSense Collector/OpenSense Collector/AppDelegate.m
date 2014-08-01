@@ -38,6 +38,8 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+    
+    
     if ([[OpenSense sharedInstance] isRunning])
     {
         bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:expirationHandler];
@@ -65,6 +67,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+    
 }
 
 @end
