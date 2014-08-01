@@ -11,6 +11,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     dispatch_block_t expirationHandler;
     UIBackgroundTaskIdentifier bgTask;
+    BOOL openSenseRunningWhenEnteredBackground;
 }
 
 @property (strong, nonatomic) UIWindow *window;

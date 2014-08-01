@@ -212,6 +212,11 @@
     return [STKeychain getPasswordForUsername:@"OpenSense" andServiceName:@"OpenSense" error:nil];
 }
 
+- (void) stopCollectorAndUploadData:(id)sender
+{
+    [self stopCollector];
+    [self uploadData:sender];
+}
 
 - (void)uploadData:(id)sender
 {
