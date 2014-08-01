@@ -23,7 +23,7 @@
     OSLog(@"Encryption key: %@", [[OpenSense sharedInstance] encryptionKey]);
 #endif
     
-    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
     
     return YES;
 }
@@ -41,9 +41,11 @@
     [f writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
     [f closeFile];
     
-    [[OpenSense sharedInstance] startCollector];
-    [NSTimer scheduledTimerWithTimeInterval:20 target:[OpenSense sharedInstance] selector:@selector(stopCollectorAndUploadData) userInfo:nil repeats:NO];
-    
+    // only start the collector if it was running when the user exited
+    if (openSenseRunningWhenEnteredBackground) {
+        [[OpenSense sharedInstance] startCollector];
+        [NSTimer scheduledTimerWithTimeInterval:20 target:[OpenSense sharedInstance] selector:@selector(stopCollectorAndUploadData) userInfo:nil repeats:NO];
+    }
     completionHandler(UIBackgroundFetchResultNoData);
 }
 
@@ -85,6 +87,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // will give ~5 sec notice
     
+    openSenseRunningWhenEnteredBackground = [[OpenSense sharedInstance] isRunning]
     [[OpenSense sharedInstance] stopCollector];
 }
 
