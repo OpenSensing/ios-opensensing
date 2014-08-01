@@ -31,9 +31,9 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batchesUpdated:) name:kOpenSenseBatchSavedNotification object:nil];
     
     // Start collecting
-    if (![OpenSense sharedInstance].isRunning) {
-        [self toggleCollecting:nil];
-    }
+//    if (![OpenSense sharedInstance].isRunning) {
+//        [self toggleCollecting:nil];
+//    }
 }
 
 - (void)batchesUpdated:(NSNotification*)notification

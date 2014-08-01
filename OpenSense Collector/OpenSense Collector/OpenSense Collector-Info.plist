@@ -39,7 +39,7 @@
 	<true/>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>voip</string>
+		<string>fetch</string>
 		<string>location</string>
 	</array>
 	<key>UIMainStoryboardFile</key>

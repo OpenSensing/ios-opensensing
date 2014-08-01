@@ -11,7 +11,7 @@
 // kMotionUpdateInterval originally 0.1
 
 #define kMotionUpdateInterval (double) 0.5  // originally 1/50 50Hz
-#define kMotionSampleFrequency (double) 2700.0 // seconds between samples
+#define kMotionSampleFrequency (double) 30.0 // seconds between samples
 #define kMotionSampleDuration (double) 5.0   // probes record data for this many seconds
 
 @implementation OSMotionProbe

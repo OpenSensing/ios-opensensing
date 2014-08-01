@@ -23,8 +23,15 @@
     OSLog(@"Encryption key: %@", [[OpenSense sharedInstance] encryptionKey]);
 #endif
     
-    [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
     
+    expirationHandler = ^{
+        [application endBackgroundTask:bgTask];
+        
+        bgTask = UIBackgroundTaskInvalid;
+        bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:expirationHandler];
+    };
+    
+    [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
     return YES;
 }
 
@@ -32,14 +39,24 @@
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     OSLog(@"application performFetchWithCompletionHandler entered");
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
-    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"/log.txt"];
-    NSFileHandle *f = [NSFileHandle fileHandleForUpdatingAtPath:filePath];
-    [f seekToEndOfFile];
-    NSString *message = [NSString stringWithFormat:@"performFetch ran at time %f\n",[[NSDate date] timeIntervalSince1970]];
-    [f writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
-    [f closeFile];
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
+//    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"/log.txt"];
+//    NSFileHandle *f = [NSFileHandle fileHandleForUpdatingAtPath:filePath];
+//    [f seekToEndOfFile];
+//    NSString *message = [NSString stringWithFormat:@"performFetch ran at time %f\n",[[NSDate date] timeIntervalSince1970]];
+//    [f writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
+//    [f closeFile];
+//    
+
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    NSDate *now = [NSDate date];
+    localNotification.fireDate = now;
+    localNotification.alertBody = @"OpenSensing activated and took a data sample";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
     
     // only start the collector if it was running when the user exited
     if (openSenseRunningWhenEnteredBackground) {
@@ -58,21 +75,44 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    if ([[OpenSense sharedInstance] isRunning]){
+    
+        OSLog(@"applicationDidEnterBackground");
+    
+    if ([[OpenSense sharedInstance] isRunning])
+    {
         openSenseRunningWhenEnteredBackground = YES;
+        bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:expirationHandler];
+        
+        // Mathias + Sam Code. May cut out
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
+            NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"/log.txt"];
+            NSLog(@"%@", filePath);
+            [[NSFileManager defaultManager] createFileAtPath:filePath contents:NULL attributes:NULL ];
+            while (true)
+            {
+                NSFileHandle *f = [NSFileHandle fileHandleForUpdatingAtPath:filePath];
+                [f seekToEndOfFile];
+                
+                NSString *message = [NSString stringWithFormat:@"Loop ran at time %f\n",[[NSDate date] timeIntervalSince1970]];
+                [f writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
+                //                NSLog(message);
+                [NSThread sleepForTimeInterval:10.0f]; // Free up the CPU
+                [f closeFile];
+            }
+        });
+        
+        
     } else {
         openSenseRunningWhenEnteredBackground = NO;
     }
 }
 
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    [application endBackgroundTask:bgTask];
-}
-
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    OSLog(@"applicationDidBecomeActive");
     if (openSenseRunningWhenEnteredBackground){
         [[OpenSense sharedInstance] startCollector];
     } else {
@@ -86,8 +126,8 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // will give ~5 sec notice
-    
-    openSenseRunningWhenEnteredBackground = [[OpenSense sharedInstance] isRunning]
+    OSLog(@"applicationWillTerminate");
+    openSenseRunningWhenEnteredBackground = [[OpenSense sharedInstance] isRunning];
     [[OpenSense sharedInstance] stopCollector];
 }
 
