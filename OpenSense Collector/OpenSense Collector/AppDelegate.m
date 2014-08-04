@@ -87,7 +87,7 @@
             NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
             NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
             NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"/log.txt"];
-            NSLog(@"%@", filePath);
+            OSLog(@"%@", filePath);
             [[NSFileManager defaultManager] createFileAtPath:filePath contents:NULL attributes:NULL ];
             while (true)
             {

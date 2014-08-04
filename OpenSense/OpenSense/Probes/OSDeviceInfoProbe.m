@@ -39,7 +39,7 @@
 
 - (void)stopProbe
 {
-//    [super stopProbe];
+    [super stopProbe];
 }
 
 - (NSDictionary*)sendData
