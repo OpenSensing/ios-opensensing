@@ -23,22 +23,23 @@
 
 + (NSString*)description
 {
-    return @"";
+    return @"device info";
 }
 
 + (NSTimeInterval)defaultUpdateInterval
 {
-    return 1;
+    return kUpdateIntervalPush;
 }
 
 - (void)startProbe
 {
-    
+    [super startProbe];
+    [self saveData];
 }
 
 - (void)stopProbe
 {
-    
+//    [super stopProbe];
 }
 
 - (NSDictionary*)sendData
@@ -52,13 +53,16 @@
     NSLocale *locale = [NSLocale currentLocale];
     NSString *country = [locale localeIdentifier];
     
+    float bright = [UIScreen mainScreen].brightness;
+    NSNumber *brightness = [NSNumber numberWithFloat:bright];
+    
     NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                                  model, @"device_model",
                                  systemVersion, @"system_version",
                                  language, @"language",
-                                 locale, @"locale",
                                  country, @"country",
-                                 nil];
+                                 brightness, @"brightness",
+                                nil];
     
     return data;
 }
