@@ -9,7 +9,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import "OSActivityManagerProbe.h"
 
-#define kActivitySampleFrequency (double) 5.0;
+#define kActivitySampleFrequency (double) 10.0; // how often a sample is taken when the probe is started
 @implementation OSActivityManagerProbe
 
 + (NSString*)name
@@ -24,20 +24,21 @@
 
 + (NSTimeInterval) defaultUpdateInterval
 {
-    return 1;
+    return kUpdateIntervalPush;
 }
 
 - (void) startProbe
 {
-    // make sure that MotionActivity is supported.
+    // ensure that MotionActivity is supported
     if ([CMMotionActivityManager isActivityAvailable]) {
-    
+
+        [super startProbe];
         [self saveData];
         NSTimeInterval sampleFrequency = [self sampleFrequency];
         sampleFrequencyTimer = [NSTimer
                                scheduledTimerWithTimeInterval:sampleFrequency target:self selector:@selector(saveData) userInfo:nil repeats:YES];
         
-        [super startProbe];
+        
     } else {
         nil;
     };
@@ -45,8 +46,14 @@
 
 - (void) stopProbe
 {
+    if (sampleFrequencyTimer){
+        [sampleFrequencyTimer invalidate];
+        sampleFrequencyTimer = nil;
+    }
+    
     [super stopProbe];
 }
+#pragma mark - frequency related methods
 
 - (void) saveData
 {
@@ -60,7 +67,7 @@
 {
     // testing date stamp
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"M/yyyy hh:mm"];
+    [formatter setDateFormat:@"M/yyyy hh:mm:ss"];
     NSDate *now = [NSDate date];
     OSLog(@"Activity Monitor Sample Started at %@", [formatter stringFromDate:now]);
     
@@ -97,9 +104,7 @@
 }
 
 
-- (NSTimeInterval) sampleFrequency{
-    return kActivitySampleFrequency;
-}
+
 
 
 

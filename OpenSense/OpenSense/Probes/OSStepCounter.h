@@ -8,6 +8,10 @@
 
 #import "OSProbe.h"
 
-@interface OSStepCounter : OSProbe
+@interface OSStepCounter : OSProbe{
+    NSTimer *sampleFrequencyTimer;
+}
+
+@property (strong, nonatomic) NSDate *lastStepCountSample;
 
 @end
