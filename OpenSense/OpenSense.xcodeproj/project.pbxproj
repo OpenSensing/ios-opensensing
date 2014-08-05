@@ -354,14 +354,7 @@
 			children = (
 				3D8C70651694815800619CDB /* OSProbe.h */,
 				3D8C70661694815800619CDB /* OSProbe.m */,
-				3DB69EFD16B1D59A009570F3 /* OSMotionProbe.h */,
-				3DB69EFE16B1D59A009570F3 /* OSMotionProbe.m */,
-				3D8C70681694816C00619CDB /* OSAccelerometerProbe.h */,
-				3D8C70691694816C00619CDB /* OSAccelerometerProbe.m */,
-				3DB69F0416B1DD9B009570F3 /* OSMagnetometerProbe.h */,
-				3DB69F0516B1DD9B009570F3 /* OSMagnetometerProbe.m */,
-				3DB69F0716B1DE71009570F3 /* OSGyroProbe.h */,
-				3DB69F0816B1DE71009570F3 /* OSGyroProbe.m */,
+				943E9B73199124E800981E44 /* Motion Probes */,
 				3D8C70611694814C00619CDB /* OSPositioningProbe.h */,
 				3D8C70621694814C00619CDB /* OSPositioningProbe.m */,
 				3D8C70711694818E00619CDB /* OSDeviceInfoProbe.h */,
@@ -392,6 +385,21 @@
 				3DFE5426169608CF00E09161 /* OSLocalStorage.m */,
 			);
 			name = LocalStorage;
+			sourceTree = "<group>";
+		};
+		943E9B73199124E800981E44 /* Motion Probes */ = {
+			isa = PBXGroup;
+			children = (
+				3DB69EFD16B1D59A009570F3 /* OSMotionProbe.h */,
+				3DB69EFE16B1D59A009570F3 /* OSMotionProbe.m */,
+				3D8C70681694816C00619CDB /* OSAccelerometerProbe.h */,
+				3D8C70691694816C00619CDB /* OSAccelerometerProbe.m */,
+				3DB69F0416B1DD9B009570F3 /* OSMagnetometerProbe.h */,
+				3DB69F0516B1DD9B009570F3 /* OSMagnetometerProbe.m */,
+				3DB69F0716B1DE71009570F3 /* OSGyroProbe.h */,
+				3DB69F0816B1DE71009570F3 /* OSGyroProbe.m */,
+			);
+			name = "Motion Probes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
