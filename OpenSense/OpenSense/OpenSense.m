@@ -13,14 +13,14 @@
 #import "NSString+MD5Addition.h"
 #import "OSLocalStorage.h"
 #import "OSConfiguration.h"
+
 #import "OSPositioningProbe.h"
-#import "OSAccelerometerProbe.h"
-#import "OSMagnetometerProbe.h"
-#import "OSGyroProbe.h"
 #import "OSDeviceInfoProbe.h"
 #import "OSBatteryProbe.h"
 #import "OSProximityProbe.h"
 #import "OSActivityManagerProbe.h"
+#import "OSMotionProbe.h"
+#import "OSStepCounter.h"
 
 @implementation OpenSense
 
@@ -159,9 +159,7 @@
 {
     return @[
         [OSPositioningProbe class],
-        [OSAccelerometerProbe class],
-        [OSMagnetometerProbe class],
-        [OSGyroProbe class],
+        [OSMotionProbe class],
         [OSDeviceInfoProbe class],
         [OSBatteryProbe class],
         [OSProximityProbe class],

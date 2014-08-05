@@ -15,7 +15,6 @@
 		3D7A747D16B0467F000B4A0D /* STKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A747B16B0467F000B4A0D /* STKeychain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3D8C70631694814C00619CDB /* OSPositioningProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70621694814C00619CDB /* OSPositioningProbe.m */; };
 		3D8C70671694815800619CDB /* OSProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70661694815800619CDB /* OSProbe.m */; };
-		3D8C706A1694816C00619CDB /* OSAccelerometerProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70691694816C00619CDB /* OSAccelerometerProbe.m */; };
 		3D8C70731694818E00619CDB /* OSDeviceInfoProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */; };
 		3D98CA7116AF3FAE0009F3C4 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D98CA5F16AF3FAE0009F3C4 /* AFHTTPClient.m */; };
 		3D98CA7216AF3FAE0009F3C4 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D98CA6116AF3FAE0009F3C4 /* AFHTTPRequestOperation.m */; };
@@ -38,9 +37,6 @@
 		3DA1E7D816FF861900F3C474 /* OSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5AEA0216A45AF000741652 /* OSConfiguration.m */; };
 		3DA1E7D916FF861900F3C474 /* OSProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70661694815800619CDB /* OSProbe.m */; };
 		3DA1E7DA16FF861900F3C474 /* OSMotionProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69EFE16B1D59A009570F3 /* OSMotionProbe.m */; };
-		3DA1E7DB16FF861900F3C474 /* OSAccelerometerProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70691694816C00619CDB /* OSAccelerometerProbe.m */; };
-		3DA1E7DC16FF861900F3C474 /* OSMagnetometerProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69F0516B1DD9B009570F3 /* OSMagnetometerProbe.m */; };
-		3DA1E7DD16FF861900F3C474 /* OSGyroProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69F0816B1DE71009570F3 /* OSGyroProbe.m */; };
 		3DA1E7DE16FF861900F3C474 /* OSPositioningProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70621694814C00619CDB /* OSPositioningProbe.m */; };
 		3DA1E7DF16FF861900F3C474 /* OSDeviceInfoProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */; };
 		3DA1E7E116FF861900F3C474 /* OSBatteryProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE532F1695D5AE00E09161 /* OSBatteryProbe.m */; };
@@ -71,8 +67,6 @@
 		3DB21AE416972ED500F6B294 /* OSProximityProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB21AE316972ED500F6B294 /* OSProximityProbe.m */; };
 		3DB69EFF16B1D59A009570F3 /* OSMotionProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69EFE16B1D59A009570F3 /* OSMotionProbe.m */; };
 		3DB69F0116B1D74A009570F3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB69F0016B1D74A009570F3 /* CoreMotion.framework */; };
-		3DB69F0616B1DD9B009570F3 /* OSMagnetometerProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69F0516B1DD9B009570F3 /* OSMagnetometerProbe.m */; };
-		3DB69F0916B1DE71009570F3 /* OSGyroProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB69F0816B1DE71009570F3 /* OSGyroProbe.m */; };
 		3DD1314D16B5EFBF0055CB7C /* Common.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DDCAA9B16B5EF470063DC29 /* Common.h */; };
 		3DDED69F167D04CF006DE4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED69E167D04CF006DE4F8 /* Foundation.framework */; };
 		3DDED6A4167D04CF006DE4F8 /* OpenSense.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3DDED6A3167D04CF006DE4F8 /* OpenSense.h */; };
@@ -80,7 +74,6 @@
 		3DDED6AE167D04CF006DE4F8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDED6AD167D04CF006DE4F8 /* SenTestingKit.framework */; };
 		3DDED6BA167D04CF006DE4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DDED6B8167D04CF006DE4F8 /* InfoPlist.strings */; };
 		3DF797A31694BA1D00E84594 /* OSPositioningProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70611694814C00619CDB /* OSPositioningProbe.h */; };
-		3DF797A41694BA1D00E84594 /* OSAccelerometerProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70681694816C00619CDB /* OSAccelerometerProbe.h */; };
 		3DF797A71694BA1D00E84594 /* OSDeviceInfoProbe.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D8C70711694818E00619CDB /* OSDeviceInfoProbe.h */; };
 		3DFE53301695D5AE00E09161 /* OSBatteryProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE532F1695D5AE00E09161 /* OSBatteryProbe.m */; };
 		3DFE5427169608CF00E09161 /* OSLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE5426169608CF00E09161 /* OSLocalStorage.m */; };
@@ -111,7 +104,6 @@
 				3D98CA8016AF4BA20009F3C4 /* OSProximityProbe.h in Copy Files */,
 				3D4B3B1D1697256600FFEA73 /* OSBatteryProbe.h in Copy Files */,
 				3DF797A31694BA1D00E84594 /* OSPositioningProbe.h in Copy Files */,
-				3DF797A41694BA1D00E84594 /* OSAccelerometerProbe.h in Copy Files */,
 				3DF797A71694BA1D00E84594 /* OSDeviceInfoProbe.h in Copy Files */,
 				3D12255F1694B154005A1CBB /* OSProbe.h in Copy Files */,
 				3DDED6A4167D04CF006DE4F8 /* OpenSense.h in Copy Files */,
@@ -132,8 +124,6 @@
 		3D8C70621694814C00619CDB /* OSPositioningProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPositioningProbe.m; sourceTree = "<group>"; };
 		3D8C70651694815800619CDB /* OSProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSProbe.h; sourceTree = "<group>"; };
 		3D8C70661694815800619CDB /* OSProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSProbe.m; sourceTree = "<group>"; };
-		3D8C70681694816C00619CDB /* OSAccelerometerProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSAccelerometerProbe.h; sourceTree = "<group>"; };
-		3D8C70691694816C00619CDB /* OSAccelerometerProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSAccelerometerProbe.m; sourceTree = "<group>"; };
 		3D8C70711694818E00619CDB /* OSDeviceInfoProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDeviceInfoProbe.h; sourceTree = "<group>"; };
 		3D8C70721694818E00619CDB /* OSDeviceInfoProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDeviceInfoProbe.m; sourceTree = "<group>"; };
 		3D98CA5E16AF3FAE0009F3C4 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -172,10 +162,6 @@
 		3DB69EFD16B1D59A009570F3 /* OSMotionProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSMotionProbe.h; sourceTree = "<group>"; };
 		3DB69EFE16B1D59A009570F3 /* OSMotionProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMotionProbe.m; sourceTree = "<group>"; };
 		3DB69F0016B1D74A009570F3 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		3DB69F0416B1DD9B009570F3 /* OSMagnetometerProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSMagnetometerProbe.h; sourceTree = "<group>"; };
-		3DB69F0516B1DD9B009570F3 /* OSMagnetometerProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSMagnetometerProbe.m; sourceTree = "<group>"; };
-		3DB69F0716B1DE71009570F3 /* OSGyroProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSGyroProbe.h; sourceTree = "<group>"; };
-		3DB69F0816B1DE71009570F3 /* OSGyroProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSGyroProbe.m; sourceTree = "<group>"; };
 		3DDCAA9B16B5EF470063DC29 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		3DDED69B167D04CF006DE4F8 /* libOpenSense.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOpenSense.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDED69E167D04CF006DE4F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -387,12 +373,6 @@
 			children = (
 				3DB69EFD16B1D59A009570F3 /* OSMotionProbe.h */,
 				3DB69EFE16B1D59A009570F3 /* OSMotionProbe.m */,
-				3D8C70681694816C00619CDB /* OSAccelerometerProbe.h */,
-				3D8C70691694816C00619CDB /* OSAccelerometerProbe.m */,
-				3DB69F0416B1DD9B009570F3 /* OSMagnetometerProbe.h */,
-				3DB69F0516B1DD9B009570F3 /* OSMagnetometerProbe.m */,
-				3DB69F0716B1DE71009570F3 /* OSGyroProbe.h */,
-				3DB69F0816B1DE71009570F3 /* OSGyroProbe.m */,
 			);
 			name = "Motion Probes";
 			sourceTree = "<group>";
@@ -526,7 +506,6 @@
 				3D8C70631694814C00619CDB /* OSPositioningProbe.m in Sources */,
 				3D8C70671694815800619CDB /* OSProbe.m in Sources */,
 				9413FB15198C1A7B001F62AD /* OSActivityManagerProbe.m in Sources */,
-				3D8C706A1694816C00619CDB /* OSAccelerometerProbe.m in Sources */,
 				3D8C70731694818E00619CDB /* OSDeviceInfoProbe.m in Sources */,
 				943E9B77199139BE00981E44 /* OSStepCounter.m in Sources */,
 				3DFE53301695D5AE00E09161 /* OSBatteryProbe.m in Sources */,
@@ -547,8 +526,6 @@
 				3D98CA8F16AF4CFA0009F3C4 /* NSString+MD5Addition.m in Sources */,
 				3D7A747D16B0467F000B4A0D /* STKeychain.m in Sources */,
 				3DB69EFF16B1D59A009570F3 /* OSMotionProbe.m in Sources */,
-				3DB69F0616B1DD9B009570F3 /* OSMagnetometerProbe.m in Sources */,
-				3DB69F0916B1DE71009570F3 /* OSGyroProbe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,9 +538,6 @@
 				3DA1E7D816FF861900F3C474 /* OSConfiguration.m in Sources */,
 				3DA1E7D916FF861900F3C474 /* OSProbe.m in Sources */,
 				3DA1E7DA16FF861900F3C474 /* OSMotionProbe.m in Sources */,
-				3DA1E7DB16FF861900F3C474 /* OSAccelerometerProbe.m in Sources */,
-				3DA1E7DC16FF861900F3C474 /* OSMagnetometerProbe.m in Sources */,
-				3DA1E7DD16FF861900F3C474 /* OSGyroProbe.m in Sources */,
 				3DA1E7DE16FF861900F3C474 /* OSPositioningProbe.m in Sources */,
 				3DA1E7DF16FF861900F3C474 /* OSDeviceInfoProbe.m in Sources */,
 				3DA1E7E116FF861900F3C474 /* OSBatteryProbe.m in Sources */,

@@ -8,9 +8,8 @@
 
 #import "OSMotionProbe.h"
 
-// kMotionUpdateInterval originally 0.1
 
-#define kMotionUpdateInterval (double) 0.5  // originally 1/50 50Hz
+#define kMotionUpdateInterval (double) 1/50  // originally 1/50 50Hz
 #define kMotionSampleFrequency (double) 30.0 // seconds between samples
 #define kMotionSampleDuration (double) 5.0   // probes record data for this many seconds
 
@@ -18,20 +17,18 @@
 
 + (NSString*)name
 {
-    NSAssert(NO, @"This is an abstract method and should be overridden");
+    return @"Motion";
     return nil;
 }
 
 + (NSString*)identifier
 {
-    NSAssert(NO, @"This is an abstract method and should be overridden");
-    return nil;
+    return @"dk.dtu.imm.sensible.motion";
 }
 
 + (NSString*)description
 {
-    NSAssert(NO, @"This is an abstract method and should be overridden");
-    return nil;
+    return @"Collects gyroscope, acceleration, magnometer data from the device";
 }
 
 + (NSTimeInterval)defaultUpdateInterval
@@ -49,9 +46,6 @@
     // Initialize motion manager and queue
     motionManager = [[CMMotionManager alloc] init];
     motionManager.deviceMotionUpdateInterval = kMotionUpdateInterval;
-    motionManager.accelerometerUpdateInterval = kMotionUpdateInterval;
-    motionManager.magnetometerUpdateInterval = kMotionUpdateInterval;
-    motionManager.gyroUpdateInterval = kMotionUpdateInterval;
     operationQueue = [[NSOperationQueue alloc] init];
     
     // Start generating and sampling data
@@ -86,10 +80,61 @@
     [super stopProbe];
 }
 
+- (NSDictionary *) sendData
+{
+    if (!lastData){
+        return nil;
+    }
+    
+    NSNumber *attitude_roll     = [NSNumber numberWithDouble:lastData.attitude.roll];
+    NSNumber *attitude_pitch    = [NSNumber numberWithDouble:lastData.attitude.pitch];
+    NSNumber *attitude_yaw      = [NSNumber numberWithDouble:lastData.attitude.yaw];
+    
+    NSNumber *rotationRate_x    = [NSNumber numberWithDouble:lastData.rotationRate.x];
+    NSNumber *rotationRate_y    = [NSNumber numberWithDouble:lastData.rotationRate.y];
+    NSNumber *rotationRate_z    = [NSNumber numberWithDouble:lastData.rotationRate.z];
+    
+    NSNumber *gravity_x         = [NSNumber numberWithDouble:lastData.gravity.x];
+    NSNumber *gravity_y         = [NSNumber numberWithDouble:lastData.gravity.y];
+    NSNumber *gravity_z         = [NSNumber numberWithDouble:lastData.gravity.z];
+    
+    NSNumber *userAcceleration_x= [NSNumber numberWithDouble:lastData.userAcceleration.x];
+    NSNumber *userAcceleration_y= [NSNumber numberWithDouble:lastData.userAcceleration.x];
+    NSNumber *userAcceleration_z= [NSNumber numberWithDouble:lastData.userAcceleration.x];
+    
+    
+    NSDictionary *data = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                 attitude_roll, @"attitude_x",
+                                 attitude_pitch, @"attitude_pitch",
+                                 attitude_yaw, @"attitude_yaw",
+                                 
+                                 rotationRate_x, @"rotationRate_x",
+                                 rotationRate_y, @"rotationRate_y",
+                                 rotationRate_z, @"rotationRate_z",
+                                 
+                                 gravity_x, @"gravity_x",
+                                 gravity_y, @"gravity_y",
+                                 gravity_z, @"gravity_z",
+                                 
+                                 userAcceleration_x, @"userAcceleration_x",
+                                 userAcceleration_y, @"userAcceleration_y",
+                                 userAcceleration_z, @"userAcceleration_z",
+                                 
+                                 nil];
+    
+    return data;
+}
+
 # pragma mark - sample start/stop
 
 - (void) startSample
 {
+    
+    [motionManager startDeviceMotionUpdatesToQueue:operationQueue withHandler:^(CMDeviceMotion *motionData, NSError *error) {
+        lastData = motionData;
+        
+        [self saveData];
+    }];
     
     // after a period of time stop the motion Manager
     NSTimeInterval sampleDuration = [self sampleDuration];
@@ -99,7 +144,6 @@
 
 - (void) stopSample
 {
-//    NSAssert(NO, @"This is an abstract method and should be overridden");
     [motionManager stopDeviceMotionUpdates];
 }
 

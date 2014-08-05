@@ -38,7 +38,7 @@
 {
     // Append timestamp and probe name to dictionary
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     
     NSMutableDictionary *jsonDict = [[NSMutableDictionary alloc] initWithDictionary:batchDataDict];
     [jsonDict setObject:probeIdentifier forKey:@"probe"];

@@ -12,7 +12,7 @@
 @interface OSMotionProbe : OSProbe {
     CMMotionManager *motionManager;
     NSOperationQueue *operationQueue;
-    CMLogItem *lastData;
+    CMDeviceMotion *lastData;
     NSTimer *sampleFrequencyTimer;
     NSTimer *sampleDurationTimer;
 }
