@@ -56,7 +56,7 @@
     
     // Start generating and sampling data
 
-    [self startSample];  // Span new thread to avoid sampleFrequency delay
+    [self startSample];  // Spawn new thread to avoid sampleFrequency delay
     NSTimeInterval sampleFrequency = [self sampleFrequency];
     sampleFrequencyTimer = [NSTimer scheduledTimerWithTimeInterval:sampleFrequency target:self selector:@selector(startSample) userInfo:nil repeats:YES];
 

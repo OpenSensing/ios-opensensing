@@ -20,6 +20,7 @@
 #import "OSDeviceInfoProbe.h"
 #import "OSBatteryProbe.h"
 #import "OSProximityProbe.h"
+#import "OSActivityManagerProbe.h"
 
 @implementation OpenSense
 
@@ -164,6 +165,7 @@
         [OSDeviceInfoProbe class],
         [OSBatteryProbe class],
         [OSProximityProbe class],
+        [OSActivityManagerProbe class],
     ];
 }
 

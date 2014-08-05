@@ -22,8 +22,8 @@
 -(void) startSample;
 -(void) stopSample;
 
-- (NSTimeInterval) sampleFrequency;
-- (NSTimeInterval) sampleDuration;
+//- (NSTimeInterval) sampleFrequency;
+//- (NSTimeInterval) sampleDuration;
 
 
 
