@@ -9,7 +9,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import "OSActivityManagerProbe.h"
 
-#define kActivitySampleFrequency (double) 5.0
+#define kActivitySampleFrequency (double) 5.0;
 @implementation OSActivityManagerProbe
 
 + (NSString*)name
