@@ -10,7 +10,9 @@
 #import "OSDeviceInfoProbe.h"
 
 #define kDeviceSampleFrequency (double) 5.0; //how often a sample is taken
-@implementation OSDeviceInfoProbe
+@implementation OSDeviceInfoProbe{
+    NSTimer *sampleFrequencyTimer;
+}
 
 + (NSString*)name
 {
@@ -19,7 +21,7 @@
 
 + (NSString*)identifier
 {
-    return @"dk.dtu.imm.sensible.deviceinfo";
+    return @"deviceinfo";
 }
 
 + (NSString*)description

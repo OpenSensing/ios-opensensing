@@ -47,6 +47,7 @@
     NSString *message = [NSString stringWithFormat:@"performFetch ran at time %f\n",[[NSDate date] timeIntervalSince1970]];
     [f writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
     [f closeFile];
+    // try something with an nserror
 
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];

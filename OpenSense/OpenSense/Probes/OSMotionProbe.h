@@ -10,11 +10,9 @@
 #import <CoreMotion/CoreMotion.h>
 
 @interface OSMotionProbe : OSProbe {
-    CMMotionManager *motionManager;
     NSOperationQueue *operationQueue;
     CMDeviceMotion *lastData;
-    NSTimer *sampleFrequencyTimer;
-    NSTimer *sampleDurationTimer;
+
 }
 
 // turn on processor and start sampling data.

@@ -7,16 +7,20 @@
 //
 
 #import <CoreMotion/CMStepCounter.h>
-#import "OSStepCounter.h"
+#import "OSStepCounterProbe.h"
 
 #define kActivitySampleFrequency (double) 60.0;
-@implementation OSStepCounter
+@implementation OSStepCounterProbe{
+    NSTimer *sampleFrequencyTimer;
+}
 
 - (id) init{
     self = [super init];
     
     if (self) {
-        self.lastStepCountSample = [[NSDate alloc] init];
+        self.lastStepCountSample = [NSDate date];
+        stepQueue = [[NSOperationQueue alloc] init];
+        stepQueue.maxConcurrentOperationCount = 1;
     }
     
     return self;
@@ -29,7 +33,7 @@
 
 + (NSString *) identifier
 {
-    return @"dk.dtu.imm.sensible.stepcounter";
+    return @"stepcounter";
 }
 
 + (NSTimeInterval) defaultUpdateInterval
@@ -75,9 +79,24 @@
     OSLog(@"Activity Monitor Sample Started at %@", [formatter stringFromDate:now]);
 
     CMStepCounter *stepCounter = [[CMStepCounter alloc] init];
+    __block NSNumber *stepCount = [[NSNumber alloc] init];
     
-//    [stepCounter queryStepCountStartingFrom:self.lastStepCountSample to:[[NSDate alloc] init] toQueue:<#(NSOperationQueue *)#> withHandler:<#^(NSInteger numberOfSteps, NSError *error)handler#>]
+    [stepCounter queryStepCountStartingFrom:self.lastStepCountSample to:[NSDate date] toQueue:stepQueue withHandler:^(NSInteger numberOfSteps, NSError *error) {
+        if (error){
+            OSLog(@"%@", [error localizedDescription]);
+            stepCount = @-1;
+        } else {
+            stepCount = [NSNumber numberWithInteger:numberOfSteps];
+        }
+    }];
     
+    NSDictionary *data = [[NSDictionary alloc] initWithObjectsAndKeys:
+                          self.lastStepCountSample, @"lastStepCountDate",
+                          now, @"currentStepCountDate",
+                          stepCount, @"numSteps",
+                          nil];
+    
+    return data;
 }
 
 - (NSTimeInterval) sampleFrequency {

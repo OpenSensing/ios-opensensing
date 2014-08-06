@@ -17,7 +17,7 @@
 
 + (NSString*)identifier
 {
-    return @"dk.dtu.imm.sensible.positioning";
+    return @"positioning";
 }
 
 + (NSString*)description

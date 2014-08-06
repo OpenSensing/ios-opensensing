@@ -8,8 +8,6 @@
 
 #import "OSProbe.h"
 
-@interface OSActivityManagerProbe : OSProbe{
-    NSTimer *sampleFrequencyTimer;
-}
+@interface OSActivityManagerProbe : OSProbe
 
 @end

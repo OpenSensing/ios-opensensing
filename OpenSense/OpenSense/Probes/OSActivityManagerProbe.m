@@ -10,7 +10,9 @@
 #import "OSActivityManagerProbe.h"
 
 #define kActivitySampleFrequency (double) 10.0; // how often a sample is taken when the probe is started
-@implementation OSActivityManagerProbe
+@implementation OSActivityManagerProbe{
+    NSTimer *sampleFrequencyTimer;
+}
 
 + (NSString*)name
 {
@@ -19,7 +21,7 @@
 
 + (NSString *) identifier
 {
-    return @"dk.dtu.imm.sensible.activitymanager";
+    return @"activitymanager";
 }
 
 + (NSTimeInterval) defaultUpdateInterval
@@ -66,10 +68,10 @@
 - (NSDictionary *) sendData
 {
     // testing date stamp
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"M/yyyy hh:mm:ss"];
-    NSDate *now = [NSDate date];
-    OSLog(@"Activity Monitor Sample Started at %@", [formatter stringFromDate:now]);
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:@"M/yyyy hh:mm:ss"];
+//    NSDate *now = [NSDate date];
+//    OSLog(@"Activity Monitor Sample Started at %@", [formatter stringFromDate:now]);
     
     // check activity
     CMMotionActivity *activity = [[CMMotionActivity init] alloc];
@@ -104,7 +106,9 @@
 }
 
 
-
+- (NSTimeInterval) sampleFrequency{
+    return kActivitySampleFrequency;
+}
 
 
 

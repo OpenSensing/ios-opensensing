@@ -8,8 +8,9 @@
 
 #import "OSProbe.h"
 
-@interface OSStepCounter : OSProbe{
-    NSTimer *sampleFrequencyTimer;
+@interface OSStepCounterProbe : OSProbe{
+    
+    NSOperationQueue *stepQueue;
 }
 
 @property (strong, nonatomic) NSDate *lastStepCountSample;
