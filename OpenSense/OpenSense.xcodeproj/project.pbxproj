@@ -78,7 +78,6 @@
 		3DFE53301695D5AE00E09161 /* OSBatteryProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE532F1695D5AE00E09161 /* OSBatteryProbe.m */; };
 		3DFE5427169608CF00E09161 /* OSLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE5426169608CF00E09161 /* OSLocalStorage.m */; };
 		9413FB15198C1A7B001F62AD /* OSActivityManagerProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 9413FB14198C1A7B001F62AD /* OSActivityManagerProbe.m */; };
-		943E9B77199139BE00981E44 /* OSStepCounterProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = 943E9B76199139BE00981E44 /* OSStepCounterProbe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,8 +179,6 @@
 		3DFE5426169608CF00E09161 /* OSLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSLocalStorage.m; path = LocalStorage/OSLocalStorage.m; sourceTree = "<group>"; };
 		9413FB13198C1A7B001F62AD /* OSActivityManagerProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSActivityManagerProbe.h; sourceTree = "<group>"; };
 		9413FB14198C1A7B001F62AD /* OSActivityManagerProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSActivityManagerProbe.m; sourceTree = "<group>"; };
-		943E9B75199139BE00981E44 /* OSStepCounterProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSStepCounterProbe.h; sourceTree = "<group>"; };
-		943E9B76199139BE00981E44 /* OSStepCounterProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSStepCounterProbe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,8 +378,6 @@
 			children = (
 				9413FB13198C1A7B001F62AD /* OSActivityManagerProbe.h */,
 				9413FB14198C1A7B001F62AD /* OSActivityManagerProbe.m */,
-				943E9B75199139BE00981E44 /* OSStepCounterProbe.h */,
-				943E9B76199139BE00981E44 /* OSStepCounterProbe.m */,
 			);
 			name = "M7 Probes";
 			sourceTree = "<group>";
@@ -515,7 +510,6 @@
 				3D8C70671694815800619CDB /* OSProbe.m in Sources */,
 				9413FB15198C1A7B001F62AD /* OSActivityManagerProbe.m in Sources */,
 				3D8C70731694818E00619CDB /* OSDeviceInfoProbe.m in Sources */,
-				943E9B77199139BE00981E44 /* OSStepCounterProbe.m in Sources */,
 				3DFE53301695D5AE00E09161 /* OSBatteryProbe.m in Sources */,
 				3DFE5427169608CF00E09161 /* OSLocalStorage.m in Sources */,
 				3DB21AE416972ED500F6B294 /* OSProximityProbe.m in Sources */,

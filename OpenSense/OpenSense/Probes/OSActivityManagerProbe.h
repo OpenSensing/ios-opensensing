@@ -8,6 +8,8 @@
 
 #import "OSProbe.h"
 
-@interface OSActivityManagerProbe : OSProbe
+@interface OSActivityManagerProbe : OSProbe{
+    NSOperationQueue *activityQueue;
+}
 
 @end

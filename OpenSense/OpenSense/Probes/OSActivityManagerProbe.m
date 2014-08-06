@@ -14,6 +14,22 @@
     NSTimer *sampleFrequencyTimer;
 }
 
+- (id) init{
+    self = [super init];
+    
+    if (self){
+        
+        // register this as the first step count sample
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:[NSDate date] forKey:@"lastActivitySample"];
+        
+        activityQueue = [[NSOperationQueue alloc] init];
+        activityQueue.maxConcurrentOperationCount = 1;
+    }
+    
+    return self;
+}
+
 + (NSString*)name
 {
     return @"Activity manager";
@@ -32,7 +48,7 @@
 - (void) startProbe
 {
     // ensure that MotionActivity is supported
-    if ([CMMotionActivityManager isActivityAvailable]) {
+    if ([CMMotionActivityManager isActivityAvailable] && [CMStepCounter isStepCountingAvailable]) {
 
         [super startProbe];
         [self saveData];
@@ -60,47 +76,63 @@
 - (void) saveData
 {
     // override superclass, because save data is irrelevent if activity isn't avaialble in device
-    if ([CMMotionActivityManager isActivityAvailable]){
+    if ([CMMotionActivityManager isActivityAvailable] && [CMStepCounter isStepCountingAvailable]){
     [super saveData];
     }
 }
 
+
 - (NSDictionary *) sendData
 {
-    // testing date stamp
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"M/yyyy hh:mm:ss"];
-//    NSDate *now = [NSDate date];
-//    OSLog(@"Activity Monitor Sample Started at %@", [formatter stringFromDate:now]);
     
-    // check activity
-    CMMotionActivity *activity = [[CMMotionActivity init] alloc];
-    NSString *activityString = [[NSString alloc] init];
-    NSNumber *confidence = [NSNumber numberWithInteger:activity.confidence];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDate *lastSampleDate = [defaults objectForKey:@"lastActivitySample"];
+    NSDate *now = [NSDate date];
     
-    if (activity.running) {
-        activityString = @"running";
-    } else if (activity.walking){
-        activityString = @"walking";
-    } else if (activity.automotive){
-        activityString = @"automotive";
-    } else if (activity.stationary){
-        activityString = @"stationary";
-    } else {
-        activityString = @"unknown";
-    };
+    CMMotionActivityManager *cm = [[CMMotionActivityManager alloc] init];
+    CMStepCounter *sc = [[CMStepCounter alloc] init];
     
-    // when the activity started
-    NSDate *startDate = activity.startDate;
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSString *startDateString = [dateFormatter stringFromDate:startDate];
+    // declare some variables accessible outside of the block
+    __block NSDictionary *point = [NSDictionary alloc];
+    __block NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
+    __block NSMutableArray *arr = [[NSMutableArray alloc] init];
     
-    NSDictionary *data = [[NSDictionary alloc] initWithObjectsAndKeys:
-                activityString,@"activity",
-                startDateString, @"activityStarted",
-                confidence, @"confidence",
-                nil];
+    
+    [cm queryActivityStartingFromDate:lastSampleDate toDate:now toQueue:activityQueue withHandler:^(NSArray *activities, NSError *error){
+        
+        // for each returned activity
+        for(int i=0;i<[activities count]-1;i++) {
+            CMMotionActivity *a = [activities objectAtIndex:i];
+            
+            NSDate *startDate = a.startDate;
+            NSDate *endDate = [[activities objectAtIndex:i+1] startDate];
+            
+            NSString *activityString = @"unknown";
+            if (a.running) activityString = @"running";
+            else if (a.walking) activityString = @"walking";
+            else if (a.automotive) activityString = @"automotive";
+            else if (a.stationary) activityString = @"stationary";
+            
+            NSString *confidenceString = @"low";
+            if (a.confidence == CMMotionActivityConfidenceMedium) confidenceString = @"medium";
+            else if (a.confidence == CMMotionActivityConfidenceHigh) confidenceString = @"high";
+        
+            // find stepCounts for that activity
+            [sc queryStepCountStartingFrom:startDate to:endDate toQueue:activityQueue withHandler:^(NSInteger numberOfSteps, NSError *error) {
+                NSNumber *steps = [[NSNumber alloc] initWithInteger:numberOfSteps];
+                point = [point initWithObjectsAndKeys:
+                                       activityString, @"activity",
+                                       confidenceString, @"confidence",
+                                       steps, @"steps",
+                                       startDate, @"startDate",
+                                       endDate, @"endDate",
+                                       nil];
+                [arr addObject:point];
+            }];
+        
+            [data setObject:arr forKey:@"activityLog"];
+        }
+    }];
     
     return data;
 }
