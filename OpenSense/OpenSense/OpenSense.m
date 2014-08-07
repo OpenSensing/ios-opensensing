@@ -20,7 +20,6 @@
 #import "OSProximityProbe.h"
 #import "OSActivityManagerProbe.h"
 #import "OSMotionProbe.h"
-#import "OSStepCounterProbe.h"
 
 @implementation OpenSense
 
@@ -135,6 +134,7 @@
 - (void)stopCollector
 {
     // Only stop collector process if it is already running
+    OSLog(@"OpenSense stopCollector called");
     if (!isRunning) {
         return;
     }
@@ -157,15 +157,21 @@
 
 - (NSArray*)availableProbes
 {
-    return @[
-        [OSPositioningProbe class],
-        [OSMotionProbe class],
-        [OSDeviceInfoProbe class],
-        [OSBatteryProbe class],
-        [OSProximityProbe class],
-        [OSActivityManagerProbe class],
-        [OSStepCounterProbe class],
-    ];
+    
+    NSMutableArray *availableProbes = [[NSMutableArray alloc]
+                                       initWithObjects:
+                                       [OSPositioningProbe class],
+                                       [OSMotionProbe class],
+                                       [OSDeviceInfoProbe class],
+                                       [OSBatteryProbe class],
+                                       [OSProximityProbe class],
+                                       nil];
+
+    // it's best to check for m7 here. additional check is done on probe level.
+    if ([CMMotionActivityManager isActivityAvailable] && [CMStepCounter isStepCountingAvailable])
+        [availableProbes addObject:[OSActivityManagerProbe class]];
+    
+    return availableProbes;
 }
 
 - (NSArray*)enabledProbes
