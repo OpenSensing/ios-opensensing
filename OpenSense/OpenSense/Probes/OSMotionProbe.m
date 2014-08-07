@@ -9,14 +9,30 @@
 #import "OSMotionProbe.h"
 
 
-#define kMotionUpdateInterval (double) .5  // originally 1/50 50Hz
-#define kMotionSampleFrequency (double) 1800.0 // seconds between samples. This really should only matter if the app is kept on indefinitely
-#define kMotionSampleDuration (double) 5.0   // probes record data for this many seconds
-
 @implementation OSMotionProbe{
     CMMotionManager *motionManager;
+    
+    double updateInterval;
+    double sampleFrequency;
+    double sampleDuration;
+    
     NSTimer *sampleFrequencyTimer;
     NSTimer *sampleDurationTimer;
+}
+
+- (id) init
+{
+    self = [super init];
+    if (self) {
+        
+        // get probe from config.json
+        NSDictionary *configDict = [[OSConfiguration currentConfig] motionConfig];
+        sampleFrequency = [[configDict objectForKey:@"frequency"] doubleValue]; // seconds between sample
+        sampleDuration = [[configDict objectForKey:@"duration"] doubleValue]; // how long a sample takes
+        updateInterval = [[configDict objectForKey:@"updateInterval"] doubleValue]; // Hz at which samples are updated.
+    }
+    
+    return self;
 }
 
 + (NSString*)name
@@ -42,20 +58,19 @@
 
 - (void)startProbe
 {
-    if(kMotionSampleFrequency - kMotionSampleDuration < 0){
+    if(sampleFrequency - sampleDuration < 0){
         [NSException raise:@"Your OSMotionProbe frequency/duration are incorrect" format:@"Check to make sure your greater tha is less than your kMotionSampleDuration"];
     }
 
     
     // Initialize motion manager and queue
     motionManager = [[CMMotionManager alloc] init];
-    motionManager.deviceMotionUpdateInterval = kMotionUpdateInterval;
+    motionManager.deviceMotionUpdateInterval = updateInterval;
     operationQueue = [[NSOperationQueue alloc] init];
     
     // Start generating and sampling data
 
     [self startSample];  // Spawn new thread to avoid sampleFrequency delay
-    NSTimeInterval sampleFrequency = [self sampleFrequency];
     sampleFrequencyTimer = [NSTimer scheduledTimerWithTimeInterval:sampleFrequency target:self selector:@selector(startSample) userInfo:nil repeats:YES];
 
     
@@ -141,7 +156,6 @@
     }];
     
     // after a period of time stop the motion Manager
-    NSTimeInterval sampleDuration = [self sampleDuration];
     sampleDurationTimer = [NSTimer scheduledTimerWithTimeInterval:sampleDuration target:self selector:@selector(stopSample) userInfo:nil repeats:NO];
     
 }
@@ -150,16 +164,5 @@
 {
     [motionManager stopDeviceMotionUpdates];
 }
-
-- (NSTimeInterval) sampleFrequency
-{
-    return kMotionSampleFrequency;
-}
-
-- (NSTimeInterval) sampleDuration
-{
-    return kMotionSampleDuration;
-}
-
 
 @end

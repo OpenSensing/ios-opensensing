@@ -179,4 +179,22 @@
     return [probeData allKeys];
 }
 
+- (NSDictionary*)motionConfig
+{
+    if (!config)
+        return nil;
+    
+    NSDictionary *motion = [[config objectForKey:@"dataRequests"] objectForKey:@"motion"][0];
+    
+    NSNumber *frequency = [[NSNumber alloc] initWithDouble:[[motion objectForKey:@"frequency"] doubleValue]];
+    NSNumber *duration = [[NSNumber alloc] initWithDouble:[[motion objectForKey:@"duration"] doubleValue]];
+    NSNumber *updateInterval = [[NSNumber alloc] initWithDouble:[[motion objectForKey:@"updateInterval"] doubleValue]];
+    
+    return [[NSDictionary alloc] initWithObjectsAndKeys:
+                            frequency, @"frequency",
+                            duration, @"duration",
+                            updateInterval, @"updateInterval",
+                            nil];
+}
+
 @end

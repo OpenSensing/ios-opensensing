@@ -7,6 +7,7 @@
 //
 
 #import "OSProbe.h"
+#import "OSConfiguration.h"
 #import <CoreMotion/CoreMotion.h>
 
 @interface OSMotionProbe : OSProbe {
@@ -19,10 +20,6 @@
 // startProbe will turn these on and off on a timer.
 -(void) startSample;
 -(void) stopSample;
-
-//- (NSTimeInterval) sampleFrequency;
-//- (NSTimeInterval) sampleDuration;
-
 
 
 @end
