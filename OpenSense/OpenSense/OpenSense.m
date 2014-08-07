@@ -307,4 +307,7 @@
     [[OSConfiguration currentConfig] refresh];
 }
 
+# pragma mark - background methods
+
+
 @end

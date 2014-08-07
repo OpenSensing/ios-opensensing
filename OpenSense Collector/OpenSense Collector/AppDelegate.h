@@ -8,11 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
-    UIBackgroundTaskIdentifier bgTask;
-    dispatch_block_t expirationHandler;
-    BOOL openSenseRunningWhenEnteredBackground;
-}
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

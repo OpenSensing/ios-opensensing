@@ -9,28 +9,36 @@
 #import "AppDelegate.h"
 #import "OpenSense.h"
 
-@implementation AppDelegate
+@implementation AppDelegate {
+     NSUserDefaults *defaults;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     
-#ifdef SHOW_ENCRYPTION_KEY
-    OSLog(@"Encryption key: %@", [[OpenSense sharedInstance] encryptionKey]);
-#endif
+    #ifdef SHOW_ENCRYPTION_KEY
+        OSLog(@"Encryption key: %@", [[OpenSense sharedInstance] encryptionKey]);
+    #endif
+    
+    // configure app on first launch
+    defaults = [NSUserDefaults standardUserDefaults];
+    if (![defaults boolForKey:@"OSHasLaunchedOnce"]) {
+        [defaults setBool:YES forKey:@"OSHasLaunchedOnce"];
+        [defaults setBool:NO  forKey:@"OSCollecting"];
+        [defaults synchronize];
+    }
+    [defaults boolForKey:@"OSCollecting"];
     
     [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    
     return YES;
 }
-
 
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     OSLog(@"application performFetchWithCompletionHandler entered");
    
     // only start the collector if it was running when the user exited
-    if (openSenseRunningWhenEnteredBackground) {
-        
-
+    if ([defaults boolForKey:@"OSCollecting"]) {
         
         [[OpenSense sharedInstance] startCollector];
         [NSTimer scheduledTimerWithTimeInterval:15 target:[OpenSense sharedInstance] selector:@selector(stopCollectorAndUploadData) userInfo:nil repeats:NO];
@@ -42,12 +50,9 @@
         localNotification.alertBody = @"performFetchWithCompletionHandler called. startCollector called";
         localNotification.soundName = UILocalNotificationDefaultSoundName;
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-        
-        
     }
     completionHandler(UIBackgroundFetchResultNoData);
 }
-
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
@@ -65,10 +70,10 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         if ([[OpenSense sharedInstance] isRunning]){
-            openSenseRunningWhenEnteredBackground = YES;
+            [defaults setBool:YES forKey:@"OSCollecting"];
             [[OpenSense sharedInstance] stopCollector];
         } else {
-            openSenseRunningWhenEnteredBackground = NO;
+            [defaults setBool:NO forKey:@"OSCollecting"];
         }
         
         OSLog(@"\n\nRunning in the background!\n\n");
@@ -81,23 +86,23 @@
     
 }
 
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
+- (void) applicationDidBecomeActive:(UIApplication *)application
 {
-    OSLog(@"applicationDidBecomeActive");
-    if (openSenseRunningWhenEnteredBackground){
+    OSLog(@"application did become active");
+    if ([defaults boolForKey:@"OSCollecting"]){
         [[OpenSense sharedInstance] startCollector];
     } else {
         [[OpenSense sharedInstance] stopCollector];
     }
 }
 
+
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // will give ~5 sec notice
     OSLog(@"applicationWillTerminate");
-    openSenseRunningWhenEnteredBackground = [[OpenSense sharedInstance] isRunning];
+    [defaults setBool:[[OpenSense sharedInstance] isRunning] forKey:@"OSCollecting"];
     [[OpenSense sharedInstance] stopCollector];
 }
 
