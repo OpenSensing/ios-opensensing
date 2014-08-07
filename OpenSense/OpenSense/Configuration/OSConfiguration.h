@@ -24,5 +24,6 @@
 - (NSTimeInterval)updateIntervalForProbe:(NSString*)probeId;
 - (NSArray*)enabledProbes;
 - (NSDictionary *)motionConfig;
+- (NSDictionary *)activityConfig;
 
 @end

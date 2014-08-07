@@ -7,9 +7,10 @@
 //
 
 #import "OSProbe.h"
+#import "OSConfiguration.h"
 
 @interface OSActivityManagerProbe : OSProbe{
-    NSOperationQueue *activityQueue;
+    
 }
 
 @end

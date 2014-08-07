@@ -197,4 +197,17 @@
                             nil];
 }
 
+- (NSDictionary *) activityConfig
+{
+    if (!config)
+        return nil;
+    
+    NSDictionary *activity = [[config objectForKey:@"dataRequests"] objectForKey:@"activitymanager"][0];
+    NSNumber *frequency = [[NSNumber alloc] initWithDouble:[[activity objectForKey:@"frequency"] doubleValue]];
+    
+    return [[NSDictionary alloc] initWithObjectsAndKeys:
+            frequency, @"activity",
+            nil];
+}
+
 @end

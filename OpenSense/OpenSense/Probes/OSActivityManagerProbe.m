@@ -9,9 +9,10 @@
 #import <CoreMotion/CoreMotion.h>
 #import "OSActivityManagerProbe.h"
 
-#define kActivitySampleFrequency (double) 10.0; // how often a sample is taken when the probe is started
 @implementation OSActivityManagerProbe{
     NSTimer *sampleFrequencyTimer;
+    double sampleFrequency;
+    NSOperationQueue *activityQueue;
 }
 
 - (id) init{
@@ -25,6 +26,10 @@
         
         activityQueue = [[NSOperationQueue alloc] init];
         activityQueue.maxConcurrentOperationCount = 1;
+        
+        // get probe info from config.json
+        NSDictionary *configDict = [[OSConfiguration currentConfig] activityConfig];
+        sampleFrequency = [[configDict objectForKey:@"frequency"] doubleValue]; // seconds between when the probe is started
     }
     
     return self;
@@ -52,7 +57,6 @@
 
         [super startProbe];
         [self saveData];
-        NSTimeInterval sampleFrequency = [self sampleFrequency];
         sampleFrequencyTimer = [NSTimer
                                scheduledTimerWithTimeInterval:sampleFrequency target:self selector:@selector(saveData) userInfo:nil repeats:YES];
         
@@ -135,11 +139,6 @@
     }];
     
     return data;
-}
-
-
-- (NSTimeInterval) sampleFrequency{
-    return kActivitySampleFrequency;
 }
 
 
