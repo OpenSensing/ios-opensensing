@@ -18,7 +18,7 @@
 
 + (NSString*)identifier
 {
-    return @"dk.dtu.imm.sensible.battery";
+    return @"battery";
 }
 
 + (NSString*)description

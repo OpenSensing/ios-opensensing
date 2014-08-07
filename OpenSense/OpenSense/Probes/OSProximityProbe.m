@@ -18,7 +18,7 @@
 
 + (NSString*)identifier
 {
-    return @"dk.dtu.imm.sensible.proximity";
+    return @"proximity";
 }
 
 + (NSString*)description

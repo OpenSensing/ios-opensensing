@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "OSDeviceInfoProbe.h"
 
-@implementation OSDeviceInfoProbe
+#define kDeviceSampleFrequency (double) 5.0; //how often a sample is taken
+@implementation OSDeviceInfoProbe{
+    NSTimer *sampleFrequencyTimer;
+}
 
 + (NSString*)name
 {
@@ -18,27 +21,41 @@
 
 + (NSString*)identifier
 {
-    return @"dk.dtu.imm.sensible.deviceinfo";
+    return @"deviceinfo";
 }
 
 + (NSString*)description
 {
-    return @"";
+    return @"device info";
 }
 
 + (NSTimeInterval)defaultUpdateInterval
 {
-    return 1;
+    return kUpdateIntervalPush;
 }
 
 - (void)startProbe
 {
+    [super startProbe];
+    [self saveData];
     
-}
+    NSTimeInterval sampleFrequency = [self sampleFrequency];
+    sampleFrequencyTimer = [NSTimer
+                            scheduledTimerWithTimeInterval:sampleFrequency target:self selector:@selector(saveData) userInfo:nil repeats:YES];}
 
 - (void)stopProbe
 {
+    if (sampleFrequencyTimer){
+        [sampleFrequencyTimer invalidate];
+        sampleFrequencyTimer = nil;
+    }
     
+    [super stopProbe];
+}
+
+- (void) saveData
+{
+    [super saveData];
 }
 
 - (NSDictionary*)sendData
@@ -52,15 +69,22 @@
     NSLocale *locale = [NSLocale currentLocale];
     NSString *country = [locale localeIdentifier];
     
+    float bright = [UIScreen mainScreen].brightness;
+    NSNumber *brightness = [NSNumber numberWithFloat:bright];
+    
     NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                                  model, @"device_model",
                                  systemVersion, @"system_version",
                                  language, @"language",
-                                 locale, @"locale",
                                  country, @"country",
-                                 nil];
+                                 brightness, @"brightness",
+                                nil];
     
     return data;
+}
+
+- (NSTimeInterval) sampleFrequency{
+    return kDeviceSampleFrequency;
 }
 
 @end

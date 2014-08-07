@@ -13,13 +13,14 @@
 #import "NSString+MD5Addition.h"
 #import "OSLocalStorage.h"
 #import "OSConfiguration.h"
+
 #import "OSPositioningProbe.h"
-#import "OSAccelerometerProbe.h"
-#import "OSMagnetometerProbe.h"
-#import "OSGyroProbe.h"
 #import "OSDeviceInfoProbe.h"
 #import "OSBatteryProbe.h"
 #import "OSProximityProbe.h"
+#import "OSActivityManagerProbe.h"
+#import "OSMotionProbe.h"
+#import "OSStepCounterProbe.h"
 
 @implementation OpenSense
 
@@ -158,12 +159,12 @@
 {
     return @[
         [OSPositioningProbe class],
-        [OSAccelerometerProbe class],
-        [OSMagnetometerProbe class],
-        [OSGyroProbe class],
+        [OSMotionProbe class],
         [OSDeviceInfoProbe class],
         [OSBatteryProbe class],
         [OSProximityProbe class],
+        [OSActivityManagerProbe class],
+        [OSStepCounterProbe class],
     ];
 }
 
@@ -212,12 +213,19 @@
     return [STKeychain getPasswordForUsername:@"OpenSense" andServiceName:@"OpenSense" error:nil];
 }
 
+- (void) stopCollectorAndUploadData
+{
+    [self stopCollector];
+    [self uploadData:nil];
+}
+
 - (void)uploadData:(id)sender
 {
-    // Fetch probe data, but skip currently used probe file to avoid conflicts
-    [[OSLocalStorage sharedInstance] fetchBatchesForProbe:nil skipCurrent:YES parseJSON:NO success:^(NSArray *batches) {
+    // Fetch probe data, but if openSense is running, skip the currently used probe file to avoid conflicts. See Thesis p. 37
+    BOOL * skipCurrent = [OpenSense sharedInstance].isRunning;
+    [[OSLocalStorage sharedInstance] fetchBatchesForProbe:nil skipCurrent:skipCurrent parseJSON:NO success:^(NSArray *batches) {
         
-        OSLog(@"Constructing JSON document with %d batches", [batches count]);
+        OSLog(@"Constructing JSON document with %lu batches", (unsigned long)[batches count]);
         
         // Construct JSON document by comma-separating indvidual data batches
         NSString *jsonFile = [[NSString alloc] init];
@@ -240,7 +248,7 @@
         // ...and add array brackets
         jsonFile = [NSString stringWithFormat:@"[%@]", jsonFile];
         
-        OSLog(@"%@", jsonFile);
+//        OSLog(@"Json File to be sent:\n%@", jsonFile);
         
         // Create hash of document for integrity checking
         NSString *jsonFileHash = [jsonFile stringFromMD5];

@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelTime;
 
 - (IBAction)toggleCollecting:(id)sender;
+- (IBAction)toggleUpload:(id)sender;
 
 @end

@@ -31,4 +31,6 @@
 - (void)localDataBatchesForProbe:(NSString*)probeIdentifier success:(void (^)(NSArray *batches))success;
 - (NSString*)encryptionKey;
 
+- (void) stopCollectorAndUploadData;
+
 @end

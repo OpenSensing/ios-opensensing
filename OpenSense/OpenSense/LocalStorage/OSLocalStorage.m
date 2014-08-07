@@ -88,7 +88,9 @@
     long fileSize = [[[NSFileManager defaultManager] attributesOfItemAtPath:currentFile error:nil][NSFileSize] longValue];
     long maxFileSize = ([[OSConfiguration currentConfig].maxDataFileSizeKb longValue] * 1024L);
     
-    if (fileSize > maxFileSize) { // If file is to big
+    // If file is to big or the collector is running, make a new file
+    if (fileSize > maxFileSize) {
+        
         OSLog(@"Rotating log file");
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

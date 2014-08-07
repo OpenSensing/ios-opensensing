@@ -31,9 +31,9 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batchesUpdated:) name:kOpenSenseBatchSavedNotification object:nil];
     
     // Start collecting
-    if (![OpenSense sharedInstance].isRunning) {
-        [self toggleCollecting:nil];
-    }
+//    if (![OpenSense sharedInstance].isRunning) {
+//        [self toggleCollecting:nil];
+//    }
 }
 
 - (void)batchesUpdated:(NSNotification*)notification
@@ -90,6 +90,11 @@
             elapsedTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
         }
     }
+}
+
+- (IBAction)toggleUpload:(id)sender {
+    // should only be called when OpenSense is stopped
+    [[OpenSense sharedInstance] stopCollectorAndUploadData];
 }
 
 - (void)dealloc
