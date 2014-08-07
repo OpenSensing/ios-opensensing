@@ -79,7 +79,7 @@ Commands:
 Notes on the probes:
 ================
 
-Probes are grouped into two categories "OnChange" and "Periodic."  "OnChange" probes update only when the state of the device changes.  "Periodic" probes update at defined intervals based on their ```kDeviceSampleFrequency``` double.
+Probes are grouped into two categories "OnChange" and "Periodic."  "OnChange" probes update only when the state of the device changes.  "Periodic" probes update at defined intervals based on their ```frequency``` double, as specified in config.json.
 
 ###OnChange:
 
@@ -99,9 +99,9 @@ Probes are grouped into two categories "OnChange" and "Periodic."  "OnChange" pr
 
   * Motion
 
-The ```OSMotionProbe``` is a special case in that it turns on and _remains_ on for a predefined period (```kMotionSampleDuration```).  During this period, it takes many data readings, at ```kMotionUpdateInterval``` frequency. As with other probes, ```kDeviceSampleFrequency`` determines the length of time between when it starts taking samples. 
+The ```OSMotionProbe``` is a special case in that it turns on and _remains_ on for a predefined period (```duration```).  During this period, it takes many data readings, at ```kMotionUpdateInterval``` frequency. As with other probes, ```frequency`` determines the length of time between when it starts taking samples. 
 
-Think of it as filling up a cup of water.  You go ```kDeviceSampleFrequency``` seconds between wanting water. When you start filling up your cup, the water flows at ```kMotionUpdateInterval``` units per second. After ```kMotionSampleDuration```, your cup is full, and you stop filling it. In ```kDeviceSampleFrequency``` minus ```kMotionSampleDuration``` seconds, you will want water again.
+Think of it as filling up a cup of water.  You go ```frequency``` seconds between wanting water. When you start filling up your cup, the water flows at ```updateInterval``` units per second. After ```duration```, your cup is full, and you stop filling it. In ```frequency``` minus ```duration``` seconds, you will want water again.
 
 Mathias Hansen - s093478 &lt;s093478@student.dtu.dk>
 
