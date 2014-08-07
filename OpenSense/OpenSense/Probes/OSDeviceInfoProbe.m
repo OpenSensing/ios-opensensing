@@ -9,9 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "OSDeviceInfoProbe.h"
 
-#define kDeviceSampleFrequency (double) 5.0; //how often a sample is taken
 @implementation OSDeviceInfoProbe{
     NSTimer *sampleFrequencyTimer;
+    double sampleFrequency;
+}
+
+- (id) init
+{
+    self = [super init];
+    if (self){
+        NSDictionary *configDict = [[OSConfiguration currentConfig] sampleFrequencyForProbe:[[self class] identifier]];
+        sampleFrequency = [[configDict objectForKey:@"frequency"] doubleValue]; // seconds between when the probe is started
+    }
+    return self;
 }
 
 + (NSString*)name
@@ -39,7 +49,6 @@
     [super startProbe];
     [self saveData];
     
-    NSTimeInterval sampleFrequency = [self sampleFrequency];
     sampleFrequencyTimer = [NSTimer
                             scheduledTimerWithTimeInterval:sampleFrequency target:self selector:@selector(saveData) userInfo:nil repeats:YES];}
 
@@ -81,10 +90,6 @@
                                 nil];
     
     return data;
-}
-
-- (NSTimeInterval) sampleFrequency{
-    return kDeviceSampleFrequency;
 }
 
 @end

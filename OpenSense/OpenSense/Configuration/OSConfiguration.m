@@ -197,16 +197,16 @@
                             nil];
 }
 
-- (NSDictionary *) activityConfig
+- (NSDictionary *) sampleFrequencyForProbe:(NSString *)probeId
 {
     if (!config)
         return nil;
     
-    NSDictionary *activity = [[config objectForKey:@"dataRequests"] objectForKey:@"activitymanager"][0];
-    NSNumber *frequency = [[NSNumber alloc] initWithDouble:[[activity objectForKey:@"frequency"] doubleValue]];
+    NSDictionary *probe = [[config objectForKey:@"dataRequests"] objectForKey:probeId][0];
+    NSNumber *frequency = [[NSNumber alloc] initWithDouble:[[probe objectForKey:@"frequency"] doubleValue]];
     
     return [[NSDictionary alloc] initWithObjectsAndKeys:
-            frequency, @"activity",
+            frequency, @"frequency",
             nil];
 }
 

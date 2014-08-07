@@ -28,7 +28,7 @@
         activityQueue.maxConcurrentOperationCount = 1;
         
         // get probe info from config.json
-        NSDictionary *configDict = [[OSConfiguration currentConfig] activityConfig];
+        NSDictionary *configDict = [[OSConfiguration currentConfig] sampleFrequencyForProbe:[[self class] identifier]];
         sampleFrequency = [[configDict objectForKey:@"frequency"] doubleValue]; // seconds between when the probe is started
     }
     

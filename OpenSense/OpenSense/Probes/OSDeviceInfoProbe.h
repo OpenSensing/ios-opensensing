@@ -7,6 +7,7 @@
 //
 
 #import "OSProbe.h"
+#import "OSConfiguration.h"
 
 @interface OSDeviceInfoProbe : OSProbe 
 
