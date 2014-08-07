@@ -46,17 +46,22 @@ To build, you will need to create a new config.json file in OpenSense Collector/
     ],
     "motion": [
       {
-        "interval": -1
+        "interval": -1,
+        "frequency": 1800,
+        "duration": 5,
+        "updateInterval":0.02
       }
     ],
     "deviceinfo": [
       {
-        "interval": -1
+        "interval": -1,
+        "frequency":10
       }
     ],
     "activitymanager": [
       {
-        "interval": -1
+        "interval": -1,
+        "frequency": 15
       }
     ],
   }
