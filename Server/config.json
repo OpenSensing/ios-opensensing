@@ -2,40 +2,50 @@
   "name": "awesome2",
   "version": 2,
   "dataUploadOnWifiOnly": true,
-  "baseUrl": "http://localhost:4000",
+  "baseUrl": "http://localhost:4000/",
   "configUpdatePeriod": 21600,
   "dataArchivePeriod": 300,
   "dataUploadPeriod": 7200,
   "maxDataFileSizeKb": 1024,
   "dataRequests": {
-    "dk.dtu.imm.sensible.battery": [
+    "battery": [
       {
         "interval": -1
       }
     ],
-    "dk.dtu.imm.sensible.proximity": [
+    "proximity": [
       {
         "interval": -1
       }
     ],
-    "dk.dtu.imm.sensible.positioning": [
+    "positioning": [
       {
         "interval": -1
       }
     ],
-    "dk.dtu.imm.sensible.accelerometer": [
+    "stepcounter": [
       {
         "interval": -1
       }
     ],
-    "dk.dtu.imm.sensible.magnetometer": [
+    "motion": [
       {
-        "interval": -1
+        "interval": -1,
+        "frequency": 1800,
+        "duration": 5,
+        "updateInterval":0.02
       }
     ],
-    "dk.dtu.imm.sensible.gyro": [
+    "deviceinfo": [
       {
-        "interval": -1
+        "interval": -1,
+        "frequency":10
+      }
+    ],
+    "activitymanager": [
+      {
+        "interval": -1,
+        "frequency": 15
       }
     ],
   }

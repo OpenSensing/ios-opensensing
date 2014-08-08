@@ -23,5 +23,7 @@
 - (NSNumber*)maxDataFileSizeKb;
 - (NSTimeInterval)updateIntervalForProbe:(NSString*)probeId;
 - (NSArray*)enabledProbes;
+- (NSDictionary *)motionConfig;
+- (NSDictionary *)sampleFrequencyForProbe:(NSString *)probeId;
 
 @end
